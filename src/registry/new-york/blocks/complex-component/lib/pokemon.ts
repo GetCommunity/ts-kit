@@ -1,15 +1,31 @@
-import { z } from "zod";
+import * as v from "valibot";
+
+const pokemonListSchema = v.object({
+  results: v.array(v.object({ name: v.string() })),
+});
+
+const pokemonSchema = v.object({
+  name: v.string(),
+  id: v.number(),
+  sprites: v.object({
+    front_default: v.string(),
+  }),
+  stats: v.array(
+    v.object({
+      base_stat: v.number(),
+      stat: v.object({
+        name: v.string(),
+      }),
+    }),
+  ),
+});
 
 export async function getPokemonList({ limit = 10 }: { limit?: number } = {}) {
   try {
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon?limit=${limit}`,
     );
-    return z
-      .object({
-        results: z.array(z.object({ name: z.string() })),
-      })
-      .parse(await response.json());
+    return v.parse(pokemonListSchema, await response.json());
   } catch (error) {
     console.error(error);
     return null;
@@ -24,23 +40,7 @@ export async function getPokemon(name: string) {
       throw new Error("Failed to fetch pokemon");
     }
 
-    return z
-      .object({
-        name: z.string(),
-        id: z.number(),
-        sprites: z.object({
-          front_default: z.string(),
-        }),
-        stats: z.array(
-          z.object({
-            base_stat: z.number(),
-            stat: z.object({
-              name: z.string(),
-            }),
-          }),
-        ),
-      })
-      .parse(await response.json());
+    return v.parse(pokemonSchema, await response.json());
   } catch (error) {
     console.error(error);
     return null;

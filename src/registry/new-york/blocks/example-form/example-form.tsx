@@ -1,5 +1,5 @@
 import { createSignal, Show } from "solid-js";
-import { z } from "zod";
+import * as v from "valibot";
 import { Button } from "@/registry/new-york/ui/button";
 import {
   Card,
@@ -13,13 +13,13 @@ import { Input } from "@/registry/new-york/ui/input";
 import { Label } from "@/registry/new-york/ui/label";
 import { Textarea } from "@/registry/new-york/ui/textarea";
 
-const formSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  message: z.string().min(1, "Message is required"),
+const formSchema = v.object({
+  name: v.pipe(v.string(), v.minLength(1, "Name is required")),
+  email: v.pipe(v.string(), v.email("Invalid email address")),
+  message: v.pipe(v.string(), v.minLength(1, "Message is required")),
 });
 
-type FormData = z.infer<typeof formSchema>;
+type FormData = v.InferOutput<typeof formSchema>;
 type FormErrors = Partial<Record<keyof FormData, string>>;
 
 export function ExampleForm() {
@@ -36,13 +36,15 @@ export function ExampleForm() {
     setIsPending(true);
     setErrors({});
 
-    const result = formSchema.safeParse(formData());
+    const result = v.safeParse(formSchema, formData());
 
     if (!result.success) {
       const fieldErrors: FormErrors = {};
-      for (const issue of result.error.issues) {
-        const field = issue.path[0] as keyof FormData;
-        fieldErrors[field] = issue.message;
+      for (const issue of result.issues) {
+        const field = issue.path?.[0]?.key;
+        if (typeof field === "string" && field in formData()) {
+          fieldErrors[field as keyof FormData] = issue.message;
+        }
       }
       setErrors(fieldErrors);
       setIsPending(false);
@@ -51,7 +53,7 @@ export function ExampleForm() {
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Form submitted:", result.data);
+    console.log("Form submitted:", result.output);
     setIsPending(false);
   };
 

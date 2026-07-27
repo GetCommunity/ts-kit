@@ -37,7 +37,7 @@ export default function Home() {
             <div>
               <h2 class="font-semibold text-lg">ExampleForm</h2>
               <p class="text-muted-foreground text-sm">
-                A contact form with Zod validation
+                A contact form with Valibot validation
               </p>
             </div>
           </div>
