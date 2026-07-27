@@ -6,6 +6,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
