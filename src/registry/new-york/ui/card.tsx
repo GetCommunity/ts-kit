@@ -9,7 +9,7 @@ function Card(props: CardProps) {
     <div
       class={cn(
         "rounded-xl border bg-card text-card-foreground shadow",
-        local.class
+        local.class,
       )}
       {...others}
     />

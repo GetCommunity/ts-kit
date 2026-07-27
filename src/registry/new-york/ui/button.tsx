@@ -29,11 +29,12 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
-  extends JSX.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    JSX.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {}
 
 function Button(props: ButtonProps) {
@@ -43,7 +44,7 @@ function Button(props: ButtonProps) {
     <button
       class={cn(
         buttonVariants({ variant: local.variant, size: local.size }),
-        local.class
+        local.class,
       )}
       {...others}
     />
