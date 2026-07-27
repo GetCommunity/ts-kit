@@ -10,8 +10,7 @@
     "group:linters",
     "group:postcss",
     "group:recommended",
-    "group:test",
-    "customManagers:biomeVersions"
+    "group:test"
   ],
   "major": {
     "addLabels": ["dependencies", "major"],
