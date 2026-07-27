@@ -70,7 +70,7 @@ const registryIndex = {
 
 writeFileSync(
   join(outputDir, "registry.json"),
-  JSON.stringify(registryIndex, null, 2)
+  JSON.stringify(registryIndex, null, 2),
 );
 console.log("Built: registry.json");
 
