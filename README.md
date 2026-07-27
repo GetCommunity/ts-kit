@@ -25,10 +25,10 @@ Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view th
 
 ```bash
 # Install dependencies
-bun install
+pnpm install
 
 # Start development server
-bun dev
+pnpm dev
 ```
 
 ### Building the Registry
@@ -36,7 +36,19 @@ bun dev
 To build the static registry JSON files:
 
 ```bash
-bun build:registry
+pnpm build:registry
 ```
 
 This will generate JSON files in the `public/r/` directory that can be served statically.
+
+### Code Quality
+
+The project uses ESLint for linting and Prettier for formatting. Their direct
+configuration lives in `eslint.config.js` and `prettier.config.js`:
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm format:check
+pnpm format
+```
