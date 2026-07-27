@@ -9,7 +9,7 @@
     {
       "path": "components/ui/input.tsx",
       "type": "registry:ui",
-      "content": "import { type JSX, splitProps } from \"solid-js\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface InputProps extends JSX.InputHTMLAttributes<HTMLInputElement> {}\n\nfunction Input(props: InputProps) {\n  const [local, others] = splitProps(props, [\"class\", \"type\"]);\n\n  return (\n    <input\n      type={local.type}\n      class={cn(\n        \"flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50\",\n        local.class\n      )}\n      {...others}\n    />\n  );\n}\n\nexport { Input };\n"
+      "content": "import { type JSX, splitProps } from \"solid-js\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface InputProps extends JSX.InputHTMLAttributes<HTMLInputElement> {}\n\nfunction Input(props: InputProps) {\n  const [local, others] = splitProps(props, [\"class\", \"type\"]);\n\n  return (\n    <input\n      class={cn(\n        \"flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:font-medium file:text-foreground file:text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50\",\n        local.class,\n      )}\n      type={local.type}\n      {...others}\n    />\n  );\n}\n\nexport { Input };\n"
     }
   ]
 }

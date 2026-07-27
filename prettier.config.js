@@ -1,8 +1,3 @@
-/** @type {import("prettier").Config} */
-export default {
-  printWidth: 80,
-  semi: true,
-  singleQuote: false,
-  tabWidth: 2,
-  trailingComma: "all",
-};
+import gcPrettierTailwindApp from "@getcommunity/config-prettier/app-tailwind.js"
+
+export default gcPrettierTailwindApp

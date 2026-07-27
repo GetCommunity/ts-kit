@@ -1,5 +1,7 @@
 # Dependencies
 node_modules/
+.pnpm
+.pnpm-store/
 
 # Build output
 .output/
@@ -29,3 +31,6 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Tests
+coverage

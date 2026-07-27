@@ -27,7 +27,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div class="flex min-h-[200px] items-center justify-center rounded-md border bg-muted/50">
+          <div class="flex min-h-50 items-center justify-center rounded-md border bg-muted/50">
             <HelloWorld />
           </div>
         </section>
@@ -41,7 +41,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div class="flex min-h-[450px] items-center justify-center rounded-md border bg-muted/50 p-4">
+          <div class="flex min-h-112 items-center justify-center rounded-md border bg-muted/50 p-4">
             <ExampleForm />
           </div>
         </section>
@@ -55,7 +55,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div class="min-h-[450px] rounded-md border bg-muted/50 p-4">
+          <div class="min-h-112 rounded-md border bg-muted/50 p-4">
             <PokemonPage />
           </div>
         </section>
@@ -69,7 +69,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div class="flex min-h-[450px] items-center justify-center rounded-md border bg-muted/50">
+          <div class="flex min-h-112 items-center justify-center rounded-md border bg-muted/50">
             <ExampleCard />
           </div>
         </section>

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -12,14 +12,32 @@
     "moduleResolution": "Bundler",
     "noEmit": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["vinxi/types/client"]
+    "types": [
+      "@testing-library/jest-dom",
+      "vitest/globals",
+      "vinxi/types/client",
+    ]
   },
-  "include": ["app.config.ts", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
-  "exclude": [".output", ".vinxi", "dist", "node_modules", "public/r"]
+  "include": [
+    "app.config.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "tests/**/*.d.ts"
+  ],
+  "exclude": [
+    ".output",
+    ".vinxi",
+    "dist",
+    "node_modules",
+    "public/r"
+  ]
 }
