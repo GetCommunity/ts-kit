@@ -51,7 +51,7 @@ const DialogContent = <T extends ValidComponent = "div">(
     iconSvgClass?: string
   }
 ) => {
-  const [_, rest] = splitProps(props as DialogContentProps, ["class", "children"])
+  const [local, rest] = splitProps(props as DialogContentProps, ["class", "children"])
   const handleClose = () => {
     props.onCloseClick?.()
   }
@@ -61,11 +61,11 @@ const DialogContent = <T extends ValidComponent = "div">(
       <DialogPrimitive.Content
         class={cn(
           "fixed left-1/2 top-1/2 z-50 grid max-h-screen w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto border bg-background p-6 shadow-lg duration-200 ui-expanded:animate-in ui-closed:animate-out ui-closed:fade-out-0 ui-expanded:fade-in-0 ui-closed:zoom-out-95 ui-expanded:zoom-in-95 ui-closed:slide-out-to-left-1/2 ui-closed:slide-out-to-top-[48%] ui-expanded:slide-in-from-left-1/2 ui-expanded:slide-in-from-top-[48%] sm:rounded-lg",
-          props.class
+          local.class
         )}
         {...rest}
       >
-        {props.children}
+        {local.children}
         <DialogPrimitive.CloseButton
           onClick={handleClose}
           class={cn(

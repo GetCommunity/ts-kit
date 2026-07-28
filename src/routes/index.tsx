@@ -1,8 +1,4 @@
-import { Title } from "@solidjs/meta";
-import { PokemonPage } from "@/registry/new-york/blocks/complex-component/page";
-import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form";
-import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card";
-import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world";
+import { Title } from "@solidjs/meta"
 
 export default function Home() {
   return (
@@ -12,8 +8,7 @@ export default function Home() {
       <header class="mb-8">
         <h1 class="font-bold text-3xl">Custom Registry</h1>
         <p class="mt-2 text-muted-foreground">
-          A custom registry for distributing code using shadcn - ported to
-          SolidJS.
+          A custom registry for distributing code using shadcn - ported to SolidJS.
         </p>
       </header>
 
@@ -28,52 +23,10 @@ export default function Home() {
             </div>
           </div>
           <div class="flex min-h-50 items-center justify-center rounded-md border bg-muted/50">
-            <HelloWorld />
-          </div>
-        </section>
-
-        <section class="rounded-lg border p-6">
-          <div class="mb-4 flex items-center justify-between">
-            <div>
-              <h2 class="font-semibold text-lg">ExampleForm</h2>
-              <p class="text-muted-foreground text-sm">
-                A contact form with Valibot validation
-              </p>
-            </div>
-          </div>
-          <div class="flex min-h-112 items-center justify-center rounded-md border bg-muted/50 p-4">
-            <ExampleForm />
-          </div>
-        </section>
-
-        <section class="rounded-lg border p-6">
-          <div class="mb-4 flex items-center justify-between">
-            <div>
-              <h2 class="font-semibold text-lg">PokemonPage</h2>
-              <p class="text-muted-foreground text-sm">
-                A complex component showing hooks, libs and components
-              </p>
-            </div>
-          </div>
-          <div class="min-h-112 rounded-md border bg-muted/50 p-4">
-            <PokemonPage />
-          </div>
-        </section>
-
-        <section class="rounded-lg border p-6">
-          <div class="mb-4 flex items-center justify-between">
-            <div>
-              <h2 class="font-semibold text-lg">ExampleCard</h2>
-              <p class="text-muted-foreground text-sm">
-                A login form with a CSS file
-              </p>
-            </div>
-          </div>
-          <div class="flex min-h-112 items-center justify-center rounded-md border bg-muted/50">
-            <ExampleCard />
+            Hello World
           </div>
         </section>
       </div>
     </main>
-  );
+  )
 }

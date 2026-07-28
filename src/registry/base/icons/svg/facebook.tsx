@@ -1,0 +1,12 @@
+import { ComponentProps } from "solid-js"
+
+export const facebook = (props: ComponentProps<"svg">) => (
+  <svg viewBox="0 0 32 32" {...props}>
+    <path
+      fill="currentColor"
+      d="M23.738.214v4.714h-2.804c-1.023 0-1.714.214-2.071.643s-.536 1.071-.536 1.929v3.375h5.232l-.696 5.286h-4.536v13.554h-5.464V16.161H8.309v-5.286h4.554V6.982c0-2.214.62-3.932 1.857-5.152S17.607 0 19.666 0c1.75 0 3.107.071 4.071.214z"
+    />
+  </svg>
+)
+
+export default facebook

@@ -1,13 +1,13 @@
-import { defineConfig } from "@solidjs/start/config";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "@solidjs/start/config"
+import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     resolve: {
       alias: {
-        "@": "/src",
-      },
-    },
-  },
-});
+        "@": "/src"
+      }
+    }
+  }
+})

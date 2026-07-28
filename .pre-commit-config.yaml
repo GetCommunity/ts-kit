@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+  - repo: local
+    hooks:
+      - id: format-code
+        name: format-code
+        entry: ./scripts/format.sh
+        language: script
+        pass_filenames: false
+  - repo: local
+    hooks:
+      - id: lint-code
+        name: lint-code
+        entry: ./scripts/lint.sh
+        language: script
+        pass_filenames: false

@@ -12,17 +12,13 @@
     "moduleResolution": "Bundler",
     "noEmit": true,
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": [
-      "@testing-library/jest-dom",
-      "vitest/globals",
-      "vinxi/types/client",
-    ]
+    "types": ["@testing-library/jest-dom", "vitest/globals", "vinxi/types/client"]
   },
   "include": [
     "app.config.ts",
@@ -33,11 +29,5 @@
     "tests/**/*.tsx",
     "tests/**/*.d.ts"
   ],
-  "exclude": [
-    ".output",
-    ".vinxi",
-    "dist",
-    "node_modules",
-    "public/r"
-  ]
+  "exclude": [".output", ".vinxi", "dist", "node_modules", "public/r"]
 }

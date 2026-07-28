@@ -5,13 +5,14 @@ import {
   createMemo,
   createSignal,
   mergeProps,
+  onCleanup,
   splitProps,
   useContext
 } from "solid-js"
 
+import type { ButtonProps } from "@/registry/base/ui/button"
 import type { CreateEmblaCarouselType } from "embla-carousel-solid"
 import type { Accessor, Component, ComponentProps, VoidProps } from "solid-js"
-import type { ButtonProps } from "@/registry/base/ui/button"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/registry/base/ui/button"
@@ -114,9 +115,9 @@ const Carousel: Component<CarouselProps & ComponentProps<"div">> = (rawProps) =>
     carouselApi()!.on("reInit", onSelect)
     carouselApi()!.on("select", onSelect)
 
-    return () => {
+    onCleanup(() => {
       carouselApi()?.off("select", onSelect)
-    }
+    })
   })
 
   const value = createMemo(
@@ -125,8 +126,7 @@ const Carousel: Component<CarouselProps & ComponentProps<"div">> = (rawProps) =>
         carouselRef,
         api: carouselApi,
         opts: local.opts,
-        orientation:
-          local.orientation || (local.opts?.axis === "y" ? "vertical" : "horizontal"),
+        orientation: local.orientation,
         scrollPrev,
         scrollNext,
         canScrollPrev,
