@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@solidjs/testing-library"
+import { render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
 type UnknownRecord = Record<string, unknown>
@@ -187,8 +188,10 @@ const sharedProps = {
   disabled: true
 }
 
+const user = userEvent.setup()
+
 describe("combobox input reactive boundaries", () => {
-  it("reactively displays a newly selected single value", () => {
+  it("reactively displays a newly selected single value", async () => {
     const [value, setValue] = createSignal<Option>()
 
     render(() => (
@@ -208,7 +211,7 @@ describe("combobox input reactive boundaries", () => {
     ))
 
     expect(screen.getByLabelText("combo input")).toHaveValue("")
-    fireEvent.click(screen.getByText("choose beta"))
+    await user.click(screen.getByText("choose beta"))
     expect(screen.getByLabelText("combo input")).toHaveValue("Beta")
     expect(screen.getAllByText("Alpha").length).toBeGreaterThan(1)
     expect(screen.getByText("A, B")).toBeInTheDocument()
@@ -216,7 +219,7 @@ describe("combobox input reactive boundaries", () => {
     expect(screen.getByText("3")).toBeInTheDocument()
   })
 
-  it("reactively removes and clears multi-combobox values", () => {
+  it("reactively removes and clears multi-combobox values", async () => {
     const [value, setValue] = createSignal<Array<Option>>([options[0]!, options[1]!])
 
     render(() => (
@@ -240,10 +243,10 @@ describe("combobox input reactive boundaries", () => {
     expect(screen.getByLabelText("combobox values")).toHaveTextContent("Alpha,Beta")
     const tagButtons = screen.getAllByRole("button")
 
-    fireEvent.click(tagButtons[0]!)
+    await user.click(tagButtons[0]!)
     expect(screen.getByLabelText("combobox values")).toHaveTextContent("Beta")
 
-    fireEvent.click(screen.getAllByRole("button")[1]!)
+    await user.click(screen.getAllByRole("button")[1]!)
     expect(screen.getByLabelText("combobox values").textContent).toBe("")
   })
 })

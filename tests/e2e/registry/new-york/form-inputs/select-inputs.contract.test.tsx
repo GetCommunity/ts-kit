@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@solidjs/testing-library"
+import { render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
 type UnknownRecord = Record<string, unknown>
@@ -132,8 +133,10 @@ const options: Array<Option> = [
   { label: "Delta", value: "delta" }
 ]
 
+const user = userEvent.setup()
+
 describe("select input reactive boundaries", () => {
-  it("reactively displays a newly selected single value", () => {
+  it("reactively displays a newly selected single value", async () => {
     const [value, setValue] = createSignal<Option>()
 
     render(() => (
@@ -160,14 +163,14 @@ describe("select input reactive boundaries", () => {
     ))
 
     expect(screen.getByTestId("select-value")).toBeEmptyDOMElement()
-    fireEvent.click(screen.getByText("choose beta"))
+    await user.click(screen.getByText("choose beta"))
     expect(screen.getByTestId("select-value")).toHaveTextContent("Beta")
     expect(screen.getByText("A, B")).toBeInTheDocument()
     expect(screen.getByText("Words")).toBeInTheDocument()
     expect(screen.getByText("3")).toBeInTheDocument()
   })
 
-  it("reactively removes and clears multi-select values", () => {
+  it("reactively removes and clears multi-select values", async () => {
     const [value, setValue] = createSignal<Array<Option> | null | undefined>([
       options[0]!,
       options[1]!
@@ -205,16 +208,16 @@ describe("select input reactive boundaries", () => {
     expect(selectedValue).toHaveTextContent("Alpha")
     expect(selectedValue).toHaveTextContent("Beta")
 
-    fireEvent.click(screen.getAllByRole("button")[0]!)
+    await user.click(screen.getAllByRole("button")[0]!)
     expect(screen.getByLabelText("selected values")).toHaveTextContent("Beta")
     expect(selectedValue).not.toHaveTextContent("Alpha")
 
-    fireEvent.click(screen.getAllByRole("button")[1]!)
+    await user.click(screen.getAllByRole("button")[1]!)
     expect(screen.getByLabelText("selected values").textContent).toBe("")
     expect(selectedValue).not.toHaveTextContent("Alpha")
     expect(selectedValue).not.toHaveTextContent("Beta")
 
-    fireEvent.click(screen.getByText("unset selection"))
+    await user.click(screen.getByText("unset selection"))
     expect(screen.getByLabelText("selected values").textContent).toBe("")
   })
 })

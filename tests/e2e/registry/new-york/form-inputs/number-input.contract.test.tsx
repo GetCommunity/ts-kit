@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@solidjs/testing-library"
+import { render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
 vi.mock("@/registry/new-york/ui/number-field", () => ({
@@ -52,8 +53,10 @@ vi.mock("@/registry/new-york/ui/number-field", () => ({
 import NumberInput from "@/registry/new-york/form-inputs/number-input"
 import type { JSX } from "solid-js"
 
+const user = userEvent.setup()
+
 describe("NumberInput reactive boundary", () => {
-  it("reactively normalizes boundary values and reflects signal changes", () => {
+  it("reactively normalizes boundary values and reflects signal changes", async () => {
     const [value, setValue] = createSignal<number | null>()
 
     render(() => (
@@ -72,15 +75,15 @@ describe("NumberInput reactive boundary", () => {
     const boundary = screen.getByTestId("number-field-boundary")
     expect(boundary).toHaveAttribute("data-value", "")
 
-    fireEvent.click(screen.getByText("grouped"))
+    await user.click(screen.getByText("grouped"))
     expect(screen.getByLabelText("number value")).toHaveTextContent("1234.5")
     expect(boundary).toHaveAttribute("data-value", "1234.5")
 
-    fireEvent.click(screen.getByText("null"))
+    await user.click(screen.getByText("null"))
     expect(screen.getByLabelText("number value")).toHaveTextContent("null")
     expect(boundary).toHaveAttribute("data-value", "")
 
-    fireEvent.click(screen.getByText("raw"))
+    await user.click(screen.getByText("raw"))
     expect(boundary).toHaveAttribute("data-raw-value", "10")
   })
 })

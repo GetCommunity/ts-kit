@@ -1,5 +1,6 @@
 import { Time } from "@internationalized/date"
 import { fireEvent, render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
 import FileInput from "@/registry/new-york/form-inputs/file-input"
@@ -11,8 +12,10 @@ import NumberRangeInput from "@/registry/new-york/form-inputs/number-range-input
 import TextInput from "@/registry/new-york/form-inputs/text-input.ui"
 import TimeInput from "@/registry/new-york/form-inputs/time-input.ui"
 
+const user = userEvent.setup()
+
 describe("form input messages", () => {
-  it("renders descriptions and every error, including custom classes", () => {
+  it("renders descriptions and every error, including custom classes", async () => {
     render(() => (
       <>
         <FormInputDescription description="Helpful context" class="description-class" />
@@ -60,7 +63,7 @@ describe("HiddenInput", () => {
     }
   })
 
-  it("shows its first error and forwards disabled state", () => {
+  it("shows its first error and forwards disabled state", async () => {
     const { container } = render(() => (
       <HiddenInput
         name="account-id"
@@ -74,7 +77,7 @@ describe("HiddenInput", () => {
     expect(screen.getByText("account-id Error: Invalid account")).toBeInTheDocument()
   })
 
-  it("supports the defensive non-array error rendering path", () => {
+  it("supports the defensive non-array error rendering path", async () => {
     render(() => (
       <HiddenInput
         name="legacy-field"
@@ -87,7 +90,7 @@ describe("HiddenInput", () => {
 })
 
 describe("TextInput", () => {
-  it("renders and changes a single-line field", () => {
+  it("renders and changes a single-line field", async () => {
     const [value, setValue] = createSignal<string | null>(null)
     render(() => (
       <TextInput
@@ -123,7 +126,7 @@ describe("TextInput", () => {
     expect(input).toHaveValue("")
   })
 
-  it("renders and changes a multiline field", () => {
+  it("renders and changes a multiline field", async () => {
     const [value, setValue] = createSignal<string | null>("Existing")
     render(() => (
       <TextInput
@@ -147,7 +150,7 @@ describe("TextInput", () => {
 })
 
 describe("NumberInput", () => {
-  it("renders decorations and reports numeric, grouped, and empty input", () => {
+  it("renders decorations and reports numeric, grouped, and empty input", async () => {
     const [value, setValue] = createSignal<number | null>(12)
     render(() => (
       <NumberInput
@@ -176,7 +179,7 @@ describe("NumberInput", () => {
 })
 
 describe("NumberRangeInput", () => {
-  it("renders a labeled two-thumb error range and value label", () => {
+  it("renders a labeled two-thumb error range and value label", async () => {
     const rectSpy = vi
       .spyOn(HTMLElement.prototype, "getBoundingClientRect")
       .mockReturnValue({
@@ -220,7 +223,7 @@ describe("NumberRangeInput", () => {
     setPropertySpy.mockRestore()
   })
 
-  it("renders one thumb for a single value and two when multiple is requested", () => {
+  it("renders one thumb for a single value and two when multiple is requested", async () => {
     const setPropertySpy = vi
       .spyOn(CSSStyleDeclaration.prototype, "setProperty")
       .mockImplementation(() => {})
@@ -243,7 +246,7 @@ describe("NumberRangeInput", () => {
     setPropertySpy.mockRestore()
   })
 
-  it("updates its value signal from slider input", () => {
+  it("updates its value signal from slider input", async () => {
     const [value, setValue] = createSignal([5])
     const setPropertySpy = vi
       .spyOn(CSSStyleDeclaration.prototype, "setProperty")
@@ -269,7 +272,7 @@ describe("FileInput", () => {
     onBlur: vi.fn()
   })
 
-  it("renders an empty single-file drop zone and forwards input events", () => {
+  it("renders an empty single-file drop zone and forwards input events", async () => {
     const events = handlers()
     render(() => (
       <FileInput
@@ -294,14 +297,14 @@ describe("FileInput", () => {
     expect(events.onBlur).toHaveBeenCalledOnce()
   })
 
-  it("renders plural empty-drop copy when multiple files are accepted", () => {
+  it("renders plural empty-drop copy when multiple files are accepted", async () => {
     render(() => (
       <FileInput {...handlers()} name="empty-documents" label="Documents" multiple />
     ))
     expect(screen.getByText("Click or drag and drop files.")).toBeInTheDocument()
   })
 
-  it("reactively displays files selected through onChange", () => {
+  it("reactively displays files selected through onChange", async () => {
     const [value, setValue] = createSignal<Array<File>>([])
     const selectedFile = new File(["selected"], "selected.txt")
     render(() => (
@@ -325,7 +328,7 @@ describe("FileInput", () => {
     expect(screen.getByText("Selected file: selected.txt")).toBeInTheDocument()
   })
 
-  it("lists one or multiple selected files with error and disabled state", () => {
+  it("lists one or multiple selected files with error and disabled state", async () => {
     const events = handlers()
     const files = [new File(["a"], "a.txt"), new File(["b"], "b.txt")]
     const { unmount } = render(() => (
@@ -359,7 +362,7 @@ describe("FileInput", () => {
 })
 
 describe("TimeInput", () => {
-  it("uses a default value and reports valid, empty, and invalid input", () => {
+  it("uses a default value and reports valid, empty, and invalid input", async () => {
     const [value, setValue] = createSignal<Time | null | undefined>(undefined)
     render(() => (
       <>
@@ -401,12 +404,12 @@ describe("TimeInput", () => {
     expect(screen.getByLabelText("time value")).toHaveTextContent("null")
   })
 
-  it("clears a value with either clear-button presentation", () => {
+  it("clears a value with either clear-button presentation", async () => {
     const [plainValue, setPlainValue] = createSignal<Time | null>(new Time(10))
     const plain = render(() => (
       <TimeInput name="plain-time" value={plainValue()} onChange={setPlainValue} />
     ))
-    fireEvent.click(screen.getByRole("button"))
+    await user.click(screen.getByRole("button"))
     expect(screen.getByRole("button")).toBeDisabled()
     plain.unmount()
 
@@ -419,11 +422,11 @@ describe("TimeInput", () => {
         showTooltip
       />
     ))
-    fireEvent.click(screen.getByRole("button"))
+    await user.click(screen.getByRole("button"))
     expect(screen.getByRole("button")).toBeDisabled()
   })
 
-  it("disables clearing when disabled or empty", () => {
+  it("disables clearing when disabled or empty", async () => {
     const first = render(() => (
       <TimeInput
         name="disabled-time"
@@ -438,7 +441,7 @@ describe("TimeInput", () => {
     expect(screen.getByRole("button")).toBeDisabled()
   })
 
-  it("renders a plain label and an errored tooltip clear action", () => {
+  it("renders a plain label and an errored tooltip clear action", async () => {
     const first = render(() => (
       <TimeInput
         name="labeled-time"

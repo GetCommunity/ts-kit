@@ -1,5 +1,6 @@
 import { CalendarDate, CalendarDateTime } from "@internationalized/date"
 import { fireEvent, render, screen, waitFor } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
 import DateInput from "@/registry/new-york/form-inputs/date-input"
@@ -17,8 +18,10 @@ function getCalendarDayButtons() {
   )
 }
 
+const user = userEvent.setup()
+
 describe("DateInput", () => {
-  it("renders its calendar, decorations, default format, and clears without a tooltip", () => {
+  it("renders its calendar, decorations, default format, and clears without a tooltip", async () => {
     const [value, setValue] = createSignal([day])
     const { container } = render(() => (
       <>
@@ -56,7 +59,7 @@ describe("DateInput", () => {
     const clear = container.querySelector(
       "button:not([aria-label])"
     ) as HTMLButtonElement
-    fireEvent.click(clear)
+    await user.click(clear)
     expect(screen.getByLabelText("publish date value").textContent).toBe("")
   })
 
@@ -89,7 +92,7 @@ describe("DateInput", () => {
         button.hasAttribute("data-selectable") &&
         button.getAttribute("data-selected") === null
     )
-    fireEvent.click(selectableDay!)
+    await user.click(selectableDay!)
     await waitFor(() =>
       expect(screen.getByLabelText("custom date value")).not.toHaveTextContent(
         "2026-07-27"
@@ -99,11 +102,11 @@ describe("DateInput", () => {
     const clear = Array.from(container.querySelectorAll("button")).find(
       (button) => !button.getAttribute("aria-label")
     )
-    fireEvent.click(clear!)
+    await user.click(clear!)
     expect(screen.getByLabelText("custom date value").textContent).toBe("")
   })
 
-  it("disables clearing when empty or disabled", () => {
+  it("disables clearing when empty or disabled", async () => {
     const empty = render(() => (
       <DateInput name="empty-date" value={[]} onChange={vi.fn()} />
     ))
@@ -130,7 +133,7 @@ describe("DateInput", () => {
     ).toBeDisabled()
   })
 
-  it("renders an errored tooltip clear action", () => {
+  it("renders an errored tooltip clear action", async () => {
     render(() => (
       <DateInput
         name="errored-tooltip-date"
@@ -184,7 +187,7 @@ describe("DateRangeInput", () => {
         button.hasAttribute("data-selectable") &&
         button.getAttribute("data-selected") === null
     )
-    fireEvent.click(selectableDay!)
+    await user.click(selectableDay!)
     await waitFor(() =>
       expect(screen.getByLabelText("date range value")).not.toHaveTextContent(
         "2026-07-27,2026-07-28"
@@ -194,11 +197,11 @@ describe("DateRangeInput", () => {
     const clear = Array.from(container.querySelectorAll("button")).find(
       (button) => !button.getAttribute("aria-label")
     )
-    fireEvent.click(clear!)
+    await user.click(clear!)
     expect(screen.getByLabelText("date range value").textContent).toBe("")
   })
 
-  it("uses a custom formatter and tooltip clear presentation", () => {
+  it("uses a custom formatter and tooltip clear presentation", async () => {
     const [value, setValue] = createSignal([day, nextDay])
     const format = vi.fn(() => "Formatted")
     const { container } = render(() => (
@@ -223,11 +226,11 @@ describe("DateRangeInput", () => {
     const clear = Array.from(container.querySelectorAll("button")).find(
       (button) => !button.getAttribute("aria-label")
     )
-    fireEvent.click(clear!)
+    await user.click(clear!)
     expect(screen.getByLabelText("formatted range value").textContent).toBe("")
   })
 
-  it("disables clearing for an empty disabled range", () => {
+  it("disables clearing for an empty disabled range", async () => {
     const { container } = render(() => (
       <DateRangeInput
         name="empty-range"
@@ -244,7 +247,7 @@ describe("DateRangeInput", () => {
     ).toBeDisabled()
   })
 
-  it("renders an errored tooltip clear action", () => {
+  it("renders an errored tooltip clear action", async () => {
     render(() => (
       <DateRangeInput
         name="errored-tooltip-range"
@@ -319,7 +322,7 @@ describe("DateTimeInput", () => {
         button.hasAttribute("data-selectable") &&
         button.getAttribute("data-selected") === null
     )
-    fireEvent.click(selectableDay!)
+    await user.click(selectableDay!)
     await waitFor(() =>
       expect(screen.getByLabelText("appointment value")).not.toHaveTextContent(
         "2026-07-27T14:45:00"
@@ -329,11 +332,11 @@ describe("DateTimeInput", () => {
     const clear = Array.from(container.querySelectorAll("button")).find(
       (button) => !button.getAttribute("aria-label")
     )
-    fireEvent.click(clear!)
+    await user.click(clear!)
     expect(screen.getByLabelText("appointment value").textContent).toBe("")
   })
 
-  it("uses a custom formatter and tooltip clear presentation", () => {
+  it("uses a custom formatter and tooltip clear presentation", async () => {
     const [value, setValue] = createSignal([dateTime])
     const format = vi.fn(() => "Custom date and time")
     const { container } = render(() => (
@@ -358,11 +361,11 @@ describe("DateTimeInput", () => {
     const clear = Array.from(container.querySelectorAll("button")).find(
       (button) => !button.getAttribute("aria-label")
     )
-    fireEvent.click(clear!)
+    await user.click(clear!)
     expect(screen.getByLabelText("custom appointment value").textContent).toBe("")
   })
 
-  it("disables time and clear controls without a date or when read-only", () => {
+  it("disables time and clear controls without a date or when read-only", async () => {
     const empty = render(() => (
       <DateTimeInput name="empty-appointment" value={[]} onChange={vi.fn()} />
     ))
@@ -385,7 +388,7 @@ describe("DateTimeInput", () => {
     expect(screen.getByLabelText("readonly-appointment time")).toBeDisabled()
   })
 
-  it("renders a plain label and an errored tooltip clear action", () => {
+  it("renders a plain label and an errored tooltip clear action", async () => {
     const first = render(() => (
       <DateTimeInput
         name="plain-appointment"
