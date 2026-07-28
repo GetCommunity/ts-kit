@@ -10,8 +10,8 @@ import {
   formatTimeInputValue,
   getTimeValue,
   parseTimeInputValue
-} from "@/lib/dates"
-import { cn } from "@/lib/utils"
+} from "@/lib/utils/dates"
+import { cn } from "@/lib/utils/tailwind"
 import CloseIcon from "@/registry/new-york/icons/svg/close"
 import { Button, buttonVariants } from "@/registry/new-york/ui/button"
 import {

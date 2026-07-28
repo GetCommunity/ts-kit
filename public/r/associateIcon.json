@@ -1,6 +1,6 @@
 {
   "name": "associateIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Associate Icon",
   "description": "The associate icon component",
   "files": [

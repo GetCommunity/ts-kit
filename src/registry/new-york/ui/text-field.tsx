@@ -1,10 +1,10 @@
+import * as TextFieldPrimitive from "@kobalte/core/text-field"
 import { mergeProps, splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import * as TextFieldPrimitive from "@kobalte/core/text-field"
 import type { ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import { labelVariants } from "@/registry/new-york/ui/label"
 
 type TextFieldRootProps<T extends ValidComponent = "div"> =

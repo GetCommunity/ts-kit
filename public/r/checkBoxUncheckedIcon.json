@@ -1,6 +1,6 @@
 {
   "name": "checkBoxUncheckedIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Check Box Unchecked Icon",
   "description": "The check box unchecked icon component",
   "files": [

@@ -3,7 +3,7 @@ import { Show, createSignal } from "solid-js"
 import type { Setter } from "solid-js"
 import FormInputErrors from "./form-input-errors"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import {
   NumberFieldDecrementTrigger,
   NumberFieldDescription,

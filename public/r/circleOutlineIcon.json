@@ -1,6 +1,6 @@
 {
   "name": "circleOutlineIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Circle Outline Icon",
   "description": "The circle outline icon component",
   "files": [

@@ -1,6 +1,6 @@
 {
   "name": "archiveIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Archive Icon",
   "description": "The archive icon component",
   "files": [

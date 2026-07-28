@@ -1,6 +1,6 @@
 {
   "name": "checkboxIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Checkbox Icon",
   "description": "The checkbox icon component",
   "files": [

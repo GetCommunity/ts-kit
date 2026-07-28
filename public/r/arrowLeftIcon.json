@@ -1,6 +1,6 @@
 {
   "name": "arrowLeftIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Arrow Left Icon",
   "description": "The arrow left icon component",
   "files": [

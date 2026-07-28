@@ -5,7 +5,7 @@ import type { ComboboxTriggerMode } from "@kobalte/core/combobox"
 import type { VariantProps } from "class-variance-authority"
 import type { Setter } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import {
   ComboboxContent,
   ComboboxControl,

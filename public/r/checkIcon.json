@@ -1,6 +1,6 @@
 {
   "name": "checkIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Check Icon",
   "description": "The check icon component",
   "files": [

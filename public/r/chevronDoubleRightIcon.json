@@ -1,6 +1,6 @@
 {
   "name": "chevronDoubleRightIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Chevron Double Right Icon",
   "description": "The chevron double right icon component",
   "files": [

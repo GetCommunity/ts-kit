@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import { Label } from "@/registry/new-york/ui/label"
 import {
   RadioGroupItem,

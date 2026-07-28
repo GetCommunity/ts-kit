@@ -4,7 +4,7 @@ import type { orientationVariants } from "@/registry/new-york/ui/orientation"
 import type { VariantProps } from "class-variance-authority"
 import type { Setter } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import { Label } from "@/registry/new-york/ui/label"
 import {
   SwitchControl,

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 
 describe("tailwind cn utility", () => {
   it("joins simple class names", () => {

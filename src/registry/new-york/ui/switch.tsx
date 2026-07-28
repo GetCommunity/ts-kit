@@ -1,10 +1,10 @@
 import * as SwitchPrimitive from "@kobalte/core/switch"
-import type { JSX, ValidComponent } from "solid-js"
 import { splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
+import type { JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 
 const Switch = SwitchPrimitive.Root
 const SwitchDescription = SwitchPrimitive.Description

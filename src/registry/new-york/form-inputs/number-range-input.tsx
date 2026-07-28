@@ -3,7 +3,7 @@ import { Show } from "solid-js"
 import type { SliderGetValueLabelParams } from "@kobalte/core/slider"
 import type { Setter } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import {
   Slider,
   SliderFill,

@@ -1,10 +1,10 @@
+import * as AccordionPrimitive from "@kobalte/core/accordion"
 import { Show, splitProps } from "solid-js"
 
-import * as AccordionPrimitive from "@kobalte/core/accordion"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 
 const Accordion = AccordionPrimitive.Root
 

@@ -1,10 +1,10 @@
+import * as SelectPrimitive from "@kobalte/core/select"
 import { splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import * as SelectPrimitive from "@kobalte/core/select"
 import type { JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import { labelVariants } from "@/registry/new-york/ui/label"
 
 const Select = SelectPrimitive.Root

@@ -1,8 +1,7 @@
+import { DatePicker as DatePickerPrimitive } from "@ark-ui/solid"
 import { Show, children, splitProps } from "solid-js"
 
-import { DatePicker as DatePickerPrimitive } from "@ark-ui/solid"
-
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import { buttonVariants } from "@/registry/new-york/ui/button"
 
 const DatePicker = DatePickerPrimitive.Root

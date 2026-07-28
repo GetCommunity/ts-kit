@@ -1,6 +1,6 @@
 {
   "name": "circleFillIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Circle Fill Icon",
   "description": "The circle fill icon component",
   "files": [

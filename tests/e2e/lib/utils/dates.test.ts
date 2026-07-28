@@ -15,7 +15,7 @@ import {
   getTimeValue,
   isLeapYear,
   parseTimeInputValue
-} from "@/lib/dates"
+} from "@/lib/utils/dates"
 
 describe("date utilities", () => {
   it("extracts a time or falls back to midnight", () => {

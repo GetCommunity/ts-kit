@@ -1,6 +1,6 @@
 {
   "name": "clipboardIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Clipboard Icon",
   "description": "The clipboard icon component",
   "files": [

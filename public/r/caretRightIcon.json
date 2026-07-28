@@ -1,6 +1,6 @@
 {
   "name": "caretRightIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Caret Right Icon",
   "description": "The caret right icon component",
   "files": [

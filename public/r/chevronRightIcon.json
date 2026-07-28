@@ -1,6 +1,6 @@
 {
   "name": "chevronRightIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Chevron Right Icon",
   "description": "The chevron right icon component",
   "files": [

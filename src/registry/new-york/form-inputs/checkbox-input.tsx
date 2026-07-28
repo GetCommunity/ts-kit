@@ -7,7 +7,7 @@ import type { Setter } from "solid-js"
 import FormInputDescription from "./form-input-description"
 import FormInputErrors from "./form-input-errors"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import { Checkbox as CheckboxUI } from "@/registry/new-york/ui/checkbox"
 import { Label, labelVariants } from "@/registry/new-york/ui/label"
 

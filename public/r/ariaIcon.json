@@ -1,6 +1,6 @@
 {
   "name": "ariaIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Aria Icon",
   "description": "The aria icon component",
   "files": [

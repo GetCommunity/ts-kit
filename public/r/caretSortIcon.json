@@ -1,6 +1,6 @@
 {
   "name": "caretSortIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Caret Sort Icon",
   "description": "The caret sort icon component",
   "files": [

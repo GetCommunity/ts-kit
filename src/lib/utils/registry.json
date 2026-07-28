@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "date-utils",
+      "type": "registry:item",
+      "title": "Date Utilities",
+      "description": "Date and time utility scripts",
+      "dependencies": ["@tanstack/solid-query", "@getcommunity/gc-validators"],
+      "files": [
+        {
+          "path": "dates.ts",
+          "type": "registry:file",
+          "target": "lib/utils/dates.ts"
+        }
+      ]
+    },
+    {
+      "name": "tailwind-utils",
+      "type": "registry:item",
+      "title": "Date Utilities",
+      "description": "Date and time utility scripts",
+      "dependencies": ["tailwind-merge", "clsx"],
+      "files": [
+        {
+          "path": "tailwind.ts",
+          "type": "registry:file",
+          "target": "lib/utils/tailwind.ts"
+        }
+      ]
+    }
+  ]
+}

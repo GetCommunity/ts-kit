@@ -1,10 +1,10 @@
+import * as NumberFieldPrimitive from "@kobalte/core/number-field"
 import { Show, splitProps } from "solid-js"
 
-import * as NumberFieldPrimitive from "@kobalte/core/number-field"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import { labelVariants } from "@/registry/new-york/ui/label"
 
 const NumberField = NumberFieldPrimitive.Root

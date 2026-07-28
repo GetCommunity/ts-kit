@@ -1,6 +1,6 @@
 {
   "name": "checkBoxCheckedIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Check Box Checked Icon",
   "description": "The check box checked icon component",
   "files": [

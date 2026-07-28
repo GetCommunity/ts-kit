@@ -1,6 +1,6 @@
 {
   "name": "checkboxMinusIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Checkbox Minus Icon",
   "description": "The checkbox minus icon component",
   "files": [

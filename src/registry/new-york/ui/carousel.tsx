@@ -14,7 +14,7 @@ import type { ButtonProps } from "@/registry/new-york/ui/button"
 import type { CreateEmblaCarouselType } from "embla-carousel-solid"
 import type { Accessor, Component, ComponentProps, VoidProps } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 import { Button } from "@/registry/new-york/ui/button"
 
 export type CarouselApi = CreateEmblaCarouselType[1]

@@ -1,6 +1,6 @@
 {
   "name": "checkBoxIndeterminateIcon",
-  "type": "registry:icons",
+  "type": "registry:item",
   "title": "Check Box Indeterminate Icon",
   "description": "The check box indeterminate icon component",
   "files": [

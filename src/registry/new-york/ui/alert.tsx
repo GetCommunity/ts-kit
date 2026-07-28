@@ -1,12 +1,12 @@
 import * as AlertPrimitive from "@kobalte/core/alert"
 import { cva } from "class-variance-authority"
-import type { Component, ComponentProps, ValidComponent } from "solid-js"
 import { splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { VariantProps } from "class-variance-authority"
+import type { Component, ComponentProps, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/tailwind"
 
 const alertVariants = cva(
   "relative w-full rounded-lg border p-4 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground [&>svg~*]:pl-7",

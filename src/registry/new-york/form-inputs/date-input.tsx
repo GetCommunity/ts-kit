@@ -4,8 +4,8 @@ import { Portal } from "solid-js/web"
 import type { DateValue } from "@ark-ui/solid"
 import type { Setter } from "solid-js"
 
-import { formatDateValueLong } from "@/lib/dates"
-import { cn } from "@/lib/utils"
+import { formatDateValueLong } from "@/lib/utils/dates"
+import { cn } from "@/lib/utils/tailwind"
 import CloseIcon from "@/registry/new-york/icons/svg/close"
 import { Button, buttonVariants } from "@/registry/new-york/ui/button"
 import {

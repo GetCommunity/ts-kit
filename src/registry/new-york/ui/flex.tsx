@@ -1,7 +1,8 @@
-import type { Component, ComponentProps } from "solid-js"
 import { mergeProps, splitProps } from "solid-js"
 
-import { cn } from "@/lib/utils"
+import type { Component, ComponentProps } from "solid-js"
+
+import { cn } from "@/lib/utils/tailwind"
 
 type JustifyContent = "start" | "end" | "center" | "between" | "around" | "evenly"
 type AlignItems = "start" | "end" | "center" | "baseline" | "stretch"
