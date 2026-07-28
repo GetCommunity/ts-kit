@@ -4,6 +4,39 @@
   "homepage": "https://tskit.getcommunity.com",
   "items": [
     {
+      "name": "tanstack-solid",
+      "type": "registry:item",
+      "title": "TanStack SolidJS Tailwind Application Config",
+      "description": "The base config files for a tanstack, solidjs, tailwindcss application",
+      "dependencies": [
+        "@eslint/eslintrc",
+        "@eslint/js",
+        "@tanstack/eslint-config",
+        "typescript-eslint",
+        "@getcommunity/client-styleguides",
+        "@kobalte/tailwindcss",
+        "@tailwindcss/typography",
+        "tailwindcss"
+      ],
+      "files": [
+        {
+          "path": "config/components.json",
+          "type": "registry:file",
+          "target": "~/components.json"
+        },
+        {
+          "path": "config/prettier.config-tailwind.mjs",
+          "type": "registry:file",
+          "target": "~/prettier.config.js"
+        },
+        {
+          "path": "config/tailwind.config.mjs",
+          "type": "registry:file",
+          "target": "~/tailwind.config.mjs"
+        }
+      ]
+    },
+    {
       "name": "dates",
       "type": "registry:lib",
       "title": "Date Utilities",

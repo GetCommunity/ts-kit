@@ -1,0 +1,43 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "tanstack-solid",
+      "type": "registry:item",
+      "title": "TanStack SolidJS Tailwind Application Config",
+      "description": "The base config files for a tanstack, solidjs, tailwindcss application",
+      "dependencies": [
+        "@eslint/eslintrc",
+        "@eslint/js",
+        "@tanstack/eslint-config",
+        "typescript-eslint",
+        "@getcommunity/client-styleguides",
+        "@kobalte/tailwindcss",
+        "@tailwindcss/typography",
+        "tailwindcss"
+      ],
+      "files": [
+        {
+          "path": "components.json",
+          "type": "registry:file",
+          "target": "~/components.json"
+        },
+        {
+          "path": "eslint.config-tanstack.ts",
+          "type": "registry:file",
+          "target": "~/eslint.config.js"
+        },
+        {
+          "path": "prettier.config-tailwind.mjs",
+          "type": "registry:file",
+          "target": "~/prettier.config.js"
+        },
+        {
+          "path": "tailwind.config.mjs",
+          "type": "registry:file",
+          "target": "~/tailwind.config.mjs"
+        }
+      ]
+    }
+  ]
+}
