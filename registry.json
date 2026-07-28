@@ -2,5 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "tskit",
   "homepage": "https://tskit.getcommunity.com",
-  "items": []
+  "include": [
+    "src/registry/new-york/form-inputs/registry.json",
+    "src/registry/new-york/icons/registry.json",
+    "src/registry/new-york/ui/registry.json"
+  ]
 }

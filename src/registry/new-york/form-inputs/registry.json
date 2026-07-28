@@ -1,0 +1,362 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "dates",
+      "type": "registry:lib",
+      "title": "Date Utilities",
+      "description": "Shared date and time utility functions",
+      "dependencies": ["@internationalized/date"],
+      "files": [
+        {
+          "path": "../../../lib/dates.ts",
+          "type": "registry:lib",
+          "target": "lib/dates.ts"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-input",
+      "type": "registry:form-inputs",
+      "title": "Checkbox Input",
+      "description": "The checkbox input form component",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [
+        "orientation",
+        "form-input-description",
+        "form-input-errors",
+        "checkbox",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "checkbox-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/checkbox-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-switch-input",
+      "type": "registry:form-inputs",
+      "title": "Checkbox Switch Input",
+      "description": "The checkbox switch input form component",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [
+        "orientation",
+        "label",
+        "switch",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "checkbox-switch-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/checkbox-switch-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-input",
+      "type": "registry:form-inputs",
+      "title": "Combobox Input",
+      "description": "The combobox input form component",
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
+      "registryDependencies": [
+        "orientation",
+        "combobox",
+        "label",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "combobox-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/combobox-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-multi-input",
+      "type": "registry:form-inputs",
+      "title": "Combobox Multi Input",
+      "description": "The combobox multi input form component",
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
+      "registryDependencies": [
+        "orientation",
+        "closeIcon",
+        "combobox",
+        "label",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "combobox-multi-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/combobox-multi-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-input",
+      "type": "registry:form-inputs",
+      "title": "Date Input",
+      "description": "The date input form component",
+      "dependencies": ["@ark-ui/solid"],
+      "registryDependencies": [
+        "dates",
+        "closeIcon",
+        "button",
+        "date-picker",
+        "label",
+        "tooltip",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "date-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/date-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-range-input",
+      "type": "registry:form-inputs",
+      "title": "Date Range Input",
+      "description": "The date range input form component",
+      "dependencies": ["@ark-ui/solid"],
+      "registryDependencies": [
+        "dates",
+        "closeIcon",
+        "button",
+        "date-picker",
+        "label",
+        "tooltip",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "date-range-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/date-range-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "datetime-input",
+      "type": "registry:form-inputs",
+      "title": "Datetime Input",
+      "description": "The datetime input form component",
+      "dependencies": ["@internationalized/date", "@ark-ui/solid"],
+      "registryDependencies": [
+        "dates",
+        "closeIcon",
+        "button",
+        "date-picker",
+        "label",
+        "tooltip",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "datetime-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/datetime-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "file-input",
+      "type": "registry:form-inputs",
+      "title": "File Input",
+      "description": "The file input form component",
+      "registryDependencies": ["form-input-description", "form-input-errors", "label"],
+      "files": [
+        {
+          "path": "file-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/file-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form-errors",
+      "type": "registry:form-inputs",
+      "title": "Form Errors",
+      "description": "The form-level error summary component",
+      "dependencies": ["@formisch/solid"],
+      "registryDependencies": ["alert"],
+      "files": [
+        {
+          "path": "form-errors.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/form-errors.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form-input-description",
+      "type": "registry:form-inputs",
+      "title": "Form Input Description",
+      "description": "The shared form input description component",
+      "files": [
+        {
+          "path": "form-input-description.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/form-input-description.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form-input-errors",
+      "type": "registry:form-inputs",
+      "title": "Form Input Errors",
+      "description": "The shared form input validation errors component",
+      "files": [
+        {
+          "path": "form-input-errors.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/form-input-errors.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hidden-input",
+      "type": "registry:form-inputs",
+      "title": "Hidden Input",
+      "description": "The hidden input form component",
+      "files": [
+        {
+          "path": "hidden-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/hidden-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-input",
+      "type": "registry:form-inputs",
+      "title": "Number Input",
+      "description": "The number input form component",
+      "registryDependencies": ["form-input-errors", "number-field"],
+      "files": [
+        {
+          "path": "number-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/number-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-range-input",
+      "type": "registry:form-inputs",
+      "title": "Number Range Input",
+      "description": "The number range input form component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["slider", "form-input-description", "form-input-errors"],
+      "files": [
+        {
+          "path": "number-range-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/number-range-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-input",
+      "type": "registry:form-inputs",
+      "title": "Radio Group Input",
+      "description": "The radio group input form component",
+      "registryDependencies": [
+        "label",
+        "radio-group",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "radio-group-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/radio-group-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-input",
+      "type": "registry:form-inputs",
+      "title": "Select Input",
+      "description": "The select input form component",
+      "registryDependencies": ["select", "form-input-description", "form-input-errors"],
+      "files": [
+        {
+          "path": "select-input.ui.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/select-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-multi-input",
+      "type": "registry:form-inputs",
+      "title": "Select Multi Input",
+      "description": "The select multi input form component",
+      "registryDependencies": [
+        "closeIcon",
+        "select",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "select-multi-input.ui.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/select-multi-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-input",
+      "type": "registry:form-inputs",
+      "title": "Text Input",
+      "description": "The text input form component",
+      "registryDependencies": ["form-input-errors", "text-field"],
+      "files": [
+        {
+          "path": "text-input.ui.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/text-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "time-input",
+      "type": "registry:form-inputs",
+      "title": "Time Input",
+      "description": "The time input form component",
+      "dependencies": ["@internationalized/date"],
+      "registryDependencies": [
+        "dates",
+        "closeIcon",
+        "button",
+        "label",
+        "tooltip",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "time-input.ui.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/time-input.tsx"
+        }
+      ]
+    }
+  ]
+}

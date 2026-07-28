@@ -1,0 +1,18 @@
+{
+  "name": "label",
+  "type": "registry:ui",
+  "title": "Label",
+  "description": "The label component",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "label.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/label.tsx",
+      "content": "import { cva } from \"class-variance-authority\"\nimport { splitProps } from \"solid-js\"\n\nimport type { Component, ComponentProps } from \"solid-js\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst labelVariants = cva(\n  \"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\",\n  {\n    variants: {\n      variant: {\n        label: \"ui-invalid:text-destructive\",\n        description: \"font-normal text-muted-foreground\",\n        error: \"text-xs text-destructive\",\n        sub: \"text-sm font-normal text-muted-foreground\"\n      }\n    },\n    defaultVariants: {\n      variant: \"label\"\n    }\n  }\n)\n\nconst Label: Component<ComponentProps<\"label\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return <label class={cn(labelVariants(), local.class)} {...others} />\n}\n\nexport { Label, labelVariants }\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

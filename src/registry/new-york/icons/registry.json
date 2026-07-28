@@ -1,0 +1,1044 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "StrapiIcon-icon-component",
+      "type": "registry:icons",
+      "title": "Strapi Icon Component Icon",
+      "description": "A dynamic icon component for strapi backend icons",
+      "registryDependencies": [
+        "emailIcon",
+        "facebookIcon",
+        "instagramIcon",
+        "linkIcon",
+        "linkedinIcon",
+        "phoneIcon",
+        "pinterestIcon",
+        "tiktokIcon",
+        "twitterIcon"
+      ],
+      "dependencies": ["@getcommunity/gc-validators"],
+      "files": [
+        {
+          "path": "strapi-icon-component.ts",
+          "type": "registry:icons",
+          "target": "components/icons/strapi-icon-component.ts"
+        }
+      ]
+    },
+    {
+      "name": "appleIcon",
+      "type": "registry:icons",
+      "title": "Apple Icon",
+      "description": "The apple icon component",
+      "files": [
+        {
+          "path": "svg/apple.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/apple.tsx"
+        }
+      ]
+    },
+    {
+      "name": "archiveIcon",
+      "type": "registry:icons",
+      "title": "Archive Icon",
+      "description": "The archive icon component",
+      "files": [
+        {
+          "path": "svg/archive.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/archive.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ariaIcon",
+      "type": "registry:icons",
+      "title": "Aria Icon",
+      "description": "The aria icon component",
+      "files": [
+        {
+          "path": "svg/aria.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/aria.tsx"
+        }
+      ]
+    },
+    {
+      "name": "arrowLeftIcon",
+      "type": "registry:icons",
+      "title": "Arrow Left Icon",
+      "description": "The arrow left icon component",
+      "files": [
+        {
+          "path": "svg/arrowLeft.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/arrowLeft.tsx"
+        }
+      ]
+    },
+    {
+      "name": "arrowRightIcon",
+      "type": "registry:icons",
+      "title": "Arrow Right Icon",
+      "description": "The arrow right icon component",
+      "files": [
+        {
+          "path": "svg/arrowRight.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/arrowRight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "associateIcon",
+      "type": "registry:icons",
+      "title": "Associate Icon",
+      "description": "The associate icon component",
+      "files": [
+        {
+          "path": "svg/associate.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/associate.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretDownIcon",
+      "type": "registry:icons",
+      "title": "Caret Down Icon",
+      "description": "The caret down icon component",
+      "files": [
+        {
+          "path": "svg/caretDown.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretDown.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretLeftIcon",
+      "type": "registry:icons",
+      "title": "Caret Left Icon",
+      "description": "The caret left icon component",
+      "files": [
+        {
+          "path": "svg/caretLeft.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretLeft.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretRightIcon",
+      "type": "registry:icons",
+      "title": "Caret Right Icon",
+      "description": "The caret right icon component",
+      "files": [
+        {
+          "path": "svg/caretRight.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretRight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretSortIcon",
+      "type": "registry:icons",
+      "title": "Caret Sort Icon",
+      "description": "The caret sort icon component",
+      "files": [
+        {
+          "path": "svg/caretSort.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretSort.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretUpIcon",
+      "type": "registry:icons",
+      "title": "Caret Up Icon",
+      "description": "The caret up icon component",
+      "files": [
+        {
+          "path": "svg/caretUp.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretUp.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkIcon",
+      "type": "registry:icons",
+      "title": "Check Icon",
+      "description": "The check icon component",
+      "files": [
+        {
+          "path": "svg/check.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/check.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkboxIcon",
+      "type": "registry:icons",
+      "title": "Checkbox Icon",
+      "description": "The checkbox icon component",
+      "files": [
+        {
+          "path": "svg/checkbox.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkBoxCheckedIcon",
+      "type": "registry:icons",
+      "title": "Check Box Checked Icon",
+      "description": "The check box checked icon component",
+      "files": [
+        {
+          "path": "svg/checkBoxChecked.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkBoxChecked.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkBoxIndeterminateIcon",
+      "type": "registry:icons",
+      "title": "Check Box Indeterminate Icon",
+      "description": "The check box indeterminate icon component",
+      "files": [
+        {
+          "path": "svg/checkBoxIndeterminate.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkBoxIndeterminate.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkboxMinusIcon",
+      "type": "registry:icons",
+      "title": "Checkbox Minus Icon",
+      "description": "The checkbox minus icon component",
+      "files": [
+        {
+          "path": "svg/checkboxMinus.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkboxMinus.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkBoxUncheckedIcon",
+      "type": "registry:icons",
+      "title": "Check Box Unchecked Icon",
+      "description": "The check box unchecked icon component",
+      "files": [
+        {
+          "path": "svg/checkBoxUnchecked.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkBoxUnchecked.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevronDoubleLeftIcon",
+      "type": "registry:icons",
+      "title": "Chevron Double Left Icon",
+      "description": "The chevron double left icon component",
+      "files": [
+        {
+          "path": "svg/chevronDoubleLeft.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/chevronDoubleLeft.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevronDoubleRightIcon",
+      "type": "registry:icons",
+      "title": "Chevron Double Right Icon",
+      "description": "The chevron double right icon component",
+      "files": [
+        {
+          "path": "svg/chevronDoubleRight.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/chevronDoubleRight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevronLeftIcon",
+      "type": "registry:icons",
+      "title": "Chevron Left Icon",
+      "description": "The chevron left icon component",
+      "files": [
+        {
+          "path": "svg/chevronLeft.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/chevronLeft.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevronRightIcon",
+      "type": "registry:icons",
+      "title": "Chevron Right Icon",
+      "description": "The chevron right icon component",
+      "files": [
+        {
+          "path": "svg/chevronRight.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/chevronRight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "circleFillIcon",
+      "type": "registry:icons",
+      "title": "Circle Fill Icon",
+      "description": "The circle fill icon component",
+      "files": [
+        {
+          "path": "svg/circleFill.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/circleFill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "circleOutlineIcon",
+      "type": "registry:icons",
+      "title": "Circle Outline Icon",
+      "description": "The circle outline icon component",
+      "files": [
+        {
+          "path": "svg/circleOutline.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/circleOutline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "clipboardIcon",
+      "type": "registry:icons",
+      "title": "Clipboard Icon",
+      "description": "The clipboard icon component",
+      "files": [
+        {
+          "path": "svg/clipboard.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/clipboard.tsx"
+        }
+      ]
+    },
+    {
+      "name": "closeIcon",
+      "type": "registry:icons",
+      "title": "Close Icon",
+      "description": "The close icon component",
+      "files": [
+        {
+          "path": "svg/close.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/close.tsx"
+        }
+      ]
+    },
+    {
+      "name": "columnsIcon",
+      "type": "registry:icons",
+      "title": "Columns Icon",
+      "description": "The columns icon component",
+      "files": [
+        {
+          "path": "svg/columns.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/columns.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cookieIcon",
+      "type": "registry:icons",
+      "title": "Cookie Icon",
+      "description": "The cookie icon component",
+      "files": [
+        {
+          "path": "svg/cookie.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/cookie.tsx"
+        }
+      ]
+    },
+    {
+      "name": "createIcon",
+      "type": "registry:icons",
+      "title": "Create Icon",
+      "description": "The create icon component",
+      "files": [
+        {
+          "path": "svg/create.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/create.tsx"
+        }
+      ]
+    },
+    {
+      "name": "deleteIcon",
+      "type": "registry:icons",
+      "title": "Delete Icon",
+      "description": "The delete icon component",
+      "files": [
+        {
+          "path": "svg/delete.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/delete.tsx"
+        }
+      ]
+    },
+    {
+      "name": "disassociateIcon",
+      "type": "registry:icons",
+      "title": "Disassociate Icon",
+      "description": "The disassociate icon component",
+      "files": [
+        {
+          "path": "svg/disassociate.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/disassociate.tsx"
+        }
+      ]
+    },
+    {
+      "name": "downloadIcon",
+      "type": "registry:icons",
+      "title": "Download Icon",
+      "description": "The download icon component",
+      "files": [
+        {
+          "path": "svg/download.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/download.tsx"
+        }
+      ]
+    },
+    {
+      "name": "draggableIcon",
+      "type": "registry:icons",
+      "title": "Draggable Icon",
+      "description": "The draggable icon component",
+      "files": [
+        {
+          "path": "svg/draggable.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/draggable.tsx"
+        }
+      ]
+    },
+    {
+      "name": "duplicateIcon",
+      "type": "registry:icons",
+      "title": "Duplicate Icon",
+      "description": "The duplicate icon component",
+      "files": [
+        {
+          "path": "svg/duplicate.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/duplicate.tsx"
+        }
+      ]
+    },
+    {
+      "name": "emailIcon",
+      "type": "registry:icons",
+      "title": "Email Icon",
+      "description": "The email icon component",
+      "files": [
+        {
+          "path": "svg/email.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/email.tsx"
+        }
+      ]
+    },
+    {
+      "name": "facebookIcon",
+      "type": "registry:icons",
+      "title": "Facebook Icon",
+      "description": "The facebook icon component",
+      "files": [
+        {
+          "path": "svg/facebook.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/facebook.tsx"
+        }
+      ]
+    },
+    {
+      "name": "filterIcon",
+      "type": "registry:icons",
+      "title": "Filter Icon",
+      "description": "The filter icon component",
+      "files": [
+        {
+          "path": "svg/filter.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/filter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "getcommunityIcon",
+      "type": "registry:icons",
+      "title": "Getcommunity Icon",
+      "description": "The getcommunity icon component",
+      "files": [
+        {
+          "path": "svg/getcommunity.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/getcommunity.tsx"
+        }
+      ]
+    },
+    {
+      "name": "githubIcon",
+      "type": "registry:icons",
+      "title": "Github Icon",
+      "description": "The github icon component",
+      "files": [
+        {
+          "path": "svg/github.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/github.tsx"
+        }
+      ]
+    },
+    {
+      "name": "googleIcon",
+      "type": "registry:icons",
+      "title": "Google Icon",
+      "description": "The google icon component",
+      "files": [
+        {
+          "path": "svg/google.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/google.tsx"
+        }
+      ]
+    },
+    {
+      "name": "heartFillIcon",
+      "type": "registry:icons",
+      "title": "Heart Fill Icon",
+      "description": "The heart fill icon component",
+      "files": [
+        {
+          "path": "svg/heartFill.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/heartFill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "heartOutlineIcon",
+      "type": "registry:icons",
+      "title": "Heart Outline Icon",
+      "description": "The heart outline icon component",
+      "files": [
+        {
+          "path": "svg/heartOutline.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/heartOutline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "helpIcon",
+      "type": "registry:icons",
+      "title": "Help Icon",
+      "description": "The help icon component",
+      "files": [
+        {
+          "path": "svg/help.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/help.tsx"
+        }
+      ]
+    },
+    {
+      "name": "infoIcon",
+      "type": "registry:icons",
+      "title": "Info Icon",
+      "description": "The info icon component",
+      "files": [
+        {
+          "path": "svg/info.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/info.tsx"
+        }
+      ]
+    },
+    {
+      "name": "instagramIcon",
+      "type": "registry:icons",
+      "title": "Instagram Icon",
+      "description": "The instagram icon component",
+      "files": [
+        {
+          "path": "svg/instagram.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/instagram.tsx"
+        }
+      ]
+    },
+    {
+      "name": "laptopIcon",
+      "type": "registry:icons",
+      "title": "Laptop Icon",
+      "description": "The laptop icon component",
+      "files": [
+        {
+          "path": "svg/laptop.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/laptop.tsx"
+        }
+      ]
+    },
+    {
+      "name": "linkIcon",
+      "type": "registry:icons",
+      "title": "Link Icon",
+      "description": "The link icon component",
+      "files": [
+        {
+          "path": "svg/link.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/link.tsx"
+        }
+      ]
+    },
+    {
+      "name": "linkedinIcon",
+      "type": "registry:icons",
+      "title": "Linkedin Icon",
+      "description": "The linkedin icon component",
+      "files": [
+        {
+          "path": "svg/linkedin.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/linkedin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "loginIcon",
+      "type": "registry:icons",
+      "title": "Login Icon",
+      "description": "The login icon component",
+      "files": [
+        {
+          "path": "svg/login.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/login.tsx"
+        }
+      ]
+    },
+    {
+      "name": "logoIcon",
+      "type": "registry:icons",
+      "title": "Logo Icon",
+      "description": "The logo icon component",
+      "files": [
+        {
+          "path": "svg/logo.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "logoutIcon",
+      "type": "registry:icons",
+      "title": "Logout Icon",
+      "description": "The logout icon component",
+      "files": [
+        {
+          "path": "svg/logout.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/logout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menuOpenIcon",
+      "type": "registry:icons",
+      "title": "Menu Open Icon",
+      "description": "The menu open icon component",
+      "files": [
+        {
+          "path": "svg/menuOpen.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/menuOpen.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menuOpenFullIcon",
+      "type": "registry:icons",
+      "title": "Menu Open Full Icon",
+      "description": "The menu open full icon component",
+      "files": [
+        {
+          "path": "svg/menuOpenFull.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/menuOpenFull.tsx"
+        }
+      ]
+    },
+    {
+      "name": "moonIcon",
+      "type": "registry:icons",
+      "title": "Moon Icon",
+      "description": "The moon icon component",
+      "files": [
+        {
+          "path": "svg/moon.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/moon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pauseCircleFillIcon",
+      "type": "registry:icons",
+      "title": "Pause Circle Fill Icon",
+      "description": "The pause circle fill icon component",
+      "files": [
+        {
+          "path": "svg/pauseCircleFill.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/pauseCircleFill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pauseCircleOutlineIcon",
+      "type": "registry:icons",
+      "title": "Pause Circle Outline Icon",
+      "description": "The pause circle outline icon component",
+      "files": [
+        {
+          "path": "svg/pauseCircleOutline.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/pauseCircleOutline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "personIcon",
+      "type": "registry:icons",
+      "title": "Person Icon",
+      "description": "The person icon component",
+      "files": [
+        {
+          "path": "svg/person.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/person.tsx"
+        }
+      ]
+    },
+    {
+      "name": "phoneIcon",
+      "type": "registry:icons",
+      "title": "Phone Icon",
+      "description": "The phone icon component",
+      "files": [
+        {
+          "path": "svg/phone.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/phone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pinterestIcon",
+      "type": "registry:icons",
+      "title": "Pinterest Icon",
+      "description": "The pinterest icon component",
+      "files": [
+        {
+          "path": "svg/pinterest.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/pinterest.tsx"
+        }
+      ]
+    },
+    {
+      "name": "playCircleFillIcon",
+      "type": "registry:icons",
+      "title": "Play Circle Fill Icon",
+      "description": "The play circle fill icon component",
+      "files": [
+        {
+          "path": "svg/playCircleFill.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/playCircleFill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "playCircleOutlineIcon",
+      "type": "registry:icons",
+      "title": "Play Circle Outline Icon",
+      "description": "The play circle outline icon component",
+      "files": [
+        {
+          "path": "svg/playCircleOutline.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/playCircleOutline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "processIcon",
+      "type": "registry:icons",
+      "title": "Process Icon",
+      "description": "The process icon component",
+      "files": [
+        {
+          "path": "svg/process.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/process.tsx"
+        }
+      ]
+    },
+    {
+      "name": "profileIcon",
+      "type": "registry:icons",
+      "title": "Profile Icon",
+      "description": "The profile icon component",
+      "files": [
+        {
+          "path": "svg/profile.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/profile.tsx"
+        }
+      ]
+    },
+    {
+      "name": "readIcon",
+      "type": "registry:icons",
+      "title": "Read Icon",
+      "description": "The read icon component",
+      "files": [
+        {
+          "path": "svg/read.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/read.tsx"
+        }
+      ]
+    },
+    {
+      "name": "resetIcon",
+      "type": "registry:icons",
+      "title": "Reset Icon",
+      "description": "The reset icon component",
+      "files": [
+        {
+          "path": "svg/reset.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/reset.tsx"
+        }
+      ]
+    },
+    {
+      "name": "saveIcon",
+      "type": "registry:icons",
+      "title": "Save Icon",
+      "description": "The save icon component",
+      "files": [
+        {
+          "path": "svg/save.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/save.tsx"
+        }
+      ]
+    },
+    {
+      "name": "saveAllIcon",
+      "type": "registry:icons",
+      "title": "Save All Icon",
+      "description": "The save all icon component",
+      "files": [
+        {
+          "path": "svg/saveAll.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/saveAll.tsx"
+        }
+      ]
+    },
+    {
+      "name": "searchIcon",
+      "type": "registry:icons",
+      "title": "Search Icon",
+      "description": "The search icon component",
+      "files": [
+        {
+          "path": "svg/search.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/search.tsx"
+        }
+      ]
+    },
+    {
+      "name": "settingsIcon",
+      "type": "registry:icons",
+      "title": "Settings Icon",
+      "description": "The settings icon component",
+      "files": [
+        {
+          "path": "svg/settings.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/settings.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shareIcon",
+      "type": "registry:icons",
+      "title": "Share Icon",
+      "description": "The share icon component",
+      "files": [
+        {
+          "path": "svg/share.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/share.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidebarOpenIcon",
+      "type": "registry:icons",
+      "title": "Sidebar Open Icon",
+      "description": "The sidebar open icon component",
+      "files": [
+        {
+          "path": "svg/sidebarOpen.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/sidebarOpen.tsx"
+        }
+      ]
+    },
+    {
+      "name": "spinnerIcon",
+      "type": "registry:icons",
+      "title": "Spinner Icon",
+      "description": "The spinner icon component",
+      "files": [
+        {
+          "path": "svg/spinner.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/spinner.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sunIcon",
+      "type": "registry:icons",
+      "title": "Sun Icon",
+      "description": "The sun icon component",
+      "files": [
+        {
+          "path": "svg/sun.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/sun.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tailwindIcon",
+      "type": "registry:icons",
+      "title": "Tailwind Icon",
+      "description": "The tailwind icon component",
+      "files": [
+        {
+          "path": "svg/tailwind.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/tailwind.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tiktokIcon",
+      "type": "registry:icons",
+      "title": "Tiktok Icon",
+      "description": "The tiktok icon component",
+      "files": [
+        {
+          "path": "svg/tiktok.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/tiktok.tsx"
+        }
+      ]
+    },
+    {
+      "name": "twitterIcon",
+      "type": "registry:icons",
+      "title": "Twitter Icon",
+      "description": "The twitter icon component",
+      "files": [
+        {
+          "path": "svg/twitter.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/twitter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "unreadIcon",
+      "type": "registry:icons",
+      "title": "Unread Icon",
+      "description": "The unread icon component",
+      "files": [
+        {
+          "path": "svg/unread.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/unread.tsx"
+        }
+      ]
+    },
+    {
+      "name": "updateIcon",
+      "type": "registry:icons",
+      "title": "Update Icon",
+      "description": "The update icon component",
+      "files": [
+        {
+          "path": "svg/update.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/update.tsx"
+        }
+      ]
+    },
+    {
+      "name": "youtubeIcon",
+      "type": "registry:icons",
+      "title": "Youtube Icon",
+      "description": "The youtube icon component",
+      "files": [
+        {
+          "path": "svg/youtube.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/youtube.tsx"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "arrowLeftIcon",
+  "type": "registry:icons",
+  "title": "Arrow Left Icon",
+  "description": "The arrow left icon component",
+  "files": [
+    {
+      "path": "svg/arrowLeft.tsx",
+      "type": "registry:icons",
+      "target": "components/icons/svg/arrowLeft.tsx",
+      "content": "import { ComponentProps } from \"solid-js\"\n\nexport const arrowLeft = (props: ComponentProps<\"svg\">) => (\n  <svg\n    {...props}\n    fill=\"none\"\n    stroke-width=\"2\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    stroke=\"currentColor\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    viewBox=\"0 0 24 24\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n  >\n    <path d=\"M19 12 5 12\" />\n    <path d=\"M12 19 5 12 12 5\" />\n  </svg>\n)\n\nexport default arrowLeft\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

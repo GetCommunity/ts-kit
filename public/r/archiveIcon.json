@@ -1,0 +1,15 @@
+{
+  "name": "archiveIcon",
+  "type": "registry:icons",
+  "title": "Archive Icon",
+  "description": "The archive icon component",
+  "files": [
+    {
+      "path": "svg/archive.tsx",
+      "type": "registry:icons",
+      "target": "components/icons/svg/archive.tsx",
+      "content": "import { ComponentProps } from \"solid-js\"\n\nexport const archive = (props: ComponentProps<\"svg\">) => (\n  <svg\n    stroke-width=\"0\"\n    viewBox=\"0 0 512 512\"\n    style={{ overflow: \"visible\", color: \"currentcolor\", fill: \"currentcolor\" }}\n    {...props}\n  >\n    <path\n      fill=\"currentColor\"\n      d=\"M0 64c0-17.7 14.3-32 32-32h448c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V64zm32 112h448v240c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V176zm152 64c-13.3 0-24 10.7-24 24s10.7 24 24 24h144c13.3 0 24-10.7 24-24s-10.7-24-24-24H184z\"\n    />\n  </svg>\n)\n\nexport default archive\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

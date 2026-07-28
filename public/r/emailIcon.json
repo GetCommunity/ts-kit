@@ -1,0 +1,15 @@
+{
+  "name": "emailIcon",
+  "type": "registry:icons",
+  "title": "Email Icon",
+  "description": "The email icon component",
+  "files": [
+    {
+      "path": "svg/email.tsx",
+      "type": "registry:icons",
+      "target": "components/icons/svg/email.tsx",
+      "content": "import { ComponentProps } from \"solid-js\"\n\nexport const email = (props: ComponentProps<\"svg\">) => (\n  <svg\n    {...props}\n    fill=\"currentColor\"\n    stroke-width=\"0\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    viewBox=\"0 0 16 16\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n  >\n    <path\n      fill-rule=\"evenodd\"\n      d=\"m1 3.5.5-.5h13l.5.5v9l-.5.5h-13l-.5-.5v-9zm1 1.035V12h12V4.536L8.31 8.9H7.7L2 4.535zM13.03 4H2.97L8 7.869 13.03 4z\"\n      clip-rule=\"evenodd\"\n    />\n  </svg>\n)\n\nexport default email\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

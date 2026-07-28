@@ -1,0 +1,2015 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "tskit",
+  "homepage": "https://tskit.getcommunity.com",
+  "items": [
+    {
+      "name": "dates",
+      "type": "registry:lib",
+      "title": "Date Utilities",
+      "description": "Shared date and time utility functions",
+      "dependencies": [
+        "@internationalized/date"
+      ],
+      "files": [
+        {
+          "path": "src/lib/dates.ts",
+          "type": "registry:lib",
+          "target": "lib/dates.ts"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-input",
+      "type": "registry:form-inputs",
+      "title": "Checkbox Input",
+      "description": "The checkbox input form component",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "orientation",
+        "form-input-description",
+        "form-input-errors",
+        "checkbox",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/checkbox-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/checkbox-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-switch-input",
+      "type": "registry:form-inputs",
+      "title": "Checkbox Switch Input",
+      "description": "The checkbox switch input form component",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "orientation",
+        "label",
+        "switch",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/checkbox-switch-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/checkbox-switch-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-input",
+      "type": "registry:form-inputs",
+      "title": "Combobox Input",
+      "description": "The combobox input form component",
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "orientation",
+        "combobox",
+        "label",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/combobox-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/combobox-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox-multi-input",
+      "type": "registry:form-inputs",
+      "title": "Combobox Multi Input",
+      "description": "The combobox multi input form component",
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "orientation",
+        "closeIcon",
+        "combobox",
+        "label",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/combobox-multi-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/combobox-multi-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-input",
+      "type": "registry:form-inputs",
+      "title": "Date Input",
+      "description": "The date input form component",
+      "dependencies": [
+        "@ark-ui/solid"
+      ],
+      "registryDependencies": [
+        "dates",
+        "closeIcon",
+        "button",
+        "date-picker",
+        "label",
+        "tooltip",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/date-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/date-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-range-input",
+      "type": "registry:form-inputs",
+      "title": "Date Range Input",
+      "description": "The date range input form component",
+      "dependencies": [
+        "@ark-ui/solid"
+      ],
+      "registryDependencies": [
+        "dates",
+        "closeIcon",
+        "button",
+        "date-picker",
+        "label",
+        "tooltip",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/date-range-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/date-range-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "datetime-input",
+      "type": "registry:form-inputs",
+      "title": "Datetime Input",
+      "description": "The datetime input form component",
+      "dependencies": [
+        "@internationalized/date",
+        "@ark-ui/solid"
+      ],
+      "registryDependencies": [
+        "dates",
+        "closeIcon",
+        "button",
+        "date-picker",
+        "label",
+        "tooltip",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/datetime-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/datetime-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "file-input",
+      "type": "registry:form-inputs",
+      "title": "File Input",
+      "description": "The file input form component",
+      "registryDependencies": [
+        "form-input-description",
+        "form-input-errors",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/file-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/file-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form-errors",
+      "type": "registry:form-inputs",
+      "title": "Form Errors",
+      "description": "The form-level error summary component",
+      "dependencies": [
+        "@formisch/solid"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/form-errors.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/form-errors.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form-input-description",
+      "type": "registry:form-inputs",
+      "title": "Form Input Description",
+      "description": "The shared form input description component",
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/form-input-description.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/form-input-description.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form-input-errors",
+      "type": "registry:form-inputs",
+      "title": "Form Input Errors",
+      "description": "The shared form input validation errors component",
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/form-input-errors.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/form-input-errors.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hidden-input",
+      "type": "registry:form-inputs",
+      "title": "Hidden Input",
+      "description": "The hidden input form component",
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/hidden-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/hidden-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-input",
+      "type": "registry:form-inputs",
+      "title": "Number Input",
+      "description": "The number input form component",
+      "registryDependencies": [
+        "form-input-errors",
+        "number-field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/number-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/number-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-range-input",
+      "type": "registry:form-inputs",
+      "title": "Number Range Input",
+      "description": "The number range input form component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "slider",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/number-range-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/number-range-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-input",
+      "type": "registry:form-inputs",
+      "title": "Radio Group Input",
+      "description": "The radio group input form component",
+      "registryDependencies": [
+        "label",
+        "radio-group",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/radio-group-input.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/radio-group-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-input",
+      "type": "registry:form-inputs",
+      "title": "Select Input",
+      "description": "The select input form component",
+      "registryDependencies": [
+        "select",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/select-input.ui.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/select-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select-multi-input",
+      "type": "registry:form-inputs",
+      "title": "Select Multi Input",
+      "description": "The select multi input form component",
+      "registryDependencies": [
+        "closeIcon",
+        "select",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/select-multi-input.ui.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/select-multi-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-input",
+      "type": "registry:form-inputs",
+      "title": "Text Input",
+      "description": "The text input form component",
+      "registryDependencies": [
+        "form-input-errors",
+        "text-field"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/text-input.ui.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/text-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "time-input",
+      "type": "registry:form-inputs",
+      "title": "Time Input",
+      "description": "The time input form component",
+      "dependencies": [
+        "@internationalized/date"
+      ],
+      "registryDependencies": [
+        "dates",
+        "closeIcon",
+        "button",
+        "label",
+        "tooltip",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/time-input.ui.tsx",
+          "type": "registry:form-inputs",
+          "target": "components/form-inputs/time-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "StrapiIcon-icon-component",
+      "type": "registry:icons",
+      "title": "Strapi Icon Component Icon",
+      "description": "A dynamic icon component for strapi backend icons",
+      "registryDependencies": [
+        "emailIcon",
+        "facebookIcon",
+        "instagramIcon",
+        "linkIcon",
+        "linkedinIcon",
+        "phoneIcon",
+        "pinterestIcon",
+        "tiktokIcon",
+        "twitterIcon"
+      ],
+      "dependencies": [
+        "@getcommunity/gc-validators"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/strapi-icon-component.ts",
+          "type": "registry:icons",
+          "target": "components/icons/strapi-icon-component.ts"
+        }
+      ]
+    },
+    {
+      "name": "appleIcon",
+      "type": "registry:icons",
+      "title": "Apple Icon",
+      "description": "The apple icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/apple.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/apple.tsx"
+        }
+      ]
+    },
+    {
+      "name": "archiveIcon",
+      "type": "registry:icons",
+      "title": "Archive Icon",
+      "description": "The archive icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/archive.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/archive.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ariaIcon",
+      "type": "registry:icons",
+      "title": "Aria Icon",
+      "description": "The aria icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/aria.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/aria.tsx"
+        }
+      ]
+    },
+    {
+      "name": "arrowLeftIcon",
+      "type": "registry:icons",
+      "title": "Arrow Left Icon",
+      "description": "The arrow left icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/arrowLeft.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/arrowLeft.tsx"
+        }
+      ]
+    },
+    {
+      "name": "arrowRightIcon",
+      "type": "registry:icons",
+      "title": "Arrow Right Icon",
+      "description": "The arrow right icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/arrowRight.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/arrowRight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "associateIcon",
+      "type": "registry:icons",
+      "title": "Associate Icon",
+      "description": "The associate icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/associate.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/associate.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretDownIcon",
+      "type": "registry:icons",
+      "title": "Caret Down Icon",
+      "description": "The caret down icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/caretDown.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretDown.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretLeftIcon",
+      "type": "registry:icons",
+      "title": "Caret Left Icon",
+      "description": "The caret left icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/caretLeft.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretLeft.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretRightIcon",
+      "type": "registry:icons",
+      "title": "Caret Right Icon",
+      "description": "The caret right icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/caretRight.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretRight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretSortIcon",
+      "type": "registry:icons",
+      "title": "Caret Sort Icon",
+      "description": "The caret sort icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/caretSort.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretSort.tsx"
+        }
+      ]
+    },
+    {
+      "name": "caretUpIcon",
+      "type": "registry:icons",
+      "title": "Caret Up Icon",
+      "description": "The caret up icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/caretUp.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/caretUp.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkIcon",
+      "type": "registry:icons",
+      "title": "Check Icon",
+      "description": "The check icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/check.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/check.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkboxIcon",
+      "type": "registry:icons",
+      "title": "Checkbox Icon",
+      "description": "The checkbox icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/checkbox.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkBoxCheckedIcon",
+      "type": "registry:icons",
+      "title": "Check Box Checked Icon",
+      "description": "The check box checked icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/checkBoxChecked.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkBoxChecked.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkBoxIndeterminateIcon",
+      "type": "registry:icons",
+      "title": "Check Box Indeterminate Icon",
+      "description": "The check box indeterminate icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/checkBoxIndeterminate.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkBoxIndeterminate.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkboxMinusIcon",
+      "type": "registry:icons",
+      "title": "Checkbox Minus Icon",
+      "description": "The checkbox minus icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/checkboxMinus.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkboxMinus.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkBoxUncheckedIcon",
+      "type": "registry:icons",
+      "title": "Check Box Unchecked Icon",
+      "description": "The check box unchecked icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/checkBoxUnchecked.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/checkBoxUnchecked.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevronDoubleLeftIcon",
+      "type": "registry:icons",
+      "title": "Chevron Double Left Icon",
+      "description": "The chevron double left icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/chevronDoubleLeft.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/chevronDoubleLeft.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevronDoubleRightIcon",
+      "type": "registry:icons",
+      "title": "Chevron Double Right Icon",
+      "description": "The chevron double right icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/chevronDoubleRight.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/chevronDoubleRight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevronLeftIcon",
+      "type": "registry:icons",
+      "title": "Chevron Left Icon",
+      "description": "The chevron left icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/chevronLeft.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/chevronLeft.tsx"
+        }
+      ]
+    },
+    {
+      "name": "chevronRightIcon",
+      "type": "registry:icons",
+      "title": "Chevron Right Icon",
+      "description": "The chevron right icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/chevronRight.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/chevronRight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "circleFillIcon",
+      "type": "registry:icons",
+      "title": "Circle Fill Icon",
+      "description": "The circle fill icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/circleFill.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/circleFill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "circleOutlineIcon",
+      "type": "registry:icons",
+      "title": "Circle Outline Icon",
+      "description": "The circle outline icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/circleOutline.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/circleOutline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "clipboardIcon",
+      "type": "registry:icons",
+      "title": "Clipboard Icon",
+      "description": "The clipboard icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/clipboard.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/clipboard.tsx"
+        }
+      ]
+    },
+    {
+      "name": "closeIcon",
+      "type": "registry:icons",
+      "title": "Close Icon",
+      "description": "The close icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/close.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/close.tsx"
+        }
+      ]
+    },
+    {
+      "name": "columnsIcon",
+      "type": "registry:icons",
+      "title": "Columns Icon",
+      "description": "The columns icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/columns.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/columns.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cookieIcon",
+      "type": "registry:icons",
+      "title": "Cookie Icon",
+      "description": "The cookie icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/cookie.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/cookie.tsx"
+        }
+      ]
+    },
+    {
+      "name": "createIcon",
+      "type": "registry:icons",
+      "title": "Create Icon",
+      "description": "The create icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/create.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/create.tsx"
+        }
+      ]
+    },
+    {
+      "name": "deleteIcon",
+      "type": "registry:icons",
+      "title": "Delete Icon",
+      "description": "The delete icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/delete.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/delete.tsx"
+        }
+      ]
+    },
+    {
+      "name": "disassociateIcon",
+      "type": "registry:icons",
+      "title": "Disassociate Icon",
+      "description": "The disassociate icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/disassociate.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/disassociate.tsx"
+        }
+      ]
+    },
+    {
+      "name": "downloadIcon",
+      "type": "registry:icons",
+      "title": "Download Icon",
+      "description": "The download icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/download.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/download.tsx"
+        }
+      ]
+    },
+    {
+      "name": "draggableIcon",
+      "type": "registry:icons",
+      "title": "Draggable Icon",
+      "description": "The draggable icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/draggable.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/draggable.tsx"
+        }
+      ]
+    },
+    {
+      "name": "duplicateIcon",
+      "type": "registry:icons",
+      "title": "Duplicate Icon",
+      "description": "The duplicate icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/duplicate.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/duplicate.tsx"
+        }
+      ]
+    },
+    {
+      "name": "emailIcon",
+      "type": "registry:icons",
+      "title": "Email Icon",
+      "description": "The email icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/email.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/email.tsx"
+        }
+      ]
+    },
+    {
+      "name": "facebookIcon",
+      "type": "registry:icons",
+      "title": "Facebook Icon",
+      "description": "The facebook icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/facebook.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/facebook.tsx"
+        }
+      ]
+    },
+    {
+      "name": "filterIcon",
+      "type": "registry:icons",
+      "title": "Filter Icon",
+      "description": "The filter icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/filter.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/filter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "getcommunityIcon",
+      "type": "registry:icons",
+      "title": "Getcommunity Icon",
+      "description": "The getcommunity icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/getcommunity.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/getcommunity.tsx"
+        }
+      ]
+    },
+    {
+      "name": "githubIcon",
+      "type": "registry:icons",
+      "title": "Github Icon",
+      "description": "The github icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/github.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/github.tsx"
+        }
+      ]
+    },
+    {
+      "name": "googleIcon",
+      "type": "registry:icons",
+      "title": "Google Icon",
+      "description": "The google icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/google.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/google.tsx"
+        }
+      ]
+    },
+    {
+      "name": "heartFillIcon",
+      "type": "registry:icons",
+      "title": "Heart Fill Icon",
+      "description": "The heart fill icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/heartFill.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/heartFill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "heartOutlineIcon",
+      "type": "registry:icons",
+      "title": "Heart Outline Icon",
+      "description": "The heart outline icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/heartOutline.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/heartOutline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "helpIcon",
+      "type": "registry:icons",
+      "title": "Help Icon",
+      "description": "The help icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/help.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/help.tsx"
+        }
+      ]
+    },
+    {
+      "name": "infoIcon",
+      "type": "registry:icons",
+      "title": "Info Icon",
+      "description": "The info icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/info.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/info.tsx"
+        }
+      ]
+    },
+    {
+      "name": "instagramIcon",
+      "type": "registry:icons",
+      "title": "Instagram Icon",
+      "description": "The instagram icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/instagram.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/instagram.tsx"
+        }
+      ]
+    },
+    {
+      "name": "laptopIcon",
+      "type": "registry:icons",
+      "title": "Laptop Icon",
+      "description": "The laptop icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/laptop.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/laptop.tsx"
+        }
+      ]
+    },
+    {
+      "name": "linkIcon",
+      "type": "registry:icons",
+      "title": "Link Icon",
+      "description": "The link icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/link.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/link.tsx"
+        }
+      ]
+    },
+    {
+      "name": "linkedinIcon",
+      "type": "registry:icons",
+      "title": "Linkedin Icon",
+      "description": "The linkedin icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/linkedin.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/linkedin.tsx"
+        }
+      ]
+    },
+    {
+      "name": "loginIcon",
+      "type": "registry:icons",
+      "title": "Login Icon",
+      "description": "The login icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/login.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/login.tsx"
+        }
+      ]
+    },
+    {
+      "name": "logoIcon",
+      "type": "registry:icons",
+      "title": "Logo Icon",
+      "description": "The logo icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/logo.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "logoutIcon",
+      "type": "registry:icons",
+      "title": "Logout Icon",
+      "description": "The logout icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/logout.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/logout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menuOpenIcon",
+      "type": "registry:icons",
+      "title": "Menu Open Icon",
+      "description": "The menu open icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/menuOpen.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/menuOpen.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menuOpenFullIcon",
+      "type": "registry:icons",
+      "title": "Menu Open Full Icon",
+      "description": "The menu open full icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/menuOpenFull.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/menuOpenFull.tsx"
+        }
+      ]
+    },
+    {
+      "name": "moonIcon",
+      "type": "registry:icons",
+      "title": "Moon Icon",
+      "description": "The moon icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/moon.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/moon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pauseCircleFillIcon",
+      "type": "registry:icons",
+      "title": "Pause Circle Fill Icon",
+      "description": "The pause circle fill icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/pauseCircleFill.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/pauseCircleFill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pauseCircleOutlineIcon",
+      "type": "registry:icons",
+      "title": "Pause Circle Outline Icon",
+      "description": "The pause circle outline icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/pauseCircleOutline.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/pauseCircleOutline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "personIcon",
+      "type": "registry:icons",
+      "title": "Person Icon",
+      "description": "The person icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/person.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/person.tsx"
+        }
+      ]
+    },
+    {
+      "name": "phoneIcon",
+      "type": "registry:icons",
+      "title": "Phone Icon",
+      "description": "The phone icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/phone.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/phone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pinterestIcon",
+      "type": "registry:icons",
+      "title": "Pinterest Icon",
+      "description": "The pinterest icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/pinterest.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/pinterest.tsx"
+        }
+      ]
+    },
+    {
+      "name": "playCircleFillIcon",
+      "type": "registry:icons",
+      "title": "Play Circle Fill Icon",
+      "description": "The play circle fill icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/playCircleFill.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/playCircleFill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "playCircleOutlineIcon",
+      "type": "registry:icons",
+      "title": "Play Circle Outline Icon",
+      "description": "The play circle outline icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/playCircleOutline.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/playCircleOutline.tsx"
+        }
+      ]
+    },
+    {
+      "name": "processIcon",
+      "type": "registry:icons",
+      "title": "Process Icon",
+      "description": "The process icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/process.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/process.tsx"
+        }
+      ]
+    },
+    {
+      "name": "profileIcon",
+      "type": "registry:icons",
+      "title": "Profile Icon",
+      "description": "The profile icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/profile.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/profile.tsx"
+        }
+      ]
+    },
+    {
+      "name": "readIcon",
+      "type": "registry:icons",
+      "title": "Read Icon",
+      "description": "The read icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/read.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/read.tsx"
+        }
+      ]
+    },
+    {
+      "name": "resetIcon",
+      "type": "registry:icons",
+      "title": "Reset Icon",
+      "description": "The reset icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/reset.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/reset.tsx"
+        }
+      ]
+    },
+    {
+      "name": "saveIcon",
+      "type": "registry:icons",
+      "title": "Save Icon",
+      "description": "The save icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/save.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/save.tsx"
+        }
+      ]
+    },
+    {
+      "name": "saveAllIcon",
+      "type": "registry:icons",
+      "title": "Save All Icon",
+      "description": "The save all icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/saveAll.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/saveAll.tsx"
+        }
+      ]
+    },
+    {
+      "name": "searchIcon",
+      "type": "registry:icons",
+      "title": "Search Icon",
+      "description": "The search icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/search.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/search.tsx"
+        }
+      ]
+    },
+    {
+      "name": "settingsIcon",
+      "type": "registry:icons",
+      "title": "Settings Icon",
+      "description": "The settings icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/settings.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/settings.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shareIcon",
+      "type": "registry:icons",
+      "title": "Share Icon",
+      "description": "The share icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/share.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/share.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidebarOpenIcon",
+      "type": "registry:icons",
+      "title": "Sidebar Open Icon",
+      "description": "The sidebar open icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/sidebarOpen.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/sidebarOpen.tsx"
+        }
+      ]
+    },
+    {
+      "name": "spinnerIcon",
+      "type": "registry:icons",
+      "title": "Spinner Icon",
+      "description": "The spinner icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/spinner.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/spinner.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sunIcon",
+      "type": "registry:icons",
+      "title": "Sun Icon",
+      "description": "The sun icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/sun.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/sun.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tailwindIcon",
+      "type": "registry:icons",
+      "title": "Tailwind Icon",
+      "description": "The tailwind icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/tailwind.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/tailwind.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tiktokIcon",
+      "type": "registry:icons",
+      "title": "Tiktok Icon",
+      "description": "The tiktok icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/tiktok.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/tiktok.tsx"
+        }
+      ]
+    },
+    {
+      "name": "twitterIcon",
+      "type": "registry:icons",
+      "title": "Twitter Icon",
+      "description": "The twitter icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/twitter.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/twitter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "unreadIcon",
+      "type": "registry:icons",
+      "title": "Unread Icon",
+      "description": "The unread icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/unread.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/unread.tsx"
+        }
+      ]
+    },
+    {
+      "name": "updateIcon",
+      "type": "registry:icons",
+      "title": "Update Icon",
+      "description": "The update icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/update.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/update.tsx"
+        }
+      ]
+    },
+    {
+      "name": "youtubeIcon",
+      "type": "registry:icons",
+      "title": "Youtube Icon",
+      "description": "The youtube icon component",
+      "files": [
+        {
+          "path": "src/registry/new-york/icons/svg/youtube.tsx",
+          "type": "registry:icons",
+          "target": "components/icons/svg/youtube.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "The alert component",
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/alert.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "The accordion component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/accordion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "The avatar component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/avatar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "The badge component",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/badge.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "The breadcrumb component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/breadcrumb.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/breadcrumb.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "The button component",
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "The card component",
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "description": "The carousel component",
+      "dependencies": [
+        "embla-carousel-solid"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/carousel.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/carousel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "The checkbox component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "The collapsible component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/collapsible.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/collapsible.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "The combobox component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/combobox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/combobox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "The date picker component",
+      "dependencies": [
+        "@ark-ui/solid"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/date-picker.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/date-picker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "The dialog component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "The drawer component",
+      "dependencies": [
+        "@corvu/drawer"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/drawer.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/drawer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "The dropdown menu component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/dropdown-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dropdown-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "flex",
+      "type": "registry:ui",
+      "title": "Flex",
+      "description": "The flex component",
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/flex.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/flex.tsx"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "The label component",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/label.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "The menubar component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/menubar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/menubar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "The number field component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/number-field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/number-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "orientation",
+      "type": "registry:ui",
+      "title": "Orientation",
+      "description": "The orientation component",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/orientation.ts",
+          "type": "registry:ui",
+          "target": "components/ui/orientation.ts"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "The pagination component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/pagination.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pagination.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "The popover component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "progress-circle",
+      "type": "registry:ui",
+      "title": "Progress Circle",
+      "description": "The progress circle component",
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/progress-circle.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/progress-circle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "The progress component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/progress.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/progress.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "The radio group component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/radio-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/radio-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "The select component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "The separator component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/separator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "The slider component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "The switch component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "The table component",
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/table.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "The tabs component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-field",
+      "type": "registry:ui",
+      "title": "Text Field",
+      "description": "The text field component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "label"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/text-field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/text-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "The toast component",
+      "dependencies": [
+        "@kobalte/core",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/toast.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "The tooltip component",
+      "dependencies": [
+        "@kobalte/core"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tooltip.tsx"
+        }
+      ]
+    }
+  ]
+}

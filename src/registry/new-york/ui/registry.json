@@ -1,0 +1,487 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "The alert component",
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
+      "files": [
+        {
+          "path": "alert.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "The accordion component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/accordion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "The avatar component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "avatar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "The badge component",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "badge.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "The breadcrumb component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "breadcrumb.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/breadcrumb.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "The button component",
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
+      "files": [
+        {
+          "path": "button.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "The card component",
+      "files": [
+        {
+          "path": "card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "description": "The carousel component",
+      "dependencies": ["embla-carousel-solid"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "carousel.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/carousel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "The checkbox component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "The collapsible component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "collapsible.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/collapsible.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "The combobox component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "combobox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/combobox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "The date picker component",
+      "dependencies": ["@ark-ui/solid"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "date-picker.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/date-picker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "The dialog component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "The drawer component",
+      "dependencies": ["@corvu/drawer"],
+      "files": [
+        {
+          "path": "drawer.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/drawer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "The dropdown menu component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "dropdown-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dropdown-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "flex",
+      "type": "registry:ui",
+      "title": "Flex",
+      "description": "The flex component",
+      "files": [
+        {
+          "path": "flex.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/flex.tsx"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "The label component",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "label.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "The menubar component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "menubar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/menubar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "The number field component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "number-field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/number-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "orientation",
+      "type": "registry:ui",
+      "title": "Orientation",
+      "description": "The orientation component",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "orientation.ts",
+          "type": "registry:ui",
+          "target": "components/ui/orientation.ts"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "The pagination component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "pagination.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pagination.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "The popover component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "popover.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "progress-circle",
+      "type": "registry:ui",
+      "title": "Progress Circle",
+      "description": "The progress circle component",
+      "files": [
+        {
+          "path": "progress-circle.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/progress-circle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "The progress component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "progress.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/progress.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "The radio group component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "radio-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/radio-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "The select component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "The separator component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "separator.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/separator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "The slider component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "slider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "The switch component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "switch.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "The table component",
+      "files": [
+        {
+          "path": "table.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "The tabs component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-field",
+      "type": "registry:ui",
+      "title": "Text Field",
+      "description": "The text field component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "text-field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/text-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "The toast component",
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
+      "files": [
+        {
+          "path": "toast.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "The tooltip component",
+      "dependencies": ["@kobalte/core"],
+      "files": [
+        {
+          "path": "tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tooltip.tsx"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "orientation",
+  "type": "registry:ui",
+  "title": "Orientation",
+  "description": "The orientation component",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "orientation.ts",
+      "type": "registry:ui",
+      "target": "components/ui/orientation.ts",
+      "content": "import { cva } from \"class-variance-authority\"\n\nconst orientationVariants = cva(\"w-full inline-flex gap-1.5 max-w-full\", {\n  variants: {\n    orientation: {\n      vertical: \"flex-col\",\n      horizontal: \"flex-row\" // justify-start items-center\n    }\n  },\n  defaultVariants: {\n    orientation: \"vertical\"\n  }\n})\n\nexport { orientationVariants }\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

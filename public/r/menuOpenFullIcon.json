@@ -1,0 +1,15 @@
+{
+  "name": "menuOpenFullIcon",
+  "type": "registry:icons",
+  "title": "Menu Open Full Icon",
+  "description": "The menu open full icon component",
+  "files": [
+    {
+      "path": "svg/menuOpenFull.tsx",
+      "type": "registry:icons",
+      "target": "components/icons/svg/menuOpenFull.tsx",
+      "content": "import * as SolidJs from \"solid-js\"\n\nimport { ComponentProps } from \"solid-js\"\n\nexport const menuOpenFull = (props: ComponentProps<\"svg\">) => {\n  const [, rest] = SolidJs.splitProps(props, [\"class\"])\n  return (\n    <svg\n      fill=\"currentColor\"\n      stroke-width=\"0\"\n      viewBox=\"0 0 24 24\"\n      class={props.class}\n      {...rest}\n    >\n      <path d=\"M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z\" />\n    </svg>\n  )\n}\n\nexport default menuOpenFull\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

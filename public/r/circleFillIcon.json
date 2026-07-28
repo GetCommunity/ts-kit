@@ -1,0 +1,15 @@
+{
+  "name": "circleFillIcon",
+  "type": "registry:icons",
+  "title": "Circle Fill Icon",
+  "description": "The circle fill icon component",
+  "files": [
+    {
+      "path": "svg/circleFill.tsx",
+      "type": "registry:icons",
+      "target": "components/icons/svg/circleFill.tsx",
+      "content": "import { ComponentProps } from \"solid-js\"\n\nexport const circleFill = (props: ComponentProps<\"svg\">) => (\n  <svg\n    fill=\"currentColor\"\n    stroke-width=\"0\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    viewBox=\"0 0 512 512\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n    {...props}\n  >\n    <path d=\"M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512z\" />\n  </svg>\n)\n\nexport default circleFill\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

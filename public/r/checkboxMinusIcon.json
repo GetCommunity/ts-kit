@@ -1,0 +1,15 @@
+{
+  "name": "checkboxMinusIcon",
+  "type": "registry:icons",
+  "title": "Checkbox Minus Icon",
+  "description": "The checkbox minus icon component",
+  "files": [
+    {
+      "path": "svg/checkboxMinus.tsx",
+      "type": "registry:icons",
+      "target": "components/icons/svg/checkboxMinus.tsx",
+      "content": "import { ComponentProps } from \"solid-js\"\n\nexport const checkboxMinus = (props: ComponentProps<\"svg\">) => (\n  <svg\n    {...props}\n    fill=\"currentColor\"\n    stroke-width=\"0\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    viewBox=\"0 0 24 24\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n  >\n    <path d=\"M9.01 11h6v2h-6z\" />\n    <path d=\"M17 5H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zM7 17V7h10v10z\" />\n  </svg>\n)\n\nexport default checkboxMinus\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}
