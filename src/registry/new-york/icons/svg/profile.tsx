@@ -1,4 +1,4 @@
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const profile = (props: ComponentProps<"svg">) => (
   <svg fill="currentColor" stroke-width="0" viewBox="0 0 16 16" {...props}>

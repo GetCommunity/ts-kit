@@ -1,4 +1,4 @@
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const facebook = (props: ComponentProps<"svg">) => (
   <svg viewBox="0 0 32 32" {...props}>

@@ -1,4 +1,4 @@
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const share = (props: ComponentProps<"svg">) => (
   <svg

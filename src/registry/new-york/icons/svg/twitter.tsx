@@ -1,4 +1,4 @@
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const twitter = (props: ComponentProps<"svg">) => (
   <svg {...props} viewBox="0 0 1200 1227">

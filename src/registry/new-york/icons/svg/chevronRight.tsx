@@ -1,4 +1,4 @@
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const chevronRight = (props: ComponentProps<"svg">) => (
   <>

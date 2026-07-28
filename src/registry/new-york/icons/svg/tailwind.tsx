@@ -1,4 +1,4 @@
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const tailwind = (props: ComponentProps<"svg">) => (
   <svg viewBox="0 0 24 24" {...props}>

@@ -1,6 +1,6 @@
 import * as SolidJs from "solid-js"
 
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const sidebarOpen = (props: ComponentProps<"svg">) => {
   const [, rest] = SolidJs.splitProps(props, ["class"])

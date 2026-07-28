@@ -1,4 +1,4 @@
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const github = (props: ComponentProps<"svg">) => (
   <svg viewBox="0 0 438.549 438.549" {...props}>

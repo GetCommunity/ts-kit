@@ -1,4 +1,4 @@
-import { ComponentProps } from "solid-js"
+import type { ComponentProps } from "solid-js"
 
 export const apple = (props: ComponentProps<"svg">) => (
   <svg role="img" viewBox="0 0 24 24" {...props}>

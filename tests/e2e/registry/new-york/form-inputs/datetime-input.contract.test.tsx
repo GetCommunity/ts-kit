@@ -1,4 +1,7 @@
-import { CalendarDate, CalendarDateTime } from "@internationalized/date"
+import type { CalendarDateTime } from "@internationalized/date"
+import type { JSX } from "solid-js"
+
+import { CalendarDate } from "@internationalized/date"
 import { render, screen } from "@solidjs/testing-library"
 import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
@@ -71,7 +74,6 @@ vi.mock("@/registry/new-york/ui/date-picker", async () => {
 })
 
 import DateTimeInput from "@/registry/new-york/form-inputs/datetime-input"
-import { JSX } from "solid-js"
 
 const user = userEvent.setup()
 

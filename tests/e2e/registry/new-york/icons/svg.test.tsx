@@ -1,4 +1,4 @@
-import { Component, ComponentProps } from "solid-js"
+import type { Component, ComponentProps } from "solid-js"
 
 import AppleIcon, { apple } from "@/registry/new-york/icons/svg/apple"
 import ArchiveIcon, { archive } from "@/registry/new-york/icons/svg/archive"

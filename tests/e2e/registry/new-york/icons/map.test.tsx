@@ -1,4 +1,5 @@
 import type { StrapiIconName } from "@getcommunity/gc-validators/base"
+import type { Component, ComponentProps } from "solid-js"
 
 import {
   getStrapiIconComponent,
@@ -14,7 +15,6 @@ import PinterestIcon from "@/registry/new-york/icons/svg/pinterest"
 import TiktokIcon from "@/registry/new-york/icons/svg/tiktok"
 import TwitterIcon from "@/registry/new-york/icons/svg/twitter"
 import { render, screen } from "@solidjs/testing-library"
-import { Component, ComponentProps } from "solid-js"
 
 const mappedIcons = {
   link: LinkIcon,
