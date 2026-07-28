@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@solidjs/testing-library"
+import { render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 
 import {
   Dialog,
@@ -10,8 +11,10 @@ import {
   DialogTrigger
 } from "@/registry/new-york/ui/dialog"
 
+const user = userEvent.setup()
+
 describe("Dialog", () => {
-  it("renders open dialog content and handles close clicks", () => {
+  it("renders open dialog content and handles close clicks", async () => {
     const handleClose = vi.fn()
 
     render(() => (
@@ -31,7 +34,7 @@ describe("Dialog", () => {
     expect(screen.getByText("Dialog title")).toHaveClass("text-lg")
     expect(screen.getByText("Dialog description")).toHaveClass("text-muted-foreground")
 
-    fireEvent.click(screen.getByRole("button", { name: "Dismiss" }))
+    await user.click(screen.getByRole("button", { name: "Dismiss" }))
 
     expect(handleClose).toHaveBeenCalledTimes(1)
   })

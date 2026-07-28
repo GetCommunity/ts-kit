@@ -1,8 +1,9 @@
 import { CalendarDate, CalendarDateTime } from "@internationalized/date"
-import { fireEvent, render, screen } from "@solidjs/testing-library"
+import { render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
-vi.mock("@/registry/new-york/ui/date-picker", () => {
+vi.mock("@/registry/new-york/ui/date-picker", async () => {
   type DatePickerApi = {
     getMonthsGrid: () => Array<Array<{ label: string; value: CalendarDate }>>
     getYearsGrid: () => Array<Array<{ label: string; value: CalendarDate }>>
@@ -72,18 +73,20 @@ vi.mock("@/registry/new-york/ui/date-picker", () => {
 import DateTimeInput from "@/registry/new-york/form-inputs/datetime-input"
 import { JSX } from "solid-js"
 
+const user = userEvent.setup()
+
 describe("DateTimeInput date-picker composition contract", () => {
-  it("reactively sets and unsets values from the date-picker boundary", () => {
+  it("reactively sets and unsets values from the date-picker boundary", async () => {
     const [value, setValue] = createSignal<Array<CalendarDateTime>>([])
     render(() => (
       <DateTimeInput name="contract-datetime" value={value()} onChange={setValue} />
     ))
 
-    fireEvent.click(screen.getByText("selected date change"))
+    await user.click(screen.getByText("selected date change"))
     expect(screen.getByLabelText("contract-datetime time")).toHaveValue("00:00")
     expect(screen.getByLabelText("contract-datetime time")).toBeEnabled()
 
-    fireEvent.click(screen.getByText("empty date change"))
+    await user.click(screen.getByText("empty date change"))
     expect(screen.getByLabelText("contract-datetime time")).toBeDisabled()
   })
 })

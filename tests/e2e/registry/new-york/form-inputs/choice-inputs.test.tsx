@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
 import CheckboxInput from "@/registry/new-york/form-inputs/checkbox-input"
@@ -23,8 +24,10 @@ const options: Array<Option> = [
   { label: "Delta", value: "delta" }
 ]
 
+const user = userEvent.setup()
+
 describe("CheckboxInput", () => {
-  it("renders a decorated horizontal checkbox and toggles from its row", () => {
+  it("renders a decorated horizontal checkbox and toggles from its row", async () => {
     const [checked, setChecked] = createSignal(false)
     const { container } = render(() => (
       <CheckboxInput
@@ -54,13 +57,13 @@ describe("CheckboxInput", () => {
       "checkbox-class"
     )
 
-    fireEvent.click(screen.getByText("Accept terms"))
+    await user.click(screen.getByText("Accept terms"))
     expect(screen.getByRole("checkbox")).toBeChecked()
-    fireEvent.click(screen.getByText("Accept terms"))
+    await user.click(screen.getByText("Accept terms"))
     expect(screen.getByRole("checkbox")).not.toBeChecked()
   })
 
-  it("does not toggle when disabled and supports the vertical checked state", () => {
+  it("does not toggle when disabled and supports the vertical checked state", async () => {
     const onChange = vi.fn()
     const { container } = render(() => (
       <CheckboxInput
@@ -78,11 +81,11 @@ describe("CheckboxInput", () => {
 
     expect(screen.getByRole("checkbox")).toBeChecked()
     expect(container.firstElementChild).toHaveClass("cursor-not-allowed")
-    fireEvent.click(screen.getByText("Receive updates"))
+    await user.click(screen.getByText("Receive updates"))
     expect(onChange).not.toHaveBeenCalled()
   })
 
-  it("renders a plain vertical checkbox without error styling", () => {
+  it("renders a plain vertical checkbox without error styling", async () => {
     render(() => (
       <CheckboxInput
         name="plain-checkbox"
@@ -99,7 +102,7 @@ describe("CheckboxInput", () => {
 })
 
 describe("CheckboxSwitchInput", () => {
-  it("renders, toggles, and forwards key presses", () => {
+  it("renders, toggles, and forwards key presses", async () => {
     const [checked, setChecked] = createSignal(false)
     const onKeyPress = vi.fn()
     const { container } = render(() => (
@@ -127,13 +130,13 @@ describe("CheckboxSwitchInput", () => {
     expect(container.firstElementChild).toHaveClass("grid-cols-2")
 
     const switchRow = container.querySelector(".switch-class") as HTMLElement
-    fireEvent.click(switchRow)
+    await user.click(switchRow)
     expect(screen.getByRole("switch")).toBeChecked()
     fireEvent.keyPress(switchRow, { key: "Enter" })
     expect(onKeyPress).toHaveBeenCalledOnce()
   })
 
-  it("handles its item label and ignores row events when disabled", () => {
+  it("handles its item label and ignores row events when disabled", async () => {
     const labelChange = vi.fn()
     const first = render(() => (
       <CheckboxSwitchInput
@@ -146,7 +149,7 @@ describe("CheckboxSwitchInput", () => {
         itemDescription="Plain description"
       />
     ))
-    fireEvent.click(screen.getByText("Label switch"))
+    await user.click(screen.getByText("Label switch"))
     expect(labelChange).toHaveBeenCalledWith(false)
     first.unmount()
 
@@ -167,7 +170,7 @@ describe("CheckboxSwitchInput", () => {
       />
     ))
     const row = second.container.querySelector(".disabled-row") as HTMLElement
-    fireEvent.click(row)
+    await user.click(row)
     fireEvent.keyPress(row, { key: "Enter" })
     expect(disabledChange).not.toHaveBeenCalled()
     expect(onKeyPress).not.toHaveBeenCalled()
@@ -175,7 +178,7 @@ describe("CheckboxSwitchInput", () => {
 })
 
 describe("RadioGroupInput", () => {
-  it("supports primitive options and reports selection", () => {
+  it("supports primitive options and reports selection", async () => {
     const [value, setValue] = createSignal<string | null>(null)
     render(() => (
       <RadioGroupInput
@@ -191,13 +194,13 @@ describe("RadioGroupInput", () => {
 
     expect(screen.getByText("Color")).toBeInTheDocument()
     expect(screen.getByText("Pick one.")).toBeInTheDocument()
-    fireEvent.click(screen.getByText("Blue"))
+    await user.click(screen.getByText("Blue"))
     expect(screen.getByRole("radio", { name: "Blue" })).toBeChecked()
-    fireEvent.click(screen.getByText("Red"))
+    await user.click(screen.getByText("Red"))
     expect(screen.getByRole("radio", { name: "Red" })).toBeChecked()
   })
 
-  it("supports object options, descriptions, horizontal errors, and disabled state", () => {
+  it("supports object options, descriptions, horizontal errors, and disabled state", async () => {
     const onChange = vi.fn()
     const { container } = render(() => (
       <RadioGroupInput
@@ -255,7 +258,7 @@ describe("SelectInput", () => {
     expect(screen.getByText("First, choice")).toBeInTheDocument()
     expect(screen.getByText("Second choice")).toBeInTheDocument()
     expect(screen.getByText("3")).toBeInTheDocument()
-    fireEvent.click(screen.getByRole("option", { name: /Beta/ }))
+    await user.click(screen.getByRole("option", { name: /Beta/ }))
     expect(screen.getByRole("button")).toHaveTextContent("Beta")
   })
 })
@@ -293,12 +296,12 @@ describe("SelectMultipleInput", () => {
     expect(screen.getByText("Too many selections")).toBeInTheDocument()
     const closeButtons = container.querySelectorAll('button[type="button"]')
     fireEvent.pointerDown(closeButtons[1]!)
-    fireEvent.click(closeButtons[1]!)
+    await user.click(closeButtons[1]!)
     expect(screen.getByLabelText("multi-select value")).toHaveTextContent("Beta")
 
     const updatedButtons = container.querySelectorAll('button[type="button"]')
     fireEvent.pointerDown(updatedButtons[updatedButtons.length - 1]!)
-    fireEvent.click(updatedButtons[updatedButtons.length - 1]!)
+    await user.click(updatedButtons[updatedButtons.length - 1]!)
     expect(screen.getByLabelText("multi-select value").textContent).toBe("")
 
     const trigger = container.querySelector('button[aria-haspopup="listbox"]')!
@@ -309,7 +312,7 @@ describe("SelectMultipleInput", () => {
 })
 
 describe("ComboboxInput", () => {
-  it("renders open options and emits a selected value", () => {
+  it("renders open options and emits a selected value", async () => {
     const [value, setValue] = createSignal<Option>()
     render(() => (
       <ComboboxInput
@@ -339,13 +342,13 @@ describe("ComboboxInput", () => {
     expect(screen.getByText("3")).toBeInTheDocument()
     expect(screen.getByText("Invalid choice").parentElement).toHaveClass("col-span-2")
 
-    fireEvent.click(screen.getByRole("option", { name: /Beta/ }))
+    await user.click(screen.getByRole("option", { name: /Beta/ }))
     expect(screen.getByRole("combobox")).toHaveValue("Beta")
   })
 })
 
 describe("ComboboxMultiInput", () => {
-  it("renders selected items, removes one, and clears all", () => {
+  it("renders selected items, removes one, and clears all", async () => {
     const [value, setValue] = createSignal<Array<Option>>([options[0]!, options[1]!])
     const { container } = render(() => (
       <>
@@ -383,16 +386,16 @@ describe("ComboboxMultiInput", () => {
 
     const buttons = container.querySelectorAll('button[type="button"]')
     fireEvent.pointerDown(buttons[0]!)
-    fireEvent.click(buttons[0]!)
+    await user.click(buttons[0]!)
     expect(screen.getByLabelText("multi-combobox value")).toHaveTextContent("Beta")
 
     const clearButton = container.querySelector("button.self-center")
     fireEvent.pointerDown(clearButton!)
-    fireEvent.click(clearButton!)
+    await user.click(clearButton!)
     expect(screen.getByLabelText("multi-combobox value").textContent).toBe("")
   })
 
-  it("renders without selected tags in the vertical orientation", () => {
+  it("renders without selected tags in the vertical orientation", async () => {
     render(() => (
       <ComboboxMultiInput
         name="empty-combobox"
@@ -413,7 +416,7 @@ describe("ComboboxMultiInput", () => {
     expect(screen.getByRole("combobox")).toHaveValue("")
   })
 
-  it("renders a plain vertical single combobox", () => {
+  it("renders a plain vertical single combobox", async () => {
     render(() => (
       <ComboboxInput
         name="plain-combobox"

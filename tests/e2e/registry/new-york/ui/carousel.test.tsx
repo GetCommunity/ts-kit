@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 
 const emblaMocks = vi.hoisted(() => {
   const api = {
@@ -36,6 +37,8 @@ import {
   CarouselPrevious
 } from "@/registry/new-york/ui/carousel"
 
+const user = userEvent.setup()
+
 describe("Carousel", () => {
   beforeEach(() => {
     emblaMocks.apiValue = emblaMocks.api
@@ -45,7 +48,7 @@ describe("Carousel", () => {
     emblaMocks.refValue = emblaMocks.ref
   })
 
-  it("renders carousel structure and navigation buttons", () => {
+  it("renders carousel structure and navigation buttons", async () => {
     const setApi = vi.fn()
     const plugin = {
       name: "test-plugin",
@@ -81,8 +84,8 @@ describe("Carousel", () => {
     expect(emblaMocks.plugins[0]).toHaveLength(1)
     expect(emblaMocks.api.on).toHaveBeenCalledWith("select", expect.any(Function))
 
-    fireEvent.click(screen.getByRole("button", { name: "Previous slide" }))
-    fireEvent.click(screen.getByRole("button", { name: "Next slide" }))
+    await user.click(screen.getByRole("button", { name: "Previous slide" }))
+    await user.click(screen.getByRole("button", { name: "Next slide" }))
     expect(emblaMocks.api.scrollPrev).toHaveBeenCalled()
     expect(emblaMocks.api.scrollNext).toHaveBeenCalled()
 
@@ -90,7 +93,7 @@ describe("Carousel", () => {
     expect(emblaMocks.api.off).toHaveBeenCalledWith("select", expect.any(Function))
   })
 
-  it("supports horizontal keyboard navigation and default plugins", () => {
+  it("supports horizontal keyboard navigation and default plugins", async () => {
     render(() => (
       <Carousel class="horizontal-carousel">
         <CarouselContent>
@@ -117,7 +120,7 @@ describe("Carousel", () => {
     expect(emblaMocks.api.scrollNext).toHaveBeenCalledOnce()
   })
 
-  it("stays disabled while the carousel API is unavailable", () => {
+  it("stays disabled while the carousel API is unavailable", async () => {
     emblaMocks.apiValue = undefined
 
     render(() => (
@@ -134,13 +137,13 @@ describe("Carousel", () => {
     fireEvent.keyDown(screen.getByRole("region"), { key: "ArrowRight" })
   })
 
-  it("rejects carousel parts rendered outside the provider", () => {
+  it("rejects carousel parts rendered outside the provider", async () => {
     expect(() => render(() => <CarouselContent />)).toThrow(
       "useCarousel must be used within a <Carousel />"
     )
   })
 
-  it("accepts an element-style carousel ref from the adapter", () => {
+  it("accepts an element-style carousel ref from the adapter", async () => {
     emblaMocks.refValue = document.createElement("div")
 
     render(() => (

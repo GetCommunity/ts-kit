@@ -1,9 +1,12 @@
-import { fireEvent, render, screen } from "@solidjs/testing-library"
+import { render, screen } from "@solidjs/testing-library"
+import userEvent from "@testing-library/user-event"
 
 import { Button, buttonVariants } from "@/registry/new-york/ui/button"
 
+const user = userEvent.setup()
+
 describe("Button", () => {
-  it("renders children as a button with default variant styles", () => {
+  it("renders children as a button with default variant styles", async () => {
     render(() => <Button>Save changes</Button>)
 
     const button = screen.getByRole("button", { name: "Save changes" })
@@ -13,7 +16,7 @@ describe("Button", () => {
     expect(button).toHaveClass("bg-primary", "text-primary-foreground", "h-10")
   })
 
-  it("applies variant, size, and custom classes", () => {
+  it("applies variant, size, and custom classes", async () => {
     render(() => (
       <Button variant="outline" size="sm" class="w-full">
         Filter
@@ -32,7 +35,7 @@ describe("Button", () => {
     )
   })
 
-  it("passes button props through to the root element", () => {
+  it("passes button props through to the root element", async () => {
     const handleClick = vi.fn()
 
     render(() => (
@@ -45,12 +48,12 @@ describe("Button", () => {
 
     expect(button).toHaveAttribute("type", "submit")
 
-    fireEvent.click(button)
+    await user.click(button)
 
     expect(handleClick).toHaveBeenCalledTimes(1)
   })
 
-  it("renders disabled state", () => {
+  it("renders disabled state", async () => {
     render(() => <Button disabled>Disabled action</Button>)
 
     const button = screen.getByRole("button", { name: "Disabled action" })
@@ -59,7 +62,7 @@ describe("Button", () => {
     expect(button).toHaveClass("disabled:pointer-events-none", "disabled:opacity-50")
   })
 
-  it("supports polymorphic anchor rendering", () => {
+  it("supports polymorphic anchor rendering", async () => {
     render(() => (
       <Button as="a" href="/resources" variant="link">
         View resources
@@ -73,7 +76,7 @@ describe("Button", () => {
     expect(link).toHaveClass("text-primary", "underline-offset-4")
   })
 
-  it("exports reusable variant classes", () => {
+  it("exports reusable variant classes", async () => {
     expect(buttonVariants({ variant: "destructive", size: "icon" })).toContain(
       "bg-destructive"
     )
