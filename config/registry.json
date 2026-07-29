@@ -5,7 +5,7 @@
       "name": "tanstack-solid",
       "type": "registry:item",
       "title": "TanStack SolidJS Tailwind Application Config",
-      "description": "The base config files for a tanstack, solidjs, tailwindcss application",
+      "description": "A base config files for a tanstack, solidjs, tailwindcss application",
       "dependencies": [
         "@eslint/eslintrc",
         "@eslint/js",
@@ -23,7 +23,7 @@
           "target": "~/components.json"
         },
         {
-          "path": "eslint.config-tanstack.ts",
+          "path": "eslint.config-tanstack.mjs",
           "type": "registry:file",
           "target": "~/eslint.config.js"
         },

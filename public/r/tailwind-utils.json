@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tailwind-utils",
+  "title": "Date Utilities",
+  "description": "Date and time utility scripts",
+  "dependencies": [
+    "tailwind-merge",
+    "clsx"
+  ],
+  "files": [
+    {
+      "path": "src/lib/utils/tailwind.ts",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { clsx } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
+      "type": "registry:file",
+      "target": "lib/utils/tailwind.ts"
+    }
+  ],
+  "type": "registry:item"
+}

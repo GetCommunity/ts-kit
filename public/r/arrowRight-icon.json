@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "arrowRight-icon",
+  "title": "Arrow Right Icon",
+  "description": "An arrow right icon component",
+  "files": [
+    {
+      "path": "src/registry/new-york/icons/svg/arrowRight.tsx",
+      "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const arrowRight = (props: ComponentProps<\"svg\">) => (\n  <svg\n    {...props}\n    fill=\"none\"\n    stroke-width=\"2\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    stroke=\"currentColor\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    viewBox=\"0 0 24 24\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n  >\n    <path d=\"M5 12 19 12\" />\n    <path d=\"M12 5 19 12 12 19\" />\n  </svg>\n)\n\nexport default arrowRight\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/arrowRight.tsx"
+    }
+  ],
+  "type": "registry:item"
+}

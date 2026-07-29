@@ -1,18 +1,21 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip",
-  "type": "registry:ui",
   "title": "Tooltip",
-  "description": "The tooltip component",
+  "description": "A tooltip component",
   "dependencies": [
     "@kobalte/core"
   ],
+  "registryDependencies": [
+    "tailwind-utils"
+  ],
   "files": [
     {
-      "path": "tooltip.tsx",
+      "path": "src/registry/new-york/ui/tooltip.tsx",
+      "content": "import * as TooltipPrimitive from \"@kobalte/core/tooltip\"\nimport { splitProps } from \"solid-js\"\n\nimport type { PolymorphicProps } from \"@kobalte/core/polymorphic\"\nimport type { Component, ValidComponent } from \"solid-js\"\n\nimport { cn } from \"@/lib/utils/tailwind\"\n\nconst TooltipTrigger = TooltipPrimitive.Trigger\n\nconst Tooltip: Component<TooltipPrimitive.TooltipRootProps> = (props) => {\n  return <TooltipPrimitive.Root gutter={4} {...props} />\n}\n\ntype TooltipContentProps<T extends ValidComponent = \"div\"> =\n  TooltipPrimitive.TooltipContentProps<T> & { class?: string | undefined }\n\nconst TooltipContent = <T extends ValidComponent = \"div\">(\n  props: PolymorphicProps<T, TooltipContentProps<T>>\n) => {\n  const [local, others] = splitProps(props as TooltipContentProps, [\"class\"])\n  return (\n    <TooltipPrimitive.Portal>\n      <TooltipPrimitive.Content\n        class={cn(\n          \"z-50 origin-(--kb-popover-content-transform-origin) overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95\",\n          local.class\n        )}\n        {...others}\n      />\n    </TooltipPrimitive.Portal>\n  )\n}\n\nexport { Tooltip, TooltipContent, TooltipTrigger }\n",
       "type": "registry:ui",
-      "target": "components/ui/tooltip.tsx",
-      "content": "import * as TooltipPrimitive from \"@kobalte/core/tooltip\"\nimport type { Component, ValidComponent } from \"solid-js\"\nimport { splitProps } from \"solid-js\"\n\nimport type { PolymorphicProps } from \"@kobalte/core/polymorphic\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst TooltipTrigger = TooltipPrimitive.Trigger\n\nconst Tooltip: Component<TooltipPrimitive.TooltipRootProps> = (props) => {\n  return <TooltipPrimitive.Root gutter={4} {...props} />\n}\n\ntype TooltipContentProps<T extends ValidComponent = \"div\"> =\n  TooltipPrimitive.TooltipContentProps<T> & { class?: string | undefined }\n\nconst TooltipContent = <T extends ValidComponent = \"div\">(\n  props: PolymorphicProps<T, TooltipContentProps<T>>\n) => {\n  const [local, others] = splitProps(props as TooltipContentProps, [\"class\"])\n  return (\n    <TooltipPrimitive.Portal>\n      <TooltipPrimitive.Content\n        class={cn(\n          \"z-50 origin-(--kb-popover-content-transform-origin) overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95\",\n          local.class\n        )}\n        {...others}\n      />\n    </TooltipPrimitive.Portal>\n  )\n}\n\nexport { Tooltip, TooltipContent, TooltipTrigger }\n"
+      "target": "components/ui/tooltip.tsx"
     }
   ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  "type": "registry:ui"
 }

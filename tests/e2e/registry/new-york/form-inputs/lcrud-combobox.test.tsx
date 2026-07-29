@@ -2,7 +2,7 @@ import { screen, waitFor } from "@solidjs/testing-library"
 import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
-import LCRUDCombobox from "@/registry/new-york/form-inputs/lcrud-combobox.ui"
+import LCRUDCombobox from "@/registry/new-york/form-inputs/lcrud-combobox"
 import {
   alpha,
   beta,

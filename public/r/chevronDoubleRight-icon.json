@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chevronDoubleRight-icon",
+  "title": "Chevron Double Right Icon",
+  "description": "A chevron double right icon component",
+  "files": [
+    {
+      "path": "src/registry/new-york/icons/svg/chevronDoubleRight.tsx",
+      "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const chevronDoubleRight = (props: ComponentProps<\"svg\">) => (\n  <>\n    <svg\n      {...props}\n      fill=\"none\"\n      stroke-width=\"0\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      stroke=\"currentColor\"\n      viewBox=\"0 0 24 24\"\n      style={{ overflow: \"visible\", color: \"currentcolor\" }}\n    >\n      <path\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n        stroke-width=\"1.5\"\n        d=\"m11.25 4.5 7.5 7.5-7.5 7.5m-6-15 7.5 7.5-7.5 7.5\"\n      />\n    </svg>\n  </>\n)\n\nexport default chevronDoubleRight\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/chevronDoubleRight.tsx"
+    }
+  ],
+  "type": "registry:item"
+}

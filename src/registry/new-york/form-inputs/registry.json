@@ -2,358 +2,491 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
-      "name": "dates",
-      "type": "registry:lib",
-      "title": "Date Utilities",
-      "description": "Shared date and time utility functions",
-      "dependencies": ["@internationalized/date"],
-      "files": [
-        {
-          "path": "../../../lib/dates.ts",
-          "type": "registry:lib",
-          "target": "lib/dates.ts"
-        }
-      ]
-    },
-    {
       "name": "checkbox-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Checkbox Input",
-      "description": "The checkbox input form component",
+      "description": "A checkbox input form component",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": [
         "orientation",
         "form-input-description",
         "form-input-errors",
         "checkbox",
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "checkbox-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/checkbox-input.tsx"
         }
       ]
     },
     {
       "name": "checkbox-switch-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Checkbox Switch Input",
-      "description": "The checkbox switch input form component",
+      "description": "A checkbox switch input form component",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": [
         "orientation",
         "label",
         "switch",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "checkbox-switch-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/checkbox-switch-input.tsx"
         }
       ]
     },
     {
       "name": "combobox-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Combobox Input",
-      "description": "The combobox input form component",
+      "description": "A combobox input form component",
       "dependencies": ["@kobalte/core", "class-variance-authority"],
       "registryDependencies": [
         "orientation",
         "combobox",
         "label",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "combobox-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/combobox-input.tsx"
         }
       ]
     },
     {
       "name": "combobox-multi-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Combobox Multi Input",
-      "description": "The combobox multi input form component",
+      "description": "A combobox multi input form component",
       "dependencies": ["@kobalte/core", "class-variance-authority"],
       "registryDependencies": [
         "orientation",
-        "closeIcon",
+        "close-icon",
         "combobox",
         "label",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "combobox-multi-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/combobox-multi-input.tsx"
         }
       ]
     },
     {
       "name": "date-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Date Input",
-      "description": "The date input form component",
+      "description": "A date input form component",
       "dependencies": ["@ark-ui/solid"],
       "registryDependencies": [
-        "dates",
-        "closeIcon",
+        "dates-utils",
+        "close-icon",
         "button",
         "date-picker",
         "label",
         "tooltip",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "date-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/date-input.tsx"
         }
       ]
     },
     {
       "name": "date-range-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Date Range Input",
-      "description": "The date range input form component",
+      "description": "A date range input form component",
       "dependencies": ["@ark-ui/solid"],
       "registryDependencies": [
-        "dates",
-        "closeIcon",
+        "dates-utils",
+        "close-icon",
         "button",
         "date-picker",
         "label",
         "tooltip",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "date-range-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/date-range-input.tsx"
         }
       ]
     },
     {
       "name": "datetime-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Datetime Input",
-      "description": "The datetime input form component",
+      "description": "A datetime input form component",
       "dependencies": ["@internationalized/date", "@ark-ui/solid"],
       "registryDependencies": [
-        "dates",
-        "closeIcon",
+        "dates-utils",
+        "close-icon",
         "button",
         "date-picker",
         "label",
         "tooltip",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "datetime-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/datetime-input.tsx"
         }
       ]
     },
     {
       "name": "file-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "File Input",
-      "description": "The file input form component",
-      "registryDependencies": ["form-input-description", "form-input-errors", "label"],
+      "description": "A file input form component",
+      "registryDependencies": [
+        "form-input-description",
+        "form-input-errors",
+        "label",
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "file-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/file-input.tsx"
         }
       ]
     },
     {
       "name": "form-errors",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Form Errors",
-      "description": "The form-level error summary component",
+      "description": "A form-level error summary component",
       "dependencies": ["@formisch/solid"],
-      "registryDependencies": ["alert"],
+      "registryDependencies": ["alert", "tailwind-utils"],
       "files": [
         {
           "path": "form-errors.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/form-errors.tsx"
         }
       ]
     },
     {
       "name": "form-input-description",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Form Input Description",
-      "description": "The shared form input description component",
+      "description": "A shared form input description component",
       "files": [
         {
           "path": "form-input-description.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/form-input-description.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "form-input-errors",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Form Input Errors",
-      "description": "The shared form input validation errors component",
+      "description": "A shared form input validation errors component",
       "files": [
         {
           "path": "form-input-errors.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/form-input-errors.tsx"
+        }
+      ],
+      "registryDependencies": ["tailwind-utils"]
+    },
+    {
+      "name": "hidden-input",
+      "type": "registry:component",
+      "title": "Hidden Input",
+      "description": "A hidden input form component",
+      "files": [
+        {
+          "path": "hidden-input.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/hidden-input.tsx"
+        }
+      ],
+      "registryDependencies": ["tailwind-utils"]
+    },
+    {
+      "name": "lcrud-combobox-multi",
+      "type": "registry:component",
+      "title": "LCRUD Combobox Multi",
+      "description": "A combobox multi-select input form component using tanstack query for LCRUD operations",
+      "dependencies": [
+        "@kobalte/core",
+        "@getcommunity/gc-validators",
+        "@tanstack/solid-query",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "use-infinite-query",
+        "tailwind-utils",
+        "close-icon",
+        "button",
+        "checkbox",
+        "combobox",
+        "orientation",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "lcrud-combobox-multi.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/lcrud-combobox-multi.tsx"
         }
       ]
     },
     {
-      "name": "hidden-input",
-      "type": "registry:form-inputs",
-      "title": "Hidden Input",
-      "description": "The hidden input form component",
+      "name": "lcrud-combobox",
+      "type": "registry:component",
+      "title": "LCRUD Combobox Multi",
+      "description": "A combobox single-select input form component using tanstack query for LCRUD operations",
+      "dependencies": [
+        "@kobalte/core",
+        "@getcommunity/gc-validators",
+        "@tanstack/solid-query",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "use-infinite-query",
+        "tailwind-utils",
+        "button",
+        "checkbox",
+        "combobox",
+        "orientation",
+        "form-input-description",
+        "form-input-errors"
+      ],
       "files": [
         {
-          "path": "hidden-input.tsx",
-          "type": "registry:form-inputs",
-          "target": "components/form-inputs/hidden-input.tsx"
+          "path": "lcrud-combobox.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/lcrud-combobox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "lcrud-select-multi",
+      "type": "registry:component",
+      "title": "LCRUD Select Multi",
+      "description": "A multi-select input form component using tanstack query for LCRUD operations",
+      "dependencies": [
+        "@kobalte/core",
+        "@getcommunity/gc-validators",
+        "@tanstack/solid-query",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "use-infinite-query",
+        "close-icon",
+        "button",
+        "checkbox",
+        "select",
+        "orientation",
+        "form-input-description",
+        "form-input-errors",
+        "tailwind-utils"
+      ],
+      "files": [
+        {
+          "path": "lcrud-select-multi.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/lcrud-select-multi.tsx"
+        }
+      ]
+    },
+    {
+      "name": "lcrud-select",
+      "type": "registry:component",
+      "title": "LCRUD Select",
+      "description": "A single-select input form component using tanstack query for LCRUD operations",
+      "dependencies": [
+        "@kobalte/core",
+        "@getcommunity/gc-validators",
+        "@tanstack/solid-query",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "use-infinite-query",
+        "close-icon",
+        "button",
+        "checkbox",
+        "select",
+        "orientation",
+        "form-input-description",
+        "form-input-errors",
+        "tailwind-utils"
+      ],
+      "files": [
+        {
+          "path": "lcrud-select.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/lcrud-select.tsx"
         }
       ]
     },
     {
       "name": "number-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Number Input",
-      "description": "The number input form component",
-      "registryDependencies": ["form-input-errors", "number-field"],
+      "description": "A number input form component",
+      "registryDependencies": ["form-input-errors", "number-field", "tailwind-utils"],
       "files": [
         {
           "path": "number-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/number-input.tsx"
         }
       ]
     },
     {
       "name": "number-range-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Number Range Input",
-      "description": "The number range input form component",
+      "description": "A number range input form component",
       "dependencies": ["@kobalte/core"],
-      "registryDependencies": ["slider", "form-input-description", "form-input-errors"],
+      "registryDependencies": [
+        "slider",
+        "form-input-description",
+        "form-input-errors",
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "number-range-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/number-range-input.tsx"
         }
       ]
     },
     {
       "name": "radio-group-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Radio Group Input",
-      "description": "The radio group input form component",
+      "description": "A radio group input form component",
       "registryDependencies": [
         "label",
         "radio-group",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "radio-group-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/radio-group-input.tsx"
         }
       ]
     },
     {
       "name": "select-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Select Input",
-      "description": "The select input form component",
-      "registryDependencies": ["select", "form-input-description", "form-input-errors"],
+      "description": "A select input form component",
+      "registryDependencies": [
+        "select",
+        "form-input-description",
+        "form-input-errors",
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "select-input.ui.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/select-input.tsx"
         }
       ]
     },
     {
       "name": "select-multi-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Select Multi Input",
-      "description": "The select multi input form component",
+      "description": "A select multi input form component",
       "registryDependencies": [
-        "closeIcon",
+        "close-icon",
         "select",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "select-multi-input.ui.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/select-multi-input.tsx"
         }
       ]
     },
     {
       "name": "text-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Text Input",
-      "description": "The text input form component",
-      "registryDependencies": ["form-input-errors", "text-field"],
+      "description": "A text input form component",
+      "registryDependencies": ["form-input-errors", "text-field", "tailwind-utils"],
       "files": [
         {
           "path": "text-input.ui.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/text-input.tsx"
         }
       ]
     },
     {
       "name": "time-input",
-      "type": "registry:form-inputs",
+      "type": "registry:component",
       "title": "Time Input",
-      "description": "The time input form component",
+      "description": "A time input form component",
       "dependencies": ["@internationalized/date"],
       "registryDependencies": [
-        "dates",
-        "closeIcon",
+        "dates-utils",
+        "close-icon",
         "button",
         "label",
         "tooltip",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "time-input.ui.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/time-input.tsx"
         }
       ]

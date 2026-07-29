@@ -1,18 +1,18 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "collapsible",
-  "type": "registry:ui",
   "title": "Collapsible",
-  "description": "The collapsible component",
+  "description": "A collapsible component",
   "dependencies": [
     "@kobalte/core"
   ],
   "files": [
     {
-      "path": "collapsible.tsx",
+      "path": "src/registry/new-york/ui/collapsible.tsx",
+      "content": "import * as CollapsiblePrimitive from \"@kobalte/core/collapsible\"\n\nconst Collapsible = CollapsiblePrimitive.Root\n\nconst CollapsibleTrigger = CollapsiblePrimitive.Trigger\n\nconst CollapsibleContent = CollapsiblePrimitive.Content\n\nexport { Collapsible, CollapsibleContent, CollapsibleTrigger }\n",
       "type": "registry:ui",
-      "target": "components/ui/collapsible.tsx",
-      "content": "import * as CollapsiblePrimitive from \"@kobalte/core/collapsible\"\n\nconst Collapsible = CollapsiblePrimitive.Root\n\nconst CollapsibleTrigger = CollapsiblePrimitive.Trigger\n\nconst CollapsibleContent = CollapsiblePrimitive.Content\n\nexport { Collapsible, CollapsibleContent, CollapsibleTrigger }\n"
+      "target": "components/ui/collapsible.tsx"
     }
   ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+  "type": "registry:ui"
 }

@@ -2,7 +2,7 @@ import { fireEvent, screen, waitFor, within } from "@solidjs/testing-library"
 import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
-import LCRUDSelectMulti from "@/registry/new-york/form-inputs/lcrud-select-multi.ui"
+import LCRUDSelectMulti from "@/registry/new-york/form-inputs/lcrud-select-multi"
 import {
   alpha,
   beta,

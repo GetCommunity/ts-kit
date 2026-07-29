@@ -5,9 +5,8 @@
   "items": [
     {
       "name": "tanstack-solid",
-      "type": "registry:item",
       "title": "TanStack SolidJS Tailwind Application Config",
-      "description": "The base config files for a tanstack, solidjs, tailwindcss application",
+      "description": "A base config files for a tanstack, solidjs, tailwindcss application",
       "dependencies": [
         "@eslint/eslintrc",
         "@eslint/js",
@@ -25,6 +24,11 @@
           "target": "~/components.json"
         },
         {
+          "path": "config/eslint.config-tanstack.mjs",
+          "type": "registry:file",
+          "target": "~/eslint.config.js"
+        },
+        {
           "path": "config/prettier.config-tailwind.mjs",
           "type": "registry:file",
           "target": "~/prettier.config.js"
@@ -34,29 +38,63 @@
           "type": "registry:file",
           "target": "~/tailwind.config.mjs"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "dates",
-      "type": "registry:lib",
+      "name": "use-infinite-query",
+      "title": "Use Infinite Query",
+      "description": "A TanStack Query hook for fetching paginated Strapi data infinitely",
+      "dependencies": [
+        "@tanstack/solid-query",
+        "@getcommunity/gc-validators"
+      ],
+      "files": [
+        {
+          "path": "src/hooks/use-infinite-query.ts",
+          "type": "registry:hook",
+          "target": "hooks/use-infinite-query.ts"
+        }
+      ],
+      "type": "registry:hook"
+    },
+    {
+      "name": "dates-utils",
       "title": "Date Utilities",
-      "description": "Shared date and time utility functions",
+      "description": "Date and time utility scripts",
       "dependencies": [
         "@internationalized/date"
       ],
       "files": [
         {
-          "path": "src/lib/dates.ts",
-          "type": "registry:lib",
-          "target": "lib/dates.ts"
+          "path": "src/lib/utils/dates.ts",
+          "type": "registry:file",
+          "target": "lib/utils/dates.ts"
         }
-      ]
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "tailwind-utils",
+      "title": "Date Utilities",
+      "description": "Date and time utility scripts",
+      "dependencies": [
+        "tailwind-merge",
+        "clsx"
+      ],
+      "files": [
+        {
+          "path": "src/lib/utils/tailwind.ts",
+          "type": "registry:file",
+          "target": "lib/utils/tailwind.ts"
+        }
+      ],
+      "type": "registry:item"
     },
     {
       "name": "checkbox-input",
-      "type": "registry:form-inputs",
       "title": "Checkbox Input",
-      "description": "The checkbox input form component",
+      "description": "A checkbox input form component",
       "dependencies": [
         "class-variance-authority"
       ],
@@ -65,21 +103,22 @@
         "form-input-description",
         "form-input-errors",
         "checkbox",
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/checkbox-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/checkbox-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "checkbox-switch-input",
-      "type": "registry:form-inputs",
       "title": "Checkbox Switch Input",
-      "description": "The checkbox switch input form component",
+      "description": "A checkbox switch input form component",
       "dependencies": [
         "class-variance-authority"
       ],
@@ -88,21 +127,22 @@
         "label",
         "switch",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/checkbox-switch-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/checkbox-switch-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "combobox-input",
-      "type": "registry:form-inputs",
       "title": "Combobox Input",
-      "description": "The combobox input form component",
+      "description": "A combobox input form component",
       "dependencies": [
         "@kobalte/core",
         "class-variance-authority"
@@ -112,1381 +152,1529 @@
         "combobox",
         "label",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/combobox-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/combobox-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "combobox-multi-input",
-      "type": "registry:form-inputs",
       "title": "Combobox Multi Input",
-      "description": "The combobox multi input form component",
+      "description": "A combobox multi input form component",
       "dependencies": [
         "@kobalte/core",
         "class-variance-authority"
       ],
       "registryDependencies": [
         "orientation",
-        "closeIcon",
+        "close-icon",
         "combobox",
         "label",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/combobox-multi-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/combobox-multi-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "date-input",
-      "type": "registry:form-inputs",
       "title": "Date Input",
-      "description": "The date input form component",
+      "description": "A date input form component",
       "dependencies": [
         "@ark-ui/solid"
       ],
       "registryDependencies": [
-        "dates",
-        "closeIcon",
+        "dates-utils",
+        "close-icon",
         "button",
         "date-picker",
         "label",
         "tooltip",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/date-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/date-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "date-range-input",
-      "type": "registry:form-inputs",
       "title": "Date Range Input",
-      "description": "The date range input form component",
+      "description": "A date range input form component",
       "dependencies": [
         "@ark-ui/solid"
       ],
       "registryDependencies": [
-        "dates",
-        "closeIcon",
+        "dates-utils",
+        "close-icon",
         "button",
         "date-picker",
         "label",
         "tooltip",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/date-range-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/date-range-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "datetime-input",
-      "type": "registry:form-inputs",
       "title": "Datetime Input",
-      "description": "The datetime input form component",
+      "description": "A datetime input form component",
       "dependencies": [
         "@internationalized/date",
         "@ark-ui/solid"
       ],
       "registryDependencies": [
-        "dates",
-        "closeIcon",
+        "dates-utils",
+        "close-icon",
         "button",
         "date-picker",
         "label",
         "tooltip",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/datetime-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/datetime-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "file-input",
-      "type": "registry:form-inputs",
       "title": "File Input",
-      "description": "The file input form component",
+      "description": "A file input form component",
       "registryDependencies": [
         "form-input-description",
         "form-input-errors",
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/file-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/file-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "form-errors",
-      "type": "registry:form-inputs",
       "title": "Form Errors",
-      "description": "The form-level error summary component",
+      "description": "A form-level error summary component",
       "dependencies": [
         "@formisch/solid"
       ],
       "registryDependencies": [
-        "alert"
+        "alert",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/form-errors.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/form-errors.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "form-input-description",
-      "type": "registry:form-inputs",
       "title": "Form Input Description",
-      "description": "The shared form input description component",
+      "description": "A shared form input description component",
+      "registryDependencies": [
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/form-input-description.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/form-input-description.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "form-input-errors",
-      "type": "registry:form-inputs",
       "title": "Form Input Errors",
-      "description": "The shared form input validation errors component",
+      "description": "A shared form input validation errors component",
+      "registryDependencies": [
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/form-input-errors.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/form-input-errors.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "hidden-input",
-      "type": "registry:form-inputs",
       "title": "Hidden Input",
-      "description": "The hidden input form component",
+      "description": "A hidden input form component",
+      "registryDependencies": [
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/hidden-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/hidden-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "lcrud-combobox-multi",
+      "title": "LCRUD Combobox Multi",
+      "description": "A combobox multi-select input form component using tanstack query for LCRUD operations",
+      "dependencies": [
+        "@kobalte/core",
+        "@getcommunity/gc-validators",
+        "@tanstack/solid-query",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "use-infinite-query",
+        "tailwind-utils",
+        "close-icon",
+        "button",
+        "checkbox",
+        "combobox",
+        "orientation",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/lcrud-combobox-multi.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/lcrud-combobox-multi.tsx"
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "lcrud-combobox",
+      "title": "LCRUD Combobox Multi",
+      "description": "A combobox single-select input form component using tanstack query for LCRUD operations",
+      "dependencies": [
+        "@kobalte/core",
+        "@getcommunity/gc-validators",
+        "@tanstack/solid-query",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "use-infinite-query",
+        "tailwind-utils",
+        "button",
+        "checkbox",
+        "combobox",
+        "orientation",
+        "form-input-description",
+        "form-input-errors"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/lcrud-combobox.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/lcrud-combobox.tsx"
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "lcrud-select-multi",
+      "title": "LCRUD Select Multi",
+      "description": "A multi-select input form component using tanstack query for LCRUD operations",
+      "dependencies": [
+        "@kobalte/core",
+        "@getcommunity/gc-validators",
+        "@tanstack/solid-query",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "use-infinite-query",
+        "close-icon",
+        "button",
+        "checkbox",
+        "select",
+        "orientation",
+        "form-input-description",
+        "form-input-errors",
+        "tailwind-utils"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/lcrud-select-multi.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/lcrud-select-multi.tsx"
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "lcrud-select",
+      "title": "LCRUD Select",
+      "description": "A single-select input form component using tanstack query for LCRUD operations",
+      "dependencies": [
+        "@kobalte/core",
+        "@getcommunity/gc-validators",
+        "@tanstack/solid-query",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "use-infinite-query",
+        "close-icon",
+        "button",
+        "checkbox",
+        "select",
+        "orientation",
+        "form-input-description",
+        "form-input-errors",
+        "tailwind-utils"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/form-inputs/lcrud-select.tsx",
+          "type": "registry:component",
+          "target": "components/form-inputs/lcrud-select.tsx"
+        }
+      ],
+      "type": "registry:component"
     },
     {
       "name": "number-input",
-      "type": "registry:form-inputs",
       "title": "Number Input",
-      "description": "The number input form component",
+      "description": "A number input form component",
       "registryDependencies": [
         "form-input-errors",
-        "number-field"
+        "number-field",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/number-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/number-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "number-range-input",
-      "type": "registry:form-inputs",
       "title": "Number Range Input",
-      "description": "The number range input form component",
+      "description": "A number range input form component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
         "slider",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/number-range-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/number-range-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "radio-group-input",
-      "type": "registry:form-inputs",
       "title": "Radio Group Input",
-      "description": "The radio group input form component",
+      "description": "A radio group input form component",
       "registryDependencies": [
         "label",
         "radio-group",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/radio-group-input.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/radio-group-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "select-input",
-      "type": "registry:form-inputs",
       "title": "Select Input",
-      "description": "The select input form component",
+      "description": "A select input form component",
       "registryDependencies": [
         "select",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/select-input.ui.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/select-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "select-multi-input",
-      "type": "registry:form-inputs",
       "title": "Select Multi Input",
-      "description": "The select multi input form component",
+      "description": "A select multi input form component",
       "registryDependencies": [
-        "closeIcon",
+        "close-icon",
         "select",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/select-multi-input.ui.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/select-multi-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "text-input",
-      "type": "registry:form-inputs",
       "title": "Text Input",
-      "description": "The text input form component",
+      "description": "A text input form component",
       "registryDependencies": [
         "form-input-errors",
-        "text-field"
+        "text-field",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/text-input.ui.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/text-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "time-input",
-      "type": "registry:form-inputs",
       "title": "Time Input",
-      "description": "The time input form component",
+      "description": "A time input form component",
       "dependencies": [
         "@internationalized/date"
       ],
       "registryDependencies": [
-        "dates",
-        "closeIcon",
+        "dates-utils",
+        "close-icon",
         "button",
         "label",
         "tooltip",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "tailwind-utils"
       ],
       "files": [
         {
           "path": "src/registry/new-york/form-inputs/time-input.ui.tsx",
-          "type": "registry:form-inputs",
+          "type": "registry:component",
           "target": "components/form-inputs/time-input.tsx"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
-      "name": "StrapiIcon-icon-component",
-      "type": "registry:icons",
+      "name": "StrapiIcon-icon-compo-ient",
       "title": "Strapi Icon Component Icon",
       "description": "A dynamic icon component for strapi backend icons",
-      "registryDependencies": [
-        "emailIcon",
-        "facebookIcon",
-        "instagramIcon",
-        "linkIcon",
-        "linkedinIcon",
-        "phoneIcon",
-        "pinterestIcon",
-        "tiktokIcon",
-        "twitterIcon"
-      ],
       "dependencies": [
         "@getcommunity/gc-validators"
+      ],
+      "registryDependencies": [
+        "email-icon",
+        "facebook-icon",
+        "instagram-icon",
+        "link-icon",
+        "linkedin-icon",
+        "phone-icon",
+        "pinterest-icon",
+        "tiktok-icon",
+        "twitter-icon"
       ],
       "files": [
         {
           "path": "src/registry/new-york/icons/strapi-icon-component.ts",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/strapi-icon-component.ts"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "appleIcon",
-      "type": "registry:icons",
+      "name": "apple-icon",
       "title": "Apple Icon",
-      "description": "The apple icon component",
+      "description": "An apple icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/apple.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/apple.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "archiveIcon",
-      "type": "registry:icons",
+      "name": "archive-icon",
       "title": "Archive Icon",
-      "description": "The archive icon component",
+      "description": "An archive icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/archive.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/archive.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "ariaIcon",
-      "type": "registry:icons",
+      "name": "aria-icon",
       "title": "Aria Icon",
-      "description": "The aria icon component",
+      "description": "An aria icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/aria.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/aria.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "arrowLeftIcon",
-      "type": "registry:icons",
+      "name": "arrowLeft-icon",
       "title": "Arrow Left Icon",
-      "description": "The arrow left icon component",
+      "description": "An arrow left icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/arrowLeft.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/arrowLeft.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "arrowRightIcon",
-      "type": "registry:icons",
+      "name": "arrowRight-icon",
       "title": "Arrow Right Icon",
-      "description": "The arrow right icon component",
+      "description": "An arrow right icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/arrowRight.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/arrowRight.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "associateIcon",
-      "type": "registry:icons",
+      "name": "associate-icon",
       "title": "Associate Icon",
-      "description": "The associate icon component",
+      "description": "An associate icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/associate.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/associate.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "caretDownIcon",
-      "type": "registry:icons",
+      "name": "caretDown-icon",
       "title": "Caret Down Icon",
-      "description": "The caret down icon component",
+      "description": "A caret down icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/caretDown.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/caretDown.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "caretLeftIcon",
-      "type": "registry:icons",
+      "name": "caretLeft-icon",
       "title": "Caret Left Icon",
-      "description": "The caret left icon component",
+      "description": "A caret left icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/caretLeft.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/caretLeft.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "caretRightIcon",
-      "type": "registry:icons",
+      "name": "caretRight-icon",
       "title": "Caret Right Icon",
-      "description": "The caret right icon component",
+      "description": "A caret right icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/caretRight.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/caretRight.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "caretSortIcon",
-      "type": "registry:icons",
+      "name": "caretSort-icon",
       "title": "Caret Sort Icon",
-      "description": "The caret sort icon component",
+      "description": "A caret sort icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/caretSort.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/caretSort.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "caretUpIcon",
-      "type": "registry:icons",
+      "name": "caretUp-icon",
       "title": "Caret Up Icon",
-      "description": "The caret up icon component",
+      "description": "A caret up icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/caretUp.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/caretUp.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "checkIcon",
-      "type": "registry:icons",
+      "name": "check-icon",
       "title": "Check Icon",
-      "description": "The check icon component",
+      "description": "A check icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/check.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/check.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "checkboxIcon",
-      "type": "registry:icons",
+      "name": "checkbox-icon",
       "title": "Checkbox Icon",
-      "description": "The checkbox icon component",
+      "description": "A checkbox icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/checkbox.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/checkbox.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "checkBoxCheckedIcon",
-      "type": "registry:icons",
+      "name": "checkBoxChecked-icon",
       "title": "Check Box Checked Icon",
-      "description": "The check box checked icon component",
+      "description": "A check box checked icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/checkBoxChecked.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/checkBoxChecked.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "checkBoxIndeterminateIcon",
-      "type": "registry:icons",
+      "name": "checkBoxIndeterminate-icon",
       "title": "Check Box Indeterminate Icon",
-      "description": "The check box indeterminate icon component",
+      "description": "A check box indeterminate icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/checkBoxIndeterminate.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/checkBoxIndeterminate.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "checkboxMinusIcon",
-      "type": "registry:icons",
+      "name": "checkboxMinus-icon",
       "title": "Checkbox Minus Icon",
-      "description": "The checkbox minus icon component",
+      "description": "A checkbox minus icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/checkboxMinus.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/checkboxMinus.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "checkBoxUncheckedIcon",
-      "type": "registry:icons",
+      "name": "checkBoxUnchecked-icon",
       "title": "Check Box Unchecked Icon",
-      "description": "The check box unchecked icon component",
+      "description": "A check box unchecked icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/checkBoxUnchecked.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/checkBoxUnchecked.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "chevronDoubleLeftIcon",
-      "type": "registry:icons",
+      "name": "chevronDoubleLeft-icon",
       "title": "Chevron Double Left Icon",
-      "description": "The chevron double left icon component",
+      "description": "A chevron double left icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/chevronDoubleLeft.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/chevronDoubleLeft.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "chevronDoubleRightIcon",
-      "type": "registry:icons",
+      "name": "chevronDoubleRight-icon",
       "title": "Chevron Double Right Icon",
-      "description": "The chevron double right icon component",
+      "description": "A chevron double right icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/chevronDoubleRight.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/chevronDoubleRight.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "chevronLeftIcon",
-      "type": "registry:icons",
+      "name": "chevronLeft-icon",
       "title": "Chevron Left Icon",
-      "description": "The chevron left icon component",
+      "description": "A chevron left icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/chevronLeft.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/chevronLeft.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "chevronRightIcon",
-      "type": "registry:icons",
+      "name": "chevronRight-icon",
       "title": "Chevron Right Icon",
-      "description": "The chevron right icon component",
+      "description": "A chevron right icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/chevronRight.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/chevronRight.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "circleFillIcon",
-      "type": "registry:icons",
+      "name": "circleFill-icon",
       "title": "Circle Fill Icon",
-      "description": "The circle fill icon component",
+      "description": "A circle fill icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/circleFill.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/circleFill.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "circleOutlineIcon",
-      "type": "registry:icons",
+      "name": "circleOutline-icon",
       "title": "Circle Outline Icon",
-      "description": "The circle outline icon component",
+      "description": "A circle outline icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/circleOutline.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/circleOutline.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "clipboardIcon",
-      "type": "registry:icons",
+      "name": "clipboard-icon",
       "title": "Clipboard Icon",
-      "description": "The clipboard icon component",
+      "description": "A clipboard icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/clipboard.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/clipboard.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "closeIcon",
-      "type": "registry:icons",
+      "name": "close-icon",
       "title": "Close Icon",
-      "description": "The close icon component",
+      "description": "A close icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/close.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/close.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "columnsIcon",
-      "type": "registry:icons",
+      "name": "columns-icon",
       "title": "Columns Icon",
-      "description": "The columns icon component",
+      "description": "A columns icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/columns.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/columns.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "cookieIcon",
-      "type": "registry:icons",
+      "name": "cookie-icon",
       "title": "Cookie Icon",
-      "description": "The cookie icon component",
+      "description": "A cookie icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/cookie.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/cookie.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "createIcon",
-      "type": "registry:icons",
+      "name": "create-icon",
       "title": "Create Icon",
-      "description": "The create icon component",
+      "description": "A create icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/create.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/create.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "deleteIcon",
-      "type": "registry:icons",
+      "name": "delete-icon",
       "title": "Delete Icon",
-      "description": "The delete icon component",
+      "description": "A delete icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/delete.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/delete.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "disassociateIcon",
-      "type": "registry:icons",
+      "name": "disassociate-icon",
       "title": "Disassociate Icon",
-      "description": "The disassociate icon component",
+      "description": "A disassociate icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/disassociate.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/disassociate.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "downloadIcon",
-      "type": "registry:icons",
+      "name": "download-icon",
       "title": "Download Icon",
-      "description": "The download icon component",
+      "description": "A download icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/download.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/download.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "draggableIcon",
-      "type": "registry:icons",
+      "name": "draggable-icon",
       "title": "Draggable Icon",
-      "description": "The draggable icon component",
+      "description": "A draggable icon component",
+      "registryDependencies": [
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/draggable.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/draggable.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "duplicateIcon",
-      "type": "registry:icons",
+      "name": "duplicate-icon",
       "title": "Duplicate Icon",
-      "description": "The duplicate icon component",
+      "description": "A duplicate icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/duplicate.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/duplicate.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "emailIcon",
-      "type": "registry:icons",
+      "name": "email-icon",
       "title": "Email Icon",
-      "description": "The email icon component",
+      "description": "An email icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/email.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/email.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "facebookIcon",
-      "type": "registry:icons",
+      "name": "facebook-icon",
       "title": "Facebook Icon",
-      "description": "The facebook icon component",
+      "description": "A facebook icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/facebook.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/facebook.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "filterIcon",
-      "type": "registry:icons",
+      "name": "filter-icon",
       "title": "Filter Icon",
-      "description": "The filter icon component",
+      "description": "A filter icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/filter.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/filter.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "getcommunityIcon",
-      "type": "registry:icons",
+      "name": "getcommunity-icon",
       "title": "Getcommunity Icon",
-      "description": "The getcommunity icon component",
+      "description": "A getcommunity icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/getcommunity.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/getcommunity.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "githubIcon",
-      "type": "registry:icons",
+      "name": "github-icon",
       "title": "Github Icon",
-      "description": "The github icon component",
+      "description": "A github icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/github.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/github.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "googleIcon",
-      "type": "registry:icons",
+      "name": "google-icon",
       "title": "Google Icon",
-      "description": "The google icon component",
+      "description": "A google icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/google.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/google.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "heartFillIcon",
-      "type": "registry:icons",
+      "name": "heartFill-icon",
       "title": "Heart Fill Icon",
-      "description": "The heart fill icon component",
+      "description": "A heart fill icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/heartFill.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/heartFill.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "heartOutlineIcon",
-      "type": "registry:icons",
+      "name": "heartOutline-icon",
       "title": "Heart Outline Icon",
-      "description": "The heart outline icon component",
+      "description": "A heart outline icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/heartOutline.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/heartOutline.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "helpIcon",
-      "type": "registry:icons",
+      "name": "help-icon",
       "title": "Help Icon",
-      "description": "The help icon component",
+      "description": "A help icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/help.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/help.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "infoIcon",
-      "type": "registry:icons",
+      "name": "info-icon",
       "title": "Info Icon",
-      "description": "The info icon component",
+      "description": "An info icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/info.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/info.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "instagramIcon",
-      "type": "registry:icons",
+      "name": "instagram-icon",
       "title": "Instagram Icon",
-      "description": "The instagram icon component",
+      "description": "An instagram icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/instagram.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/instagram.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "laptopIcon",
-      "type": "registry:icons",
+      "name": "laptop-icon",
       "title": "Laptop Icon",
-      "description": "The laptop icon component",
+      "description": "A laptop icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/laptop.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/laptop.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "linkIcon",
-      "type": "registry:icons",
+      "name": "link-icon",
       "title": "Link Icon",
-      "description": "The link icon component",
+      "description": "A link icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/link.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/link.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "linkedinIcon",
-      "type": "registry:icons",
+      "name": "linkedin-icon",
       "title": "Linkedin Icon",
-      "description": "The linkedin icon component",
+      "description": "A linkedin icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/linkedin.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/linkedin.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "loginIcon",
-      "type": "registry:icons",
+      "name": "login-icon",
       "title": "Login Icon",
-      "description": "The login icon component",
+      "description": "A login icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/login.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/login.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "logoIcon",
-      "type": "registry:icons",
+      "name": "logo-icon",
       "title": "Logo Icon",
-      "description": "The logo icon component",
+      "description": "A logo icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/logo.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/logo.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "logoutIcon",
-      "type": "registry:icons",
+      "name": "logout-icon",
       "title": "Logout Icon",
-      "description": "The logout icon component",
+      "description": "A logout icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/logout.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/logout.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "menuOpenIcon",
-      "type": "registry:icons",
+      "name": "menuOpen-icon",
       "title": "Menu Open Icon",
-      "description": "The menu open icon component",
+      "description": "A menu open icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/menuOpen.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/menuOpen.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "menuOpenFullIcon",
-      "type": "registry:icons",
+      "name": "menuOpenFull-icon",
       "title": "Menu Open Full Icon",
-      "description": "The menu open full icon component",
+      "description": "A menu open full icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/menuOpenFull.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/menuOpenFull.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "moonIcon",
-      "type": "registry:icons",
+      "name": "moon-icon",
       "title": "Moon Icon",
-      "description": "The moon icon component",
+      "description": "A moon icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/moon.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/moon.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "pauseCircleFillIcon",
-      "type": "registry:icons",
+      "name": "pauseCircleFill-icon",
       "title": "Pause Circle Fill Icon",
-      "description": "The pause circle fill icon component",
+      "description": "A pause circle fill icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/pauseCircleFill.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/pauseCircleFill.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "pauseCircleOutlineIcon",
-      "type": "registry:icons",
+      "name": "pauseCircleOutline-icon",
       "title": "Pause Circle Outline Icon",
-      "description": "The pause circle outline icon component",
+      "description": "A pause circle outline icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/pauseCircleOutline.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/pauseCircleOutline.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "personIcon",
-      "type": "registry:icons",
+      "name": "person-icon",
       "title": "Person Icon",
-      "description": "The person icon component",
+      "description": "A person icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/person.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/person.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "phoneIcon",
-      "type": "registry:icons",
+      "name": "phone-icon",
       "title": "Phone Icon",
-      "description": "The phone icon component",
+      "description": "A phone icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/phone.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/phone.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "pinterestIcon",
-      "type": "registry:icons",
+      "name": "pinterest-icon",
       "title": "Pinterest Icon",
-      "description": "The pinterest icon component",
+      "description": "A pinterest icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/pinterest.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/pinterest.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "playCircleFillIcon",
-      "type": "registry:icons",
+      "name": "playCircleFill-icon",
       "title": "Play Circle Fill Icon",
-      "description": "The play circle fill icon component",
+      "description": "A play circle fill icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/playCircleFill.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/playCircleFill.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "playCircleOutlineIcon",
-      "type": "registry:icons",
+      "name": "playCircleOutline-icon",
       "title": "Play Circle Outline Icon",
-      "description": "The play circle outline icon component",
+      "description": "A play circle outline icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/playCircleOutline.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/playCircleOutline.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "processIcon",
-      "type": "registry:icons",
+      "name": "process-icon",
       "title": "Process Icon",
-      "description": "The process icon component",
+      "description": "A process icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/process.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/process.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "profileIcon",
-      "type": "registry:icons",
+      "name": "profile-icon",
       "title": "Profile Icon",
-      "description": "The profile icon component",
+      "description": "A profile icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/profile.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/profile.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "readIcon",
-      "type": "registry:icons",
+      "name": "read-icon",
       "title": "Read Icon",
-      "description": "The read icon component",
+      "description": "A read icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/read.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/read.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "resetIcon",
-      "type": "registry:icons",
+      "name": "reset-icon",
       "title": "Reset Icon",
-      "description": "The reset icon component",
+      "description": "A reset icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/reset.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/reset.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "saveIcon",
-      "type": "registry:icons",
+      "name": "save-icon",
       "title": "Save Icon",
-      "description": "The save icon component",
+      "description": "A save icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/save.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/save.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "saveAllIcon",
-      "type": "registry:icons",
+      "name": "saveAll-icon",
       "title": "Save All Icon",
-      "description": "The save all icon component",
+      "description": "A save all icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/saveAll.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/saveAll.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "searchIcon",
-      "type": "registry:icons",
+      "name": "search-icon",
       "title": "Search Icon",
-      "description": "The search icon component",
+      "description": "A search icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/search.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/search.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "settingsIcon",
-      "type": "registry:icons",
+      "name": "settings-icon",
       "title": "Settings Icon",
-      "description": "The settings icon component",
+      "description": "A settings icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/settings.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/settings.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "shareIcon",
-      "type": "registry:icons",
+      "name": "share-icon",
       "title": "Share Icon",
-      "description": "The share icon component",
+      "description": "A share icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/share.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/share.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "sidebarOpenIcon",
-      "type": "registry:icons",
+      "name": "sidebarOpen-icon",
       "title": "Sidebar Open Icon",
-      "description": "The sidebar open icon component",
+      "description": "A sidebar open icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/sidebarOpen.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/sidebarOpen.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "spinnerIcon",
-      "type": "registry:icons",
+      "name": "spinner-icon",
       "title": "Spinner Icon",
-      "description": "The spinner icon component",
+      "description": "A spinner icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/spinner.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/spinner.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "sunIcon",
-      "type": "registry:icons",
+      "name": "sun-icon",
       "title": "Sun Icon",
-      "description": "The sun icon component",
+      "description": "A sun icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/sun.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/sun.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "tailwindIcon",
-      "type": "registry:icons",
+      "name": "tailwind-icon",
       "title": "Tailwind Icon",
-      "description": "The tailwind icon component",
+      "description": "A tailwind icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/tailwind.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/tailwind.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "tiktokIcon",
-      "type": "registry:icons",
+      "name": "tiktok-icon",
       "title": "Tiktok Icon",
-      "description": "The tiktok icon component",
+      "description": "A tiktok icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/tiktok.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/tiktok.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "twitterIcon",
-      "type": "registry:icons",
+      "name": "twitter-icon",
       "title": "Twitter Icon",
-      "description": "The twitter icon component",
+      "description": "A twitter icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/twitter.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/twitter.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "unreadIcon",
-      "type": "registry:icons",
+      "name": "unread-icon",
       "title": "Unread Icon",
-      "description": "The unread icon component",
+      "description": "An unread icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/unread.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/unread.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "updateIcon",
-      "type": "registry:icons",
+      "name": "update-icon",
       "title": "Update Icon",
-      "description": "The update icon component",
+      "description": "An update icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/update.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/update.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
-      "name": "youtubeIcon",
-      "type": "registry:icons",
+      "name": "youtube-icon",
       "title": "Youtube Icon",
-      "description": "The youtube icon component",
+      "description": "A youtube icon component",
       "files": [
         {
           "path": "src/registry/new-york/icons/svg/youtube.tsx",
-          "type": "registry:icons",
+          "type": "registry:file",
           "target": "components/icons/svg/youtube.tsx"
         }
-      ]
+      ],
+      "type": "registry:item"
     },
     {
       "name": "alert",
-      "type": "registry:ui",
       "title": "Alert",
-      "description": "The alert component",
+      "description": "An alert component",
       "dependencies": [
         "@kobalte/core",
         "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1494,15 +1682,18 @@
           "type": "registry:ui",
           "target": "components/ui/alert.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "accordion",
-      "type": "registry:ui",
       "title": "Accordion",
-      "description": "The accordion component",
+      "description": "An accordion component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1510,15 +1701,18 @@
           "type": "registry:ui",
           "target": "components/ui/accordion.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "avatar",
-      "type": "registry:ui",
       "title": "Avatar",
-      "description": "The avatar component",
+      "description": "An avatar component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1526,15 +1720,18 @@
           "type": "registry:ui",
           "target": "components/ui/avatar.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "badge",
-      "type": "registry:ui",
       "title": "Badge",
-      "description": "The badge component",
+      "description": "A badge component",
       "dependencies": [
         "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1542,15 +1739,18 @@
           "type": "registry:ui",
           "target": "components/ui/badge.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "breadcrumb",
-      "type": "registry:ui",
       "title": "Breadcrumb",
-      "description": "The breadcrumb component",
+      "description": "A breadcrumb component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1558,16 +1758,19 @@
           "type": "registry:ui",
           "target": "components/ui/breadcrumb.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "button",
-      "type": "registry:ui",
       "title": "Button",
-      "description": "The button component",
+      "description": "A button component",
       "dependencies": [
         "@kobalte/core",
         "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1575,31 +1778,35 @@
           "type": "registry:ui",
           "target": "components/ui/button.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "card",
-      "type": "registry:ui",
       "title": "Card",
-      "description": "The card component",
+      "description": "A card component",
+      "registryDependencies": [
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/ui/card.tsx",
           "type": "registry:ui",
           "target": "components/ui/card.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "carousel",
-      "type": "registry:ui",
       "title": "Carousel",
-      "description": "The carousel component",
+      "description": "A carousel component",
       "dependencies": [
         "embla-carousel-solid"
       ],
       "registryDependencies": [
-        "button"
+        "button",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1607,15 +1814,18 @@
           "type": "registry:ui",
           "target": "components/ui/carousel.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "checkbox",
-      "type": "registry:ui",
       "title": "Checkbox",
-      "description": "The checkbox component",
+      "description": "A checkbox component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1623,13 +1833,13 @@
           "type": "registry:ui",
           "target": "components/ui/checkbox.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "collapsible",
-      "type": "registry:ui",
       "title": "Collapsible",
-      "description": "The collapsible component",
+      "description": "A collapsible component",
       "dependencies": [
         "@kobalte/core"
       ],
@@ -1639,18 +1849,19 @@
           "type": "registry:ui",
           "target": "components/ui/collapsible.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "combobox",
-      "type": "registry:ui",
       "title": "Combobox",
-      "description": "The combobox component",
+      "description": "A combobox component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1658,18 +1869,19 @@
           "type": "registry:ui",
           "target": "components/ui/combobox.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "date-picker",
-      "type": "registry:ui",
       "title": "Date Picker",
-      "description": "The date picker component",
+      "description": "A date picker component",
       "dependencies": [
         "@ark-ui/solid"
       ],
       "registryDependencies": [
-        "button"
+        "button",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1677,15 +1889,18 @@
           "type": "registry:ui",
           "target": "components/ui/date-picker.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "dialog",
-      "type": "registry:ui",
       "title": "Dialog",
-      "description": "The dialog component",
+      "description": "A dialog component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1693,15 +1908,18 @@
           "type": "registry:ui",
           "target": "components/ui/dialog.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "drawer",
-      "type": "registry:ui",
       "title": "Drawer",
-      "description": "The drawer component",
+      "description": "A drawer component",
       "dependencies": [
         "@corvu/drawer"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1709,15 +1927,18 @@
           "type": "registry:ui",
           "target": "components/ui/drawer.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "dropdown-menu",
-      "type": "registry:ui",
       "title": "Dropdown Menu",
-      "description": "The dropdown menu component",
+      "description": "A dropdown menu component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1725,28 +1946,34 @@
           "type": "registry:ui",
           "target": "components/ui/dropdown-menu.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "flex",
-      "type": "registry:ui",
       "title": "Flex",
-      "description": "The flex component",
+      "description": "A flex component",
+      "registryDependencies": [
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/ui/flex.tsx",
           "type": "registry:ui",
           "target": "components/ui/flex.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "label",
-      "type": "registry:ui",
       "title": "Label",
-      "description": "The label component",
+      "description": "A label component",
       "dependencies": [
         "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1754,15 +1981,18 @@
           "type": "registry:ui",
           "target": "components/ui/label.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "menubar",
-      "type": "registry:ui",
       "title": "Menubar",
-      "description": "The menubar component",
+      "description": "A menubar component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1770,18 +2000,19 @@
           "type": "registry:ui",
           "target": "components/ui/menubar.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "number-field",
-      "type": "registry:ui",
       "title": "Number Field",
-      "description": "The number field component",
+      "description": "A number field component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1789,13 +2020,13 @@
           "type": "registry:ui",
           "target": "components/ui/number-field.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "orientation",
-      "type": "registry:ui",
       "title": "Orientation",
-      "description": "The orientation component",
+      "description": "An orientation component",
       "dependencies": [
         "class-variance-authority"
       ],
@@ -1805,18 +2036,19 @@
           "type": "registry:ui",
           "target": "components/ui/orientation.ts"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "pagination",
-      "type": "registry:ui",
       "title": "Pagination",
-      "description": "The pagination component",
+      "description": "A pagination component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "button"
+        "button",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1824,15 +2056,18 @@
           "type": "registry:ui",
           "target": "components/ui/pagination.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "popover",
-      "type": "registry:ui",
       "title": "Popover",
-      "description": "The popover component",
+      "description": "A popover component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1840,26 +2075,29 @@
           "type": "registry:ui",
           "target": "components/ui/popover.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "progress-circle",
-      "type": "registry:ui",
       "title": "Progress Circle",
-      "description": "The progress circle component",
+      "description": "A progress circle component",
+      "registryDependencies": [
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/ui/progress-circle.tsx",
           "type": "registry:ui",
           "target": "components/ui/progress-circle.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "progress",
-      "type": "registry:ui",
       "title": "Progress",
-      "description": "The progress component",
+      "description": "A progress component",
       "dependencies": [
         "@kobalte/core"
       ],
@@ -1872,18 +2110,19 @@
           "type": "registry:ui",
           "target": "components/ui/progress.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "radio-group",
-      "type": "registry:ui",
       "title": "Radio Group",
-      "description": "The radio group component",
+      "description": "A radio group component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1891,18 +2130,19 @@
           "type": "registry:ui",
           "target": "components/ui/radio-group.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "select",
-      "type": "registry:ui",
       "title": "Select",
-      "description": "The select component",
+      "description": "A select component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1910,15 +2150,18 @@
           "type": "registry:ui",
           "target": "components/ui/select.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "separator",
-      "type": "registry:ui",
       "title": "Separator",
-      "description": "The separator component",
+      "description": "A separator component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1926,18 +2169,19 @@
           "type": "registry:ui",
           "target": "components/ui/separator.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "slider",
-      "type": "registry:ui",
       "title": "Slider",
-      "description": "The slider component",
+      "description": "A slider component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1945,15 +2189,18 @@
           "type": "registry:ui",
           "target": "components/ui/slider.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "switch",
-      "type": "registry:ui",
       "title": "Switch",
-      "description": "The switch component",
+      "description": "A switch component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1961,28 +2208,34 @@
           "type": "registry:ui",
           "target": "components/ui/switch.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "table",
-      "type": "registry:ui",
       "title": "Table",
-      "description": "The table component",
+      "description": "A table component",
+      "registryDependencies": [
+        "tailwind-utils"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/ui/table.tsx",
           "type": "registry:ui",
           "target": "components/ui/table.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "tabs",
-      "type": "registry:ui",
       "title": "Tabs",
-      "description": "The tabs component",
+      "description": "A tabs component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -1990,18 +2243,19 @@
           "type": "registry:ui",
           "target": "components/ui/tabs.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "text-field",
-      "type": "registry:ui",
       "title": "Text Field",
-      "description": "The text field component",
+      "description": "A text field component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label"
+        "label",
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -2009,16 +2263,19 @@
           "type": "registry:ui",
           "target": "components/ui/text-field.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "toast",
-      "type": "registry:ui",
       "title": "Toast",
-      "description": "The toast component",
+      "description": "A toast component",
       "dependencies": [
         "@kobalte/core",
         "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -2026,15 +2283,18 @@
           "type": "registry:ui",
           "target": "components/ui/toast.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     },
     {
       "name": "tooltip",
-      "type": "registry:ui",
       "title": "Tooltip",
-      "description": "The tooltip component",
+      "description": "A tooltip component",
       "dependencies": [
         "@kobalte/core"
+      ],
+      "registryDependencies": [
+        "tailwind-utils"
       ],
       "files": [
         {
@@ -2042,7 +2302,8 @@
           "type": "registry:ui",
           "target": "components/ui/tooltip.tsx"
         }
-      ]
+      ],
+      "type": "registry:ui"
     }
   ]
 }

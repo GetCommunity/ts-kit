@@ -5,7 +5,7 @@
       "name": "alert",
       "type": "registry:ui",
       "title": "Alert",
-      "description": "The alert component",
+      "description": "An alert component",
       "dependencies": ["@kobalte/core", "class-variance-authority"],
       "files": [
         {
@@ -13,13 +13,14 @@
           "type": "registry:ui",
           "target": "components/ui/alert.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "accordion",
       "type": "registry:ui",
       "title": "Accordion",
-      "description": "The accordion component",
+      "description": "An accordion component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -27,13 +28,14 @@
           "type": "registry:ui",
           "target": "components/ui/accordion.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "avatar",
       "type": "registry:ui",
       "title": "Avatar",
-      "description": "The avatar component",
+      "description": "An avatar component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -41,13 +43,14 @@
           "type": "registry:ui",
           "target": "components/ui/avatar.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "badge",
       "type": "registry:ui",
       "title": "Badge",
-      "description": "The badge component",
+      "description": "A badge component",
       "dependencies": ["class-variance-authority"],
       "files": [
         {
@@ -55,13 +58,14 @@
           "type": "registry:ui",
           "target": "components/ui/badge.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "breadcrumb",
       "type": "registry:ui",
       "title": "Breadcrumb",
-      "description": "The breadcrumb component",
+      "description": "A breadcrumb component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -69,13 +73,14 @@
           "type": "registry:ui",
           "target": "components/ui/breadcrumb.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
-      "description": "The button component",
+      "description": "A button component",
       "dependencies": ["@kobalte/core", "class-variance-authority"],
       "files": [
         {
@@ -83,28 +88,30 @@
           "type": "registry:ui",
           "target": "components/ui/button.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "card",
       "type": "registry:ui",
       "title": "Card",
-      "description": "The card component",
+      "description": "A card component",
       "files": [
         {
           "path": "card.tsx",
           "type": "registry:ui",
           "target": "components/ui/card.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "carousel",
       "type": "registry:ui",
       "title": "Carousel",
-      "description": "The carousel component",
+      "description": "A carousel component",
       "dependencies": ["embla-carousel-solid"],
-      "registryDependencies": ["button"],
+      "registryDependencies": ["button", "tailwind-utils"],
       "files": [
         {
           "path": "carousel.tsx",
@@ -117,7 +124,7 @@
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
-      "description": "The checkbox component",
+      "description": "A checkbox component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -125,13 +132,14 @@
           "type": "registry:ui",
           "target": "components/ui/checkbox.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "collapsible",
       "type": "registry:ui",
       "title": "Collapsible",
-      "description": "The collapsible component",
+      "description": "A collapsible component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -145,9 +153,9 @@
       "name": "combobox",
       "type": "registry:ui",
       "title": "Combobox",
-      "description": "The combobox component",
+      "description": "A combobox component",
       "dependencies": ["@kobalte/core"],
-      "registryDependencies": ["label"],
+      "registryDependencies": ["label", "tailwind-utils"],
       "files": [
         {
           "path": "combobox.tsx",
@@ -160,9 +168,9 @@
       "name": "date-picker",
       "type": "registry:ui",
       "title": "Date Picker",
-      "description": "The date picker component",
+      "description": "A date picker component",
       "dependencies": ["@ark-ui/solid"],
-      "registryDependencies": ["button"],
+      "registryDependencies": ["button", "tailwind-utils"],
       "files": [
         {
           "path": "date-picker.tsx",
@@ -175,7 +183,7 @@
       "name": "dialog",
       "type": "registry:ui",
       "title": "Dialog",
-      "description": "The dialog component",
+      "description": "A dialog component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -183,13 +191,14 @@
           "type": "registry:ui",
           "target": "components/ui/dialog.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "drawer",
       "type": "registry:ui",
       "title": "Drawer",
-      "description": "The drawer component",
+      "description": "A drawer component",
       "dependencies": ["@corvu/drawer"],
       "files": [
         {
@@ -197,13 +206,14 @@
           "type": "registry:ui",
           "target": "components/ui/drawer.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "dropdown-menu",
       "type": "registry:ui",
       "title": "Dropdown Menu",
-      "description": "The dropdown menu component",
+      "description": "A dropdown menu component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -211,26 +221,28 @@
           "type": "registry:ui",
           "target": "components/ui/dropdown-menu.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "flex",
       "type": "registry:ui",
       "title": "Flex",
-      "description": "The flex component",
+      "description": "A flex component",
       "files": [
         {
           "path": "flex.tsx",
           "type": "registry:ui",
           "target": "components/ui/flex.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
-      "description": "The label component",
+      "description": "A label component",
       "dependencies": ["class-variance-authority"],
       "files": [
         {
@@ -238,13 +250,14 @@
           "type": "registry:ui",
           "target": "components/ui/label.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "menubar",
       "type": "registry:ui",
       "title": "Menubar",
-      "description": "The menubar component",
+      "description": "A menubar component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -252,15 +265,16 @@
           "type": "registry:ui",
           "target": "components/ui/menubar.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "number-field",
       "type": "registry:ui",
       "title": "Number Field",
-      "description": "The number field component",
+      "description": "A number field component",
       "dependencies": ["@kobalte/core"],
-      "registryDependencies": ["label"],
+      "registryDependencies": ["label", "tailwind-utils"],
       "files": [
         {
           "path": "number-field.tsx",
@@ -273,7 +287,7 @@
       "name": "orientation",
       "type": "registry:ui",
       "title": "Orientation",
-      "description": "The orientation component",
+      "description": "An orientation component",
       "dependencies": ["class-variance-authority"],
       "files": [
         {
@@ -287,9 +301,9 @@
       "name": "pagination",
       "type": "registry:ui",
       "title": "Pagination",
-      "description": "The pagination component",
+      "description": "A pagination component",
       "dependencies": ["@kobalte/core"],
-      "registryDependencies": ["button"],
+      "registryDependencies": ["button", "tailwind-utils"],
       "files": [
         {
           "path": "pagination.tsx",
@@ -302,7 +316,7 @@
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
-      "description": "The popover component",
+      "description": "A popover component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -310,26 +324,28 @@
           "type": "registry:ui",
           "target": "components/ui/popover.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "progress-circle",
       "type": "registry:ui",
       "title": "Progress Circle",
-      "description": "The progress circle component",
+      "description": "A progress circle component",
       "files": [
         {
           "path": "progress-circle.tsx",
           "type": "registry:ui",
           "target": "components/ui/progress-circle.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "progress",
       "type": "registry:ui",
       "title": "Progress",
-      "description": "The progress component",
+      "description": "A progress component",
       "dependencies": ["@kobalte/core"],
       "registryDependencies": ["label"],
       "files": [
@@ -344,9 +360,9 @@
       "name": "radio-group",
       "type": "registry:ui",
       "title": "Radio Group",
-      "description": "The radio group component",
+      "description": "A radio group component",
       "dependencies": ["@kobalte/core"],
-      "registryDependencies": ["label"],
+      "registryDependencies": ["label", "tailwind-utils"],
       "files": [
         {
           "path": "radio-group.tsx",
@@ -359,9 +375,9 @@
       "name": "select",
       "type": "registry:ui",
       "title": "Select",
-      "description": "The select component",
+      "description": "A select component",
       "dependencies": ["@kobalte/core"],
-      "registryDependencies": ["label"],
+      "registryDependencies": ["label", "tailwind-utils"],
       "files": [
         {
           "path": "select.tsx",
@@ -374,7 +390,7 @@
       "name": "separator",
       "type": "registry:ui",
       "title": "Separator",
-      "description": "The separator component",
+      "description": "A separator component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -382,15 +398,16 @@
           "type": "registry:ui",
           "target": "components/ui/separator.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
-      "description": "The slider component",
+      "description": "A slider component",
       "dependencies": ["@kobalte/core"],
-      "registryDependencies": ["label"],
+      "registryDependencies": ["label", "tailwind-utils"],
       "files": [
         {
           "path": "slider.tsx",
@@ -403,7 +420,7 @@
       "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
-      "description": "The switch component",
+      "description": "A switch component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -411,26 +428,28 @@
           "type": "registry:ui",
           "target": "components/ui/switch.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "table",
       "type": "registry:ui",
       "title": "Table",
-      "description": "The table component",
+      "description": "A table component",
       "files": [
         {
           "path": "table.tsx",
           "type": "registry:ui",
           "target": "components/ui/table.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
-      "description": "The tabs component",
+      "description": "A tabs component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -438,15 +457,16 @@
           "type": "registry:ui",
           "target": "components/ui/tabs.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "text-field",
       "type": "registry:ui",
       "title": "Text Field",
-      "description": "The text field component",
+      "description": "A text field component",
       "dependencies": ["@kobalte/core"],
-      "registryDependencies": ["label"],
+      "registryDependencies": ["label", "tailwind-utils"],
       "files": [
         {
           "path": "text-field.tsx",
@@ -459,7 +479,7 @@
       "name": "toast",
       "type": "registry:ui",
       "title": "Toast",
-      "description": "The toast component",
+      "description": "A toast component",
       "dependencies": ["@kobalte/core", "class-variance-authority"],
       "files": [
         {
@@ -467,13 +487,14 @@
           "type": "registry:ui",
           "target": "components/ui/toast.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     },
     {
       "name": "tooltip",
       "type": "registry:ui",
       "title": "Tooltip",
-      "description": "The tooltip component",
+      "description": "A tooltip component",
       "dependencies": ["@kobalte/core"],
       "files": [
         {
@@ -481,7 +502,8 @@
           "type": "registry:ui",
           "target": "components/ui/tooltip.tsx"
         }
-      ]
+      ],
+      "registryDependencies": ["tailwind-utils"]
     }
   ]
 }

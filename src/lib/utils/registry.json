@@ -2,11 +2,11 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
-      "name": "date-utils",
+      "name": "dates-utils",
       "type": "registry:item",
       "title": "Date Utilities",
       "description": "Date and time utility scripts",
-      "dependencies": ["@tanstack/solid-query", "@getcommunity/gc-validators"],
+      "dependencies": ["@internationalized/date"],
       "files": [
         {
           "path": "dates.ts",
