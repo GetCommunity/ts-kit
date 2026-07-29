@@ -14,6 +14,7 @@ import { Button } from "@/registry/new-york/ui/button"
 import { Checkbox } from "@/registry/new-york/ui/checkbox"
 import {
   ComboboxControl,
+  ComboboxHiddenSelect,
   ComboboxInput as ComboboxInputUI,
   ComboboxItem,
   ComboboxItemLabel,
@@ -63,6 +64,7 @@ export default function LCRUDCombobox<TData extends CollectionDocument>(
   props: LCRUDComboboxProps<TData>
 ) {
   const orientation = () => props.orientation ?? "vertical"
+  const name = () => props.name ?? "generic-combobox"
   const createDialog = children(() => props.createDialog)
 
   const queryParams = () => props.queryOptions
@@ -93,7 +95,6 @@ export default function LCRUDCombobox<TData extends CollectionDocument>(
         orientation() === "horizontal" ? "gap-2 grid-cols-2 items-start" : "gap-1.5",
         props.class
       )}
-      name={props.name ?? "generic-combobox"}
       value={props.value}
       options={options()}
       validationState={props.error ? "invalid" : "valid"}
@@ -136,7 +137,7 @@ export default function LCRUDCombobox<TData extends CollectionDocument>(
       <div class={cn("inline-flex flex-col gap-1.5")}>
         <Show when={props.label}>
           <ComboboxLabel
-            for={props.name ?? "generic-combobox"}
+            for={name()}
             class={cn("w-full", props.error ? "text-destructive" : "")}
           >
             {props.label}
@@ -151,9 +152,13 @@ export default function LCRUDCombobox<TData extends CollectionDocument>(
           props.error ? "border-destructive text-destructive" : ""
         )}
       >
-        <ComboboxInputUI class={cn(props.error && "placeholder:text-destructive")} />
+        <ComboboxInputUI
+          id={name()}
+          class={cn(props.error && "placeholder:text-destructive")}
+        />
         <ComboboxTrigger />
       </ComboboxControl>
+      <ComboboxHiddenSelect name={name()} />
       <ComboboxPrimitive.Portal>
         <ComboboxPrimitive.Content
           class={cn(

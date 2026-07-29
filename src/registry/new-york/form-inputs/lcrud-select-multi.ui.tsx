@@ -64,6 +64,7 @@ export default function LCRUDSelectMulti<TData extends CollectionDocument>(
   props: LCRUDSelectMultiProps<TData>
 ) {
   const orientation = () => props.orientation ?? "vertical"
+  const name = () => props.name ?? "generic-multiselect"
   const createDialog = children(() => props.createDialog)
 
   const queryParams = () => props.queryOptions
@@ -100,7 +101,7 @@ export default function LCRUDSelectMulti<TData extends CollectionDocument>(
         orientation() === "horizontal" ? "gap-2 grid-cols-2 items-start" : "gap-1.5",
         props.class
       )}
-      name={props.name ?? "generic-multiselect"}
+      name={name()}
       value={props.value}
       options={options()}
       validationState={props.error ? "invalid" : "valid"}
@@ -144,14 +145,14 @@ export default function LCRUDSelectMulti<TData extends CollectionDocument>(
         <Show when={props.label}>
           <SelectLabel
             class={cn("w-full", props.error ? "text-destructive" : "")}
-            for={props.name ?? "generic-multiselect"}
+            for={name()}
           >
-            {props.label ?? "Select"}
+            {props.label}
           </SelectLabel>
         </Show>
         <FormInputDescription description={props.description} />
       </div>
-      <SelectHiddenSelect id={props.name ?? "generic-multiselect"} />
+      <SelectHiddenSelect id={name()} />
       <SelectTrigger
         class={cn(
           "h-auto min-h-10 w-full",

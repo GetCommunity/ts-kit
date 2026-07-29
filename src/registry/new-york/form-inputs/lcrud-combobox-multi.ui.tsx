@@ -15,6 +15,7 @@ import { Button } from "@/registry/new-york/ui/button"
 import { Checkbox } from "@/registry/new-york/ui/checkbox"
 import {
   ComboboxControl,
+  ComboboxHiddenSelect,
   ComboboxInput as ComboboxInputUI,
   ComboboxItem,
   ComboboxItemLabel,
@@ -65,6 +66,8 @@ export default function LCRUDComboboxMulti<TData extends CollectionDocument>(
   props: LCRUDComboboxMultiProps<TData>
 ) {
   const orientation = () => props.orientation ?? "vertical"
+  const name = () => props.name ?? "generic-combobox-multi"
+  const optionLabel = (option: TData) => props.getOptionLabel(option)
   const createDialog = children(() => props.createDialog)
 
   const queryParams = () => props.queryOptions
@@ -101,7 +104,6 @@ export default function LCRUDComboboxMulti<TData extends CollectionDocument>(
         orientation() === "horizontal" ? "gap-2 grid-cols-2 items-start" : "gap-1.5",
         props.class
       )}
-      name={props.name ?? "generic-combobox-multi"}
       value={props.value}
       options={options()}
       validationState={props.error ? "invalid" : "valid"}
@@ -109,13 +111,13 @@ export default function LCRUDComboboxMulti<TData extends CollectionDocument>(
       onChange={props.onChange}
       optionValue={props.optionValue}
       optionTextValue={props.optionTextValue}
-      optionLabel={props.getOptionLabel}
+      optionLabel={optionLabel}
       optionDisabled={props.getOptionDisabled}
       placeholder={props.placeholder ?? "Select options"}
       closeOnSelection={props.closeOnSelection ?? false}
       itemComponent={(itemProps) => {
         const raw = itemProps.item.rawValue
-        const itemLabel = () => props.getOptionLabel(raw)
+        const itemLabel = () => optionLabel(raw)
         const itemDesc = () => props.getOptionDesc(raw)
         const updateDialog = children(() =>
           props.getUpdateDialog?.(itemProps.item.rawValue)
@@ -144,7 +146,7 @@ export default function LCRUDComboboxMulti<TData extends CollectionDocument>(
       <div class={cn("inline-flex flex-col gap-1.5")}>
         <Show when={props.label}>
           <ComboboxLabel
-            for={props.name ?? "generic-combobox-multi"}
+            for={name()}
             class={cn("w-full", props.error ? "text-destructive" : "")}
           >
             {props.label}
@@ -166,7 +168,7 @@ export default function LCRUDComboboxMulti<TData extends CollectionDocument>(
                 <div class="flex shrink grow flex-wrap items-center gap-2 pt-1">
                   <For each={state.selectedOptions()}>
                     {(option) => {
-                      const itemLabel = props.getOptionLabel(option)
+                      const itemLabel = optionLabel(option)
                       return (
                         <span
                           class="inline-flex items-center gap-x-2 rounded bg-zinc-100 px-2 py-0.5 text-sm"
@@ -190,6 +192,7 @@ export default function LCRUDComboboxMulti<TData extends CollectionDocument>(
                 </div>
               </Show>
               <ComboboxInputUI
+                id={name()}
                 class={cn(props.error && "placeholder:text-destructive")}
               />
             </div>
@@ -211,6 +214,7 @@ export default function LCRUDComboboxMulti<TData extends CollectionDocument>(
           </>
         )}
       </ComboboxControl>
+      <ComboboxHiddenSelect name={name()} />
       <ComboboxPrimitive.Portal>
         <ComboboxPrimitive.Content
           class={cn(
