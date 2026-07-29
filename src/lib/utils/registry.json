@@ -18,8 +18,8 @@
     {
       "name": "tailwind-utils",
       "type": "registry:item",
-      "title": "Date Utilities",
-      "description": "Date and time utility scripts",
+      "title": "Tailwind Utilities",
+      "description": "Tailwind utility scripts (cn)",
       "dependencies": ["tailwind-merge", "clsx"],
       "files": [
         {

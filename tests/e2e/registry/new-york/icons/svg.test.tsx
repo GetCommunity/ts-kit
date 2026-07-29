@@ -3,42 +3,44 @@ import type { Component, ComponentProps } from "solid-js"
 import AppleIcon, { apple } from "@/registry/new-york/icons/svg/apple"
 import ArchiveIcon, { archive } from "@/registry/new-york/icons/svg/archive"
 import AriaIcon, { aria } from "@/registry/new-york/icons/svg/aria"
-import ArrowLeftIcon, { arrowLeft } from "@/registry/new-york/icons/svg/arrowLeft"
-import ArrowRightIcon, { arrowRight } from "@/registry/new-york/icons/svg/arrowRight"
+import ArrowLeftIcon, { arrowLeft } from "@/registry/new-york/icons/svg/arrow-left"
+import ArrowRightIcon, { arrowRight } from "@/registry/new-york/icons/svg/arrow-right"
 import AssociateIcon, { associate } from "@/registry/new-york/icons/svg/associate"
-import CaretDownIcon, { caretDown } from "@/registry/new-york/icons/svg/caretDown"
-import CaretLeftIcon, { caretLeft } from "@/registry/new-york/icons/svg/caretLeft"
-import CaretRightIcon, { caretRight } from "@/registry/new-york/icons/svg/caretRight"
-import CaretSortIcon, { caretSort } from "@/registry/new-york/icons/svg/caretSort"
-import CaretUpIcon, { caretUp } from "@/registry/new-york/icons/svg/caretUp"
+import CaretDownIcon, { caretDown } from "@/registry/new-york/icons/svg/caret-down"
+import CaretLeftIcon, { caretLeft } from "@/registry/new-york/icons/svg/caret-left"
+import CaretRightIcon, { caretRight } from "@/registry/new-york/icons/svg/caret-right"
+import CaretSortIcon, { caretSort } from "@/registry/new-york/icons/svg/caret-sort"
+import CaretUpIcon, { caretUp } from "@/registry/new-york/icons/svg/caret-up"
 import CheckIcon, { check } from "@/registry/new-york/icons/svg/check"
+import CheckboxIcon, { checkbox } from "@/registry/new-york/icons/svg/checkbox"
 import CheckBoxCheckedIcon, {
   checkBoxChecked
-} from "@/registry/new-york/icons/svg/checkBoxChecked"
+} from "@/registry/new-york/icons/svg/checkbox-checked"
 import CheckBoxIndeterminateIcon, {
   checkBoxIndeterminate
-} from "@/registry/new-york/icons/svg/checkBoxIndeterminate"
-import CheckBoxUncheckedIcon, {
-  checkBoxUnchecked
-} from "@/registry/new-york/icons/svg/checkBoxUnchecked"
-import CheckboxIcon, { checkbox } from "@/registry/new-york/icons/svg/checkbox"
+} from "@/registry/new-york/icons/svg/checkbox-indeterminate"
 import CheckboxMinusIcon, {
   checkboxMinus
-} from "@/registry/new-york/icons/svg/checkboxMinus"
+} from "@/registry/new-york/icons/svg/checkbox-minus"
+import CheckBoxUncheckedIcon, {
+  checkBoxUnchecked
+} from "@/registry/new-york/icons/svg/checkbox-unchecked"
 import ChevronDoubleLeftIcon, {
   chevronDoubleLeft
-} from "@/registry/new-york/icons/svg/chevronDoubleLeft"
+} from "@/registry/new-york/icons/svg/chevron-double-left"
 import ChevronDoubleRightIcon, {
   chevronDoubleRight
-} from "@/registry/new-york/icons/svg/chevronDoubleRight"
-import ChevronLeftIcon, { chevronLeft } from "@/registry/new-york/icons/svg/chevronLeft"
+} from "@/registry/new-york/icons/svg/chevron-double-right"
+import ChevronLeftIcon, {
+  chevronLeft
+} from "@/registry/new-york/icons/svg/chevron-left"
 import ChevronRightIcon, {
   chevronRight
-} from "@/registry/new-york/icons/svg/chevronRight"
-import CircleFillIcon, { circleFill } from "@/registry/new-york/icons/svg/circleFill"
+} from "@/registry/new-york/icons/svg/chevron-right"
+import CircleFillIcon, { circleFill } from "@/registry/new-york/icons/svg/circle-fill"
 import CircleOutlineIcon, {
   circleOutline
-} from "@/registry/new-york/icons/svg/circleOutline"
+} from "@/registry/new-york/icons/svg/circle-outline"
 import ClipboardIcon, { clipboard } from "@/registry/new-york/icons/svg/clipboard"
 import CloseIcon, { close } from "@/registry/new-york/icons/svg/close"
 import ColumnsIcon, { columns } from "@/registry/new-york/icons/svg/columns"
@@ -59,10 +61,10 @@ import GetcommunityIcon, {
 } from "@/registry/new-york/icons/svg/getcommunity"
 import GithubIcon, { github } from "@/registry/new-york/icons/svg/github"
 import GoogleIcon, { google } from "@/registry/new-york/icons/svg/google"
-import HeartFillIcon, { heartFill } from "@/registry/new-york/icons/svg/heartFill"
+import HeartFillIcon, { heartFill } from "@/registry/new-york/icons/svg/heart-fill"
 import HeartOutlineIcon, {
   heartOutline
-} from "@/registry/new-york/icons/svg/heartOutline"
+} from "@/registry/new-york/icons/svg/heart-outline"
 import HelpIcon, { help } from "@/registry/new-york/icons/svg/help"
 import InfoIcon, { info } from "@/registry/new-york/icons/svg/info"
 import InstagramIcon, { instagram } from "@/registry/new-york/icons/svg/instagram"
@@ -72,36 +74,38 @@ import LinkedinIcon, { linkedin } from "@/registry/new-york/icons/svg/linkedin"
 import LoginIcon, { login } from "@/registry/new-york/icons/svg/login"
 import LogoIcon, { logo } from "@/registry/new-york/icons/svg/logo"
 import LogoutIcon, { logout } from "@/registry/new-york/icons/svg/logout"
-import MenuOpenIcon, { menuOpen } from "@/registry/new-york/icons/svg/menuOpen"
+import MenuOpenIcon, { menuOpen } from "@/registry/new-york/icons/svg/menu-open"
 import MenuOpenFullIcon, {
   menuOpenFull
-} from "@/registry/new-york/icons/svg/menuOpenFull"
+} from "@/registry/new-york/icons/svg/menu-open-full"
 import MoonIcon, { moon } from "@/registry/new-york/icons/svg/moon"
 import PauseCircleFillIcon, {
   pauseCircleFill
-} from "@/registry/new-york/icons/svg/pauseCircleFill"
+} from "@/registry/new-york/icons/svg/pause-circle-fill"
 import PauseCircleOutlineIcon, {
   pauseCircleOutline
-} from "@/registry/new-york/icons/svg/pauseCircleOutline"
+} from "@/registry/new-york/icons/svg/pause-circle-outline"
 import PersonIcon, { person } from "@/registry/new-york/icons/svg/person"
 import PhoneIcon, { phone } from "@/registry/new-york/icons/svg/phone"
 import PinterestIcon, { pinterest } from "@/registry/new-york/icons/svg/pinterest"
 import PlayCircleFillIcon, {
   playCircleFill
-} from "@/registry/new-york/icons/svg/playCircleFill"
+} from "@/registry/new-york/icons/svg/play-circle-fill"
 import PlayCircleOutlineIcon, {
   playCircleOutline
-} from "@/registry/new-york/icons/svg/playCircleOutline"
+} from "@/registry/new-york/icons/svg/play-circle-outline"
 import ProcessIcon, { process } from "@/registry/new-york/icons/svg/process"
 import ProfileIcon, { profile } from "@/registry/new-york/icons/svg/profile"
 import ReadIcon, { read } from "@/registry/new-york/icons/svg/read"
 import ResetIcon, { reset } from "@/registry/new-york/icons/svg/reset"
 import SaveIcon, { save } from "@/registry/new-york/icons/svg/save"
-import SaveAllIcon, { saveAll } from "@/registry/new-york/icons/svg/saveAll"
+import SaveAllIcon, { saveAll } from "@/registry/new-york/icons/svg/save-all"
 import SearchIcon, { search } from "@/registry/new-york/icons/svg/search"
 import SettingsIcon, { settings } from "@/registry/new-york/icons/svg/settings"
 import ShareIcon, { share } from "@/registry/new-york/icons/svg/share"
-import SidebarOpenIcon, { sidebarOpen } from "@/registry/new-york/icons/svg/sidebarOpen"
+import SidebarOpenIcon, {
+  sidebarOpen
+} from "@/registry/new-york/icons/svg/sidebar-open"
 import SpinnerIcon, { spinner } from "@/registry/new-york/icons/svg/spinner"
 import SunIcon, { sun } from "@/registry/new-york/icons/svg/sun"
 import TailwindIcon, { tailwind } from "@/registry/new-york/icons/svg/tailwind"

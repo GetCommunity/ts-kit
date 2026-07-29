@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "dev-scripts",
+      "type": "registry:item",
+      "title": "Development Scripts",
+      "description": "Essential scripts used for development",
+      "files": [
+        {
+          "path": ".pre-commit-config.yaml",
+          "type": "registry:file",
+          "target": "~/.pre-commit-config.yaml"
+        },
+        {
+          "path": "format.sh",
+          "type": "registry:file",
+          "target": "~/scripts/format.sh"
+        },
+        {
+          "path": "lint.sh",
+          "type": "registry:file",
+          "target": "~/scripts/lint.sh"
+        },
+        {
+          "path": "test.sh",
+          "type": "registry:file",
+          "target": "~/scripts/test.sh"
+        }
+      ]
+    }
+  ]
+}

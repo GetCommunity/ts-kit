@@ -4,6 +4,7 @@
   "homepage": "https://tskit.getcommunity.com",
   "include": [
     "config/registry.json",
+    "scripts/registry.json",
     "src/hooks/registry.json",
     "src/lib/utils/registry.json",
     "src/registry/new-york/form-inputs/registry.json",

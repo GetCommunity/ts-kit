@@ -1,8 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tailwind-utils",
-  "title": "Date Utilities",
-  "description": "Date and time utility scripts",
+  "title": "Tailwind Utilities",
+  "description": "Tailwind utility scripts (cn)",
   "dependencies": [
     "tailwind-merge",
     "clsx"

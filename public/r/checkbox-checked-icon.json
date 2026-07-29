@@ -1,14 +1,14 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "checkBoxChecked-icon",
+  "name": "checkbox-checked-icon",
   "title": "Check Box Checked Icon",
-  "description": "A check box checked icon component",
+  "description": "A checkbox checked icon component",
   "files": [
     {
-      "path": "src/registry/new-york/icons/svg/checkBoxChecked.tsx",
+      "path": "src/registry/new-york/icons/svg/checkbox-checked.tsx",
       "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const checkBoxChecked = (props: ComponentProps<\"svg\">) => (\n  <svg\n    {...props}\n    fill=\"currentColor\"\n    stroke-width=\"0\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    viewBox=\"0 0 24 24\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n  >\n    <path\n      fill=\"currentColor\"\n      d=\"M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm7.003 13 7.07-7.071-1.413-1.414-5.657 5.657-2.829-2.829-1.414 1.414L11.003 16Z\"\n    />\n  </svg>\n)\n\nexport default checkBoxChecked\n",
       "type": "registry:file",
-      "target": "components/icons/svg/checkBoxChecked.tsx"
+      "target": "components/icons/svg/checkbox-checked.tsx"
     }
   ],
   "type": "registry:item"

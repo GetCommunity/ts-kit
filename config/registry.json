@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
-      "name": "tanstack-solid",
+      "name": "tanstack-solid-config",
       "type": "registry:item",
       "title": "TanStack SolidJS Tailwind Application Config",
       "description": "A base config files for a tanstack, solidjs, tailwindcss application",
@@ -16,6 +16,7 @@
         "@tailwindcss/typography",
         "tailwindcss"
       ],
+      "registryDependencies": ["dev-scripts"],
       "files": [
         {
           "path": "components.json",

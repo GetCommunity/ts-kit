@@ -4,7 +4,7 @@
   "homepage": "https://tskit.getcommunity.com",
   "items": [
     {
-      "name": "tanstack-solid",
+      "name": "tanstack-solid-config",
       "title": "TanStack SolidJS Tailwind Application Config",
       "description": "A base config files for a tanstack, solidjs, tailwindcss application",
       "dependencies": [
@@ -16,6 +16,9 @@
         "@kobalte/tailwindcss",
         "@tailwindcss/typography",
         "tailwindcss"
+      ],
+      "registryDependencies": [
+        "dev-scripts"
       ],
       "files": [
         {
@@ -37,6 +40,34 @@
           "path": "config/tailwind.config.mjs",
           "type": "registry:file",
           "target": "~/tailwind.config.mjs"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "dev-scripts",
+      "title": "Development Scripts",
+      "description": "Essential scripts used for development",
+      "files": [
+        {
+          "path": "scripts/.pre-commit-config.yaml",
+          "type": "registry:file",
+          "target": "~/.pre-commit-config.yaml"
+        },
+        {
+          "path": "scripts/format.sh",
+          "type": "registry:file",
+          "target": "~/scripts/format.sh"
+        },
+        {
+          "path": "scripts/lint.sh",
+          "type": "registry:file",
+          "target": "~/scripts/lint.sh"
+        },
+        {
+          "path": "scripts/test.sh",
+          "type": "registry:file",
+          "target": "~/scripts/test.sh"
         }
       ],
       "type": "registry:item"
@@ -76,8 +107,8 @@
     },
     {
       "name": "tailwind-utils",
-      "title": "Date Utilities",
-      "description": "Date and time utility scripts",
+      "title": "Tailwind Utilities",
+      "description": "Tailwind utility scripts (cn)",
       "dependencies": [
         "tailwind-merge",
         "clsx"
@@ -688,27 +719,27 @@
       "type": "registry:item"
     },
     {
-      "name": "arrowLeft-icon",
+      "name": "arrow-left-icon",
       "title": "Arrow Left Icon",
       "description": "An arrow left icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/arrowLeft.tsx",
+          "path": "src/registry/new-york/icons/svg/arrow-left.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/arrowLeft.tsx"
+          "target": "components/icons/svg/arrow-left.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "arrowRight-icon",
+      "name": "arrow-right-icon",
       "title": "Arrow Right Icon",
       "description": "An arrow right icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/arrowRight.tsx",
+          "path": "src/registry/new-york/icons/svg/arrow-right.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/arrowRight.tsx"
+          "target": "components/icons/svg/arrow-right.tsx"
         }
       ],
       "type": "registry:item"
@@ -727,66 +758,66 @@
       "type": "registry:item"
     },
     {
-      "name": "caretDown-icon",
+      "name": "caret-down-icon",
       "title": "Caret Down Icon",
       "description": "A caret down icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/caretDown.tsx",
+          "path": "src/registry/new-york/icons/svg/caret-down.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretDown.tsx"
+          "target": "components/icons/svg/caret-down.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "caretLeft-icon",
+      "name": "caret-left-icon",
       "title": "Caret Left Icon",
       "description": "A caret left icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/caretLeft.tsx",
+          "path": "src/registry/new-york/icons/svg/caret-left.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretLeft.tsx"
+          "target": "components/icons/svg/caret-left.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "caretRight-icon",
+      "name": "caret-right-icon",
       "title": "Caret Right Icon",
       "description": "A caret right icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/caretRight.tsx",
+          "path": "src/registry/new-york/icons/svg/caret-right.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretRight.tsx"
+          "target": "components/icons/svg/caret-right.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "caretSort-icon",
+      "name": "caret-sort-icon",
       "title": "Caret Sort Icon",
       "description": "A caret sort icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/caretSort.tsx",
+          "path": "src/registry/new-york/icons/svg/caret-sort.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretSort.tsx"
+          "target": "components/icons/svg/caret-sort.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "caretUp-icon",
+      "name": "caret-up-icon",
       "title": "Caret Up Icon",
       "description": "A caret up icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/caretUp.tsx",
+          "path": "src/registry/new-york/icons/svg/caret-up.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretUp.tsx"
+          "target": "components/icons/svg/caret-up.tsx"
         }
       ],
       "type": "registry:item"
@@ -818,131 +849,131 @@
       "type": "registry:item"
     },
     {
-      "name": "checkBoxChecked-icon",
+      "name": "checkbox-checked-icon",
       "title": "Check Box Checked Icon",
-      "description": "A check box checked icon component",
+      "description": "A checkbox checked icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/checkBoxChecked.tsx",
+          "path": "src/registry/new-york/icons/svg/checkbox-checked.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/checkBoxChecked.tsx"
+          "target": "components/icons/svg/checkbox-checked.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "checkBoxIndeterminate-icon",
+      "name": "checkbox-indeterminate-icon",
       "title": "Check Box Indeterminate Icon",
-      "description": "A check box indeterminate icon component",
+      "description": "A checkbox indeterminate icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/checkBoxIndeterminate.tsx",
+          "path": "src/registry/new-york/icons/svg/checkbox-indeterminate.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/checkBoxIndeterminate.tsx"
+          "target": "components/icons/svg/checkbox-indeterminate.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "checkboxMinus-icon",
+      "name": "checkbox-minus-icon",
       "title": "Checkbox Minus Icon",
       "description": "A checkbox minus icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/checkboxMinus.tsx",
+          "path": "src/registry/new-york/icons/svg/checkbox-minus.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/checkboxMinus.tsx"
+          "target": "components/icons/svg/checkbox-minus.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "checkBoxUnchecked-icon",
+      "name": "checkbox-unchecked-icon",
       "title": "Check Box Unchecked Icon",
-      "description": "A check box unchecked icon component",
+      "description": "A checkbox unchecked icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/checkBoxUnchecked.tsx",
+          "path": "src/registry/new-york/icons/svg/checkbox-unchecked.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/checkBoxUnchecked.tsx"
+          "target": "components/icons/svg/checkbox-unchecked.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "chevronDoubleLeft-icon",
+      "name": "chevron-double-left-icon",
       "title": "Chevron Double Left Icon",
       "description": "A chevron double left icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/chevronDoubleLeft.tsx",
+          "path": "src/registry/new-york/icons/svg/chevron-double-left.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/chevronDoubleLeft.tsx"
+          "target": "components/icons/svg/chevron-double-left.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "chevronDoubleRight-icon",
+      "name": "chevron-double-right-icon",
       "title": "Chevron Double Right Icon",
       "description": "A chevron double right icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/chevronDoubleRight.tsx",
+          "path": "src/registry/new-york/icons/svg/chevron-double-right.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/chevronDoubleRight.tsx"
+          "target": "components/icons/svg/chevron-double-right.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "chevronLeft-icon",
+      "name": "chevron-left-icon",
       "title": "Chevron Left Icon",
       "description": "A chevron left icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/chevronLeft.tsx",
+          "path": "src/registry/new-york/icons/svg/chevron-left.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/chevronLeft.tsx"
+          "target": "components/icons/svg/chevron-left.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "chevronRight-icon",
+      "name": "chevron-right-icon",
       "title": "Chevron Right Icon",
       "description": "A chevron right icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/chevronRight.tsx",
+          "path": "src/registry/new-york/icons/svg/chevron-right.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/chevronRight.tsx"
+          "target": "components/icons/svg/chevron-right.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "circleFill-icon",
+      "name": "circle-fill-icon",
       "title": "Circle Fill Icon",
       "description": "A circle fill icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/circleFill.tsx",
+          "path": "src/registry/new-york/icons/svg/circle-fill.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/circleFill.tsx"
+          "target": "components/icons/svg/circle-fill.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "circleOutline-icon",
+      "name": "circle-outline-icon",
       "title": "Circle Outline Icon",
       "description": "A circle outline icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/circleOutline.tsx",
+          "path": "src/registry/new-york/icons/svg/circle-outline.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/circleOutline.tsx"
+          "target": "components/icons/svg/circle-outline.tsx"
         }
       ],
       "type": "registry:item"
@@ -1159,27 +1190,27 @@
       "type": "registry:item"
     },
     {
-      "name": "heartFill-icon",
+      "name": "heart-fill-icon",
       "title": "Heart Fill Icon",
       "description": "A heart fill icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/heartFill.tsx",
+          "path": "src/registry/new-york/icons/svg/heart-fill.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/heartFill.tsx"
+          "target": "components/icons/svg/heart-fill.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "heartOutline-icon",
+      "name": "heart-outline-icon",
       "title": "Heart Outline Icon",
       "description": "A heart outline icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/heartOutline.tsx",
+          "path": "src/registry/new-york/icons/svg/heart-outline.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/heartOutline.tsx"
+          "target": "components/icons/svg/heart-outline.tsx"
         }
       ],
       "type": "registry:item"
@@ -1302,27 +1333,27 @@
       "type": "registry:item"
     },
     {
-      "name": "menuOpen-icon",
+      "name": "menu-open-icon",
       "title": "Menu Open Icon",
       "description": "A menu open icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/menuOpen.tsx",
+          "path": "src/registry/new-york/icons/svg/menu-open.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/menuOpen.tsx"
+          "target": "components/icons/svg/menu-open.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "menuOpenFull-icon",
+      "name": "menu-open-full-icon",
       "title": "Menu Open Full Icon",
       "description": "A menu open full icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/menuOpenFull.tsx",
+          "path": "src/registry/new-york/icons/svg/menu-open-full.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/menuOpenFull.tsx"
+          "target": "components/icons/svg/menu-open-full.tsx"
         }
       ],
       "type": "registry:item"
@@ -1341,27 +1372,27 @@
       "type": "registry:item"
     },
     {
-      "name": "pauseCircleFill-icon",
+      "name": "pause-circle-fill-icon",
       "title": "Pause Circle Fill Icon",
       "description": "A pause circle fill icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/pauseCircleFill.tsx",
+          "path": "src/registry/new-york/icons/svg/pause-circle-fill.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/pauseCircleFill.tsx"
+          "target": "components/icons/svg/pause-circle-fill.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "pauseCircleOutline-icon",
+      "name": "pause-circle-outline-icon",
       "title": "Pause Circle Outline Icon",
       "description": "A pause circle outline icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/pauseCircleOutline.tsx",
+          "path": "src/registry/new-york/icons/svg/pause-circle-outline.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/pauseCircleOutline.tsx"
+          "target": "components/icons/svg/pause-circle-outline.tsx"
         }
       ],
       "type": "registry:item"
@@ -1406,27 +1437,27 @@
       "type": "registry:item"
     },
     {
-      "name": "playCircleFill-icon",
+      "name": "play-circle-fill-icon",
       "title": "Play Circle Fill Icon",
       "description": "A play circle fill icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/playCircleFill.tsx",
+          "path": "src/registry/new-york/icons/svg/play-circle-fill.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/playCircleFill.tsx"
+          "target": "components/icons/svg/play-circle-fill.tsx"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "playCircleOutline-icon",
+      "name": "play-circle-outline-icon",
       "title": "Play Circle Outline Icon",
       "description": "A play circle outline icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/playCircleOutline.tsx",
+          "path": "src/registry/new-york/icons/svg/play-circle-outline.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/playCircleOutline.tsx"
+          "target": "components/icons/svg/play-circle-outline.tsx"
         }
       ],
       "type": "registry:item"
@@ -1497,14 +1528,14 @@
       "type": "registry:item"
     },
     {
-      "name": "saveAll-icon",
+      "name": "save-all-icon",
       "title": "Save All Icon",
       "description": "A save all icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/saveAll.tsx",
+          "path": "src/registry/new-york/icons/svg/save-all.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/saveAll.tsx"
+          "target": "components/icons/svg/save-all.tsx"
         }
       ],
       "type": "registry:item"
@@ -1549,14 +1580,14 @@
       "type": "registry:item"
     },
     {
-      "name": "sidebarOpen-icon",
+      "name": "sidebar-open-icon",
       "title": "Sidebar Open Icon",
       "description": "A sidebar open icon component",
       "files": [
         {
-          "path": "src/registry/new-york/icons/svg/sidebarOpen.tsx",
+          "path": "src/registry/new-york/icons/svg/sidebar-open.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/sidebarOpen.tsx"
+          "target": "components/icons/svg/sidebar-open.tsx"
         }
       ],
       "type": "registry:item"

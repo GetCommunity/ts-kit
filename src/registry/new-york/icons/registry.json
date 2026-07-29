@@ -66,28 +66,28 @@
       ]
     },
     {
-      "name": "arrowLeft-icon",
+      "name": "arrow-left-icon",
       "type": "registry:item",
       "title": "Arrow Left Icon",
       "description": "An arrow left icon component",
       "files": [
         {
-          "path": "svg/arrowLeft.tsx",
+          "path": "svg/arrow-left.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/arrowLeft.tsx"
+          "target": "components/icons/svg/arrow-left.tsx"
         }
       ]
     },
     {
-      "name": "arrowRight-icon",
+      "name": "arrow-right-icon",
       "type": "registry:item",
       "title": "Arrow Right Icon",
       "description": "An arrow right icon component",
       "files": [
         {
-          "path": "svg/arrowRight.tsx",
+          "path": "svg/arrow-right.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/arrowRight.tsx"
+          "target": "components/icons/svg/arrow-right.tsx"
         }
       ]
     },
@@ -105,67 +105,67 @@
       ]
     },
     {
-      "name": "caretDown-icon",
+      "name": "caret-down-icon",
       "type": "registry:item",
       "title": "Caret Down Icon",
       "description": "A caret down icon component",
       "files": [
         {
-          "path": "svg/caretDown.tsx",
+          "path": "svg/caret-down.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretDown.tsx"
+          "target": "components/icons/svg/caret-down.tsx"
         }
       ]
     },
     {
-      "name": "caretLeft-icon",
+      "name": "caret-left-icon",
       "type": "registry:item",
       "title": "Caret Left Icon",
       "description": "A caret left icon component",
       "files": [
         {
-          "path": "svg/caretLeft.tsx",
+          "path": "svg/caret-left.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretLeft.tsx"
+          "target": "components/icons/svg/caret-left.tsx"
         }
       ]
     },
     {
-      "name": "caretRight-icon",
+      "name": "caret-right-icon",
       "type": "registry:item",
       "title": "Caret Right Icon",
       "description": "A caret right icon component",
       "files": [
         {
-          "path": "svg/caretRight.tsx",
+          "path": "svg/caret-right.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretRight.tsx"
+          "target": "components/icons/svg/caret-right.tsx"
         }
       ]
     },
     {
-      "name": "caretSort-icon",
+      "name": "caret-sort-icon",
       "type": "registry:item",
       "title": "Caret Sort Icon",
       "description": "A caret sort icon component",
       "files": [
         {
-          "path": "svg/caretSort.tsx",
+          "path": "svg/caret-sort.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretSort.tsx"
+          "target": "components/icons/svg/caret-sort.tsx"
         }
       ]
     },
     {
-      "name": "caretUp-icon",
+      "name": "caret-up-icon",
       "type": "registry:item",
       "title": "Caret Up Icon",
       "description": "A caret up icon component",
       "files": [
         {
-          "path": "svg/caretUp.tsx",
+          "path": "svg/caret-up.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/caretUp.tsx"
+          "target": "components/icons/svg/caret-up.tsx"
         }
       ]
     },
@@ -196,132 +196,132 @@
       ]
     },
     {
-      "name": "checkBoxChecked-icon",
+      "name": "checkbox-checked-icon",
       "type": "registry:item",
       "title": "Check Box Checked Icon",
-      "description": "A check box checked icon component",
+      "description": "A checkbox checked icon component",
       "files": [
         {
-          "path": "svg/checkBoxChecked.tsx",
+          "path": "svg/checkbox-checked.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/checkBoxChecked.tsx"
+          "target": "components/icons/svg/checkbox-checked.tsx"
         }
       ]
     },
     {
-      "name": "checkBoxIndeterminate-icon",
+      "name": "checkbox-indeterminate-icon",
       "type": "registry:item",
       "title": "Check Box Indeterminate Icon",
-      "description": "A check box indeterminate icon component",
+      "description": "A checkbox indeterminate icon component",
       "files": [
         {
-          "path": "svg/checkBoxIndeterminate.tsx",
+          "path": "svg/checkbox-indeterminate.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/checkBoxIndeterminate.tsx"
+          "target": "components/icons/svg/checkbox-indeterminate.tsx"
         }
       ]
     },
     {
-      "name": "checkboxMinus-icon",
+      "name": "checkbox-minus-icon",
       "type": "registry:item",
       "title": "Checkbox Minus Icon",
       "description": "A checkbox minus icon component",
       "files": [
         {
-          "path": "svg/checkboxMinus.tsx",
+          "path": "svg/checkbox-minus.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/checkboxMinus.tsx"
+          "target": "components/icons/svg/checkbox-minus.tsx"
         }
       ]
     },
     {
-      "name": "checkBoxUnchecked-icon",
+      "name": "checkbox-unchecked-icon",
       "type": "registry:item",
       "title": "Check Box Unchecked Icon",
-      "description": "A check box unchecked icon component",
+      "description": "A checkbox unchecked icon component",
       "files": [
         {
-          "path": "svg/checkBoxUnchecked.tsx",
+          "path": "svg/checkbox-unchecked.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/checkBoxUnchecked.tsx"
+          "target": "components/icons/svg/checkbox-unchecked.tsx"
         }
       ]
     },
     {
-      "name": "chevronDoubleLeft-icon",
+      "name": "chevron-double-left-icon",
       "type": "registry:item",
       "title": "Chevron Double Left Icon",
       "description": "A chevron double left icon component",
       "files": [
         {
-          "path": "svg/chevronDoubleLeft.tsx",
+          "path": "svg/chevron-double-left.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/chevronDoubleLeft.tsx"
+          "target": "components/icons/svg/chevron-double-left.tsx"
         }
       ]
     },
     {
-      "name": "chevronDoubleRight-icon",
+      "name": "chevron-double-right-icon",
       "type": "registry:item",
       "title": "Chevron Double Right Icon",
       "description": "A chevron double right icon component",
       "files": [
         {
-          "path": "svg/chevronDoubleRight.tsx",
+          "path": "svg/chevron-double-right.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/chevronDoubleRight.tsx"
+          "target": "components/icons/svg/chevron-double-right.tsx"
         }
       ]
     },
     {
-      "name": "chevronLeft-icon",
+      "name": "chevron-left-icon",
       "type": "registry:item",
       "title": "Chevron Left Icon",
       "description": "A chevron left icon component",
       "files": [
         {
-          "path": "svg/chevronLeft.tsx",
+          "path": "svg/chevron-left.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/chevronLeft.tsx"
+          "target": "components/icons/svg/chevron-left.tsx"
         }
       ]
     },
     {
-      "name": "chevronRight-icon",
+      "name": "chevron-right-icon",
       "type": "registry:item",
       "title": "Chevron Right Icon",
       "description": "A chevron right icon component",
       "files": [
         {
-          "path": "svg/chevronRight.tsx",
+          "path": "svg/chevron-right.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/chevronRight.tsx"
+          "target": "components/icons/svg/chevron-right.tsx"
         }
       ]
     },
     {
-      "name": "circleFill-icon",
+      "name": "circle-fill-icon",
       "type": "registry:item",
       "title": "Circle Fill Icon",
       "description": "A circle fill icon component",
       "files": [
         {
-          "path": "svg/circleFill.tsx",
+          "path": "svg/circle-fill.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/circleFill.tsx"
+          "target": "components/icons/svg/circle-fill.tsx"
         }
       ]
     },
     {
-      "name": "circleOutline-icon",
+      "name": "circle-outline-icon",
       "type": "registry:item",
       "title": "Circle Outline Icon",
       "description": "A circle outline icon component",
       "files": [
         {
-          "path": "svg/circleOutline.tsx",
+          "path": "svg/circle-outline.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/circleOutline.tsx"
+          "target": "components/icons/svg/circle-outline.tsx"
         }
       ]
     },
@@ -535,28 +535,28 @@
       ]
     },
     {
-      "name": "heartFill-icon",
+      "name": "heart-fill-icon",
       "type": "registry:item",
       "title": "Heart Fill Icon",
       "description": "A heart fill icon component",
       "files": [
         {
-          "path": "svg/heartFill.tsx",
+          "path": "svg/heart-fill.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/heartFill.tsx"
+          "target": "components/icons/svg/heart-fill.tsx"
         }
       ]
     },
     {
-      "name": "heartOutline-icon",
+      "name": "heart-outline-icon",
       "type": "registry:item",
       "title": "Heart Outline Icon",
       "description": "A heart outline icon component",
       "files": [
         {
-          "path": "svg/heartOutline.tsx",
+          "path": "svg/heart-outline.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/heartOutline.tsx"
+          "target": "components/icons/svg/heart-outline.tsx"
         }
       ]
     },
@@ -678,28 +678,28 @@
       ]
     },
     {
-      "name": "menuOpen-icon",
+      "name": "menu-open-icon",
       "type": "registry:item",
       "title": "Menu Open Icon",
       "description": "A menu open icon component",
       "files": [
         {
-          "path": "svg/menuOpen.tsx",
+          "path": "svg/menu-open.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/menuOpen.tsx"
+          "target": "components/icons/svg/menu-open.tsx"
         }
       ]
     },
     {
-      "name": "menuOpenFull-icon",
+      "name": "menu-open-full-icon",
       "type": "registry:item",
       "title": "Menu Open Full Icon",
       "description": "A menu open full icon component",
       "files": [
         {
-          "path": "svg/menuOpenFull.tsx",
+          "path": "svg/menu-open-full.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/menuOpenFull.tsx"
+          "target": "components/icons/svg/menu-open-full.tsx"
         }
       ]
     },
@@ -717,28 +717,28 @@
       ]
     },
     {
-      "name": "pauseCircleFill-icon",
+      "name": "pause-circle-fill-icon",
       "type": "registry:item",
       "title": "Pause Circle Fill Icon",
       "description": "A pause circle fill icon component",
       "files": [
         {
-          "path": "svg/pauseCircleFill.tsx",
+          "path": "svg/pause-circle-fill.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/pauseCircleFill.tsx"
+          "target": "components/icons/svg/pause-circle-fill.tsx"
         }
       ]
     },
     {
-      "name": "pauseCircleOutline-icon",
+      "name": "pause-circle-outline-icon",
       "type": "registry:item",
       "title": "Pause Circle Outline Icon",
       "description": "A pause circle outline icon component",
       "files": [
         {
-          "path": "svg/pauseCircleOutline.tsx",
+          "path": "svg/pause-circle-outline.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/pauseCircleOutline.tsx"
+          "target": "components/icons/svg/pause-circle-outline.tsx"
         }
       ]
     },
@@ -782,28 +782,28 @@
       ]
     },
     {
-      "name": "playCircleFill-icon",
+      "name": "play-circle-fill-icon",
       "type": "registry:item",
       "title": "Play Circle Fill Icon",
       "description": "A play circle fill icon component",
       "files": [
         {
-          "path": "svg/playCircleFill.tsx",
+          "path": "svg/play-circle-fill.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/playCircleFill.tsx"
+          "target": "components/icons/svg/play-circle-fill.tsx"
         }
       ]
     },
     {
-      "name": "playCircleOutline-icon",
+      "name": "play-circle-outline-icon",
       "type": "registry:item",
       "title": "Play Circle Outline Icon",
       "description": "A play circle outline icon component",
       "files": [
         {
-          "path": "svg/playCircleOutline.tsx",
+          "path": "svg/play-circle-outline.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/playCircleOutline.tsx"
+          "target": "components/icons/svg/play-circle-outline.tsx"
         }
       ]
     },
@@ -873,15 +873,15 @@
       ]
     },
     {
-      "name": "saveAll-icon",
+      "name": "save-all-icon",
       "type": "registry:item",
       "title": "Save All Icon",
       "description": "A save all icon component",
       "files": [
         {
-          "path": "svg/saveAll.tsx",
+          "path": "svg/save-all.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/saveAll.tsx"
+          "target": "components/icons/svg/save-all.tsx"
         }
       ]
     },
@@ -925,15 +925,15 @@
       ]
     },
     {
-      "name": "sidebarOpen-icon",
+      "name": "sidebar-open-icon",
       "type": "registry:item",
       "title": "Sidebar Open Icon",
       "description": "A sidebar open icon component",
       "files": [
         {
-          "path": "svg/sidebarOpen.tsx",
+          "path": "svg/sidebar-open.tsx",
           "type": "registry:file",
-          "target": "components/icons/svg/sidebarOpen.tsx"
+          "target": "components/icons/svg/sidebar-open.tsx"
         }
       ]
     },

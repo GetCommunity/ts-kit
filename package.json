@@ -14,8 +14,7 @@
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
-    "build:registry": "shadcn build",
-    "build:registry:old": "node scripts/build-registry.mjs"
+    "build:registry": "rm -rf ./public/r && shadcn build"
   },
   "dependencies": {
     "@ark-ui/solid": "^5.37.1",
