@@ -2,6 +2,14 @@ import "@testing-library/jest-dom/vitest"
 
 import { vi } from "vitest"
 
+// JSDOM doesn't perform layout, so the body otherwise reports a width of 0.
+// Matching it to the viewport prevents scroll-lock libraries from detecting a
+// viewport-sized scrollbar and generating invalid computed CSS values.
+Object.defineProperty(document.body, "offsetWidth", {
+  configurable: true,
+  get: () => window.innerWidth
+})
+
 // Match Media
 if (typeof window.matchMedia !== "function") {
   Object.defineProperty(window, "matchMedia", {
