@@ -52,3 +52,17 @@ pnpm typecheck
 pnpm format:check
 pnpm format
 ```
+
+### Validate Registry
+
+```bash
+pnpm dlx shadcn@latest registry validate getcommunity/ts-kit
+```
+
+### List and Search Registry
+
+```bash
+pnpm dlx shadcn@latest list getcommunity/ts-kit
+pnpm dlx shadcn@latest search getcommunity/ts-kit --query tailwind-utils
+pnpm dlx shadcn@latest view getcommunity/ts-kit/button
+```
