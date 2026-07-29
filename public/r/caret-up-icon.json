@@ -11,5 +11,5 @@
       "target": "components/icons/svg/caret-up.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

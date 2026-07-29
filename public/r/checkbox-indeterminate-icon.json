@@ -11,5 +11,5 @@
       "target": "components/icons/svg/checkbox-indeterminate.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

@@ -14,5 +14,5 @@
       "target": "components/icons/svg/draggable.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

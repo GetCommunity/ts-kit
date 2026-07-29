@@ -11,5 +11,5 @@
       "target": "components/icons/svg/chevron-right.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

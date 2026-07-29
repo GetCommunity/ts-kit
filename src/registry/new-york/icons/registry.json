@@ -28,7 +28,7 @@
     },
     {
       "name": "apple-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Apple Icon",
       "description": "An apple icon component",
       "files": [
@@ -41,7 +41,7 @@
     },
     {
       "name": "archive-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Archive Icon",
       "description": "An archive icon component",
       "files": [
@@ -54,7 +54,7 @@
     },
     {
       "name": "aria-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Aria Icon",
       "description": "An aria icon component",
       "files": [
@@ -67,7 +67,7 @@
     },
     {
       "name": "arrow-left-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Arrow Left Icon",
       "description": "An arrow left icon component",
       "files": [
@@ -80,7 +80,7 @@
     },
     {
       "name": "arrow-right-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Arrow Right Icon",
       "description": "An arrow right icon component",
       "files": [
@@ -93,7 +93,7 @@
     },
     {
       "name": "associate-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Associate Icon",
       "description": "An associate icon component",
       "files": [
@@ -106,7 +106,7 @@
     },
     {
       "name": "caret-down-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Caret Down Icon",
       "description": "A caret down icon component",
       "files": [
@@ -119,7 +119,7 @@
     },
     {
       "name": "caret-left-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Caret Left Icon",
       "description": "A caret left icon component",
       "files": [
@@ -132,7 +132,7 @@
     },
     {
       "name": "caret-right-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Caret Right Icon",
       "description": "A caret right icon component",
       "files": [
@@ -145,7 +145,7 @@
     },
     {
       "name": "caret-sort-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Caret Sort Icon",
       "description": "A caret sort icon component",
       "files": [
@@ -158,7 +158,7 @@
     },
     {
       "name": "caret-up-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Caret Up Icon",
       "description": "A caret up icon component",
       "files": [
@@ -171,7 +171,7 @@
     },
     {
       "name": "check-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Check Icon",
       "description": "A check icon component",
       "files": [
@@ -184,7 +184,7 @@
     },
     {
       "name": "checkbox-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Checkbox Icon",
       "description": "A checkbox icon component",
       "files": [
@@ -197,7 +197,7 @@
     },
     {
       "name": "checkbox-checked-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Check Box Checked Icon",
       "description": "A checkbox checked icon component",
       "files": [
@@ -210,7 +210,7 @@
     },
     {
       "name": "checkbox-indeterminate-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Check Box Indeterminate Icon",
       "description": "A checkbox indeterminate icon component",
       "files": [
@@ -223,7 +223,7 @@
     },
     {
       "name": "checkbox-minus-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Checkbox Minus Icon",
       "description": "A checkbox minus icon component",
       "files": [
@@ -236,7 +236,7 @@
     },
     {
       "name": "checkbox-unchecked-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Check Box Unchecked Icon",
       "description": "A checkbox unchecked icon component",
       "files": [
@@ -249,7 +249,7 @@
     },
     {
       "name": "chevron-double-left-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Chevron Double Left Icon",
       "description": "A chevron double left icon component",
       "files": [
@@ -262,7 +262,7 @@
     },
     {
       "name": "chevron-double-right-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Chevron Double Right Icon",
       "description": "A chevron double right icon component",
       "files": [
@@ -275,7 +275,7 @@
     },
     {
       "name": "chevron-left-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Chevron Left Icon",
       "description": "A chevron left icon component",
       "files": [
@@ -288,7 +288,7 @@
     },
     {
       "name": "chevron-right-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Chevron Right Icon",
       "description": "A chevron right icon component",
       "files": [
@@ -301,7 +301,7 @@
     },
     {
       "name": "circle-fill-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Circle Fill Icon",
       "description": "A circle fill icon component",
       "files": [
@@ -314,7 +314,7 @@
     },
     {
       "name": "circle-outline-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Circle Outline Icon",
       "description": "A circle outline icon component",
       "files": [
@@ -327,7 +327,7 @@
     },
     {
       "name": "clipboard-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Clipboard Icon",
       "description": "A clipboard icon component",
       "files": [
@@ -340,7 +340,7 @@
     },
     {
       "name": "close-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Close Icon",
       "description": "A close icon component",
       "files": [
@@ -353,7 +353,7 @@
     },
     {
       "name": "columns-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Columns Icon",
       "description": "A columns icon component",
       "files": [
@@ -366,7 +366,7 @@
     },
     {
       "name": "cookie-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Cookie Icon",
       "description": "A cookie icon component",
       "files": [
@@ -379,7 +379,7 @@
     },
     {
       "name": "create-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Create Icon",
       "description": "A create icon component",
       "files": [
@@ -392,7 +392,7 @@
     },
     {
       "name": "delete-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Delete Icon",
       "description": "A delete icon component",
       "files": [
@@ -405,7 +405,7 @@
     },
     {
       "name": "disassociate-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Disassociate Icon",
       "description": "A disassociate icon component",
       "files": [
@@ -418,7 +418,7 @@
     },
     {
       "name": "download-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Download Icon",
       "description": "A download icon component",
       "files": [
@@ -431,7 +431,7 @@
     },
     {
       "name": "draggable-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Draggable Icon",
       "description": "A draggable icon component",
       "files": [
@@ -445,7 +445,7 @@
     },
     {
       "name": "duplicate-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Duplicate Icon",
       "description": "A duplicate icon component",
       "files": [
@@ -458,7 +458,7 @@
     },
     {
       "name": "email-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Email Icon",
       "description": "An email icon component",
       "files": [
@@ -471,7 +471,7 @@
     },
     {
       "name": "facebook-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Facebook Icon",
       "description": "A facebook icon component",
       "files": [
@@ -484,7 +484,7 @@
     },
     {
       "name": "filter-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Filter Icon",
       "description": "A filter icon component",
       "files": [
@@ -497,7 +497,7 @@
     },
     {
       "name": "getcommunity-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Getcommunity Icon",
       "description": "A getcommunity icon component",
       "files": [
@@ -510,7 +510,7 @@
     },
     {
       "name": "github-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Github Icon",
       "description": "A github icon component",
       "files": [
@@ -523,7 +523,7 @@
     },
     {
       "name": "google-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Google Icon",
       "description": "A google icon component",
       "files": [
@@ -536,7 +536,7 @@
     },
     {
       "name": "heart-fill-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Heart Fill Icon",
       "description": "A heart fill icon component",
       "files": [
@@ -549,7 +549,7 @@
     },
     {
       "name": "heart-outline-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Heart Outline Icon",
       "description": "A heart outline icon component",
       "files": [
@@ -562,7 +562,7 @@
     },
     {
       "name": "help-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Help Icon",
       "description": "A help icon component",
       "files": [
@@ -575,7 +575,7 @@
     },
     {
       "name": "info-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Info Icon",
       "description": "An info icon component",
       "files": [
@@ -588,7 +588,7 @@
     },
     {
       "name": "instagram-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Instagram Icon",
       "description": "An instagram icon component",
       "files": [
@@ -601,7 +601,7 @@
     },
     {
       "name": "laptop-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Laptop Icon",
       "description": "A laptop icon component",
       "files": [
@@ -614,7 +614,7 @@
     },
     {
       "name": "link-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Link Icon",
       "description": "A link icon component",
       "files": [
@@ -627,7 +627,7 @@
     },
     {
       "name": "linkedin-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Linkedin Icon",
       "description": "A linkedin icon component",
       "files": [
@@ -640,7 +640,7 @@
     },
     {
       "name": "login-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Login Icon",
       "description": "A login icon component",
       "files": [
@@ -653,7 +653,7 @@
     },
     {
       "name": "logo-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Logo Icon",
       "description": "A logo icon component",
       "files": [
@@ -666,7 +666,7 @@
     },
     {
       "name": "logout-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Logout Icon",
       "description": "A logout icon component",
       "files": [
@@ -679,7 +679,7 @@
     },
     {
       "name": "menu-open-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Menu Open Icon",
       "description": "A menu open icon component",
       "files": [
@@ -692,7 +692,7 @@
     },
     {
       "name": "menu-open-full-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Menu Open Full Icon",
       "description": "A menu open full icon component",
       "files": [
@@ -705,7 +705,7 @@
     },
     {
       "name": "moon-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Moon Icon",
       "description": "A moon icon component",
       "files": [
@@ -718,7 +718,7 @@
     },
     {
       "name": "pause-circle-fill-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Pause Circle Fill Icon",
       "description": "A pause circle fill icon component",
       "files": [
@@ -731,7 +731,7 @@
     },
     {
       "name": "pause-circle-outline-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Pause Circle Outline Icon",
       "description": "A pause circle outline icon component",
       "files": [
@@ -744,7 +744,7 @@
     },
     {
       "name": "person-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Person Icon",
       "description": "A person icon component",
       "files": [
@@ -757,7 +757,7 @@
     },
     {
       "name": "phone-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Phone Icon",
       "description": "A phone icon component",
       "files": [
@@ -770,7 +770,7 @@
     },
     {
       "name": "pinterest-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Pinterest Icon",
       "description": "A pinterest icon component",
       "files": [
@@ -783,7 +783,7 @@
     },
     {
       "name": "play-circle-fill-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Play Circle Fill Icon",
       "description": "A play circle fill icon component",
       "files": [
@@ -796,7 +796,7 @@
     },
     {
       "name": "play-circle-outline-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Play Circle Outline Icon",
       "description": "A play circle outline icon component",
       "files": [
@@ -809,7 +809,7 @@
     },
     {
       "name": "process-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Process Icon",
       "description": "A process icon component",
       "files": [
@@ -822,7 +822,7 @@
     },
     {
       "name": "profile-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Profile Icon",
       "description": "A profile icon component",
       "files": [
@@ -835,7 +835,7 @@
     },
     {
       "name": "read-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Read Icon",
       "description": "A read icon component",
       "files": [
@@ -848,7 +848,7 @@
     },
     {
       "name": "reset-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Reset Icon",
       "description": "A reset icon component",
       "files": [
@@ -861,7 +861,7 @@
     },
     {
       "name": "save-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Save Icon",
       "description": "A save icon component",
       "files": [
@@ -874,7 +874,7 @@
     },
     {
       "name": "save-all-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Save All Icon",
       "description": "A save all icon component",
       "files": [
@@ -887,7 +887,7 @@
     },
     {
       "name": "search-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Search Icon",
       "description": "A search icon component",
       "files": [
@@ -900,7 +900,7 @@
     },
     {
       "name": "settings-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Settings Icon",
       "description": "A settings icon component",
       "files": [
@@ -913,7 +913,7 @@
     },
     {
       "name": "share-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Share Icon",
       "description": "A share icon component",
       "files": [
@@ -926,7 +926,7 @@
     },
     {
       "name": "sidebar-open-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Sidebar Open Icon",
       "description": "A sidebar open icon component",
       "files": [
@@ -939,7 +939,7 @@
     },
     {
       "name": "spinner-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Spinner Icon",
       "description": "A spinner icon component",
       "files": [
@@ -952,7 +952,7 @@
     },
     {
       "name": "sun-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Sun Icon",
       "description": "A sun icon component",
       "files": [
@@ -965,7 +965,7 @@
     },
     {
       "name": "tailwind-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Tailwind Icon",
       "description": "A tailwind icon component",
       "files": [
@@ -978,7 +978,7 @@
     },
     {
       "name": "tiktok-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Tiktok Icon",
       "description": "A tiktok icon component",
       "files": [
@@ -991,7 +991,7 @@
     },
     {
       "name": "twitter-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Twitter Icon",
       "description": "A twitter icon component",
       "files": [
@@ -1004,7 +1004,7 @@
     },
     {
       "name": "unread-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Unread Icon",
       "description": "An unread icon component",
       "files": [
@@ -1017,7 +1017,7 @@
     },
     {
       "name": "update-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Update Icon",
       "description": "An update icon component",
       "files": [
@@ -1030,7 +1030,7 @@
     },
     {
       "name": "youtube-icon",
-      "type": "registry:item",
+      "type": "registry:component",
       "title": "Youtube Icon",
       "description": "A youtube icon component",
       "files": [

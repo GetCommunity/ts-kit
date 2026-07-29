@@ -11,5 +11,5 @@
       "target": "components/icons/svg/logo.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

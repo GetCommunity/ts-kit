@@ -690,7 +690,7 @@
           "target": "components/icons/svg/apple.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "archive-icon",
@@ -703,7 +703,7 @@
           "target": "components/icons/svg/archive.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "aria-icon",
@@ -716,7 +716,7 @@
           "target": "components/icons/svg/aria.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "arrow-left-icon",
@@ -729,7 +729,7 @@
           "target": "components/icons/svg/arrow-left.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "arrow-right-icon",
@@ -742,7 +742,7 @@
           "target": "components/icons/svg/arrow-right.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "associate-icon",
@@ -755,7 +755,7 @@
           "target": "components/icons/svg/associate.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "caret-down-icon",
@@ -768,7 +768,7 @@
           "target": "components/icons/svg/caret-down.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "caret-left-icon",
@@ -781,7 +781,7 @@
           "target": "components/icons/svg/caret-left.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "caret-right-icon",
@@ -794,7 +794,7 @@
           "target": "components/icons/svg/caret-right.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "caret-sort-icon",
@@ -807,7 +807,7 @@
           "target": "components/icons/svg/caret-sort.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "caret-up-icon",
@@ -820,7 +820,7 @@
           "target": "components/icons/svg/caret-up.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "check-icon",
@@ -833,7 +833,7 @@
           "target": "components/icons/svg/check.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "checkbox-icon",
@@ -846,7 +846,7 @@
           "target": "components/icons/svg/checkbox.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "checkbox-checked-icon",
@@ -859,7 +859,7 @@
           "target": "components/icons/svg/checkbox-checked.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "checkbox-indeterminate-icon",
@@ -872,7 +872,7 @@
           "target": "components/icons/svg/checkbox-indeterminate.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "checkbox-minus-icon",
@@ -885,7 +885,7 @@
           "target": "components/icons/svg/checkbox-minus.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "checkbox-unchecked-icon",
@@ -898,7 +898,7 @@
           "target": "components/icons/svg/checkbox-unchecked.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "chevron-double-left-icon",
@@ -911,7 +911,7 @@
           "target": "components/icons/svg/chevron-double-left.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "chevron-double-right-icon",
@@ -924,7 +924,7 @@
           "target": "components/icons/svg/chevron-double-right.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "chevron-left-icon",
@@ -937,7 +937,7 @@
           "target": "components/icons/svg/chevron-left.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "chevron-right-icon",
@@ -950,7 +950,7 @@
           "target": "components/icons/svg/chevron-right.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "circle-fill-icon",
@@ -963,7 +963,7 @@
           "target": "components/icons/svg/circle-fill.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "circle-outline-icon",
@@ -976,7 +976,7 @@
           "target": "components/icons/svg/circle-outline.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "clipboard-icon",
@@ -989,7 +989,7 @@
           "target": "components/icons/svg/clipboard.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "close-icon",
@@ -1002,7 +1002,7 @@
           "target": "components/icons/svg/close.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "columns-icon",
@@ -1015,7 +1015,7 @@
           "target": "components/icons/svg/columns.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "cookie-icon",
@@ -1028,7 +1028,7 @@
           "target": "components/icons/svg/cookie.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "create-icon",
@@ -1041,7 +1041,7 @@
           "target": "components/icons/svg/create.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "delete-icon",
@@ -1054,7 +1054,7 @@
           "target": "components/icons/svg/delete.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "disassociate-icon",
@@ -1067,7 +1067,7 @@
           "target": "components/icons/svg/disassociate.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "download-icon",
@@ -1080,7 +1080,7 @@
           "target": "components/icons/svg/download.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "draggable-icon",
@@ -1096,7 +1096,7 @@
           "target": "components/icons/svg/draggable.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "duplicate-icon",
@@ -1109,7 +1109,7 @@
           "target": "components/icons/svg/duplicate.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "email-icon",
@@ -1122,7 +1122,7 @@
           "target": "components/icons/svg/email.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "facebook-icon",
@@ -1135,7 +1135,7 @@
           "target": "components/icons/svg/facebook.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "filter-icon",
@@ -1148,7 +1148,7 @@
           "target": "components/icons/svg/filter.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "getcommunity-icon",
@@ -1161,7 +1161,7 @@
           "target": "components/icons/svg/getcommunity.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "github-icon",
@@ -1174,7 +1174,7 @@
           "target": "components/icons/svg/github.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "google-icon",
@@ -1187,7 +1187,7 @@
           "target": "components/icons/svg/google.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "heart-fill-icon",
@@ -1200,7 +1200,7 @@
           "target": "components/icons/svg/heart-fill.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "heart-outline-icon",
@@ -1213,7 +1213,7 @@
           "target": "components/icons/svg/heart-outline.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "help-icon",
@@ -1226,7 +1226,7 @@
           "target": "components/icons/svg/help.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "info-icon",
@@ -1239,7 +1239,7 @@
           "target": "components/icons/svg/info.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "instagram-icon",
@@ -1252,7 +1252,7 @@
           "target": "components/icons/svg/instagram.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "laptop-icon",
@@ -1265,7 +1265,7 @@
           "target": "components/icons/svg/laptop.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "link-icon",
@@ -1278,7 +1278,7 @@
           "target": "components/icons/svg/link.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "linkedin-icon",
@@ -1291,7 +1291,7 @@
           "target": "components/icons/svg/linkedin.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "login-icon",
@@ -1304,7 +1304,7 @@
           "target": "components/icons/svg/login.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "logo-icon",
@@ -1317,7 +1317,7 @@
           "target": "components/icons/svg/logo.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "logout-icon",
@@ -1330,7 +1330,7 @@
           "target": "components/icons/svg/logout.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "menu-open-icon",
@@ -1343,7 +1343,7 @@
           "target": "components/icons/svg/menu-open.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "menu-open-full-icon",
@@ -1356,7 +1356,7 @@
           "target": "components/icons/svg/menu-open-full.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "moon-icon",
@@ -1369,7 +1369,7 @@
           "target": "components/icons/svg/moon.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "pause-circle-fill-icon",
@@ -1382,7 +1382,7 @@
           "target": "components/icons/svg/pause-circle-fill.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "pause-circle-outline-icon",
@@ -1395,7 +1395,7 @@
           "target": "components/icons/svg/pause-circle-outline.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "person-icon",
@@ -1408,7 +1408,7 @@
           "target": "components/icons/svg/person.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "phone-icon",
@@ -1421,7 +1421,7 @@
           "target": "components/icons/svg/phone.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "pinterest-icon",
@@ -1434,7 +1434,7 @@
           "target": "components/icons/svg/pinterest.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "play-circle-fill-icon",
@@ -1447,7 +1447,7 @@
           "target": "components/icons/svg/play-circle-fill.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "play-circle-outline-icon",
@@ -1460,7 +1460,7 @@
           "target": "components/icons/svg/play-circle-outline.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "process-icon",
@@ -1473,7 +1473,7 @@
           "target": "components/icons/svg/process.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "profile-icon",
@@ -1486,7 +1486,7 @@
           "target": "components/icons/svg/profile.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "read-icon",
@@ -1499,7 +1499,7 @@
           "target": "components/icons/svg/read.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "reset-icon",
@@ -1512,7 +1512,7 @@
           "target": "components/icons/svg/reset.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "save-icon",
@@ -1525,7 +1525,7 @@
           "target": "components/icons/svg/save.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "save-all-icon",
@@ -1538,7 +1538,7 @@
           "target": "components/icons/svg/save-all.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "search-icon",
@@ -1551,7 +1551,7 @@
           "target": "components/icons/svg/search.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "settings-icon",
@@ -1564,7 +1564,7 @@
           "target": "components/icons/svg/settings.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "share-icon",
@@ -1577,7 +1577,7 @@
           "target": "components/icons/svg/share.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "sidebar-open-icon",
@@ -1590,7 +1590,7 @@
           "target": "components/icons/svg/sidebar-open.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "spinner-icon",
@@ -1603,7 +1603,7 @@
           "target": "components/icons/svg/spinner.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "sun-icon",
@@ -1616,7 +1616,7 @@
           "target": "components/icons/svg/sun.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "tailwind-icon",
@@ -1629,7 +1629,7 @@
           "target": "components/icons/svg/tailwind.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "tiktok-icon",
@@ -1642,7 +1642,7 @@
           "target": "components/icons/svg/tiktok.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "twitter-icon",
@@ -1655,7 +1655,7 @@
           "target": "components/icons/svg/twitter.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "unread-icon",
@@ -1668,7 +1668,7 @@
           "target": "components/icons/svg/unread.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "update-icon",
@@ -1681,7 +1681,7 @@
           "target": "components/icons/svg/update.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "youtube-icon",
@@ -1694,7 +1694,7 @@
           "target": "components/icons/svg/youtube.tsx"
         }
       ],
-      "type": "registry:item"
+      "type": "registry:component"
     },
     {
       "name": "alert",

@@ -11,5 +11,5 @@
       "target": "components/icons/svg/chevron-double-left.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

@@ -11,5 +11,5 @@
       "target": "components/icons/svg/person.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

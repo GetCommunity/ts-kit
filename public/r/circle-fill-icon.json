@@ -11,5 +11,5 @@
       "target": "components/icons/svg/circle-fill.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

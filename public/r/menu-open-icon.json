@@ -11,5 +11,5 @@
       "target": "components/icons/svg/menu-open.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

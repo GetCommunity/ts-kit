@@ -11,5 +11,5 @@
       "target": "components/icons/svg/arrow-left.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

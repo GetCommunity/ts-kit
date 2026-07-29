@@ -11,5 +11,5 @@
       "target": "components/icons/svg/checkbox-minus.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

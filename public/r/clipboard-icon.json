@@ -11,5 +11,5 @@
       "target": "components/icons/svg/clipboard.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

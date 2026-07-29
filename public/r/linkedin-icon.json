@@ -11,5 +11,5 @@
       "target": "components/icons/svg/linkedin.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

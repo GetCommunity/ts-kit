@@ -11,5 +11,5 @@
       "target": "components/icons/svg/arrow-right.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }

@@ -11,5 +11,5 @@
       "target": "components/icons/svg/pause-circle-outline.tsx"
     }
   ],
-  "type": "registry:item"
+  "type": "registry:component"
 }
