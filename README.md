@@ -1,6 +1,6 @@
 # Shadcn Solid Registry Template
 
-A template for creating custom component registries compatible with the shadcn CLI, ported to **SolidJS** and **SolidStart**.
+A template for creating custom component registries compatible with the shadcn CLI, ported to **SolidJS** and **TanStack Start**.
 
 This is a SolidJS port of the official [shadcn-ui/registry-template](https://github.com/shadcn-ui/registry-template).
 
@@ -30,6 +30,11 @@ pnpm install
 # Start development server
 pnpm dev
 ```
+
+The frontend uses TanStack Start's file-based Solid Router. Routes live in
+`src/routes`, the router and its Query client are created in `src/router.tsx`,
+and server-rendered TanStack Query data is dehydrated and hydrated through the
+router integration.
 
 ### Building the Registry
 

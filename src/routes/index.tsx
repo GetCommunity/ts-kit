@@ -1,10 +1,12 @@
-import { Title } from "@solidjs/meta"
+import { createFileRoute } from "@tanstack/solid-router"
 
-export default function Home() {
+export const Route = createFileRoute("/")({
+  component: Home
+})
+
+function Home() {
   return (
     <main class="container mx-auto max-w-4xl px-4 py-8">
-      <Title>Custom Registry - SolidJS</Title>
-
       <header class="mb-8">
         <h1 class="font-bold text-3xl">Custom Registry</h1>
         <p class="mt-2 text-muted-foreground">
