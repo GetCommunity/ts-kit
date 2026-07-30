@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-create",
+  "title": "Create Icon",
+  "description": "A create icon component",
+  "files": [
+    {
+      "path": "src/registry/new-york/icons/svg/create.tsx",
+      "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const create = (props: ComponentProps<\"svg\">) => (\n  <svg\n    fill=\"currentColor\"\n    stroke-width=\"0\"\n    viewBox=\"0 0 1024 1024\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n    {...props}\n  >\n    <path d=\"M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8Z\" />\n    <path d=\"M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8Z\" />\n  </svg>\n)\n\nexport default create\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/create.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

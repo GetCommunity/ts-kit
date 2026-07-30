@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-progress",
+  "title": "Progress",
+  "description": "A progress component",
+  "dependencies": [
+    "@kobalte/core"
+  ],
+  "registryDependencies": [
+    "ui-label"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/ui/progress.tsx",
+      "content": "import * as ProgressPrimitive from \"@kobalte/core/progress\"\nimport { splitProps } from \"solid-js\"\n\nimport type { PolymorphicProps } from \"@kobalte/core/polymorphic\"\nimport type { Component, JSX, ValidComponent } from \"solid-js\"\n\nimport { Label } from \"@/registry/new-york/ui/label\"\n\ntype ProgressRootProps<T extends ValidComponent = \"div\"> =\n  ProgressPrimitive.ProgressRootProps<T> & { children?: JSX.Element }\n\nconst Progress = <T extends ValidComponent = \"div\">(\n  props: PolymorphicProps<T, ProgressRootProps<T>>\n) => {\n  const [local, others] = splitProps(props as ProgressRootProps, [\"children\"])\n  return (\n    <ProgressPrimitive.Root {...others}>\n      {local.children}\n      <ProgressPrimitive.Track class=\"relative h-2 w-full overflow-hidden rounded-full bg-secondary\">\n        <ProgressPrimitive.Fill class=\"h-full w-(--kb-progress-fill-width) flex-1 bg-primary transition-all\" />\n      </ProgressPrimitive.Track>\n    </ProgressPrimitive.Root>\n  )\n}\n\nconst ProgressLabel: Component<ProgressPrimitive.ProgressLabelProps> = (props) => {\n  return <ProgressPrimitive.Label as={Label} {...props} />\n}\n\nconst ProgressValueLabel: Component<ProgressPrimitive.ProgressValueLabelProps> = (\n  props\n) => {\n  return <ProgressPrimitive.ValueLabel as={Label} {...props} />\n}\n\nexport { Progress, ProgressLabel, ProgressValueLabel }\n",
+      "type": "registry:ui",
+      "target": "components/ui/progress.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

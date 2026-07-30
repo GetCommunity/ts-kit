@@ -3,6 +3,8 @@ import { Show, mergeProps } from "solid-js"
 import type { Setter } from "solid-js"
 
 import { cn } from "@/lib/utils/tailwind"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import {
   Select,
   SelectContent,
@@ -13,8 +15,6 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/registry/new-york/ui/select"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 export type SelectInputProps<T> = {
   name: string

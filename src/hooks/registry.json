@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
-      "name": "use-infinite-query",
+      "name": "hook-use-infinite-query",
       "type": "registry:hook",
       "title": "Use Infinite Query",
       "description": "A TanStack Query hook for fetching paginated Strapi data infinitely",

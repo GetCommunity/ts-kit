@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils/tailwind"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import { Label } from "@/registry/new-york/ui/label"
 import {
   RadioGroupItem,
@@ -6,8 +8,6 @@ import {
   RadioGroup as RadioGroupUI
 } from "@/registry/new-york/ui/radio-group"
 import { For, Show, mergeProps } from "solid-js"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 export type RadioGroupInputProps<T> = {
   name: string

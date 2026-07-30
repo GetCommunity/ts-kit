@@ -4,8 +4,10 @@ import { Portal } from "solid-js/web"
 import type { DateValue } from "@ark-ui/solid"
 import type { Setter } from "solid-js"
 
-import { formatDateValueLong } from "@/lib/utils/dates"
+import { formatDateValueLong } from "@/lib/utils/date"
 import { cn } from "@/lib/utils/tailwind"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import CloseIcon from "@/registry/new-york/icons/svg/close"
 import { Button, buttonVariants } from "@/registry/new-york/ui/button"
 import {
@@ -33,8 +35,6 @@ import {
 } from "@/registry/new-york/ui/date-picker"
 import { labelVariants } from "@/registry/new-york/ui/label"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/new-york/ui/tooltip"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 export type DateRangeInputProps = {
   name: string

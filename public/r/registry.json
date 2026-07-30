@@ -73,7 +73,7 @@
       "type": "registry:item"
     },
     {
-      "name": "use-infinite-query",
+      "name": "hook-use-infinite-query",
       "title": "Use Infinite Query",
       "description": "A TanStack Query hook for fetching paginated Strapi data infinitely",
       "dependencies": [
@@ -90,7 +90,7 @@
       "type": "registry:hook"
     },
     {
-      "name": "dates-utils",
+      "name": "lib-utils-date",
       "title": "Date Utilities",
       "description": "Date and time utility scripts",
       "dependencies": [
@@ -98,15 +98,28 @@
       ],
       "files": [
         {
-          "path": "src/lib/utils/dates.ts",
+          "path": "src/lib/utils/date.ts",
           "type": "registry:file",
-          "target": "lib/utils/dates.ts"
+          "target": "lib/utils/date.ts"
         }
       ],
       "type": "registry:item"
     },
     {
-      "name": "tailwind-utils",
+      "name": "lib-utils-script-tag",
+      "title": "Script Tag Utilities",
+      "description": "Utilities for handling <script> tag injection",
+      "files": [
+        {
+          "path": "src/lib/utils/script-tag.ts",
+          "type": "registry:file",
+          "target": "lib/utils/script-tag.ts"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "lib-utils-tailwind",
       "title": "Tailwind Utilities",
       "description": "Tailwind utility scripts (cn)",
       "dependencies": [
@@ -123,19 +136,19 @@
       "type": "registry:item"
     },
     {
-      "name": "checkbox-input",
+      "name": "form-input-checkbox",
       "title": "Checkbox Input",
       "description": "A checkbox input form component",
       "dependencies": [
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "orientation",
+        "ui-orientation",
         "form-input-description",
         "form-input-errors",
-        "checkbox",
-        "label",
-        "tailwind-utils"
+        "form-input-checkbox",
+        "ui-label",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -147,19 +160,19 @@
       "type": "registry:component"
     },
     {
-      "name": "checkbox-switch-input",
+      "name": "form-input-checkbox-switch",
       "title": "Checkbox Switch Input",
       "description": "A checkbox switch input form component",
       "dependencies": [
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "orientation",
-        "label",
-        "switch",
+        "ui-orientation",
+        "ui-label",
+        "ui-switch",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -171,7 +184,7 @@
       "type": "registry:component"
     },
     {
-      "name": "combobox-input",
+      "name": "form-input-combobox",
       "title": "Combobox Input",
       "description": "A combobox input form component",
       "dependencies": [
@@ -179,12 +192,12 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "orientation",
-        "combobox",
-        "label",
+        "ui-orientation",
+        "ui-combobox",
+        "ui-label",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -196,7 +209,7 @@
       "type": "registry:component"
     },
     {
-      "name": "combobox-multi-input",
+      "name": "form-input-combobox-multi",
       "title": "Combobox Multi Input",
       "description": "A combobox multi input form component",
       "dependencies": [
@@ -204,13 +217,13 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "orientation",
-        "close-icon",
-        "combobox",
-        "label",
+        "icon-close",
+        "ui-orientation",
+        "ui-combobox",
+        "ui-label",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -222,22 +235,22 @@
       "type": "registry:component"
     },
     {
-      "name": "date-input",
+      "name": "form-input-date",
       "title": "Date Input",
       "description": "A date input form component",
       "dependencies": [
         "@ark-ui/solid"
       ],
       "registryDependencies": [
-        "dates-utils",
-        "close-icon",
-        "button",
-        "date-picker",
-        "label",
-        "tooltip",
+        "icon-close",
+        "ui-button",
+        "ui-date-picker",
+        "ui-label",
+        "ui-tooltip",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-date",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -249,22 +262,22 @@
       "type": "registry:component"
     },
     {
-      "name": "date-range-input",
+      "name": "form-input-date-range",
       "title": "Date Range Input",
       "description": "A date range input form component",
       "dependencies": [
         "@ark-ui/solid"
       ],
       "registryDependencies": [
-        "dates-utils",
-        "close-icon",
-        "button",
-        "date-picker",
-        "label",
-        "tooltip",
+        "icon-close",
+        "ui-button",
+        "ui-date-picker",
+        "ui-label",
+        "ui-tooltip",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-date",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -276,7 +289,7 @@
       "type": "registry:component"
     },
     {
-      "name": "datetime-input",
+      "name": "form-input-datetime",
       "title": "Datetime Input",
       "description": "A datetime input form component",
       "dependencies": [
@@ -284,15 +297,15 @@
         "@ark-ui/solid"
       ],
       "registryDependencies": [
-        "dates-utils",
-        "close-icon",
-        "button",
-        "date-picker",
-        "label",
-        "tooltip",
+        "icon-close",
+        "ui-button",
+        "ui-date-picker",
+        "ui-label",
+        "ui-tooltip",
+        "lib-utils-date",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -304,14 +317,14 @@
       "type": "registry:component"
     },
     {
-      "name": "file-input",
+      "name": "form-input-file",
       "title": "File Input",
       "description": "A file input form component",
       "registryDependencies": [
+        "ui-label",
         "form-input-description",
         "form-input-errors",
-        "label",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -330,8 +343,8 @@
         "@formisch/solid"
       ],
       "registryDependencies": [
-        "alert",
-        "tailwind-utils"
+        "ui-alert",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -347,7 +360,7 @@
       "title": "Form Input Description",
       "description": "A shared form input description component",
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -363,7 +376,7 @@
       "title": "Form Input Errors",
       "description": "A shared form input validation errors component",
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -375,11 +388,11 @@
       "type": "registry:component"
     },
     {
-      "name": "hidden-input",
+      "name": "form-input-hidden",
       "title": "Hidden Input",
       "description": "A hidden input form component",
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -391,7 +404,7 @@
       "type": "registry:component"
     },
     {
-      "name": "lcrud-combobox-multi",
+      "name": "form-input-lcrud-combobox-multi",
       "title": "LCRUD Combobox Multi",
       "description": "A combobox multi-select input form component using tanstack query for LCRUD operations",
       "dependencies": [
@@ -401,15 +414,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "use-infinite-query",
-        "tailwind-utils",
-        "close-icon",
-        "button",
-        "checkbox",
-        "combobox",
-        "orientation",
+        "hook-use-infinite-query",
+        "icon-close",
+        "ui-button",
+        "ui-combobox",
+        "ui-orientation",
+        "form-input-checkbox",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -421,7 +434,7 @@
       "type": "registry:component"
     },
     {
-      "name": "lcrud-combobox",
+      "name": "form-input-lcrud-combobox",
       "title": "LCRUD Combobox Multi",
       "description": "A combobox single-select input form component using tanstack query for LCRUD operations",
       "dependencies": [
@@ -431,14 +444,14 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "use-infinite-query",
-        "tailwind-utils",
-        "button",
-        "checkbox",
-        "combobox",
-        "orientation",
+        "hook-use-infinite-query",
+        "ui-button",
+        "ui-combobox",
+        "ui-orientation",
+        "form-input-checkbox",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -450,7 +463,7 @@
       "type": "registry:component"
     },
     {
-      "name": "lcrud-select-multi",
+      "name": "form-input-lcrud-select-multi",
       "title": "LCRUD Select Multi",
       "description": "A multi-select input form component using tanstack query for LCRUD operations",
       "dependencies": [
@@ -460,15 +473,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "use-infinite-query",
-        "close-icon",
-        "button",
-        "checkbox",
-        "select",
-        "orientation",
+        "hook-use-infinite-query",
+        "icon-close",
+        "ui-button",
+        "ui-orientation",
+        "form-input-checkbox",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "form-input-select",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -480,7 +493,7 @@
       "type": "registry:component"
     },
     {
-      "name": "lcrud-select",
+      "name": "form-input-lcrud-select",
       "title": "LCRUD Select",
       "description": "A single-select input form component using tanstack query for LCRUD operations",
       "dependencies": [
@@ -490,15 +503,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "use-infinite-query",
-        "close-icon",
-        "button",
-        "checkbox",
-        "select",
-        "orientation",
+        "hook-use-infinite-query",
+        "icon-close",
+        "ui-button",
+        "ui-orientation",
+        "form-input-checkbox",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "form-input-select",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -510,13 +523,13 @@
       "type": "registry:component"
     },
     {
-      "name": "number-input",
+      "name": "form-input-number",
       "title": "Number Input",
       "description": "A number input form component",
       "registryDependencies": [
+        "ui-number-field",
         "form-input-errors",
-        "number-field",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -528,17 +541,17 @@
       "type": "registry:component"
     },
     {
-      "name": "number-range-input",
+      "name": "form-input-number-range",
       "title": "Number Range Input",
       "description": "A number range input form component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "slider",
+        "ui-slider",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -550,15 +563,15 @@
       "type": "registry:component"
     },
     {
-      "name": "radio-group-input",
+      "name": "form-input-radio-group",
       "title": "Radio Group Input",
       "description": "A radio group input form component",
       "registryDependencies": [
-        "label",
-        "radio-group",
+        "ui-label",
+        "ui-radio-group",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -570,14 +583,14 @@
       "type": "registry:component"
     },
     {
-      "name": "select-input",
+      "name": "form-input-select",
       "title": "Select Input",
       "description": "A select input form component",
       "registryDependencies": [
-        "select",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "form-input-select",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -589,15 +602,15 @@
       "type": "registry:component"
     },
     {
-      "name": "select-multi-input",
+      "name": "form-input-select-multi",
       "title": "Select Multi Input",
       "description": "A select multi input form component",
       "registryDependencies": [
-        "close-icon",
-        "select",
+        "icon-close",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "form-input-select",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -609,13 +622,13 @@
       "type": "registry:component"
     },
     {
-      "name": "text-input",
+      "name": "form-input-text",
       "title": "Text Input",
       "description": "A text input form component",
       "registryDependencies": [
+        "ui-text-field",
         "form-input-errors",
-        "text-field",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -627,21 +640,21 @@
       "type": "registry:component"
     },
     {
-      "name": "time-input",
+      "name": "form-input-time",
       "title": "Time Input",
       "description": "A time input form component",
       "dependencies": [
         "@internationalized/date"
       ],
       "registryDependencies": [
-        "dates-utils",
-        "close-icon",
-        "button",
-        "label",
-        "tooltip",
+        "lib-utils-date",
+        "icon-close",
+        "ui-button",
+        "ui-label",
+        "ui-tooltip",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -653,22 +666,22 @@
       "type": "registry:component"
     },
     {
-      "name": "StrapiIcon-icon-compo-ient",
+      "name": "strapi-icon-component",
       "title": "Strapi Icon Component Icon",
       "description": "A dynamic icon component for strapi backend icons",
       "dependencies": [
         "@getcommunity/gc-validators"
       ],
       "registryDependencies": [
-        "email-icon",
-        "facebook-icon",
-        "instagram-icon",
-        "link-icon",
-        "linkedin-icon",
-        "phone-icon",
-        "pinterest-icon",
-        "tiktok-icon",
-        "twitter-icon"
+        "icon-email",
+        "icon-facebook",
+        "icon-instagram",
+        "icon-link",
+        "icon-linkedin",
+        "icon-phone",
+        "icon-pinterest",
+        "icon-tiktok",
+        "icon-twitter"
       ],
       "files": [
         {
@@ -680,7 +693,7 @@
       "type": "registry:item"
     },
     {
-      "name": "apple-icon",
+      "name": "icon-apple",
       "title": "Apple Icon",
       "description": "An apple icon component",
       "files": [
@@ -693,7 +706,7 @@
       "type": "registry:component"
     },
     {
-      "name": "archive-icon",
+      "name": "icon-archive",
       "title": "Archive Icon",
       "description": "An archive icon component",
       "files": [
@@ -706,7 +719,7 @@
       "type": "registry:component"
     },
     {
-      "name": "aria-icon",
+      "name": "icon-aria",
       "title": "Aria Icon",
       "description": "An aria icon component",
       "files": [
@@ -719,7 +732,7 @@
       "type": "registry:component"
     },
     {
-      "name": "arrow-left-icon",
+      "name": "icon-arrow-left",
       "title": "Arrow Left Icon",
       "description": "An arrow left icon component",
       "files": [
@@ -732,7 +745,7 @@
       "type": "registry:component"
     },
     {
-      "name": "arrow-right-icon",
+      "name": "icon-arrow-right",
       "title": "Arrow Right Icon",
       "description": "An arrow right icon component",
       "files": [
@@ -745,7 +758,7 @@
       "type": "registry:component"
     },
     {
-      "name": "associate-icon",
+      "name": "icon-associate",
       "title": "Associate Icon",
       "description": "An associate icon component",
       "files": [
@@ -758,7 +771,7 @@
       "type": "registry:component"
     },
     {
-      "name": "caret-down-icon",
+      "name": "icon-caret-down",
       "title": "Caret Down Icon",
       "description": "A caret down icon component",
       "files": [
@@ -771,7 +784,7 @@
       "type": "registry:component"
     },
     {
-      "name": "caret-left-icon",
+      "name": "icon-caret-left",
       "title": "Caret Left Icon",
       "description": "A caret left icon component",
       "files": [
@@ -784,7 +797,7 @@
       "type": "registry:component"
     },
     {
-      "name": "caret-right-icon",
+      "name": "icon-caret-right",
       "title": "Caret Right Icon",
       "description": "A caret right icon component",
       "files": [
@@ -797,7 +810,7 @@
       "type": "registry:component"
     },
     {
-      "name": "caret-sort-icon",
+      "name": "icon-caret-sort",
       "title": "Caret Sort Icon",
       "description": "A caret sort icon component",
       "files": [
@@ -810,7 +823,7 @@
       "type": "registry:component"
     },
     {
-      "name": "caret-up-icon",
+      "name": "icon-caret-up",
       "title": "Caret Up Icon",
       "description": "A caret up icon component",
       "files": [
@@ -823,7 +836,7 @@
       "type": "registry:component"
     },
     {
-      "name": "check-icon",
+      "name": "icon-check",
       "title": "Check Icon",
       "description": "A check icon component",
       "files": [
@@ -836,7 +849,7 @@
       "type": "registry:component"
     },
     {
-      "name": "checkbox-icon",
+      "name": "icon-checkbox",
       "title": "Checkbox Icon",
       "description": "A checkbox icon component",
       "files": [
@@ -849,7 +862,7 @@
       "type": "registry:component"
     },
     {
-      "name": "checkbox-checked-icon",
+      "name": "icon-checkbox-checked",
       "title": "Check Box Checked Icon",
       "description": "A checkbox checked icon component",
       "files": [
@@ -862,7 +875,7 @@
       "type": "registry:component"
     },
     {
-      "name": "checkbox-indeterminate-icon",
+      "name": "icon-checkbox-indeterminate",
       "title": "Check Box Indeterminate Icon",
       "description": "A checkbox indeterminate icon component",
       "files": [
@@ -875,7 +888,7 @@
       "type": "registry:component"
     },
     {
-      "name": "checkbox-minus-icon",
+      "name": "icon-checkbox-minus",
       "title": "Checkbox Minus Icon",
       "description": "A checkbox minus icon component",
       "files": [
@@ -888,7 +901,7 @@
       "type": "registry:component"
     },
     {
-      "name": "checkbox-unchecked-icon",
+      "name": "icon-checkbox-unchecked",
       "title": "Check Box Unchecked Icon",
       "description": "A checkbox unchecked icon component",
       "files": [
@@ -901,7 +914,7 @@
       "type": "registry:component"
     },
     {
-      "name": "chevron-double-left-icon",
+      "name": "icon-chevron-double-left",
       "title": "Chevron Double Left Icon",
       "description": "A chevron double left icon component",
       "files": [
@@ -914,7 +927,7 @@
       "type": "registry:component"
     },
     {
-      "name": "chevron-double-right-icon",
+      "name": "icon-chevron-double-right",
       "title": "Chevron Double Right Icon",
       "description": "A chevron double right icon component",
       "files": [
@@ -927,7 +940,7 @@
       "type": "registry:component"
     },
     {
-      "name": "chevron-left-icon",
+      "name": "icon-chevron-left",
       "title": "Chevron Left Icon",
       "description": "A chevron left icon component",
       "files": [
@@ -940,7 +953,7 @@
       "type": "registry:component"
     },
     {
-      "name": "chevron-right-icon",
+      "name": "icon-chevron-right",
       "title": "Chevron Right Icon",
       "description": "A chevron right icon component",
       "files": [
@@ -953,7 +966,7 @@
       "type": "registry:component"
     },
     {
-      "name": "circle-fill-icon",
+      "name": "icon-circle-fill",
       "title": "Circle Fill Icon",
       "description": "A circle fill icon component",
       "files": [
@@ -966,7 +979,7 @@
       "type": "registry:component"
     },
     {
-      "name": "circle-outline-icon",
+      "name": "icon-circle-outline",
       "title": "Circle Outline Icon",
       "description": "A circle outline icon component",
       "files": [
@@ -979,7 +992,7 @@
       "type": "registry:component"
     },
     {
-      "name": "clipboard-icon",
+      "name": "icon-clipboard",
       "title": "Clipboard Icon",
       "description": "A clipboard icon component",
       "files": [
@@ -992,7 +1005,7 @@
       "type": "registry:component"
     },
     {
-      "name": "close-icon",
+      "name": "icon-close",
       "title": "Close Icon",
       "description": "A close icon component",
       "files": [
@@ -1005,7 +1018,7 @@
       "type": "registry:component"
     },
     {
-      "name": "columns-icon",
+      "name": "icon-columns",
       "title": "Columns Icon",
       "description": "A columns icon component",
       "files": [
@@ -1018,7 +1031,7 @@
       "type": "registry:component"
     },
     {
-      "name": "cookie-icon",
+      "name": "icon-cookie",
       "title": "Cookie Icon",
       "description": "A cookie icon component",
       "files": [
@@ -1031,7 +1044,7 @@
       "type": "registry:component"
     },
     {
-      "name": "create-icon",
+      "name": "icon-create",
       "title": "Create Icon",
       "description": "A create icon component",
       "files": [
@@ -1044,7 +1057,7 @@
       "type": "registry:component"
     },
     {
-      "name": "delete-icon",
+      "name": "icon-delete",
       "title": "Delete Icon",
       "description": "A delete icon component",
       "files": [
@@ -1057,7 +1070,7 @@
       "type": "registry:component"
     },
     {
-      "name": "disassociate-icon",
+      "name": "icon-disassociate",
       "title": "Disassociate Icon",
       "description": "A disassociate icon component",
       "files": [
@@ -1070,7 +1083,7 @@
       "type": "registry:component"
     },
     {
-      "name": "download-icon",
+      "name": "icon-download",
       "title": "Download Icon",
       "description": "A download icon component",
       "files": [
@@ -1083,11 +1096,11 @@
       "type": "registry:component"
     },
     {
-      "name": "draggable-icon",
+      "name": "icon-draggable",
       "title": "Draggable Icon",
       "description": "A draggable icon component",
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1099,7 +1112,7 @@
       "type": "registry:component"
     },
     {
-      "name": "duplicate-icon",
+      "name": "icon-duplicate",
       "title": "Duplicate Icon",
       "description": "A duplicate icon component",
       "files": [
@@ -1112,7 +1125,7 @@
       "type": "registry:component"
     },
     {
-      "name": "email-icon",
+      "name": "icon-email",
       "title": "Email Icon",
       "description": "An email icon component",
       "files": [
@@ -1125,7 +1138,7 @@
       "type": "registry:component"
     },
     {
-      "name": "facebook-icon",
+      "name": "icon-facebook",
       "title": "Facebook Icon",
       "description": "A facebook icon component",
       "files": [
@@ -1138,7 +1151,7 @@
       "type": "registry:component"
     },
     {
-      "name": "filter-icon",
+      "name": "icon-filter",
       "title": "Filter Icon",
       "description": "A filter icon component",
       "files": [
@@ -1151,7 +1164,7 @@
       "type": "registry:component"
     },
     {
-      "name": "getcommunity-icon",
+      "name": "icon-getcommunity",
       "title": "Getcommunity Icon",
       "description": "A getcommunity icon component",
       "files": [
@@ -1164,7 +1177,7 @@
       "type": "registry:component"
     },
     {
-      "name": "github-icon",
+      "name": "icon-github",
       "title": "Github Icon",
       "description": "A github icon component",
       "files": [
@@ -1177,7 +1190,7 @@
       "type": "registry:component"
     },
     {
-      "name": "google-icon",
+      "name": "icon-google",
       "title": "Google Icon",
       "description": "A google icon component",
       "files": [
@@ -1190,7 +1203,7 @@
       "type": "registry:component"
     },
     {
-      "name": "heart-fill-icon",
+      "name": "icon-heart-fill",
       "title": "Heart Fill Icon",
       "description": "A heart fill icon component",
       "files": [
@@ -1203,7 +1216,7 @@
       "type": "registry:component"
     },
     {
-      "name": "heart-outline-icon",
+      "name": "icon-heart-outline",
       "title": "Heart Outline Icon",
       "description": "A heart outline icon component",
       "files": [
@@ -1216,7 +1229,7 @@
       "type": "registry:component"
     },
     {
-      "name": "help-icon",
+      "name": "icon-help",
       "title": "Help Icon",
       "description": "A help icon component",
       "files": [
@@ -1229,7 +1242,7 @@
       "type": "registry:component"
     },
     {
-      "name": "info-icon",
+      "name": "icon-info",
       "title": "Info Icon",
       "description": "An info icon component",
       "files": [
@@ -1242,7 +1255,7 @@
       "type": "registry:component"
     },
     {
-      "name": "instagram-icon",
+      "name": "icon-instagram",
       "title": "Instagram Icon",
       "description": "An instagram icon component",
       "files": [
@@ -1255,7 +1268,7 @@
       "type": "registry:component"
     },
     {
-      "name": "laptop-icon",
+      "name": "icon-laptop",
       "title": "Laptop Icon",
       "description": "A laptop icon component",
       "files": [
@@ -1268,7 +1281,7 @@
       "type": "registry:component"
     },
     {
-      "name": "link-icon",
+      "name": "icon-link",
       "title": "Link Icon",
       "description": "A link icon component",
       "files": [
@@ -1281,7 +1294,7 @@
       "type": "registry:component"
     },
     {
-      "name": "linkedin-icon",
+      "name": "icon-linkedin",
       "title": "Linkedin Icon",
       "description": "A linkedin icon component",
       "files": [
@@ -1294,7 +1307,7 @@
       "type": "registry:component"
     },
     {
-      "name": "login-icon",
+      "name": "icon-login",
       "title": "Login Icon",
       "description": "A login icon component",
       "files": [
@@ -1307,7 +1320,7 @@
       "type": "registry:component"
     },
     {
-      "name": "logo-icon",
+      "name": "icon-logo",
       "title": "Logo Icon",
       "description": "A logo icon component",
       "files": [
@@ -1320,7 +1333,7 @@
       "type": "registry:component"
     },
     {
-      "name": "logout-icon",
+      "name": "icon-logout",
       "title": "Logout Icon",
       "description": "A logout icon component",
       "files": [
@@ -1333,7 +1346,7 @@
       "type": "registry:component"
     },
     {
-      "name": "menu-open-icon",
+      "name": "icon-menu-open",
       "title": "Menu Open Icon",
       "description": "A menu open icon component",
       "files": [
@@ -1346,7 +1359,7 @@
       "type": "registry:component"
     },
     {
-      "name": "menu-open-full-icon",
+      "name": "icon-menu-open-full",
       "title": "Menu Open Full Icon",
       "description": "A menu open full icon component",
       "files": [
@@ -1359,7 +1372,7 @@
       "type": "registry:component"
     },
     {
-      "name": "moon-icon",
+      "name": "icon-moon",
       "title": "Moon Icon",
       "description": "A moon icon component",
       "files": [
@@ -1372,7 +1385,7 @@
       "type": "registry:component"
     },
     {
-      "name": "pause-circle-fill-icon",
+      "name": "icon-pause-circle-fill",
       "title": "Pause Circle Fill Icon",
       "description": "A pause circle fill icon component",
       "files": [
@@ -1385,7 +1398,7 @@
       "type": "registry:component"
     },
     {
-      "name": "pause-circle-outline-icon",
+      "name": "icon-pause-circle-outline",
       "title": "Pause Circle Outline Icon",
       "description": "A pause circle outline icon component",
       "files": [
@@ -1398,7 +1411,7 @@
       "type": "registry:component"
     },
     {
-      "name": "person-icon",
+      "name": "icon-person",
       "title": "Person Icon",
       "description": "A person icon component",
       "files": [
@@ -1411,7 +1424,7 @@
       "type": "registry:component"
     },
     {
-      "name": "phone-icon",
+      "name": "icon-phone",
       "title": "Phone Icon",
       "description": "A phone icon component",
       "files": [
@@ -1424,7 +1437,7 @@
       "type": "registry:component"
     },
     {
-      "name": "pinterest-icon",
+      "name": "icon-pinterest",
       "title": "Pinterest Icon",
       "description": "A pinterest icon component",
       "files": [
@@ -1437,7 +1450,7 @@
       "type": "registry:component"
     },
     {
-      "name": "play-circle-fill-icon",
+      "name": "icon-play-circle-fill",
       "title": "Play Circle Fill Icon",
       "description": "A play circle fill icon component",
       "files": [
@@ -1450,7 +1463,7 @@
       "type": "registry:component"
     },
     {
-      "name": "play-circle-outline-icon",
+      "name": "icon-play-circle-outline",
       "title": "Play Circle Outline Icon",
       "description": "A play circle outline icon component",
       "files": [
@@ -1463,7 +1476,7 @@
       "type": "registry:component"
     },
     {
-      "name": "process-icon",
+      "name": "icon-process",
       "title": "Process Icon",
       "description": "A process icon component",
       "files": [
@@ -1476,7 +1489,7 @@
       "type": "registry:component"
     },
     {
-      "name": "profile-icon",
+      "name": "icon-profile",
       "title": "Profile Icon",
       "description": "A profile icon component",
       "files": [
@@ -1489,7 +1502,7 @@
       "type": "registry:component"
     },
     {
-      "name": "read-icon",
+      "name": "icon-read",
       "title": "Read Icon",
       "description": "A read icon component",
       "files": [
@@ -1502,7 +1515,7 @@
       "type": "registry:component"
     },
     {
-      "name": "reset-icon",
+      "name": "icon-reset",
       "title": "Reset Icon",
       "description": "A reset icon component",
       "files": [
@@ -1515,7 +1528,7 @@
       "type": "registry:component"
     },
     {
-      "name": "save-icon",
+      "name": "icon-save",
       "title": "Save Icon",
       "description": "A save icon component",
       "files": [
@@ -1528,7 +1541,7 @@
       "type": "registry:component"
     },
     {
-      "name": "save-all-icon",
+      "name": "icon-save-all",
       "title": "Save All Icon",
       "description": "A save all icon component",
       "files": [
@@ -1541,7 +1554,7 @@
       "type": "registry:component"
     },
     {
-      "name": "search-icon",
+      "name": "icon-search",
       "title": "Search Icon",
       "description": "A search icon component",
       "files": [
@@ -1554,7 +1567,7 @@
       "type": "registry:component"
     },
     {
-      "name": "settings-icon",
+      "name": "icon-settings",
       "title": "Settings Icon",
       "description": "A settings icon component",
       "files": [
@@ -1567,7 +1580,7 @@
       "type": "registry:component"
     },
     {
-      "name": "share-icon",
+      "name": "icon-share",
       "title": "Share Icon",
       "description": "A share icon component",
       "files": [
@@ -1580,7 +1593,7 @@
       "type": "registry:component"
     },
     {
-      "name": "sidebar-open-icon",
+      "name": "icon-sidebar-open",
       "title": "Sidebar Open Icon",
       "description": "A sidebar open icon component",
       "files": [
@@ -1593,7 +1606,7 @@
       "type": "registry:component"
     },
     {
-      "name": "spinner-icon",
+      "name": "icon-spinner",
       "title": "Spinner Icon",
       "description": "A spinner icon component",
       "files": [
@@ -1606,7 +1619,7 @@
       "type": "registry:component"
     },
     {
-      "name": "sun-icon",
+      "name": "icon-sun",
       "title": "Sun Icon",
       "description": "A sun icon component",
       "files": [
@@ -1619,7 +1632,7 @@
       "type": "registry:component"
     },
     {
-      "name": "tailwind-icon",
+      "name": "icon-tailwind",
       "title": "Tailwind Icon",
       "description": "A tailwind icon component",
       "files": [
@@ -1632,7 +1645,7 @@
       "type": "registry:component"
     },
     {
-      "name": "tiktok-icon",
+      "name": "icon-tiktok",
       "title": "Tiktok Icon",
       "description": "A tiktok icon component",
       "files": [
@@ -1645,7 +1658,7 @@
       "type": "registry:component"
     },
     {
-      "name": "twitter-icon",
+      "name": "icon-twitter",
       "title": "Twitter Icon",
       "description": "A twitter icon component",
       "files": [
@@ -1658,7 +1671,7 @@
       "type": "registry:component"
     },
     {
-      "name": "unread-icon",
+      "name": "icon-unread",
       "title": "Unread Icon",
       "description": "An unread icon component",
       "files": [
@@ -1671,7 +1684,7 @@
       "type": "registry:component"
     },
     {
-      "name": "update-icon",
+      "name": "icon-update",
       "title": "Update Icon",
       "description": "An update icon component",
       "files": [
@@ -1684,7 +1697,7 @@
       "type": "registry:component"
     },
     {
-      "name": "youtube-icon",
+      "name": "icon-youtube",
       "title": "Youtube Icon",
       "description": "A youtube icon component",
       "files": [
@@ -1697,7 +1710,7 @@
       "type": "registry:component"
     },
     {
-      "name": "alert",
+      "name": "ui-alert",
       "title": "Alert",
       "description": "An alert component",
       "dependencies": [
@@ -1705,7 +1718,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1717,14 +1730,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "accordion",
+      "name": "ui-accordion",
       "title": "Accordion",
       "description": "An accordion component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1736,14 +1749,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "avatar",
+      "name": "ui-avatar",
       "title": "Avatar",
       "description": "An avatar component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1755,14 +1768,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "badge",
+      "name": "ui-badge",
       "title": "Badge",
       "description": "A badge component",
       "dependencies": [
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1774,14 +1787,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "breadcrumb",
+      "name": "ui-breadcrumb",
       "title": "Breadcrumb",
       "description": "A breadcrumb component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1793,7 +1806,7 @@
       "type": "registry:ui"
     },
     {
-      "name": "button",
+      "name": "ui-button",
       "title": "Button",
       "description": "A button component",
       "dependencies": [
@@ -1801,7 +1814,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1813,11 +1826,11 @@
       "type": "registry:ui"
     },
     {
-      "name": "card",
+      "name": "ui-card",
       "title": "Card",
       "description": "A card component",
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1829,15 +1842,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "carousel",
+      "name": "ui-carousel",
       "title": "Carousel",
       "description": "A carousel component",
       "dependencies": [
         "embla-carousel-solid"
       ],
       "registryDependencies": [
-        "button",
-        "tailwind-utils"
+        "ui-button",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1849,14 +1862,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "checkbox",
+      "name": "ui-checkbox",
       "title": "Checkbox",
       "description": "A checkbox component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1868,7 +1881,7 @@
       "type": "registry:ui"
     },
     {
-      "name": "collapsible",
+      "name": "ui-collapsible",
       "title": "Collapsible",
       "description": "A collapsible component",
       "dependencies": [
@@ -1884,15 +1897,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "combobox",
+      "name": "ui-combobox",
       "title": "Combobox",
       "description": "A combobox component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label",
-        "tailwind-utils"
+        "ui-label",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1904,15 +1917,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "date-picker",
+      "name": "ui-date-picker",
       "title": "Date Picker",
       "description": "A date picker component",
       "dependencies": [
         "@ark-ui/solid"
       ],
       "registryDependencies": [
-        "button",
-        "tailwind-utils"
+        "ui-button",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1924,14 +1937,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "dialog",
+      "name": "ui-dialog",
       "title": "Dialog",
       "description": "A dialog component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1943,14 +1956,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "drawer",
+      "name": "ui-drawer",
       "title": "Drawer",
       "description": "A drawer component",
       "dependencies": [
         "@corvu/drawer"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1962,14 +1975,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "dropdown-menu",
+      "name": "ui-dropdown-menu",
       "title": "Dropdown Menu",
       "description": "A dropdown menu component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1981,11 +1994,11 @@
       "type": "registry:ui"
     },
     {
-      "name": "flex",
+      "name": "ui-flex",
       "title": "Flex",
       "description": "A flex component",
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -1997,14 +2010,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "label",
+      "name": "ui-label",
       "title": "Label",
       "description": "A label component",
       "dependencies": [
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2016,14 +2029,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "menubar",
+      "name": "ui-menubar",
       "title": "Menubar",
       "description": "A menubar component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2035,15 +2048,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "number-field",
+      "name": "ui-number-field",
       "title": "Number Field",
       "description": "A number field component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label",
-        "tailwind-utils"
+        "ui-label",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2055,7 +2068,7 @@
       "type": "registry:ui"
     },
     {
-      "name": "orientation",
+      "name": "ui-orientation",
       "title": "Orientation",
       "description": "An orientation component",
       "dependencies": [
@@ -2071,15 +2084,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "pagination",
+      "name": "ui-pagination",
       "title": "Pagination",
       "description": "A pagination component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "button",
-        "tailwind-utils"
+        "ui-button",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2091,14 +2104,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "popover",
+      "name": "ui-popover",
       "title": "Popover",
       "description": "A popover component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2110,11 +2123,11 @@
       "type": "registry:ui"
     },
     {
-      "name": "progress-circle",
+      "name": "ui-progress-circle",
       "title": "Progress Circle",
       "description": "A progress circle component",
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2126,14 +2139,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "progress",
+      "name": "ui-progress",
       "title": "Progress",
       "description": "A progress component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label"
+        "ui-label"
       ],
       "files": [
         {
@@ -2145,15 +2158,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "radio-group",
+      "name": "ui-radio-group",
       "title": "Radio Group",
       "description": "A radio group component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label",
-        "tailwind-utils"
+        "ui-label",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2165,15 +2178,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "select",
+      "name": "ui-select",
       "title": "Select",
       "description": "A select component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label",
-        "tailwind-utils"
+        "ui-label",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2185,14 +2198,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "separator",
+      "name": "ui-separator",
       "title": "Separator",
       "description": "A separator component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2204,15 +2217,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "slider",
+      "name": "ui-slider",
       "title": "Slider",
       "description": "A slider component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label",
-        "tailwind-utils"
+        "ui-label",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2224,14 +2237,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "switch",
+      "name": "ui-switch",
       "title": "Switch",
       "description": "A switch component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2243,11 +2256,11 @@
       "type": "registry:ui"
     },
     {
-      "name": "table",
+      "name": "ui-table",
       "title": "Table",
       "description": "A table component",
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2259,14 +2272,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "tabs",
+      "name": "ui-tabs",
       "title": "Tabs",
       "description": "A tabs component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2278,15 +2291,15 @@
       "type": "registry:ui"
     },
     {
-      "name": "text-field",
+      "name": "ui-text-field",
       "title": "Text Field",
       "description": "A text field component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "label",
-        "tailwind-utils"
+        "ui-label",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2298,7 +2311,7 @@
       "type": "registry:ui"
     },
     {
-      "name": "toast",
+      "name": "ui-toast",
       "title": "Toast",
       "description": "A toast component",
       "dependencies": [
@@ -2306,7 +2319,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -2318,14 +2331,14 @@
       "type": "registry:ui"
     },
     {
-      "name": "tooltip",
+      "name": "ui-tooltip",
       "title": "Tooltip",
       "description": "A tooltip component",
       "dependencies": [
         "@kobalte/core"
       ],
       "registryDependencies": [
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {

@@ -4,8 +4,8 @@ import type { orientationVariants } from "@/registry/new-york/ui/orientation"
 import type { VariantProps } from "class-variance-authority"
 import type { Setter } from "solid-js"
 
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 
 import { cn } from "@/lib/utils/tailwind"
 import { Checkbox as CheckboxUI } from "@/registry/new-york/ui/checkbox"

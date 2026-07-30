@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-clipboard",
+  "title": "Clipboard Icon",
+  "description": "A clipboard icon component",
+  "files": [
+    {
+      "path": "src/registry/new-york/icons/svg/clipboard.tsx",
+      "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const clipboard = (props: ComponentProps<\"svg\">) => (\n  <svg\n    fill=\"none\"\n    stroke-width=\"2\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    stroke=\"currentColor\"\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    viewBox=\"0 0 24 24\"\n    {...props}\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n  >\n    <path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\" />\n    <rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\" />\n  </svg>\n)\n\nexport default clipboard\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/clipboard.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

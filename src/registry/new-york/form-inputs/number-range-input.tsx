@@ -4,6 +4,8 @@ import type { SliderGetValueLabelParams } from "@kobalte/core/slider"
 import type { Setter } from "solid-js"
 
 import { cn } from "@/lib/utils/tailwind"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import {
   Slider,
   SliderFill,
@@ -12,8 +14,6 @@ import {
   SliderTrack,
   SliderValueLabel
 } from "@/registry/new-york/ui/slider"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 export type NumberRangeInputProps = {
   class?: string

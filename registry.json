@@ -5,6 +5,7 @@
   "include": [
     "config/registry.json",
     "scripts/registry.json",
+    "src/components/registry.json",
     "src/hooks/registry.json",
     "src/lib/utils/registry.json",
     "src/registry/new-york/form-inputs/registry.json",

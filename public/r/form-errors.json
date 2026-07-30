@@ -7,8 +7,8 @@
     "@formisch/solid"
   ],
   "registryDependencies": [
-    "alert",
-    "tailwind-utils"
+    "ui-alert",
+    "lib-utils-tailwind"
   ],
   "files": [
     {

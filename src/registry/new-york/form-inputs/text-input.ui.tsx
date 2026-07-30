@@ -1,7 +1,7 @@
 import { Match, Show, Switch } from "solid-js"
 
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import type { Setter } from "solid-js"
-import FormInputErrors from "./form-input-errors"
 
 import { cn } from "@/lib/utils/tailwind"
 import {

@@ -18,7 +18,12 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["@testing-library/jest-dom", "vitest/globals", "vinxi/types/client"]
+    "types": [
+      "@types/node",
+      "@testing-library/jest-dom",
+      "vitest/globals",
+      "vinxi/types/client"
+    ]
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
   "exclude": [".idea", ".output", ".vinxi", "dist", "node_modules", "public/r"]

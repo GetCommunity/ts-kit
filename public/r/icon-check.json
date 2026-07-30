@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-check",
+  "title": "Check Icon",
+  "description": "A check icon component",
+  "files": [
+    {
+      "path": "src/registry/new-york/icons/svg/check.tsx",
+      "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const check = (props: ComponentProps<\"svg\">) => (\n  <svg\n    fill=\"currentColor\"\n    stroke-width=\"0\"\n    viewBox=\"0 0 448 512\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n    {...props}\n  >\n    <path d=\"M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z\" />\n  </svg>\n)\n\nexport default check\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/check.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

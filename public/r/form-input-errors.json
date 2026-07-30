@@ -4,7 +4,7 @@
   "title": "Form Input Errors",
   "description": "A shared form input validation errors component",
   "registryDependencies": [
-    "tailwind-utils"
+    "lib-utils-tailwind"
   ],
   "files": [
     {

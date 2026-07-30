@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-input-hidden",
+  "title": "Hidden Input",
+  "description": "A hidden input form component",
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/form-inputs/hidden-input.tsx",
+      "content": "import { Match, Show, Switch, splitProps } from \"solid-js\"\n\nimport { cn } from \"@/lib/utils/tailwind\"\n\nexport type HiddenInputProps = {\n  name: string\n  value: string | Array<string> | number | boolean | null | undefined\n  error?: [string, ...Array<string>] | null\n  disabled?: boolean\n}\n\nfunction HiddenInput(props: HiddenInputProps) {\n  const [field, input] = splitProps(props, [\"error\", \"value\"])\n  const valueIsString = () => typeof field.value === \"string\"\n  const valueIsArray = () => Array.isArray(field.value)\n  const valueIsNumber = () => typeof field.value === \"number\"\n  const valueIsBoolean = () => typeof field.value === \"boolean\"\n  return (\n    <>\n      <div class={cn(\"inline-flex flex-col grow\", !field.error && \"hidden\")}>\n        <Switch\n          fallback={\n            <input type=\"hidden\" value={field.value as string | undefined} {...input} />\n          }\n        >\n          <Match when={valueIsString()}>\n            <input type=\"hidden\" value={field.value as string | undefined} {...input} />\n          </Match>\n          <Match when={valueIsArray()}>\n            <input\n              type=\"hidden\"\n              value={(field.value as Array<string> | undefined)?.join(\",\")}\n              {...input}\n            />\n          </Match>\n          <Match when={valueIsNumber()}>\n            <input type=\"hidden\" value={field.value as number | undefined} {...input} />\n          </Match>\n          <Match when={valueIsBoolean()}>\n            <input\n              {...props}\n              value={field.value ? \"true\" : \"false\"}\n              checked={field.value as boolean | undefined}\n              type=\"hidden\"\n            />\n          </Match>\n        </Switch>\n        <Show when={field.error}>\n          <div class=\"text-sm text-destructive\">\n            {props.name} Error:{\" \"}\n            {Array.isArray(field.error) ? field.error[0] : field.error}\n          </div>\n        </Show>\n      </div>\n    </>\n  )\n}\n\nexport default HiddenInput\n",
+      "type": "registry:component",
+      "target": "components/form-inputs/hidden-input.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

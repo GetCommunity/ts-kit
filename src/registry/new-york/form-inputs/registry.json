@@ -2,18 +2,18 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
-      "name": "checkbox-input",
+      "name": "form-input-checkbox",
       "type": "registry:component",
       "title": "Checkbox Input",
       "description": "A checkbox input form component",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": [
-        "orientation",
         "form-input-description",
         "form-input-errors",
-        "checkbox",
-        "label",
-        "tailwind-utils"
+        "lib-utils-tailwind",
+        "ui-checkbox",
+        "ui-label",
+        "ui-orientation"
       ],
       "files": [
         {
@@ -24,18 +24,18 @@
       ]
     },
     {
-      "name": "checkbox-switch-input",
+      "name": "form-input-checkbox-switch",
       "type": "registry:component",
       "title": "Checkbox Switch Input",
       "description": "A checkbox switch input form component",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": [
-        "orientation",
-        "label",
-        "switch",
+        "ui-orientation",
+        "ui-label",
+        "ui-switch",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -46,18 +46,18 @@
       ]
     },
     {
-      "name": "combobox-input",
+      "name": "form-input-combobox",
       "type": "registry:component",
       "title": "Combobox Input",
       "description": "A combobox input form component",
       "dependencies": ["@kobalte/core", "class-variance-authority"],
       "registryDependencies": [
-        "orientation",
-        "combobox",
-        "label",
+        "ui-orientation",
+        "ui-combobox",
+        "ui-label",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -68,19 +68,19 @@
       ]
     },
     {
-      "name": "combobox-multi-input",
+      "name": "form-input-combobox-multi",
       "type": "registry:component",
       "title": "Combobox Multi Input",
       "description": "A combobox multi input form component",
       "dependencies": ["@kobalte/core", "class-variance-authority"],
       "registryDependencies": [
-        "orientation",
-        "close-icon",
-        "combobox",
-        "label",
+        "icon-close",
+        "ui-orientation",
+        "ui-combobox",
+        "ui-label",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -91,21 +91,21 @@
       ]
     },
     {
-      "name": "date-input",
+      "name": "form-input-date",
       "type": "registry:component",
       "title": "Date Input",
       "description": "A date input form component",
       "dependencies": ["@ark-ui/solid"],
       "registryDependencies": [
-        "dates-utils",
-        "close-icon",
-        "button",
-        "date-picker",
-        "label",
-        "tooltip",
+        "icon-close",
+        "ui-button",
+        "ui-date-picker",
+        "ui-label",
+        "ui-tooltip",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-date",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -116,21 +116,21 @@
       ]
     },
     {
-      "name": "date-range-input",
+      "name": "form-input-date-range",
       "type": "registry:component",
       "title": "Date Range Input",
       "description": "A date range input form component",
       "dependencies": ["@ark-ui/solid"],
       "registryDependencies": [
-        "dates-utils",
-        "close-icon",
-        "button",
-        "date-picker",
-        "label",
-        "tooltip",
+        "icon-close",
+        "ui-button",
+        "ui-date-picker",
+        "ui-label",
+        "ui-tooltip",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-date",
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -141,21 +141,21 @@
       ]
     },
     {
-      "name": "datetime-input",
+      "name": "form-input-datetime",
       "type": "registry:component",
       "title": "Datetime Input",
       "description": "A datetime input form component",
       "dependencies": ["@internationalized/date", "@ark-ui/solid"],
       "registryDependencies": [
-        "dates-utils",
-        "close-icon",
-        "button",
-        "date-picker",
-        "label",
-        "tooltip",
+        "icon-close",
+        "ui-button",
+        "ui-date-picker",
+        "ui-label",
+        "ui-tooltip",
+        "lib-utils-date",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -166,15 +166,15 @@
       ]
     },
     {
-      "name": "file-input",
+      "name": "form-input-file",
       "type": "registry:component",
       "title": "File Input",
       "description": "A file input form component",
       "registryDependencies": [
+        "ui-label",
         "form-input-description",
         "form-input-errors",
-        "label",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -190,7 +190,7 @@
       "title": "Form Errors",
       "description": "A form-level error summary component",
       "dependencies": ["@formisch/solid"],
-      "registryDependencies": ["alert", "tailwind-utils"],
+      "registryDependencies": ["ui-alert", "lib-utils-tailwind"],
       "files": [
         {
           "path": "form-errors.tsx",
@@ -204,45 +204,45 @@
       "type": "registry:component",
       "title": "Form Input Description",
       "description": "A shared form input description component",
+      "registryDependencies": ["lib-utils-tailwind"],
       "files": [
         {
           "path": "form-input-description.tsx",
           "type": "registry:component",
           "target": "components/form-inputs/form-input-description.tsx"
         }
-      ],
-      "registryDependencies": ["tailwind-utils"]
+      ]
     },
     {
       "name": "form-input-errors",
       "type": "registry:component",
       "title": "Form Input Errors",
       "description": "A shared form input validation errors component",
+      "registryDependencies": ["lib-utils-tailwind"],
       "files": [
         {
           "path": "form-input-errors.tsx",
           "type": "registry:component",
           "target": "components/form-inputs/form-input-errors.tsx"
         }
-      ],
-      "registryDependencies": ["tailwind-utils"]
+      ]
     },
     {
-      "name": "hidden-input",
+      "name": "form-input-hidden",
       "type": "registry:component",
       "title": "Hidden Input",
       "description": "A hidden input form component",
+      "registryDependencies": ["lib-utils-tailwind"],
       "files": [
         {
           "path": "hidden-input.tsx",
           "type": "registry:component",
           "target": "components/form-inputs/hidden-input.tsx"
         }
-      ],
-      "registryDependencies": ["tailwind-utils"]
+      ]
     },
     {
-      "name": "lcrud-combobox-multi",
+      "name": "form-input-lcrud-combobox-multi",
       "type": "registry:component",
       "title": "LCRUD Combobox Multi",
       "description": "A combobox multi-select input form component using tanstack query for LCRUD operations",
@@ -253,15 +253,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "use-infinite-query",
-        "tailwind-utils",
-        "close-icon",
-        "button",
-        "checkbox",
-        "combobox",
-        "orientation",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "hook-use-infinite-query",
+        "icon-close",
+        "lib-utils-tailwind",
+        "ui-button",
+        "ui-checkbox",
+        "ui-combobox",
+        "ui-orientation"
       ],
       "files": [
         {
@@ -272,7 +272,7 @@
       ]
     },
     {
-      "name": "lcrud-combobox",
+      "name": "form-input-lcrud-combobox",
       "type": "registry:component",
       "title": "LCRUD Combobox Multi",
       "description": "A combobox single-select input form component using tanstack query for LCRUD operations",
@@ -283,14 +283,14 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "use-infinite-query",
-        "tailwind-utils",
-        "button",
-        "checkbox",
-        "combobox",
-        "orientation",
         "form-input-description",
-        "form-input-errors"
+        "form-input-errors",
+        "hook-use-infinite-query",
+        "lib-utils-tailwind",
+        "ui-button",
+        "ui-checkbox",
+        "ui-combobox",
+        "ui-orientation"
       ],
       "files": [
         {
@@ -301,7 +301,7 @@
       ]
     },
     {
-      "name": "lcrud-select-multi",
+      "name": "form-input-lcrud-select-multi",
       "type": "registry:component",
       "title": "LCRUD Select Multi",
       "description": "A multi-select input form component using tanstack query for LCRUD operations",
@@ -312,15 +312,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "use-infinite-query",
-        "close-icon",
-        "button",
-        "checkbox",
-        "select",
-        "orientation",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "hook-use-infinite-query",
+        "icon-close",
+        "lib-utils-tailwind",
+        "ui-button",
+        "ui-checkbox",
+        "ui-orientation",
+        "ui-select"
       ],
       "files": [
         {
@@ -331,7 +331,7 @@
       ]
     },
     {
-      "name": "lcrud-select",
+      "name": "form-input-lcrud-select",
       "type": "registry:component",
       "title": "LCRUD Select",
       "description": "A single-select input form component using tanstack query for LCRUD operations",
@@ -342,15 +342,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "use-infinite-query",
-        "close-icon",
-        "button",
-        "checkbox",
-        "select",
-        "orientation",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "hook-use-infinite-query",
+        "icon-close",
+        "lib-utils-tailwind",
+        "ui-button",
+        "ui-checkbox",
+        "ui-orientation",
+        "ui-select"
       ],
       "files": [
         {
@@ -361,11 +361,15 @@
       ]
     },
     {
-      "name": "number-input",
+      "name": "form-input-number",
       "type": "registry:component",
       "title": "Number Input",
       "description": "A number input form component",
-      "registryDependencies": ["form-input-errors", "number-field", "tailwind-utils"],
+      "registryDependencies": [
+        "ui-number-field",
+        "form-input-errors",
+        "lib-utils-tailwind"
+      ],
       "files": [
         {
           "path": "number-input.tsx",
@@ -375,16 +379,16 @@
       ]
     },
     {
-      "name": "number-range-input",
+      "name": "form-input-number-range",
       "type": "registry:component",
       "title": "Number Range Input",
       "description": "A number range input form component",
       "dependencies": ["@kobalte/core"],
       "registryDependencies": [
-        "slider",
+        "ui-slider",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -395,16 +399,16 @@
       ]
     },
     {
-      "name": "radio-group-input",
+      "name": "form-input-radio-group",
       "type": "registry:component",
       "title": "Radio Group Input",
       "description": "A radio group input form component",
       "registryDependencies": [
-        "label",
-        "radio-group",
+        "ui-label",
+        "ui-radio-group",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {
@@ -415,15 +419,15 @@
       ]
     },
     {
-      "name": "select-input",
+      "name": "form-input-select",
       "type": "registry:component",
       "title": "Select Input",
       "description": "A select input form component",
       "registryDependencies": [
-        "select",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind",
+        "ui-select"
       ],
       "files": [
         {
@@ -434,16 +438,16 @@
       ]
     },
     {
-      "name": "select-multi-input",
+      "name": "form-input-select-multi",
       "type": "registry:component",
       "title": "Select Multi Input",
       "description": "A select multi input form component",
       "registryDependencies": [
-        "close-icon",
-        "select",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "icon-close",
+        "lib-utils-tailwind",
+        "ui-select"
       ],
       "files": [
         {
@@ -454,11 +458,15 @@
       ]
     },
     {
-      "name": "text-input",
+      "name": "form-input-text",
       "type": "registry:component",
       "title": "Text Input",
       "description": "A text input form component",
-      "registryDependencies": ["form-input-errors", "text-field", "tailwind-utils"],
+      "registryDependencies": [
+        "ui-text-field",
+        "form-input-errors",
+        "lib-utils-tailwind"
+      ],
       "files": [
         {
           "path": "text-input.ui.tsx",
@@ -468,20 +476,20 @@
       ]
     },
     {
-      "name": "time-input",
+      "name": "form-input-time",
       "type": "registry:component",
       "title": "Time Input",
       "description": "A time input form component",
       "dependencies": ["@internationalized/date"],
       "registryDependencies": [
-        "dates-utils",
-        "close-icon",
-        "button",
-        "label",
-        "tooltip",
+        "lib-utils-date",
+        "icon-close",
+        "ui-button",
+        "ui-label",
+        "ui-tooltip",
         "form-input-description",
         "form-input-errors",
-        "tailwind-utils"
+        "lib-utils-tailwind"
       ],
       "files": [
         {

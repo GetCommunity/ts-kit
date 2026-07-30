@@ -10,6 +10,8 @@ import type { JSX } from "solid-js"
 
 import { useInfiniteCollection } from "@/hooks/use-infinite-query"
 import { cn } from "@/lib/utils/tailwind"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import { Button } from "@/registry/new-york/ui/button"
 import { Checkbox } from "@/registry/new-york/ui/checkbox"
 import {
@@ -22,8 +24,6 @@ import {
   ComboboxTrigger,
   Combobox as ComboboxUI
 } from "@/registry/new-york/ui/combobox"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 export type LCRUDComboboxProps<TData extends CollectionDocument> = {
   /** Solid form wiring */

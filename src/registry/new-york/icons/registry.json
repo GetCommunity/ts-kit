@@ -2,21 +2,21 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "items": [
     {
-      "name": "StrapiIcon-icon-compo-ient",
+      "name": "strapi-icon-component",
       "type": "registry:item",
       "title": "Strapi Icon Component Icon",
       "description": "A dynamic icon component for strapi backend icons",
       "dependencies": ["@getcommunity/gc-validators"],
       "registryDependencies": [
-        "email-icon",
-        "facebook-icon",
-        "instagram-icon",
-        "link-icon",
-        "linkedin-icon",
-        "phone-icon",
-        "pinterest-icon",
-        "tiktok-icon",
-        "twitter-icon"
+        "icon-email",
+        "icon-facebook",
+        "icon-instagram",
+        "icon-link",
+        "icon-linkedin",
+        "icon-phone",
+        "icon-pinterest",
+        "icon-tiktok",
+        "icon-twitter"
       ],
       "files": [
         {
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "name": "apple-icon",
+      "name": "icon-apple",
       "type": "registry:component",
       "title": "Apple Icon",
       "description": "An apple icon component",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "name": "archive-icon",
+      "name": "icon-archive",
       "type": "registry:component",
       "title": "Archive Icon",
       "description": "An archive icon component",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "name": "aria-icon",
+      "name": "icon-aria",
       "type": "registry:component",
       "title": "Aria Icon",
       "description": "An aria icon component",
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "name": "arrow-left-icon",
+      "name": "icon-arrow-left",
       "type": "registry:component",
       "title": "Arrow Left Icon",
       "description": "An arrow left icon component",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "name": "arrow-right-icon",
+      "name": "icon-arrow-right",
       "type": "registry:component",
       "title": "Arrow Right Icon",
       "description": "An arrow right icon component",
@@ -92,7 +92,7 @@
       ]
     },
     {
-      "name": "associate-icon",
+      "name": "icon-associate",
       "type": "registry:component",
       "title": "Associate Icon",
       "description": "An associate icon component",
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "name": "caret-down-icon",
+      "name": "icon-caret-down",
       "type": "registry:component",
       "title": "Caret Down Icon",
       "description": "A caret down icon component",
@@ -118,7 +118,7 @@
       ]
     },
     {
-      "name": "caret-left-icon",
+      "name": "icon-caret-left",
       "type": "registry:component",
       "title": "Caret Left Icon",
       "description": "A caret left icon component",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "name": "caret-right-icon",
+      "name": "icon-caret-right",
       "type": "registry:component",
       "title": "Caret Right Icon",
       "description": "A caret right icon component",
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "name": "caret-sort-icon",
+      "name": "icon-caret-sort",
       "type": "registry:component",
       "title": "Caret Sort Icon",
       "description": "A caret sort icon component",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "name": "caret-up-icon",
+      "name": "icon-caret-up",
       "type": "registry:component",
       "title": "Caret Up Icon",
       "description": "A caret up icon component",
@@ -170,7 +170,7 @@
       ]
     },
     {
-      "name": "check-icon",
+      "name": "icon-check",
       "type": "registry:component",
       "title": "Check Icon",
       "description": "A check icon component",
@@ -183,7 +183,7 @@
       ]
     },
     {
-      "name": "checkbox-icon",
+      "name": "icon-checkbox",
       "type": "registry:component",
       "title": "Checkbox Icon",
       "description": "A checkbox icon component",
@@ -196,7 +196,7 @@
       ]
     },
     {
-      "name": "checkbox-checked-icon",
+      "name": "icon-checkbox-checked",
       "type": "registry:component",
       "title": "Check Box Checked Icon",
       "description": "A checkbox checked icon component",
@@ -209,7 +209,7 @@
       ]
     },
     {
-      "name": "checkbox-indeterminate-icon",
+      "name": "icon-checkbox-indeterminate",
       "type": "registry:component",
       "title": "Check Box Indeterminate Icon",
       "description": "A checkbox indeterminate icon component",
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "name": "checkbox-minus-icon",
+      "name": "icon-checkbox-minus",
       "type": "registry:component",
       "title": "Checkbox Minus Icon",
       "description": "A checkbox minus icon component",
@@ -235,7 +235,7 @@
       ]
     },
     {
-      "name": "checkbox-unchecked-icon",
+      "name": "icon-checkbox-unchecked",
       "type": "registry:component",
       "title": "Check Box Unchecked Icon",
       "description": "A checkbox unchecked icon component",
@@ -248,7 +248,7 @@
       ]
     },
     {
-      "name": "chevron-double-left-icon",
+      "name": "icon-chevron-double-left",
       "type": "registry:component",
       "title": "Chevron Double Left Icon",
       "description": "A chevron double left icon component",
@@ -261,7 +261,7 @@
       ]
     },
     {
-      "name": "chevron-double-right-icon",
+      "name": "icon-chevron-double-right",
       "type": "registry:component",
       "title": "Chevron Double Right Icon",
       "description": "A chevron double right icon component",
@@ -274,7 +274,7 @@
       ]
     },
     {
-      "name": "chevron-left-icon",
+      "name": "icon-chevron-left",
       "type": "registry:component",
       "title": "Chevron Left Icon",
       "description": "A chevron left icon component",
@@ -287,7 +287,7 @@
       ]
     },
     {
-      "name": "chevron-right-icon",
+      "name": "icon-chevron-right",
       "type": "registry:component",
       "title": "Chevron Right Icon",
       "description": "A chevron right icon component",
@@ -300,7 +300,7 @@
       ]
     },
     {
-      "name": "circle-fill-icon",
+      "name": "icon-circle-fill",
       "type": "registry:component",
       "title": "Circle Fill Icon",
       "description": "A circle fill icon component",
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "name": "circle-outline-icon",
+      "name": "icon-circle-outline",
       "type": "registry:component",
       "title": "Circle Outline Icon",
       "description": "A circle outline icon component",
@@ -326,7 +326,7 @@
       ]
     },
     {
-      "name": "clipboard-icon",
+      "name": "icon-clipboard",
       "type": "registry:component",
       "title": "Clipboard Icon",
       "description": "A clipboard icon component",
@@ -339,7 +339,7 @@
       ]
     },
     {
-      "name": "close-icon",
+      "name": "icon-close",
       "type": "registry:component",
       "title": "Close Icon",
       "description": "A close icon component",
@@ -352,7 +352,7 @@
       ]
     },
     {
-      "name": "columns-icon",
+      "name": "icon-columns",
       "type": "registry:component",
       "title": "Columns Icon",
       "description": "A columns icon component",
@@ -365,7 +365,7 @@
       ]
     },
     {
-      "name": "cookie-icon",
+      "name": "icon-cookie",
       "type": "registry:component",
       "title": "Cookie Icon",
       "description": "A cookie icon component",
@@ -378,7 +378,7 @@
       ]
     },
     {
-      "name": "create-icon",
+      "name": "icon-create",
       "type": "registry:component",
       "title": "Create Icon",
       "description": "A create icon component",
@@ -391,7 +391,7 @@
       ]
     },
     {
-      "name": "delete-icon",
+      "name": "icon-delete",
       "type": "registry:component",
       "title": "Delete Icon",
       "description": "A delete icon component",
@@ -404,7 +404,7 @@
       ]
     },
     {
-      "name": "disassociate-icon",
+      "name": "icon-disassociate",
       "type": "registry:component",
       "title": "Disassociate Icon",
       "description": "A disassociate icon component",
@@ -417,7 +417,7 @@
       ]
     },
     {
-      "name": "download-icon",
+      "name": "icon-download",
       "type": "registry:component",
       "title": "Download Icon",
       "description": "A download icon component",
@@ -430,21 +430,21 @@
       ]
     },
     {
-      "name": "draggable-icon",
+      "name": "icon-draggable",
       "type": "registry:component",
       "title": "Draggable Icon",
       "description": "A draggable icon component",
+      "registryDependencies": ["lib-utils-tailwind"],
       "files": [
         {
           "path": "svg/draggable.tsx",
           "type": "registry:file",
           "target": "components/icons/svg/draggable.tsx"
         }
-      ],
-      "registryDependencies": ["tailwind-utils"]
+      ]
     },
     {
-      "name": "duplicate-icon",
+      "name": "icon-duplicate",
       "type": "registry:component",
       "title": "Duplicate Icon",
       "description": "A duplicate icon component",
@@ -457,7 +457,7 @@
       ]
     },
     {
-      "name": "email-icon",
+      "name": "icon-email",
       "type": "registry:component",
       "title": "Email Icon",
       "description": "An email icon component",
@@ -470,7 +470,7 @@
       ]
     },
     {
-      "name": "facebook-icon",
+      "name": "icon-facebook",
       "type": "registry:component",
       "title": "Facebook Icon",
       "description": "A facebook icon component",
@@ -483,7 +483,7 @@
       ]
     },
     {
-      "name": "filter-icon",
+      "name": "icon-filter",
       "type": "registry:component",
       "title": "Filter Icon",
       "description": "A filter icon component",
@@ -496,7 +496,7 @@
       ]
     },
     {
-      "name": "getcommunity-icon",
+      "name": "icon-getcommunity",
       "type": "registry:component",
       "title": "Getcommunity Icon",
       "description": "A getcommunity icon component",
@@ -509,7 +509,7 @@
       ]
     },
     {
-      "name": "github-icon",
+      "name": "icon-github",
       "type": "registry:component",
       "title": "Github Icon",
       "description": "A github icon component",
@@ -522,7 +522,7 @@
       ]
     },
     {
-      "name": "google-icon",
+      "name": "icon-google",
       "type": "registry:component",
       "title": "Google Icon",
       "description": "A google icon component",
@@ -535,7 +535,7 @@
       ]
     },
     {
-      "name": "heart-fill-icon",
+      "name": "icon-heart-fill",
       "type": "registry:component",
       "title": "Heart Fill Icon",
       "description": "A heart fill icon component",
@@ -548,7 +548,7 @@
       ]
     },
     {
-      "name": "heart-outline-icon",
+      "name": "icon-heart-outline",
       "type": "registry:component",
       "title": "Heart Outline Icon",
       "description": "A heart outline icon component",
@@ -561,7 +561,7 @@
       ]
     },
     {
-      "name": "help-icon",
+      "name": "icon-help",
       "type": "registry:component",
       "title": "Help Icon",
       "description": "A help icon component",
@@ -574,7 +574,7 @@
       ]
     },
     {
-      "name": "info-icon",
+      "name": "icon-info",
       "type": "registry:component",
       "title": "Info Icon",
       "description": "An info icon component",
@@ -587,7 +587,7 @@
       ]
     },
     {
-      "name": "instagram-icon",
+      "name": "icon-instagram",
       "type": "registry:component",
       "title": "Instagram Icon",
       "description": "An instagram icon component",
@@ -600,7 +600,7 @@
       ]
     },
     {
-      "name": "laptop-icon",
+      "name": "icon-laptop",
       "type": "registry:component",
       "title": "Laptop Icon",
       "description": "A laptop icon component",
@@ -613,7 +613,7 @@
       ]
     },
     {
-      "name": "link-icon",
+      "name": "icon-link",
       "type": "registry:component",
       "title": "Link Icon",
       "description": "A link icon component",
@@ -626,7 +626,7 @@
       ]
     },
     {
-      "name": "linkedin-icon",
+      "name": "icon-linkedin",
       "type": "registry:component",
       "title": "Linkedin Icon",
       "description": "A linkedin icon component",
@@ -639,7 +639,7 @@
       ]
     },
     {
-      "name": "login-icon",
+      "name": "icon-login",
       "type": "registry:component",
       "title": "Login Icon",
       "description": "A login icon component",
@@ -652,7 +652,7 @@
       ]
     },
     {
-      "name": "logo-icon",
+      "name": "icon-logo",
       "type": "registry:component",
       "title": "Logo Icon",
       "description": "A logo icon component",
@@ -665,7 +665,7 @@
       ]
     },
     {
-      "name": "logout-icon",
+      "name": "icon-logout",
       "type": "registry:component",
       "title": "Logout Icon",
       "description": "A logout icon component",
@@ -678,7 +678,7 @@
       ]
     },
     {
-      "name": "menu-open-icon",
+      "name": "icon-menu-open",
       "type": "registry:component",
       "title": "Menu Open Icon",
       "description": "A menu open icon component",
@@ -691,7 +691,7 @@
       ]
     },
     {
-      "name": "menu-open-full-icon",
+      "name": "icon-menu-open-full",
       "type": "registry:component",
       "title": "Menu Open Full Icon",
       "description": "A menu open full icon component",
@@ -704,7 +704,7 @@
       ]
     },
     {
-      "name": "moon-icon",
+      "name": "icon-moon",
       "type": "registry:component",
       "title": "Moon Icon",
       "description": "A moon icon component",
@@ -717,7 +717,7 @@
       ]
     },
     {
-      "name": "pause-circle-fill-icon",
+      "name": "icon-pause-circle-fill",
       "type": "registry:component",
       "title": "Pause Circle Fill Icon",
       "description": "A pause circle fill icon component",
@@ -730,7 +730,7 @@
       ]
     },
     {
-      "name": "pause-circle-outline-icon",
+      "name": "icon-pause-circle-outline",
       "type": "registry:component",
       "title": "Pause Circle Outline Icon",
       "description": "A pause circle outline icon component",
@@ -743,7 +743,7 @@
       ]
     },
     {
-      "name": "person-icon",
+      "name": "icon-person",
       "type": "registry:component",
       "title": "Person Icon",
       "description": "A person icon component",
@@ -756,7 +756,7 @@
       ]
     },
     {
-      "name": "phone-icon",
+      "name": "icon-phone",
       "type": "registry:component",
       "title": "Phone Icon",
       "description": "A phone icon component",
@@ -769,7 +769,7 @@
       ]
     },
     {
-      "name": "pinterest-icon",
+      "name": "icon-pinterest",
       "type": "registry:component",
       "title": "Pinterest Icon",
       "description": "A pinterest icon component",
@@ -782,7 +782,7 @@
       ]
     },
     {
-      "name": "play-circle-fill-icon",
+      "name": "icon-play-circle-fill",
       "type": "registry:component",
       "title": "Play Circle Fill Icon",
       "description": "A play circle fill icon component",
@@ -795,7 +795,7 @@
       ]
     },
     {
-      "name": "play-circle-outline-icon",
+      "name": "icon-play-circle-outline",
       "type": "registry:component",
       "title": "Play Circle Outline Icon",
       "description": "A play circle outline icon component",
@@ -808,7 +808,7 @@
       ]
     },
     {
-      "name": "process-icon",
+      "name": "icon-process",
       "type": "registry:component",
       "title": "Process Icon",
       "description": "A process icon component",
@@ -821,7 +821,7 @@
       ]
     },
     {
-      "name": "profile-icon",
+      "name": "icon-profile",
       "type": "registry:component",
       "title": "Profile Icon",
       "description": "A profile icon component",
@@ -834,7 +834,7 @@
       ]
     },
     {
-      "name": "read-icon",
+      "name": "icon-read",
       "type": "registry:component",
       "title": "Read Icon",
       "description": "A read icon component",
@@ -847,7 +847,7 @@
       ]
     },
     {
-      "name": "reset-icon",
+      "name": "icon-reset",
       "type": "registry:component",
       "title": "Reset Icon",
       "description": "A reset icon component",
@@ -860,7 +860,7 @@
       ]
     },
     {
-      "name": "save-icon",
+      "name": "icon-save",
       "type": "registry:component",
       "title": "Save Icon",
       "description": "A save icon component",
@@ -873,7 +873,7 @@
       ]
     },
     {
-      "name": "save-all-icon",
+      "name": "icon-save-all",
       "type": "registry:component",
       "title": "Save All Icon",
       "description": "A save all icon component",
@@ -886,7 +886,7 @@
       ]
     },
     {
-      "name": "search-icon",
+      "name": "icon-search",
       "type": "registry:component",
       "title": "Search Icon",
       "description": "A search icon component",
@@ -899,7 +899,7 @@
       ]
     },
     {
-      "name": "settings-icon",
+      "name": "icon-settings",
       "type": "registry:component",
       "title": "Settings Icon",
       "description": "A settings icon component",
@@ -912,7 +912,7 @@
       ]
     },
     {
-      "name": "share-icon",
+      "name": "icon-share",
       "type": "registry:component",
       "title": "Share Icon",
       "description": "A share icon component",
@@ -925,7 +925,7 @@
       ]
     },
     {
-      "name": "sidebar-open-icon",
+      "name": "icon-sidebar-open",
       "type": "registry:component",
       "title": "Sidebar Open Icon",
       "description": "A sidebar open icon component",
@@ -938,7 +938,7 @@
       ]
     },
     {
-      "name": "spinner-icon",
+      "name": "icon-spinner",
       "type": "registry:component",
       "title": "Spinner Icon",
       "description": "A spinner icon component",
@@ -951,7 +951,7 @@
       ]
     },
     {
-      "name": "sun-icon",
+      "name": "icon-sun",
       "type": "registry:component",
       "title": "Sun Icon",
       "description": "A sun icon component",
@@ -964,7 +964,7 @@
       ]
     },
     {
-      "name": "tailwind-icon",
+      "name": "icon-tailwind",
       "type": "registry:component",
       "title": "Tailwind Icon",
       "description": "A tailwind icon component",
@@ -977,7 +977,7 @@
       ]
     },
     {
-      "name": "tiktok-icon",
+      "name": "icon-tiktok",
       "type": "registry:component",
       "title": "Tiktok Icon",
       "description": "A tiktok icon component",
@@ -990,7 +990,7 @@
       ]
     },
     {
-      "name": "twitter-icon",
+      "name": "icon-twitter",
       "type": "registry:component",
       "title": "Twitter Icon",
       "description": "A twitter icon component",
@@ -1003,7 +1003,7 @@
       ]
     },
     {
-      "name": "unread-icon",
+      "name": "icon-unread",
       "type": "registry:component",
       "title": "Unread Icon",
       "description": "An unread icon component",
@@ -1016,7 +1016,7 @@
       ]
     },
     {
-      "name": "update-icon",
+      "name": "icon-update",
       "type": "registry:component",
       "title": "Update Icon",
       "description": "An update icon component",
@@ -1029,7 +1029,7 @@
       ]
     },
     {
-      "name": "youtube-icon",
+      "name": "icon-youtube",
       "type": "registry:component",
       "title": "Youtube Icon",
       "description": "A youtube icon component",

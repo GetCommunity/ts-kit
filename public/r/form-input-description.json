@@ -4,7 +4,7 @@
   "title": "Form Input Description",
   "description": "A shared form input description component",
   "registryDependencies": [
-    "tailwind-utils"
+    "lib-utils-tailwind"
   ],
   "files": [
     {

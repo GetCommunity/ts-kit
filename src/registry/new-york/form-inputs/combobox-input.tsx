@@ -6,6 +6,8 @@ import type { VariantProps } from "class-variance-authority"
 import type { Setter } from "solid-js"
 
 import { cn } from "@/lib/utils/tailwind"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import {
   ComboboxContent,
   ComboboxControl,
@@ -18,8 +20,6 @@ import {
   Combobox as ComboboxUI
 } from "@/registry/new-york/ui/combobox"
 import { Label } from "@/registry/new-york/ui/label"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 export type ComboboxInputProps<T> = {
   name: string

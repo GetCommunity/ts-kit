@@ -63,6 +63,6 @@ pnpm dlx shadcn@latest registry validate getcommunity/ts-kit
 
 ```bash
 pnpm dlx shadcn@latest list getcommunity/ts-kit
-pnpm dlx shadcn@latest search getcommunity/ts-kit --query tailwind-utils
+pnpm dlx shadcn@latest search getcommunity/ts-kit --query lib-utils-tailwind
 pnpm dlx shadcn@latest view getcommunity/ts-kit/button
 ```

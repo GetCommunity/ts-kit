@@ -1,0 +1,82 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "component-cookie-consent",
+      "type": "registry:component",
+      "title": "Cookie Consent",
+      "description": "A provider and component for handling cookie consent state",
+      "dependencies": [
+        "@formisch/solid",
+        "@sentry/solid",
+        "@tanstack/solid-query",
+        "@tanstack/solid-router",
+        "@tanstack/solid-start",
+        "valibot"
+      ],
+      "registryDependencies": [
+        "icon-cookie",
+        "ui-button",
+        "ui-tooltip",
+        "form-input-checkbox-switch",
+        "form-input-hidden",
+        "lib-utils-tailwind"
+      ],
+      "files": [
+        {
+          "path": "cookie-consent-provider.tsx",
+          "type": "registry:component",
+          "target": "components/cookie-consent-provider.tsx"
+        },
+        {
+          "path": "cookie-consent-banner.tsx",
+          "type": "registry:component",
+          "target": "components/cookie-consent-banner.tsx"
+        }
+      ]
+    },
+    {
+      "name": "component-gtm",
+      "type": "registry:component",
+      "title": "Google Tag Manager",
+      "description": "A component for injecting Google Tag Manager and handling GTM event firing",
+      "dependencies": [
+        "@tanstack/solid-query",
+        "@tanstack/solid-router",
+        "@tanstack/solid-start"
+      ],
+      "registryDependencies": ["component-cookie-consent", "lib-utils-script-tag"],
+      "files": [
+        {
+          "path": "gtm-provider.tsx",
+          "type": "registry:component",
+          "target": "components/gtm-provider.tsx"
+        },
+        {
+          "path": "page-view-tracker.tsx",
+          "type": "registry:component",
+          "target": "components/page-view-tracker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "component-sentry",
+      "type": "registry:component",
+      "title": "Sentry",
+      "description": "Components for handling sentry error trace and error boundaries",
+      "dependencies": ["@sentry/solid", "@tanstack/solid-router"],
+      "files": [
+        {
+          "path": "sentry-provider.tsx",
+          "type": "registry:component",
+          "target": "components/sentry-provider.tsx"
+        },
+        {
+          "path": "sentry-error-boundary.tsx",
+          "type": "registry:component",
+          "target": "components/sentry-error-boundary.tsx"
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 import { Show, createMemo, splitProps } from "solid-js"
 
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import type { JSX } from "solid-js"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 import { cn } from "@/lib/utils/tailwind"
 import { Label } from "@/registry/new-york/ui/label"

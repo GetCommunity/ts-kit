@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-table",
+  "title": "Table",
+  "description": "A table component",
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/ui/table.tsx",
+      "content": "import { splitProps } from \"solid-js\"\n\nimport type { Component, ComponentProps } from \"solid-js\"\n\nimport { cn } from \"@/lib/utils/tailwind\"\n\nconst Table: Component<\n  ComponentProps<\"table\"> & {\n    wrapperProps?: ComponentProps<\"div\">\n  }\n> = (props) => {\n  const [wrapper, table] = splitProps(props, [\"wrapperProps\"])\n  return (\n    <div\n      {...wrapper.wrapperProps}\n      class={cn(\"relative w-full overflow-auto\", wrapper.wrapperProps?.class)}\n    >\n      <table class={cn(\"w-full caption-bottom text-sm\", table.class)} {...table} />\n    </div>\n  )\n}\n\nconst TableHeader: Component<ComponentProps<\"thead\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return <thead class={cn(\"[&_tr]:border-b\", local.class)} {...others} />\n}\n\nconst TableBody: Component<ComponentProps<\"tbody\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return <tbody class={cn(\"[&_tr:last-child]:border-0\", local.class)} {...others} />\n}\n\nconst TableFooter: Component<ComponentProps<\"tfoot\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return <tfoot class={cn(\"font-medium\", local.class)} {...others} />\n}\n\nconst TableRow: Component<ComponentProps<\"tr\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <tr\n      class={cn(\n        \"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\nconst TableHead: Component<ComponentProps<\"th\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <th\n      class={cn(\n        \"px-2 text-left align-middle font-medium text-muted-foreground has-[[role=checkbox]]:pr-0\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\nconst TableCell: Component<ComponentProps<\"td\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <td\n      class={cn(\"p-2 align-middle has-[[role=checkbox]]:pr-0\", local.class)}\n      {...others}\n    />\n  )\n}\n\nconst TableCaption: Component<ComponentProps<\"caption\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <caption\n      class={cn(\"mt-4 text-sm text-muted-foreground\", local.class)}\n      {...others}\n    />\n  )\n}\n\nexport {\n  Table,\n  TableBody,\n  TableCaption,\n  TableCell,\n  TableFooter,\n  TableHead,\n  TableHeader,\n  TableRow\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/table.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

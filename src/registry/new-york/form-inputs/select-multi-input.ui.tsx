@@ -3,6 +3,8 @@ import { For, Show, mergeProps } from "solid-js"
 import type { Setter } from "solid-js"
 
 import { cn } from "@/lib/utils/tailwind"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import CloseIcon from "@/registry/new-york/icons/svg/close"
 import {
   Select,
@@ -14,8 +16,6 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/registry/new-york/ui/select"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 export type SelectMultipleInputProps<T> = {
   name: string

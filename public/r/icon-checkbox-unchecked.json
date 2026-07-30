@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-checkbox-unchecked",
+  "title": "Check Box Unchecked Icon",
+  "description": "A checkbox unchecked icon component",
+  "files": [
+    {
+      "path": "src/registry/new-york/icons/svg/checkbox-unchecked.tsx",
+      "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const checkBoxUnchecked = (props: ComponentProps<\"svg\">) => (\n  <svg\n    {...props}\n    fill=\"currentColor\"\n    stroke-width=\"0\"\n    viewBox=\"0 0 24 24\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n  >\n    <path\n      fill=\"currentColor\"\n      d=\"M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 2v14h14V5H5Z\"\n    />\n  </svg>\n)\n\nexport default checkBoxUnchecked\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/checkbox-unchecked.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

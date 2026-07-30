@@ -5,6 +5,8 @@ import type { VariantProps } from "class-variance-authority"
 import type { Setter } from "solid-js"
 
 import { cn } from "@/lib/utils/tailwind"
+import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import { Label } from "@/registry/new-york/ui/label"
 import {
   SwitchControl,
@@ -12,8 +14,6 @@ import {
   SwitchThumb,
   Switch as SwitchUI
 } from "@/registry/new-york/ui/switch"
-import FormInputDescription from "./form-input-description"
-import FormInputErrors from "./form-input-errors"
 
 export type CheckboxSwitchInputProps<T> = {
   name: string

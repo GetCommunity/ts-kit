@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hook-use-infinite-query",
+  "title": "Use Infinite Query",
+  "description": "A TanStack Query hook for fetching paginated Strapi data infinitely",
+  "dependencies": [
+    "@tanstack/solid-query",
+    "@getcommunity/gc-validators"
+  ],
+  "files": [
+    {
+      "path": "src/hooks/use-infinite-query.ts",
+      "content": "import { useInfiniteQuery } from \"@tanstack/solid-query\"\nimport { createMemo } from \"solid-js\"\n\nimport type { BaseDocument, StrapiListResponse } from \"@getcommunity/gc-validators/base\"\nimport type { infiniteQueryOptions } from \"@tanstack/solid-query\"\n\nexport interface CollectionDocument extends BaseDocument, Record<string, unknown> {}\n\nexport type PageItem<TPage extends StrapiListResponse<CollectionDocument>> =\n  TPage[\"data\"][number]\n\nexport function useInfiniteCollection<\n  TPage extends StrapiListResponse<CollectionDocument>\n>(queryOptions: ReturnType<typeof infiniteQueryOptions<TPage>>) {\n  const query = useInfiniteQuery<TPage>(() => queryOptions)\n  const pages = createMemo(() => query.data?.pages ?? [])\n\n  const options = createMemo<Array<PageItem<TPage>>>(() => {\n    const flat = pages().flatMap((p) => p.data)\n    const map = new Map<string | number, PageItem<TPage>>()\n\n    for (const item of flat) {\n      const key = item.documentId\n      if (!map.has(key)) {\n        map.set(key, item)\n      }\n    }\n\n    return Array.from(map.values())\n  })\n\n  const hasMore = createMemo(() => query.hasNextPage)\n  const isLoading = createMemo(\n    () => query.isPending || query.isFetching || query.isLoading\n  )\n\n  const fetchNext = () => query.fetchNextPage()\n  const loadingMoreMessage = createMemo<string>(() => {\n    const page = query.data?.pages.at(-1)\n    const pageMeta = page?.meta.pagination\n    if (!pageMeta) return \"Loading...\"\n    if (query.isFetching) return \"Loading more...\"\n    return hasMore() ? \"Load More\" : \"Nothing more to load\"\n  })\n\n  return {\n    query,\n    options,\n    hasMore,\n    isLoading,\n    fetchNext,\n    loadingMoreMessage\n  } as const\n}\n",
+      "type": "registry:hook",
+      "target": "hooks/use-infinite-query.ts"
+    }
+  ],
+  "type": "registry:hook"
+}
