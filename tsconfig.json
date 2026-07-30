@@ -22,9 +22,9 @@
       "@types/node",
       "@testing-library/jest-dom",
       "vitest/globals",
-      "vinxi/types/client"
+      "vite/client"
     ]
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
-  "exclude": [".idea", ".output", ".vinxi", "dist", "node_modules", "public/r"]
+  "exclude": [".idea", ".output", ".tanstack", "dist", "node_modules", "public/r"]
 }

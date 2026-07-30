@@ -30,3 +30,4 @@ const Separator = <T extends ValidComponent = "hr">(
 }
 
 export { Separator }
+export type { SeparatorRootProps as SeparatorProps }

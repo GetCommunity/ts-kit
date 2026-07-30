@@ -504,6 +504,419 @@
           "target": "components/ui/tooltip.tsx"
         }
       ]
+    },
+    {
+      "name": "ui-alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "A alert dialog component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["ui-button", "lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert-dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-aspect-ratio",
+      "type": "registry:ui",
+      "title": "Aspect Ratio",
+      "description": "A aspect ratio component",
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "aspect-ratio.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/aspect-ratio.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-button-group",
+      "type": "registry:ui",
+      "title": "Button Group",
+      "description": "A button group component",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["ui-separator", "lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "button-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A calendar component",
+      "dependencies": ["@corvu/calendar", "date-fns", "lucide-solid"],
+      "registryDependencies": ["ui-button", "ui-select", "lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "calendar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/calendar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "A chart component",
+      "dependencies": ["echarts"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "chart.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/chart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "A command component",
+      "dependencies": ["cmdk-solid", "lucide-solid"],
+      "registryDependencies": ["ui-dialog", "ui-input-group", "lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "command.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/command.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "A context menu component",
+      "dependencies": ["@kobalte/core", "lucide-solid"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "context-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/context-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "description": "A empty component",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "empty.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/empty.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "A field component",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["ui-label", "ui-separator", "lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "A hover card component",
+      "dependencies": ["@kobalte/core"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "hover-card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/hover-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "A input component",
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "input.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "A input group component",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [
+        "ui-button",
+        "ui-input",
+        "ui-textarea",
+        "lib-utils-tailwind"
+      ],
+      "files": [
+        {
+          "path": "input-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-input-otp",
+      "type": "registry:ui",
+      "title": "Input Otp",
+      "description": "A input otp component",
+      "dependencies": ["@corvu/otp-field", "lucide-solid"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "input-otp.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-otp.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-item",
+      "type": "registry:ui",
+      "title": "Item",
+      "description": "A item component",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["ui-separator", "lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "item.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "A kbd component",
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "kbd.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/kbd.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-native-select",
+      "type": "registry:ui",
+      "title": "Native Select",
+      "description": "A native select component",
+      "dependencies": ["lucide-solid"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "native-select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/native-select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "description": "A navigation menu component",
+      "dependencies": ["@kobalte/core", "class-variance-authority", "lucide-solid"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "navigation-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/navigation-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-resizable",
+      "type": "registry:ui",
+      "title": "Resizable",
+      "description": "A resizable component",
+      "dependencies": ["@corvu/resizable", "@kobalte/core"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "resizable.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/resizable.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "A scroll area component",
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "scroll-area.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/scroll-area.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "A sheet component",
+      "dependencies": ["@kobalte/core", "lucide-solid"],
+      "registryDependencies": ["ui-button", "lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "sheet.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sheet.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "A sidebar component",
+      "dependencies": ["@kobalte/core", "class-variance-authority", "lucide-solid"],
+      "registryDependencies": [
+        "ui-button",
+        "ui-input",
+        "ui-separator",
+        "ui-sheet",
+        "ui-skeleton",
+        "ui-tooltip",
+        "hook-use-mobile",
+        "lib-utils-tailwind"
+      ],
+      "files": [
+        {
+          "path": "sidebar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sidebar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "A skeleton component",
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "skeleton.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/skeleton.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-sonner",
+      "type": "registry:ui",
+      "title": "Sonner",
+      "description": "A sonner component",
+      "dependencies": ["lucide-solid", "solid-sonner"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "sonner.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sonner.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "A spinner component",
+      "dependencies": ["lucide-solid"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "spinner.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/spinner.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "A textarea component",
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "textarea.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "A toggle component",
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
+      "registryDependencies": ["lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "ui-toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "A toggle group component",
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
+      "registryDependencies": ["ui-toggle", "lib-utils-tailwind"],
+      "files": [
+        {
+          "path": "toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle-group.tsx"
+        }
+      ]
     }
   ]
 }
