@@ -73,6 +73,89 @@
       "type": "registry:item"
     },
     {
+      "name": "component-cookie-consent",
+      "title": "Cookie Consent",
+      "description": "A provider and component for handling cookie consent state",
+      "dependencies": [
+        "@formisch/solid",
+        "@sentry/solid",
+        "@tanstack/solid-query",
+        "@tanstack/solid-router",
+        "@tanstack/solid-start",
+        "valibot"
+      ],
+      "registryDependencies": [
+        "icon-cookie",
+        "ui-button",
+        "ui-tooltip",
+        "form-input-checkbox-switch",
+        "form-input-hidden",
+        "lib-utils-tailwind"
+      ],
+      "files": [
+        {
+          "path": "src/components/cookie-consent-provider.tsx",
+          "type": "registry:component",
+          "target": "components/cookie-consent-provider.tsx"
+        },
+        {
+          "path": "src/components/cookie-consent-banner.tsx",
+          "type": "registry:component",
+          "target": "components/cookie-consent-banner.tsx"
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "component-gtm",
+      "title": "Google Tag Manager",
+      "description": "A component for injecting Google Tag Manager and handling GTM event firing",
+      "dependencies": [
+        "@tanstack/solid-query",
+        "@tanstack/solid-router",
+        "@tanstack/solid-start"
+      ],
+      "registryDependencies": [
+        "component-cookie-consent",
+        "lib-utils-script-tag"
+      ],
+      "files": [
+        {
+          "path": "src/components/gtm-provider.tsx",
+          "type": "registry:component",
+          "target": "components/gtm-provider.tsx"
+        },
+        {
+          "path": "src/components/page-view-tracker.tsx",
+          "type": "registry:component",
+          "target": "components/page-view-tracker.tsx"
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "component-sentry",
+      "title": "Sentry",
+      "description": "Components for handling sentry error trace and error boundaries",
+      "dependencies": [
+        "@sentry/solid",
+        "@tanstack/solid-router"
+      ],
+      "files": [
+        {
+          "path": "src/components/sentry-provider.tsx",
+          "type": "registry:component",
+          "target": "components/sentry-provider.tsx"
+        },
+        {
+          "path": "src/components/sentry-error-boundary.tsx",
+          "type": "registry:component",
+          "target": "components/sentry-error-boundary.tsx"
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "hook-use-infinite-query",
       "title": "Use Infinite Query",
       "description": "A TanStack Query hook for fetching paginated Strapi data infinitely",
@@ -143,12 +226,12 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "ui-orientation",
         "form-input-description",
         "form-input-errors",
-        "form-input-checkbox",
+        "lib-utils-tailwind",
+        "ui-checkbox",
         "ui-label",
-        "lib-utils-tailwind"
+        "ui-orientation"
       ],
       "files": [
         {
@@ -414,15 +497,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "hook-use-infinite-query",
-        "icon-close",
-        "ui-button",
-        "ui-combobox",
-        "ui-orientation",
-        "form-input-checkbox",
         "form-input-description",
         "form-input-errors",
-        "lib-utils-tailwind"
+        "hook-use-infinite-query",
+        "icon-close",
+        "lib-utils-tailwind",
+        "ui-button",
+        "ui-checkbox",
+        "ui-combobox",
+        "ui-orientation"
       ],
       "files": [
         {
@@ -444,14 +527,14 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "hook-use-infinite-query",
-        "ui-button",
-        "ui-combobox",
-        "ui-orientation",
-        "form-input-checkbox",
         "form-input-description",
         "form-input-errors",
-        "lib-utils-tailwind"
+        "hook-use-infinite-query",
+        "lib-utils-tailwind",
+        "ui-button",
+        "ui-checkbox",
+        "ui-combobox",
+        "ui-orientation"
       ],
       "files": [
         {
@@ -473,15 +556,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "hook-use-infinite-query",
-        "icon-close",
-        "ui-button",
-        "ui-orientation",
-        "form-input-checkbox",
         "form-input-description",
         "form-input-errors",
-        "form-input-select",
-        "lib-utils-tailwind"
+        "hook-use-infinite-query",
+        "icon-close",
+        "lib-utils-tailwind",
+        "ui-button",
+        "ui-checkbox",
+        "ui-orientation",
+        "ui-select"
       ],
       "files": [
         {
@@ -503,15 +586,15 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "hook-use-infinite-query",
-        "icon-close",
-        "ui-button",
-        "ui-orientation",
-        "form-input-checkbox",
         "form-input-description",
         "form-input-errors",
-        "form-input-select",
-        "lib-utils-tailwind"
+        "hook-use-infinite-query",
+        "icon-close",
+        "lib-utils-tailwind",
+        "ui-button",
+        "ui-checkbox",
+        "ui-orientation",
+        "ui-select"
       ],
       "files": [
         {
@@ -589,8 +672,8 @@
       "registryDependencies": [
         "form-input-description",
         "form-input-errors",
-        "form-input-select",
-        "lib-utils-tailwind"
+        "lib-utils-tailwind",
+        "ui-select"
       ],
       "files": [
         {
@@ -606,11 +689,11 @@
       "title": "Select Multi Input",
       "description": "A select multi input form component",
       "registryDependencies": [
-        "icon-close",
         "form-input-description",
         "form-input-errors",
-        "form-input-select",
-        "lib-utils-tailwind"
+        "icon-close",
+        "lib-utils-tailwind",
+        "ui-select"
       ],
       "files": [
         {
