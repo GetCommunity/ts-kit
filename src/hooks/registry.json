@@ -14,6 +14,19 @@
           "target": "hooks/use-infinite-query.ts"
         }
       ]
+    },
+    {
+      "name": "hook-use-mobile",
+      "type": "registry:hook",
+      "title": "Use Mobile",
+      "description": "A hook for matching mobile viewport sizes",
+      "files": [
+        {
+          "path": "use-mobile.ts",
+          "type": "registry:hook",
+          "target": "hooks/use-mobile.ts"
+        }
+      ]
     }
   ]
 }

@@ -38,13 +38,15 @@ router integration.
 
 ### Building the Registry
 
-To build the static registry JSON files:
+Build the static registry JSON files with the native shadcn build command:
 
 ```bash
 pnpm build:registry
 ```
 
-This will generate JSON files in the `public/r/` directory that can be served statically.
+This resolves the included source registries into `public/r`. TanStack Start
+serves those generated files at `/r/[name].json`, including the complete catalog
+at `/r/registry.json`.
 
 ### Code Quality
 
