@@ -8,40 +8,40 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root"
-import { Route as IndexRouteImport } from "./routes/index"
-import { Route as PoliciesSlugRouteImport } from "./routes/policies.$slug"
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as PoliciesSlugRouteImport } from './routes/policies.$slug'
 
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
-  getParentRoute: () => rootRouteImport
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PoliciesSlugRoute = PoliciesSlugRouteImport.update({
-  id: "/policies/$slug",
-  path: "/policies/$slug",
-  getParentRoute: () => rootRouteImport
+  id: '/policies/$slug',
+  path: '/policies/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute
-  "/policies/$slug": typeof PoliciesSlugRoute
+  '/': typeof IndexRoute
+  '/policies/$slug': typeof PoliciesSlugRoute
 }
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute
-  "/policies/$slug": typeof PoliciesSlugRoute
+  '/': typeof IndexRoute
+  '/policies/$slug': typeof PoliciesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  "/": typeof IndexRoute
-  "/policies/$slug": typeof PoliciesSlugRoute
+  '/': typeof IndexRoute
+  '/policies/$slug': typeof PoliciesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: "/" | "/policies/$slug"
+  fullPaths: '/' | '/policies/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: "/" | "/policies/$slug"
-  id: "__root__" | "/" | "/policies/$slug"
+  to: '/' | '/policies/$slug'
+  id: '__root__' | '/' | '/policies/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -49,19 +49,19 @@ export interface RootRouteChildren {
   PoliciesSlugRoute: typeof PoliciesSlugRoute
 }
 
-declare module "@tanstack/solid-router" {
+declare module '@tanstack/solid-router' {
   interface FileRoutesByPath {
-    "/": {
-      id: "/"
-      path: "/"
-      fullPath: "/"
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    "/policies/$slug": {
-      id: "/policies/$slug"
-      path: "/policies/$slug"
-      fullPath: "/policies/$slug"
+    '/policies/$slug': {
+      id: '/policies/$slug'
+      path: '/policies/$slug'
+      fullPath: '/policies/$slug'
       preLoaderRoute: typeof PoliciesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -70,15 +70,15 @@ declare module "@tanstack/solid-router" {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PoliciesSlugRoute: PoliciesSlugRoute
+  PoliciesSlugRoute: PoliciesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
 
-import type { createStart } from "@tanstack/solid-start"
-import type { getRouter } from "./router.tsx"
-declare module "@tanstack/solid-start" {
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/solid-start'
+declare module '@tanstack/solid-start' {
   interface Register {
     ssr: true
     router: Awaited<ReturnType<typeof getRouter>>
