@@ -1,13 +1,12 @@
+import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import { render } from "@solidjs/testing-library"
 import {
+  infiniteQueryOptions,
   QueryClient,
-  QueryClientProvider,
-  infiniteQueryOptions
+  QueryClientProvider
 } from "@tanstack/solid-query"
-
-import type { CollectionDocument } from "@/hooks/use-infinite-query"
-import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { JSX } from "solid-js"
+import type { CollectionDocument } from "@/hooks/use-infinite-query"
 
 export type TestDocument = CollectionDocument & {
   description?: string

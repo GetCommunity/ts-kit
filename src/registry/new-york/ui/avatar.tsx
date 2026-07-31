@@ -1,9 +1,7 @@
-import * as ImagePrimitive from "@kobalte/core/image"
-import { splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { ValidComponent } from "solid-js"
-
+import * as ImagePrimitive from "@kobalte/core/image"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 type AvatarRootProps<T extends ValidComponent = "span"> =

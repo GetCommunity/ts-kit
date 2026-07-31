@@ -1,5 +1,5 @@
+import { render, screen } from "@solidjs/testing-library"
 import type { Component, ComponentProps } from "solid-js"
-
 import AppleIcon, { apple } from "@/registry/new-york/icons/svg/apple"
 import ArchiveIcon, { archive } from "@/registry/new-york/icons/svg/archive"
 import AriaIcon, { aria } from "@/registry/new-york/icons/svg/aria"
@@ -114,7 +114,6 @@ import TwitterIcon, { twitter } from "@/registry/new-york/icons/svg/twitter"
 import UnreadIcon, { unread } from "@/registry/new-york/icons/svg/unread"
 import UpdateIcon, { update } from "@/registry/new-york/icons/svg/update"
 import YoutubeIcon, { youtube } from "@/registry/new-york/icons/svg/youtube"
-import { render, screen } from "@solidjs/testing-library"
 
 const iconModules = [
   {

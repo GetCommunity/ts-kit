@@ -1,10 +1,8 @@
 import { fireEvent, render, screen, waitFor } from "@solidjs/testing-library"
 import userEvent from "@testing-library/user-event"
-
-import CookieConsentBanner from "@/components/cookie-consent-banner"
-
-import type { CookieConsentState } from "@/components/cookie-consent-provider"
 import type { JSX } from "solid-js"
+import CookieConsentBanner from "@/components/cookie-consent-banner"
+import type { CookieConsentState } from "@/components/cookie-consent-provider"
 
 type CapturedSwitchProps = {
   label?: string

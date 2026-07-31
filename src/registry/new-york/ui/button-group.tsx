@@ -1,6 +1,7 @@
-import { cva, type VariantProps } from "class-variance-authority"
-import { type ComponentProps, mergeProps, splitProps } from "solid-js"
-
+import type { VariantProps } from "class-variance-authority"
+import type { ComponentProps } from "solid-js"
+import { cva } from "class-variance-authority"
+import { mergeProps, splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import { Separator } from "@/registry/new-york/ui/separator"
 
@@ -26,7 +27,6 @@ type ButtonGroupProps = ComponentProps<"div"> & VariantProps<typeof buttonGroupV
 const ButtonGroup = (props: ButtonGroupProps) => {
   const [local, others] = splitProps(props, ["class", "orientation"])
   return (
-    // biome-ignore lint/a11y/useSemanticElements: <exception for button group>
     <div
       class={cn(buttonGroupVariants({ orientation: local.orientation }), local.class)}
       data-orientation={local.orientation}

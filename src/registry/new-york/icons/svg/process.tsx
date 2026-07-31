@@ -1,6 +1,5 @@
-import * as SolidJs from "solid-js"
-
 import type { ComponentProps } from "solid-js"
+import * as SolidJs from "solid-js"
 
 export const process = (props: ComponentProps<"svg">) => {
   const [, rest] = SolidJs.splitProps(props, ["class"])

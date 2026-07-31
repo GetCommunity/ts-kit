@@ -1,20 +1,22 @@
-import { cn } from "@/lib/utils/tailwind"
+import type {
+  NavigationMenuContentProps as NavigationMenuContentPrimitiveProps,
+  NavigationMenuRootProps,
+  NavigationMenuTriggerProps as NavigationMenuTriggerPrimitiveProps
+} from "@kobalte/core/navigation-menu"
+import type { PolymorphicProps } from "@kobalte/core/polymorphic"
+import type { ComponentProps, JSX, ValidComponent } from "solid-js"
 import {
   Content,
   Menu,
-  type NavigationMenuContentProps as NavigationMenuContentPrimitiveProps,
-  type NavigationMenuRootProps,
-  type NavigationMenuTriggerProps as NavigationMenuTriggerPrimitiveProps,
   Portal,
   Root,
   Trigger,
   Viewport
 } from "@kobalte/core/navigation-menu"
-import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import { cva } from "class-variance-authority"
 import { ChevronDown } from "lucide-solid"
-import type { ComponentProps, JSX, ValidComponent } from "solid-js"
 import { mergeProps, splitProps } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
 
 type NavigationMenuProps<T extends ValidComponent = "ul"> = PolymorphicProps<
   T,

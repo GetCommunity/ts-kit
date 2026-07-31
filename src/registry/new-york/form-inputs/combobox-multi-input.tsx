@@ -1,10 +1,8 @@
-import { For, Show, mergeProps } from "solid-js"
-
-import type { orientationVariants } from "@/registry/new-york/ui/orientation"
 import type { ComboboxTriggerMode } from "@kobalte/core/combobox"
 import type { VariantProps } from "class-variance-authority"
 import type { Setter } from "solid-js"
-
+import type { orientationVariants } from "@/registry/new-york/ui/orientation"
+import { For, mergeProps, Show } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
@@ -106,7 +104,8 @@ const ComboboxMultiInput = <T,>(props: ComboboxMultiInputProps<T>) => {
       itemComponent={(itemProps) => {
         const itemLabel = () => {
           return itemProps.item.rawValue?.[comboProps.optionTextValue] as unknown as
-            string | number
+            | string
+            | number
         }
         const itemDesc = () => {
           const desc = itemProps.item.rawValue?.[
@@ -139,9 +138,9 @@ const ComboboxMultiInput = <T,>(props: ComboboxMultiInputProps<T>) => {
       }}
       sectionComponent={(sectionProps) => {
         const itemLabel = () => {
-          return sectionProps.section.rawValue[
-            comboProps.optionTextValue
-          ] as unknown as string | number
+          return sectionProps.section.rawValue[comboProps.optionTextValue] as unknown as
+            | string
+            | number
         }
         return <ComboboxSection>{itemLabel()}</ComboboxSection>
       }}
@@ -167,7 +166,8 @@ const ComboboxMultiInput = <T,>(props: ComboboxMultiInputProps<T>) => {
                     {(option) => {
                       const itemLabel = () => {
                         return option?.[comboProps.optionTextValue] as unknown as
-                          string | number
+                          | string
+                          | number
                       }
                       return (
                         <span

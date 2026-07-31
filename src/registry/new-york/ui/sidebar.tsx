@@ -1,6 +1,25 @@
+import type { PolymorphicProps } from "@kobalte/core"
+import type { VariantProps } from "class-variance-authority"
+import type { Accessor, Component, ComponentProps, JSX, ValidComponent } from "solid-js"
+import type { ButtonProps } from "@/registry/new-york/ui/button"
+import { Polymorphic } from "@kobalte/core"
+import { cva } from "class-variance-authority"
+import { Menu } from "lucide-solid"
+import {
+  createContext,
+  createEffect,
+  createMemo,
+  createSignal,
+  Match,
+  mergeProps,
+  onCleanup,
+  Show,
+  Switch,
+  splitProps,
+  useContext
+} from "solid-js"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils/tailwind"
-import type { ButtonProps } from "@/registry/new-york/ui/button"
 import { Button } from "@/registry/new-york/ui/button"
 import { Input } from "@/registry/new-york/ui/input"
 import { Separator } from "@/registry/new-york/ui/separator"
@@ -13,25 +32,6 @@ import {
 } from "@/registry/new-york/ui/sheet"
 import { Skeleton } from "@/registry/new-york/ui/skeleton"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/new-york/ui/tooltip"
-import type { PolymorphicProps } from "@kobalte/core"
-import { Polymorphic } from "@kobalte/core"
-import type { VariantProps } from "class-variance-authority"
-import { cva } from "class-variance-authority"
-import { Menu } from "lucide-solid"
-import type { Accessor, Component, ComponentProps, JSX, ValidComponent } from "solid-js"
-import {
-  createContext,
-  createEffect,
-  createMemo,
-  createSignal,
-  Match,
-  mergeProps,
-  onCleanup,
-  Show,
-  splitProps,
-  Switch,
-  useContext
-} from "solid-js"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -92,7 +92,6 @@ const SidebarProvider = (props: SidebarProviderProps) => {
     _setOpen(value)
 
     // This sets the cookie to keep the sidebar state.
-    // biome-ignore lint/suspicious/noDocumentCookie: <waiting for better solution>
     document.cookie = `${SIDEBAR_COOKIE_NAME}=${open()}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`
   }
 
@@ -719,10 +718,10 @@ export {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
+  type SidebarProps,
   SidebarProvider,
   SidebarRail,
   SidebarSeparator,
   SidebarTrigger,
-  useSidebar,
-  type SidebarProps
+  useSidebar
 }

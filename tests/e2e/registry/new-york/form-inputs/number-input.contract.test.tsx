@@ -50,8 +50,8 @@ vi.mock("@/registry/new-york/ui/number-field", () => ({
   )
 }))
 
-import NumberInput from "@/registry/new-york/form-inputs/number-input"
 import type { JSX } from "solid-js"
+import NumberInput from "@/registry/new-york/form-inputs/number-input"
 
 const user = userEvent.setup()
 

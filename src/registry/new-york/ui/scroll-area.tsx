@@ -1,16 +1,13 @@
+import type { Accessor, ComponentProps, JSX } from "solid-js"
 import {
-  type Accessor,
-  type ComponentProps,
   createContext,
   createSignal,
-  type JSX,
   mergeProps,
   onCleanup,
   onMount,
   splitProps,
   useContext
 } from "solid-js"
-
 import { cn } from "@/lib/utils/tailwind"
 
 type ScrollAreaContextValue = {
@@ -54,7 +51,6 @@ const ScrollArea = (props: ScrollAreaProps) => {
         hovered
       }}
     >
-      {/* biome-ignore lint/a11y/noStaticElementInteractions: <hover tracking is a passive UI affordance — no keyboard equivalent needed since the inner viewport remains keyboard-scrollable> */}
       <div
         class={cn("relative overflow-clip", local.class)}
         data-slot="scroll-area"
@@ -280,8 +276,6 @@ const ScrollBar = (rawProps: ScrollBarProps) => {
   const shown = () => visible() && (context.hovered() || isDragging())
 
   return (
-    // biome-ignore lint/a11y/noStaticElementInteractions: <custom scrollbar — keyboard scroll is handled via the native viewport>
-    // biome-ignore lint/a11y/useKeyWithClickEvents: <track click is a pointer-only convenience; keyboard users scroll via viewport>
     <div
       class={cn(
         "absolute z-scroll-area-scrollbar flex touch-none select-none p-px transition-opacity duration-150",
@@ -300,7 +294,6 @@ const ScrollBar = (rawProps: ScrollBarProps) => {
       ref={scrollbarRef}
       {...others}
     >
-      {/* biome-ignore lint/a11y/noStaticElementInteractions: <custom scrollbar thumb — keyboard scroll is handled via the native viewport> */}
       <div
         class="relative z-scroll-area-thumb flex-1 cursor-grab bg-border active:cursor-grabbing"
         data-slot="scroll-area-thumb"

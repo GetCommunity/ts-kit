@@ -1,9 +1,7 @@
-import * as PaginationPrimitive from "@kobalte/core/pagination"
-import { Show, splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { JSX, ValidComponent } from "solid-js"
-
+import * as PaginationPrimitive from "@kobalte/core/pagination"
+import { Show, splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import { buttonVariants } from "@/registry/new-york/ui/button"
 

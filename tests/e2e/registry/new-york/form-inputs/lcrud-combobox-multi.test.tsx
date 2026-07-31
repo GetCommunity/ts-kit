@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
 import LCRUDComboboxMulti from "@/registry/new-york/form-inputs/lcrud-combobox-multi"
+import type { TestDocument, TestPage } from "./lcrud-test-helpers"
 import {
   alpha,
   beta,
@@ -14,8 +15,6 @@ import {
   renderWithQuery,
   valueMappers
 } from "./lcrud-test-helpers"
-
-import type { TestDocument, TestPage } from "./lcrud-test-helpers"
 
 describe("LCRUDComboboxMulti", () => {
   it("loads options, initializes its controlled values, and selects every option", async () => {

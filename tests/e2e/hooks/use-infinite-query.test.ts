@@ -1,16 +1,14 @@
+import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import { renderHook, waitFor } from "@solidjs/testing-library"
 import {
+  infiniteQueryOptions,
   QueryClient,
-  QueryClientProvider,
-  infiniteQueryOptions
+  QueryClientProvider
 } from "@tanstack/solid-query"
-import { createComponent } from "solid-js"
-
-import { useInfiniteCollection } from "@/hooks/use-infinite-query"
-
-import type { CollectionDocument } from "@/hooks/use-infinite-query"
-import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { Component, JSX } from "solid-js"
+import { createComponent } from "solid-js"
+import type { CollectionDocument } from "@/hooks/use-infinite-query"
+import { useInfiniteCollection } from "@/hooks/use-infinite-query"
 
 type TestDocument = CollectionDocument & {
   label: string

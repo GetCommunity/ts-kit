@@ -2,10 +2,9 @@ import { useMutation } from "@tanstack/solid-query"
 import { useLocation } from "@tanstack/solid-router"
 import { createServerFn } from "@tanstack/solid-start"
 import { deleteCookie, getCookies } from "@tanstack/solid-start/server"
+import type { ParentProps } from "solid-js"
 import { createEffect } from "solid-js"
 import { createStore } from "solid-js/store"
-
-import type { ParentProps } from "solid-js"
 
 import { useCookieConsentState } from "@/components/cookie-consent-provider"
 import {

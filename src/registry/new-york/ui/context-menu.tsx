@@ -1,9 +1,9 @@
-import { cn } from "@/lib/utils/tailwind"
-import * as ContextMenuPrimitive from "@kobalte/core/context-menu"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import { Check, ChevronRight } from "lucide-solid"
 import type { ComponentProps, JSX, ValidComponent } from "solid-js"
+import * as ContextMenuPrimitive from "@kobalte/core/context-menu"
+import { Check, ChevronRight } from "lucide-solid"
 import { splitProps } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
 
 type ContextMenuProps<T extends ValidComponent = "div"> = PolymorphicProps<
   T,

@@ -1,11 +1,9 @@
-import * as ButtonPrimitive from "@kobalte/core/button"
-import { cva } from "class-variance-authority"
-import { splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { VariantProps } from "class-variance-authority"
 import type { JSX, ValidComponent } from "solid-js"
-
+import * as ButtonPrimitive from "@kobalte/core/button"
+import { cva } from "class-variance-authority"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 const buttonVariants = cva(
@@ -58,5 +56,5 @@ const Button = <T extends ValidComponent = "button">(
   )
 }
 
-export { Button, buttonVariants }
 export type { ButtonProps }
+export { Button, buttonVariants }

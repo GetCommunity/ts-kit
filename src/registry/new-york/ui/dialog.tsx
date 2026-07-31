@@ -1,9 +1,7 @@
-import * as DialogPrimitive from "@kobalte/core/dialog"
-import { splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
-
+import * as DialogPrimitive from "@kobalte/core/dialog"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 const Dialog = DialogPrimitive.Root

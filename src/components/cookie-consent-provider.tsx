@@ -2,11 +2,10 @@ import * as Sentry from "@sentry/solid"
 import { useMutation } from "@tanstack/solid-query"
 import { createIsomorphicFn, createServerFn } from "@tanstack/solid-start"
 import { getCookie, setCookie } from "@tanstack/solid-start/server"
+import type { JSX } from "solid-js"
 import { createContext, useContext } from "solid-js"
 import { createStore } from "solid-js/store"
 import * as v from "valibot"
-
-import type { JSX } from "solid-js"
 
 export const CookieConsentSchema = v.object({
   accepted: v.number(), // Timestamp of when consent was given, or 0 if not accepted

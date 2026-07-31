@@ -1,5 +1,5 @@
-import { type ComponentProps, splitProps } from "solid-js"
-
+import type { ComponentProps } from "solid-js"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 type TextareaProps = ComponentProps<"textarea">

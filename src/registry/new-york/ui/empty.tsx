@@ -1,7 +1,8 @@
-import { cn } from "@/lib/utils/tailwind"
-import { cva, type VariantProps } from "class-variance-authority"
+import type { VariantProps } from "class-variance-authority"
 import type { ComponentProps } from "solid-js"
+import { cva } from "class-variance-authority"
 import { splitProps } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
 
 type EmptyProps = ComponentProps<"div">
 

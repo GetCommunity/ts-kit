@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync } from "node:fs"
+import { existsSync, readdirSync, readFileSync } from "node:fs"
 import { dirname, extname, relative, resolve, sep } from "node:path"
 import { fileURLToPath } from "node:url"
 import { preProcessFile } from "typescript"

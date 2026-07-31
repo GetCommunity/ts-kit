@@ -1,7 +1,5 @@
-import { For, Show, mergeProps } from "solid-js"
-
 import type { Setter } from "solid-js"
-
+import { For, mergeProps, Show } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
@@ -64,7 +62,8 @@ const SelectMultipleInput = <T,>(props: SelectMultipleInputProps<T>) => {
       itemComponent={(itemProps) => {
         const itemLabel = () => {
           return itemProps.item.rawValue?.[selectProps.optionTextValue] as unknown as
-            string | number
+            | string
+            | number
         }
         const itemDesc = () => {
           const desc = itemProps.item.rawValue?.[

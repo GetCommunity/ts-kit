@@ -1,8 +1,6 @@
+import type { Component, ComponentProps } from "solid-js"
 import { cva } from "class-variance-authority"
 import { splitProps } from "solid-js"
-
-import type { Component, ComponentProps } from "solid-js"
-
 import { cn } from "@/lib/utils/tailwind"
 
 const labelVariants = cva(

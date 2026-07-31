@@ -1,3 +1,4 @@
+import { For, mergeProps, Show } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
@@ -7,7 +8,6 @@ import {
   RadioGroupItemLabel,
   RadioGroup as RadioGroupUI
 } from "@/registry/new-york/ui/radio-group"
-import { For, Show, mergeProps } from "solid-js"
 
 export type RadioGroupInputProps<T> = {
   name: string

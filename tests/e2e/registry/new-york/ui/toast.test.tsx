@@ -1,6 +1,6 @@
 import { render, screen } from "@solidjs/testing-library"
 
-import { Toaster, showToast, showToastPromise } from "@/registry/new-york/ui/toast"
+import { showToast, showToastPromise, Toaster } from "@/registry/new-york/ui/toast"
 
 describe("Toast", () => {
   it("renders toast content through the toaster", async () => {

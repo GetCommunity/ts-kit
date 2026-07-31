@@ -1,9 +1,7 @@
-import * as BreadcrumbPrimitive from "@kobalte/core/breadcrumbs"
-import { Show, splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
-
+import * as BreadcrumbPrimitive from "@kobalte/core/breadcrumbs"
+import { Show, splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 const Breadcrumb = BreadcrumbPrimitive.Root

@@ -1,21 +1,17 @@
-import { cn } from "@/lib/utils/tailwind"
-import { Separator, type SeparatorProps } from "@/registry/new-york/ui/separator"
-import { cva, type VariantProps } from "class-variance-authority"
-import {
-  type ComponentProps,
-  type JSX,
-  mergeProps,
-  splitProps,
-  type ValidComponent
-} from "solid-js"
+import type { VariantProps } from "class-variance-authority"
+import type { ComponentProps, JSX, ValidComponent } from "solid-js"
+import type { SeparatorProps } from "@/registry/new-york/ui/separator"
+import { cva } from "class-variance-authority"
+import { mergeProps, splitProps } from "solid-js"
 import { Dynamic } from "solid-js/web"
+import { cn } from "@/lib/utils/tailwind"
+import { Separator } from "@/registry/new-york/ui/separator"
 
 type ItemGroupProps = ComponentProps<"div">
 
 const ItemGroup = (props: ItemGroupProps) => {
   const [local, others] = splitProps(props, ["class"])
   return (
-    // biome-ignore lint/a11y/useSemanticElements: Using div with role for flexibility as per shadcn design
     <div
       role="list"
       data-slot="item-group"
@@ -227,8 +223,8 @@ export {
   ItemGroup,
   ItemHeader,
   ItemMedia,
-  itemMediaVariants,
   ItemSeparator,
   ItemTitle,
+  itemMediaVariants,
   itemVariants
 }

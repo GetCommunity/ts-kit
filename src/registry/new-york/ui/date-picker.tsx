@@ -1,6 +1,5 @@
 import { DatePicker as DatePickerPrimitive } from "@ark-ui/solid"
-import { Show, children, splitProps } from "solid-js"
-
+import { children, Show, splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import { buttonVariants } from "@/registry/new-york/ui/button"
 

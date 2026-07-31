@@ -1,9 +1,7 @@
-import * as DropdownMenuPrimitive from "@kobalte/core/dropdown-menu"
-import { splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
-
+import * as DropdownMenuPrimitive from "@kobalte/core/dropdown-menu"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger

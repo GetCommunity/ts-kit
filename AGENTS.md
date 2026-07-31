@@ -1,6 +1,6 @@
 # Code Standards
 
-This project uses **ESLint** for static analysis and **Prettier** for consistent formatting.
+This project uses **Biome** for static analysis and consistent formatting.
 
 ## Quick Reference
 
