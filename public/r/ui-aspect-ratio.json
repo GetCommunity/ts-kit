@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-aspect-ratio",
+  "title": "Aspect Ratio",
+  "description": "A aspect ratio component",
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "src/registry/kobalte/ui/aspect-ratio.tsx",
+      "content": "import { splitProps } from \"solid-js\"\n\nimport type { ComponentProps, JSX } from \"solid-js\"\n\nimport { cn } from \"@/lib/utils/tailwind\"\n\ntype AspectRatioProps = ComponentProps<\"div\"> & {\n  ratio: number\n  class?: string | undefined\n}\n\nconst AspectRatio = (props: AspectRatioProps) => {\n  const [local, others] = splitProps(props, [\"class\", \"ratio\"])\n\n  return (\n    <div\n      data-slot=\"aspect-ratio\"\n      style={\n        {\n          \"--ratio\": local.ratio\n        } as JSX.CSSProperties\n      }\n      class={cn(\"relative aspect-(--ratio) overflow-hidden\", local.class)}\n      {...others}\n    />\n  )\n}\n\nexport { AspectRatio }\nexport type { AspectRatioProps }\n",
+      "type": "registry:ui",
+      "target": "components/ui/aspect-ratio.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

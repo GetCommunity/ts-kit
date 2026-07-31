@@ -5,7 +5,7 @@
   "description": "A circle outline icon component",
   "files": [
     {
-      "path": "src/registry/new-york/icons/svg/circle-outline.tsx",
+      "path": "src/registry/kobalte/icons/svg/circle-outline.tsx",
       "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const circleOutline = (props: ComponentProps<\"svg\">) => (\n  <svg\n    fill=\"currentColor\"\n    stroke-width=\"0\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    viewBox=\"0 0 512 512\"\n    style={{ overflow: \"visible\", color: \"currentcolor\" }}\n    {...props}\n  >\n    <path d=\"M464 256a208 208 0 1 0-416 0 208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0z\" />\n  </svg>\n)\n\nexport default circleOutline\n",
       "type": "registry:file",
       "target": "components/icons/svg/circle-outline.tsx"

@@ -8,8 +8,8 @@
     "src/components/registry.json",
     "src/hooks/registry.json",
     "src/lib/utils/registry.json",
-    "src/registry/new-york/form-inputs/registry.json",
-    "src/registry/new-york/icons/registry.json",
-    "src/registry/new-york/ui/registry.json"
+    "src/registry/kobalte/form-inputs/registry.json",
+    "src/registry/kobalte/icons/registry.json",
+    "src/registry/kobalte/ui/registry.json"
   ]
 }

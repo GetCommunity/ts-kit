@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hook-use-mobile",
+  "title": "Use Mobile",
+  "description": "A hook for matching mobile viewport sizes",
+  "files": [
+    {
+      "path": "src/hooks/use-mobile.ts",
+      "content": "import { createEffect, createSignal, onCleanup } from \"solid-js\"\n\nconst MOBILE_BREAKPOINT = 768\n\nexport function useIsMobile(fallback = false) {\n  const [isMobile, setIsMobile] = createSignal(fallback)\n\n  createEffect(() => {\n    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)\n    const onChange = (e: MediaQueryListEvent | MediaQueryList) => {\n      setIsMobile(e.matches)\n    }\n    mql.addEventListener(\"change\", onChange)\n    onChange(mql)\n    onCleanup(() => mql.removeEventListener(\"change\", onChange))\n  })\n\n  return isMobile\n}\n",
+      "type": "registry:hook",
+      "target": "hooks/use-mobile.ts"
+    }
+  ],
+  "type": "registry:hook"
+}

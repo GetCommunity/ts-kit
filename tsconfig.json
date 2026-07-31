@@ -12,6 +12,7 @@
     "moduleResolution": "Bundler",
     "noEmit": true,
     "paths": {
+      "~/*": ["./*"],
       "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,

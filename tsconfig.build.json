@@ -1,0 +1,16 @@
+{
+  "exclude": [
+    ".idea",
+    ".output",
+    ".tanstack",
+    "dist",
+    "node_modules",
+    "public/r",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/__tests__/**",
+    "**/__mocks__/**"
+  ]
+}

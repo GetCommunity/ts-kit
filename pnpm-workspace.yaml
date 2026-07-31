@@ -8,3 +8,4 @@ minimumReleaseAgeExclude:
   - "@getcommunity/client-styleguides"
   - "@getcommunity/gc-validators"
   - "@getcommunity/strapi-blocks-solid-renderer"
+  - vite@8.2.0

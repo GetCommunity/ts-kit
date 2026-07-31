@@ -5,7 +5,8 @@ import { defineConfig } from "vitest/config"
 export default defineConfig({
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src")
+      "~": resolve(import.meta.dirname),
+      "@": resolve(import.meta.dirname, "src")
     }
   },
   plugins: [
@@ -24,7 +25,7 @@ export default defineConfig({
     })
   ],
   test: {
-    include: ["tests/**/*.test.{ts,tsx}"],
+    include: ["**/*.test.{ts,tsx}"],
     environment: "jsdom",
     globals: true,
     passWithNoTests: true,
@@ -34,7 +35,7 @@ export default defineConfig({
       tsconfig: "./tsconfig.json"
     },
     watch: false,
-    setupFiles: ["./tests/mocks/setup.tsx", "./tests/mocks/window.tsx"],
+    setupFiles: ["./test/mocks/setup.tsx", "./test/mocks/window.tsx"],
     coverage: {
       provider: "v8",
       clean: true,
@@ -48,14 +49,13 @@ export default defineConfig({
       },
       include: ["src/**/*.{ts,tsx}"],
       exclude: [
-        "tests/**",
+        "src/router.tsx",
+        "src/routeTree.gen.ts",
         "src/routes/**",
-        "src/app.tsx",
-        "src/entry-client.tsx",
-        "src/entry-server.tsx",
-        "src/**/*.test.{ts,tsx}",
-        "src/**/*.spec.{ts,tsx}",
-        "src/**/*.d.ts"
+        "test/**",
+        "**/*.test.{ts,tsx}",
+        "**/*.spec.{ts,tsx}",
+        "**/*.d.ts"
       ]
     }
   }

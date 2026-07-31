@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-skeleton",
+  "title": "Skeleton",
+  "description": "A skeleton component",
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "src/registry/kobalte/ui/skeleton.tsx",
+      "content": "import { splitProps } from \"solid-js\"\n\nimport type { ComponentProps } from \"solid-js\"\n\nimport { cn } from \"@/lib/utils/tailwind\"\n\nconst Skeleton = (props: ComponentProps<\"div\">) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <div\n      class={cn(\"z-skeleton animate-pulse\", local.class)}\n      data-slot=\"skeleton\"\n      {...others}\n    />\n  )\n}\n\nexport { Skeleton }\n",
+      "type": "registry:ui",
+      "target": "components/ui/skeleton.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

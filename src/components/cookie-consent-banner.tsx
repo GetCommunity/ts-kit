@@ -9,11 +9,11 @@ import {
   useCookieConsentState
 } from "@/components/cookie-consent-provider"
 import { cn } from "@/lib/utils/tailwind"
-import CheckboxSwitchInput from "@/registry/new-york/form-inputs/checkbox-switch-input"
-import HiddenInput from "@/registry/new-york/form-inputs/hidden-input"
-import Cookie from "@/registry/new-york/icons/svg/cookie"
-import { Button } from "@/registry/new-york/ui/button"
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/new-york/ui/tooltip"
+import CheckboxSwitchInput from "@/registry/kobalte/form-inputs/checkbox-switch-input"
+import HiddenInput from "@/registry/kobalte/form-inputs/hidden-input"
+import Cookie from "@/registry/kobalte/icons/svg/cookie"
+import { Button } from "@/registry/kobalte/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/kobalte/ui/tooltip"
 
 export default function CookieConsentBanner() {
   const [consent, actions] = useCookieConsentState()

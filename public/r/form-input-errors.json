@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "src/registry/new-york/form-inputs/form-input-errors.tsx",
+      "path": "src/registry/kobalte/form-inputs/form-input-errors.tsx",
       "content": "import { cn } from \"@/lib/utils/tailwind\"\nimport { For, Show } from \"solid-js\"\n\ntype FormInputErrorsProps = {\n  class?: string\n  error?: [string, ...Array<string>] | null\n}\n\nexport default function FormInputErrors(props: FormInputErrorsProps) {\n  return (\n    <Show when={props.error}>\n      <div class={cn(\"text-xs leading-none text-error-foreground\", props.class)}>\n        <For each={props.error}>{(error) => <div>{error}</div>}</For>\n      </div>\n    </Show>\n  )\n}\n",
       "type": "registry:component",
       "target": "components/form-inputs/form-input-errors.tsx"

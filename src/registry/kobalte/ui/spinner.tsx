@@ -1,0 +1,25 @@
+import { LoaderCircle } from "lucide-solid"
+import { splitProps } from "solid-js"
+
+import type { ComponentProps } from "solid-js"
+
+import { cn } from "@/lib/utils/tailwind"
+
+type SpinnerProps = ComponentProps<"svg"> & {
+  class?: string | undefined
+}
+
+const Spinner = (props: SpinnerProps) => {
+  const [local, others] = splitProps(props, ["class"])
+  return (
+    <LoaderCircle
+      role="status"
+      aria-label="Loading"
+      class={cn("z-spinner size-4 animate-spin", local.class)}
+      data-slot="spinner"
+      {...others}
+    />
+  )
+}
+
+export { Spinner }

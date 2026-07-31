@@ -12,9 +12,9 @@
     "test:coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
     "dev": "vite dev",
-    "build": "vite build",
     "start": "vite preview",
-    "build:registry": "rm -rf ./public/r && shadcn build"
+    "build": "vite build",
+    "r:build": "rm -rf ./public/r && shadcn build"
   },
   "dependencies": {
     "@ark-ui/solid": "^5.37.1",
