@@ -116,9 +116,9 @@ vi.mock("@/registry/new-york/ui/select", async () => {
   }
 })
 
+import type { JSX } from "solid-js"
 import SelectInput from "@/registry/new-york/form-inputs/select-input.ui"
 import SelectMultipleInput from "@/registry/new-york/form-inputs/select-multi-input.ui"
-import type { JSX } from "solid-js"
 
 type Option = {
   description?: Array<string> | string | number

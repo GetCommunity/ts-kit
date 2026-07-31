@@ -1,3 +1,8 @@
+import type { ComponentProps, JSX } from "solid-js"
+import Calendar from "@corvu/calendar"
+import { getWeek } from "date-fns"
+import { ChevronLeft, ChevronRight } from "lucide-solid"
+import { Index, mergeProps, Show, splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import { Button, buttonVariants } from "@/registry/new-york/ui/button"
 import {
@@ -7,17 +12,6 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/registry/new-york/ui/select"
-import Calendar from "@corvu/calendar"
-import { getWeek } from "date-fns"
-import { ChevronLeft, ChevronRight } from "lucide-solid"
-import {
-  type ComponentProps,
-  Index,
-  type JSX,
-  mergeProps,
-  Show,
-  splitProps
-} from "solid-js"
 
 type CalendarSingleValue = Date | null
 type CalendarMultipleValue = Date[]

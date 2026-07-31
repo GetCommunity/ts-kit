@@ -1,9 +1,7 @@
-import { Show, createSignal } from "solid-js"
-
-import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import type { Setter } from "solid-js"
-
+import { createSignal, Show } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
+import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"
 import {
   NumberFieldDecrementTrigger,
   NumberFieldDescription,
@@ -37,7 +35,7 @@ function NumberField(props: NumberInputProps) {
     const check = value?.toString() ?? ""
     if (check.indexOf(",") !== -1) check.replace(",", "")
     const numberValue = parseFloat(value?.replace(",", "") ?? "")
-    props.onChange(isNaN(numberValue) ? null : numberValue)
+    props.onChange(Number.isNaN(numberValue) ? null : numberValue)
   }
   return (
     <>

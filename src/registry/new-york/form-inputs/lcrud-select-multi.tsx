@@ -1,13 +1,11 @@
-import * as SelectPrimitive from "@kobalte/core/select"
-import { For, Show, children, onMount } from "solid-js"
-
-import type { CollectionDocument } from "@/hooks/use-infinite-query"
-import type { orientationVariants } from "@/registry/new-york/ui/orientation"
 import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { infiniteQueryOptions } from "@tanstack/solid-query"
 import type { VariantProps } from "class-variance-authority"
 import type { JSX } from "solid-js"
-
+import type { CollectionDocument } from "@/hooks/use-infinite-query"
+import type { orientationVariants } from "@/registry/new-york/ui/orientation"
+import * as SelectPrimitive from "@kobalte/core/select"
+import { children, For, onMount, Show } from "solid-js"
 import { useInfiniteCollection } from "@/hooks/use-infinite-query"
 import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"

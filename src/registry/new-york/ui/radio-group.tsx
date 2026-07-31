@@ -1,9 +1,7 @@
-import * as RadioGroupPrimitive from "@kobalte/core/radio-group"
-import { splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { JSX, ValidComponent } from "solid-js"
-
+import * as RadioGroupPrimitive from "@kobalte/core/radio-group"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import { labelVariants } from "@/registry/new-york/ui/label"
 

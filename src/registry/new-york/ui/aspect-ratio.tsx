@@ -1,6 +1,5 @@
 import type { ComponentProps, JSX } from "solid-js"
 import { splitProps } from "solid-js"
-
 import { cn } from "@/lib/utils/tailwind"
 
 type AspectRatioProps = ComponentProps<"div"> & {
@@ -25,5 +24,5 @@ const AspectRatio = (props: AspectRatioProps) => {
   )
 }
 
-export { AspectRatio }
 export type { AspectRatioProps }
+export { AspectRatio }

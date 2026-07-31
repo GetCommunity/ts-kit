@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils/tailwind"
 import { For, Show } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
 
 type FormInputErrorsProps = {
   class?: string

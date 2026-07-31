@@ -1,6 +1,5 @@
-import { Time, toCalendarDateTime } from "@internationalized/date"
-
 import type { DateValue } from "@internationalized/date"
+import { Time, toCalendarDateTime } from "@internationalized/date"
 
 export function formatTimePart(value: number) {
   return value.toString().padStart(2, "0")

@@ -50,8 +50,8 @@ at `/r/registry.json`.
 
 ### Code Quality
 
-The project uses ESLint for linting and Prettier for formatting. Their direct
-configuration lives in `eslint.config.js` and `prettier.config.js`:
+The project uses Biome for linting and formatting. Its configuration lives in
+`biome.json`:
 
 ```bash
 pnpm lint

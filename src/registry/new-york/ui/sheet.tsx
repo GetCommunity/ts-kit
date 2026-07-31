@@ -1,9 +1,9 @@
-import { cn } from "@/lib/utils/tailwind"
-import * as SheetPrimitive from "@kobalte/core/dialog"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import { X } from "lucide-solid"
 import type { Component, ComponentProps, ValidComponent } from "solid-js"
+import * as SheetPrimitive from "@kobalte/core/dialog"
+import { X } from "lucide-solid"
 import { mergeProps, Show, splitProps } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
 import { Button } from "./button"
 
 const Sheet: Component<SheetPrimitive.DialogRootProps> = (props) => {

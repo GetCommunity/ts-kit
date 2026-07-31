@@ -1,7 +1,8 @@
-import OtpField, { type RootProps as OtpFieldRootProps } from "@corvu/otp-field"
+import type { RootProps as OtpFieldRootProps } from "@corvu/otp-field"
+import type { ComponentProps } from "solid-js"
+import OtpField from "@corvu/otp-field"
 import { Minus } from "lucide-solid"
-import { type ComponentProps, Show, splitProps } from "solid-js"
-
+import { Show, splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 type InputOTPProps = OtpFieldRootProps &
@@ -111,10 +112,10 @@ const InputOTPSeparator = (props: InputOTPSeparatorProps) => {
 export {
   InputOTP,
   InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
   type InputOTPGroupProps,
   type InputOTPProps,
+  InputOTPSeparator,
   type InputOTPSeparatorProps,
+  InputOTPSlot,
   type InputOTPSlotProps
 }

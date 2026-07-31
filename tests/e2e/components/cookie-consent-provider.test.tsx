@@ -1,6 +1,9 @@
 import { render, screen } from "@solidjs/testing-library"
 import * as v from "valibot"
-
+import type {
+  CookieConsentState,
+  CookieConsentStateContextProvider
+} from "@/components/cookie-consent-provider"
 import CookieConsentProvider, {
   COOKIE_CONSENT_DURATION,
   COOKIE_CONSENT_NAME,
@@ -9,11 +12,6 @@ import CookieConsentProvider, {
   getCookieConsent,
   saveCookieConsent,
   useCookieConsentState
-} from "@/components/cookie-consent-provider"
-
-import type {
-  CookieConsentState,
-  CookieConsentStateContextProvider
 } from "@/components/cookie-consent-provider"
 
 const cookieConsentMocks = vi.hoisted(() => ({
@@ -266,7 +264,8 @@ describe("CookieConsentProvider", () => {
       })
     )
     const callbacks = cookieConsentMocks.mutate.mock.calls[0]?.[1] as
-      ConsentMutationCallbacks | undefined
+      | ConsentMutationCallbacks
+      | undefined
     callbacks?.onSuccess(saved)
     expect(context?.[0]).toEqual(saved)
   })
@@ -290,7 +289,8 @@ describe("CookieConsentProvider", () => {
 
     context?.[1].consent(submitted)
     const callbacks = cookieConsentMocks.mutate.mock.calls[0]?.[1] as
-      ConsentMutationCallbacks | undefined
+      | ConsentMutationCallbacks
+      | undefined
     callbacks?.onError(error)
 
     expect(cookieConsentMocks.sentryWarn).toHaveBeenCalledWith(

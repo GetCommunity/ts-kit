@@ -1,8 +1,6 @@
-import { Show } from "solid-js"
-
 import type { SliderGetValueLabelParams } from "@kobalte/core/slider"
 import type { Setter } from "solid-js"
-
+import { Show } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/new-york/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/new-york/form-inputs/form-input-errors"

@@ -1,4 +1,5 @@
-import { cn } from "@/lib/utils/tailwind"
+import type { ECharts, EChartsCoreOption, SetOptionOpts } from "echarts/core"
+import type { Component, ComponentProps, JSX } from "solid-js"
 import { BarChart, LineChart, PieChart, RadarChart, ScatterChart } from "echarts/charts"
 import {
   GridComponent,
@@ -6,15 +7,8 @@ import {
   TitleComponent,
   TooltipComponent
 } from "echarts/components"
-import {
-  type ECharts,
-  type EChartsCoreOption,
-  init,
-  type SetOptionOpts,
-  use
-} from "echarts/core"
+import { init, use } from "echarts/core"
 import { SVGRenderer } from "echarts/renderers"
-import type { Component, ComponentProps, JSX } from "solid-js"
 import {
   createContext,
   createEffect,
@@ -26,6 +20,7 @@ import {
   splitProps,
   useContext
 } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
 
 // Register ECharts components - using SVG renderer for CSS variable support
 // Note: SVG is required because Canvas cannot parse CSS variables like var(--chart-1)

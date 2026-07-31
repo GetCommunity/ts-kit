@@ -1,9 +1,7 @@
-import * as SeparatorPrimitive from "@kobalte/core/separator"
-import { splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { ValidComponent } from "solid-js"
-
+import * as SeparatorPrimitive from "@kobalte/core/separator"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 type SeparatorRootProps<T extends ValidComponent = "hr"> =
@@ -29,5 +27,5 @@ const Separator = <T extends ValidComponent = "hr">(
   )
 }
 
-export { Separator }
 export type { SeparatorRootProps as SeparatorProps }
+export { Separator }

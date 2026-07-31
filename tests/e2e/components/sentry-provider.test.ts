@@ -28,7 +28,9 @@ type RedactionEvent = {
     cookies?: unknown
     headers?: Record<string, string>
     query_string?:
-      string | Array<[string, string]> | Record<string, string | Array<string>>
+      | string
+      | Array<[string, string]>
+      | Record<string, string | Array<string>>
     url?: string
   }
   user?: {

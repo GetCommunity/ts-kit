@@ -148,9 +148,9 @@ vi.mock("@/registry/new-york/ui/combobox", async () => {
   }
 })
 
+import type { JSX } from "solid-js"
 import ComboboxInput from "@/registry/new-york/form-inputs/combobox-input"
 import ComboboxMultiInput from "@/registry/new-york/form-inputs/combobox-multi-input"
-import type { JSX } from "solid-js"
 
 type Option = {
   description?: Array<string> | string | number

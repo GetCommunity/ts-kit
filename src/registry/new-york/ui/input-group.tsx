@@ -1,8 +1,10 @@
-import { cva, type VariantProps } from "class-variance-authority"
-import { type ComponentProps, type JSX, splitProps } from "solid-js"
-
+import type { VariantProps } from "class-variance-authority"
+import type { ComponentProps, JSX } from "solid-js"
+import type { ButtonProps } from "@/registry/new-york/ui/button"
+import { cva } from "class-variance-authority"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
-import { Button, type ButtonProps } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/new-york/ui/button"
 import { Input } from "@/registry/new-york/ui/input"
 import { Textarea } from "@/registry/new-york/ui/textarea"
 
@@ -11,7 +13,6 @@ type InputGroupProps = ComponentProps<"div">
 const InputGroup = (props: InputGroupProps) => {
   const [local, others] = splitProps(props, ["class"])
   return (
-    // biome-ignore lint/a11y/useSemanticElements: <exception for input group>
     <div
       data-slot="input-group"
       role="group"
@@ -61,8 +62,6 @@ const InputGroupAddon = (props: InputGroupAddonProps) => {
   }
 
   return (
-    // biome-ignore lint/a11y/useSemanticElements: <exception for input group addon>
-    // biome-ignore lint/a11y/useKeyWithClickEvents: <click delegates focus to input>
     <div
       role="group"
       data-slot="input-group-addon"
@@ -157,14 +156,14 @@ const InputGroupTextarea = (props: InputGroupTextareaProps) => {
 export {
   InputGroup,
   InputGroupAddon,
-  InputGroupButton,
-  InputGroupInput,
-  InputGroupText,
-  InputGroupTextarea,
   type InputGroupAddonProps,
+  InputGroupButton,
   type InputGroupButtonProps,
+  InputGroupInput,
   type InputGroupInputProps,
   type InputGroupProps,
+  InputGroupText,
+  InputGroupTextarea,
   type InputGroupTextareaProps,
   type InputGroupTextProps
 }

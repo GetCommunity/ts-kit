@@ -1,6 +1,7 @@
-import { cn } from "@/lib/utils/tailwind"
+import type { ComponentProps } from "solid-js"
 import { ChevronDown } from "lucide-solid"
-import { type ComponentProps, mergeProps, splitProps } from "solid-js"
+import { mergeProps, splitProps } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
 
 type NativeSelectProps = ComponentProps<"select"> & {
   size?: "sm" | "default"

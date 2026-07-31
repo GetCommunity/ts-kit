@@ -1,8 +1,6 @@
-import { getDeepErrors } from "@formisch/solid"
-import { For, Show, mergeProps } from "solid-js"
-
 import type { FormSchema, FormStore } from "@formisch/solid"
-
+import { getDeepErrors } from "@formisch/solid"
+import { For, mergeProps, Show } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import { Alert, AlertDescription, AlertTitle } from "@/registry/new-york/ui/alert"
 

@@ -1,10 +1,10 @@
-import * as AlertDialogPrimitive from "@kobalte/core/alert-dialog"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, ValidComponent } from "solid-js"
+import type { ButtonProps } from "@/registry/new-york/ui/button"
+import * as AlertDialogPrimitive from "@kobalte/core/alert-dialog"
 import { mergeProps, splitProps } from "solid-js"
-
 import { cn } from "@/lib/utils/tailwind"
-import { Button, type ButtonProps } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/new-york/ui/button"
 
 const AlertDialog: Component<AlertDialogPrimitive.AlertDialogRootProps> = (props) => {
   return <AlertDialogPrimitive.Root data-slot="alert-dialog" {...props} />

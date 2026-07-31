@@ -1,9 +1,7 @@
-import { cva } from "class-variance-authority"
-import { splitProps } from "solid-js"
-
 import type { VariantProps } from "class-variance-authority"
 import type { Component, ComponentProps } from "solid-js"
-
+import { cva } from "class-variance-authority"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 const badgeVariants = cva(
@@ -44,5 +42,5 @@ const Badge: Component<BadgeProps> = (props) => {
   )
 }
 
-export { Badge, badgeVariants }
 export type { BadgeProps }
+export { Badge, badgeVariants }

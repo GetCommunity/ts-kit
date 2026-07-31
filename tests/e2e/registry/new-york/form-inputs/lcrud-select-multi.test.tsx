@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event"
 import { createSignal } from "solid-js"
 
 import LCRUDSelectMulti from "@/registry/new-york/form-inputs/lcrud-select-multi"
+import type { TestDocument, TestPage } from "./lcrud-test-helpers"
 import {
   alpha,
   beta,
@@ -14,8 +15,6 @@ import {
   renderWithQuery,
   valueMappers
 } from "./lcrud-test-helpers"
-
-import type { TestDocument, TestPage } from "./lcrud-test-helpers"
 
 describe("LCRUDSelectMulti", () => {
   it("loads options, initializes its controlled values, and selects every option", async () => {

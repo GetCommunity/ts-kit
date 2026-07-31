@@ -1,10 +1,8 @@
+import type { DateValue } from "@ark-ui/solid"
+import type { Setter } from "solid-js"
 import { toCalendarDateTime } from "@internationalized/date"
 import { For, Show } from "solid-js"
 import { Portal } from "solid-js/web"
-
-import type { DateValue } from "@ark-ui/solid"
-import type { Setter } from "solid-js"
-
 import {
   formatDateTimeValue,
   formatTimeInputValue,

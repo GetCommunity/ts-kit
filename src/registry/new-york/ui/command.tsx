@@ -1,3 +1,7 @@
+import type { ComponentProps } from "solid-js"
+import { Command as CommandPrimitive } from "cmdk-solid"
+import { Check, SearchIcon } from "lucide-solid"
+import { mergeProps, splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 import {
   Dialog,
@@ -7,9 +11,6 @@ import {
   DialogTitle
 } from "@/registry/new-york/ui/dialog"
 import { InputGroup, InputGroupAddon } from "@/registry/new-york/ui/input-group"
-import { Command as CommandPrimitive } from "cmdk-solid"
-import { Check, SearchIcon } from "lucide-solid"
-import { type ComponentProps, mergeProps, splitProps } from "solid-js"
 
 function Command(props: ComponentProps<"div">) {
   return (

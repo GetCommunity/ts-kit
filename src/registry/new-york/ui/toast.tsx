@@ -1,12 +1,10 @@
+import type { PolymorphicProps } from "@kobalte/core/polymorphic"
+import type { VariantProps } from "class-variance-authority"
+import type { JSX, ValidComponent } from "solid-js"
 import * as ToastPrimitive from "@kobalte/core/toast"
 import { cva } from "class-variance-authority"
 import { Match, Switch, splitProps } from "solid-js"
 import { Portal } from "solid-js/web"
-
-import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import type { VariantProps } from "class-variance-authority"
-import type { JSX, ValidComponent } from "solid-js"
-
 import { cn } from "@/lib/utils/tailwind"
 
 const toastVariants = cva(
@@ -182,11 +180,11 @@ function showToastPromise<T, U>(
 }
 
 export {
+  showToast,
+  showToastPromise,
   Toast,
   ToastClose,
   ToastDescription,
-  ToastTitle,
   Toaster,
-  showToast,
-  showToastPromise
+  ToastTitle
 }

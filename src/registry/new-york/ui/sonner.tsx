@@ -1,5 +1,5 @@
-import { CircleCheck, Info, LoaderCircle, OctagonX, TriangleAlert } from "lucide-solid"
 import type { Component, ComponentProps, JSX } from "solid-js"
+import { CircleCheck, Info, LoaderCircle, OctagonX, TriangleAlert } from "lucide-solid"
 import { Toaster as Sonner } from "solid-sonner"
 
 type ToasterProps = ComponentProps<typeof Sonner>

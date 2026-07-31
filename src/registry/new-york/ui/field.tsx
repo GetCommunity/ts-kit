@@ -1,7 +1,7 @@
-import { cva, type VariantProps } from "class-variance-authority"
+import type { VariantProps } from "class-variance-authority"
 import type { ComponentProps, JSX } from "solid-js"
+import { cva } from "class-variance-authority"
 import { createMemo, For, Show, splitProps } from "solid-js"
-
 import { cn } from "@/lib/utils/tailwind"
 import { Label } from "@/registry/new-york/ui/label"
 import { Separator } from "@/registry/new-york/ui/separator"
@@ -79,7 +79,6 @@ type FieldProps = ComponentProps<"div"> &
 const Field = (props: FieldProps) => {
   const [local, others] = splitProps(props, ["class", "orientation"])
   return (
-    // biome-ignore lint/a11y/useSemanticElements: role="group" is intentional per shadcn design for accessibility
     <div
       role="group"
       data-slot="field"

@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils/tailwind"
-import * as HoverCardPrimitive from "@kobalte/core/hover-card"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { ComponentProps, ValidComponent } from "solid-js"
+import * as HoverCardPrimitive from "@kobalte/core/hover-card"
 import { mergeProps, splitProps } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
 
 const HoverCard = (props: HoverCardPrimitive.HoverCardRootProps) => {
   const mergedProps = mergeProps({ gutter: 4 }, props)

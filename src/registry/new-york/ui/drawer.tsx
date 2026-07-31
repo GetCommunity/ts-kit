@@ -1,6 +1,3 @@
-import DrawerPrimitive from "@corvu/drawer"
-import { splitProps } from "solid-js"
-
 import type {
   ContentProps,
   DescriptionProps,
@@ -9,7 +6,8 @@ import type {
   OverlayProps
 } from "@corvu/drawer"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
-
+import DrawerPrimitive from "@corvu/drawer"
+import { splitProps } from "solid-js"
 import { cn } from "@/lib/utils/tailwind"
 
 const Drawer = DrawerPrimitive

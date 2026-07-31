@@ -1,21 +1,14 @@
-import { cn } from "@/lib/utils/tailwind"
-import { toggleVariants } from "@/registry/new-york/ui/toggle"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import {
-  type ToggleGroupItemProps,
-  ToggleGroup as ToggleGroupPrimitive,
-  type ToggleGroupRootProps
+import type {
+  ToggleGroupItemProps,
+  ToggleGroupRootProps
 } from "@kobalte/core/toggle-group"
 import type { VariantProps } from "class-variance-authority"
-import {
-  type ComponentProps,
-  createContext,
-  type JSX,
-  mergeProps,
-  splitProps,
-  useContext,
-  type ValidComponent
-} from "solid-js"
+import type { ComponentProps, JSX, ValidComponent } from "solid-js"
+import { ToggleGroup as ToggleGroupPrimitive } from "@kobalte/core/toggle-group"
+import { createContext, mergeProps, splitProps, useContext } from "solid-js"
+import { cn } from "@/lib/utils/tailwind"
+import { toggleVariants } from "@/registry/new-york/ui/toggle"
 
 type ToggleGroupContextValue = VariantProps<typeof toggleVariants> & {
   spacing?: number

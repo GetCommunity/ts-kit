@@ -1,5 +1,4 @@
 import type { ComponentProps } from "solid-js"
-
 import { cn } from "@/lib/utils/tailwind"
 
 export const draggable = (props: ComponentProps<"svg">) => (

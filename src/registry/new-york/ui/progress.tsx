@@ -1,9 +1,7 @@
-import * as ProgressPrimitive from "@kobalte/core/progress"
-import { splitProps } from "solid-js"
-
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, JSX, ValidComponent } from "solid-js"
-
+import * as ProgressPrimitive from "@kobalte/core/progress"
+import { splitProps } from "solid-js"
 import { Label } from "@/registry/new-york/ui/label"
 
 type ProgressRootProps<T extends ValidComponent = "div"> =

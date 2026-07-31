@@ -1,8 +1,7 @@
-import { Field, Form, createForm, setInput, submit } from "@formisch/solid"
+import type { SubmitHandler } from "@formisch/solid"
+import { createForm, Field, Form, setInput, submit } from "@formisch/solid"
 import { Link } from "@tanstack/solid-router"
 import { batch, createSignal } from "solid-js"
-
-import type { SubmitHandler } from "@formisch/solid"
 
 import {
   CookieConsentSchema,

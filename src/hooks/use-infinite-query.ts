@@ -1,8 +1,7 @@
-import { useInfiniteQuery } from "@tanstack/solid-query"
-import { createMemo } from "solid-js"
-
 import type { BaseDocument, StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { infiniteQueryOptions } from "@tanstack/solid-query"
+import { useInfiniteQuery } from "@tanstack/solid-query"
+import { createMemo } from "solid-js"
 
 export interface CollectionDocument extends BaseDocument, Record<string, unknown> {}
 
