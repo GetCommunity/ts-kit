@@ -5,8 +5,29 @@ repos:
       - id: gitleaks
   - repo: local
     hooks:
-      - id: pnpm-checks
-        name: Format, Lint, Type Check, and Tests
-        entry: sh -c 'pnpm format && pnpm lint && pnpm typecheck && pnpm test:coverage'
+      - id: format
+        name: Format Code
+        entry: sh -c 'pnpm format'
+        language: system
+        pass_filenames: false
+  - repo: local
+    hooks:
+      - id: lint
+        name: Lint Code
+        entry: sh -c 'pnpm lint'
+        language: system
+        pass_filenames: false
+  - repo: local
+    hooks:
+      - id: typecheck
+        name: Type Check Code
+        entry: sh -c 'pnpm typecheck'
+        language: system
+        pass_filenames: false
+  - repo: local
+    hooks:
+      - id: Test
+        name: Test Code
+        entry: sh -c 'pnpm test:coverage'
         language: system
         pass_filenames: false
