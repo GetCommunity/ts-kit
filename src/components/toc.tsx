@@ -1,0 +1,60 @@
+import type { TocEntry } from "@/lib/types"
+import { cn } from "@/lib/utils"
+import { For, Show } from "solid-js"
+
+interface TableOfContentsProps {
+  toc: TocEntry
+  class?: string
+}
+
+/**
+ * Recursive component to render TOC items with proper nesting
+ */
+function TocItems(props: { items: TocEntry; depth?: number }) {
+  const depth = () => props.depth ?? 0
+
+  return (
+    <For each={props.items}>
+      {(item) => (
+        <li>
+          <a
+            href={item.url}
+            class={cn(
+              "inline-block py-1 text-muted-foreground text-xs transition-colors hover:text-foreground",
+              {
+                "pl-0": depth() === 0,
+                "pl-4": depth() === 1,
+                "pl-8": depth() === 2,
+                "pl-12": depth() >= 3
+              }
+            )}
+          >
+            {item.title}
+          </a>
+          <Show when={item.items.length > 0}>
+            <ul>
+              <TocItems items={item.items} depth={depth() + 1} />
+            </ul>
+          </Show>
+        </li>
+      )}
+    </For>
+  )
+}
+
+/**
+ * Table of Contents component with scroll spy functionality
+ * Displays on xl screens and larger, sticky positioned on the right side
+ */
+export function TableOfContents(props: TableOfContentsProps) {
+  return (
+    <nav data-slot="toc" class={props.class} aria-label="Table of contents">
+      <div class="pb-4">
+        <p class="mb-2 font-medium text-xs">On This Page</p>
+        <ul class="space-y-1">
+          <TocItems items={props.toc} />
+        </ul>
+      </div>
+    </nav>
+  )
+}

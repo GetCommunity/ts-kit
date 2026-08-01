@@ -5,7 +5,7 @@ import {
   infiniteQueryOptions
 } from "@tanstack/solid-query"
 
-import type { CollectionDocument } from "@/hooks/use-infinite-query"
+import type { CollectionDocument } from "@/registry/kobalte/hooks/use-infinite-query"
 import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { JSX } from "solid-js"
 

@@ -14,7 +14,7 @@ import type { ButtonProps } from "@/registry/kobalte/ui/button"
 import type { CreateEmblaCarouselType } from "embla-carousel-solid"
 import type { Accessor, Component, ComponentProps, VoidProps } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Button } from "@/registry/kobalte/ui/button"
 
 export type CarouselApi = CreateEmblaCarouselType[1]

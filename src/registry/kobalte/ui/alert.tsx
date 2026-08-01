@@ -6,7 +6,7 @@ import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { VariantProps } from "class-variance-authority"
 import type { Component, ComponentProps, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const alertVariants = cva(
   "relative w-full rounded-lg border p-4 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground [&>svg~*]:pl-7",
@@ -55,4 +55,16 @@ const AlertDescription: Component<ComponentProps<"div">> = (props) => {
   return <div class={cn("text-sm [&_p]:leading-relaxed", local.class)} {...others} />
 }
 
-export { Alert, AlertDescription, AlertTitle, alertVariants }
+const AlertAction: Component<ComponentProps<"div">> = (props) => {
+  const [local, others] = splitProps(props, ["class"])
+
+  return (
+    <div
+      class={cn("z-alert-action", local.class)}
+      data-slot="alert-action"
+      {...others}
+    />
+  )
+}
+
+export { Alert, AlertAction, AlertDescription, AlertTitle, alertVariants }

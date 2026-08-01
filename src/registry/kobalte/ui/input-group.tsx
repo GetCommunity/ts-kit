@@ -4,7 +4,7 @@ import { splitProps } from "solid-js"
 import type { VariantProps } from "class-variance-authority"
 import type { ComponentProps, JSX } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Button, type ButtonProps } from "@/registry/kobalte/ui/button"
 import { Input } from "@/registry/kobalte/ui/input"
 import { Textarea } from "@/registry/kobalte/ui/textarea"

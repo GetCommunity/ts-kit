@@ -1,0 +1,79 @@
+---
+title: "Zaidan Agent"
+description: "Install and use Zaidan Agent to port shadcn-style React components and registries to SolidJS."
+slug: "zaidan-agent"
+order: 4
+---
+
+# Zaidan Agent
+
+Zaidan Agent is a coding-agent workflow for porting Shadcn-based React components to Zaidan.
+It is useful when you want to bring a component from shadcn/ui or a shadcn-compatible registry
+into a SolidJS project that follows Zaidan conventions.
+
+The skill gives your agent a repeatable path: find the original source, inspect
+the behavior, translate the component to SolidJS, and if you're in a clone or a
+fork of zaidan, it'll update examples, docs, the registry, and verify the result locally.
+
+## Install
+
+Zaidan Agent can be installed with the [skills]() tool:
+
+```package-dlx
+skills add carere/zaidan
+```
+
+## Use It
+
+Ask your agent to use Zaidan Agent whenever the work is a component port, a
+registry import, or a meaningful update to an existing Zaidan registry item.
+
+### Port From shadcn/ui
+
+Use this when the source component is part of shadcn/ui or follows the same API
+shape.
+
+```txt
+Use Zaidan Agent to port the shadcn dialog component.
+```
+
+For shadcn ports, the agent resolves the React source, checks the original
+documentation or examples when available, translates the component, and adds,
+if running inside zaidan fork, the matching Zaidan docs and registry entry.
+
+### Port From a shadcn-Compatible Registry
+
+Use this when the component comes from another registry that follows the shadcn
+registry format.
+
+```txt
+Use Zaidan Agent to port the following components:
+- items: component-1,component-2,component-3
+- registry: https://example.com/r/registry.json
+- sources: https://raw.github.com/some/repo/<component>.tsx
+- playground: https://example.com/<component>
+- docs: https://example.com/docs/<component>
+```
+
+For registry imports, the agent will do the same as for shadcn but it
+will use provided URLS and raw file to perform the transformation
+
+## Workflow
+
+Zaidan Agent follows the same workflow for every port:
+
+1. Resolve the source component, docs, examples, registry metadata, and
+   playground URL when they exist.
+2. Inspect the original behavior in a browser when a playground is available.
+3. Choose the Zaidan target: UI component, block, hook, shared registry
+   component, or example-only composition.
+4. Translate React patterns to SolidJS patterns using `react-to-solid` skill.
+5. Prefer existing Zaidan primitives, Kobalte, Corvu, local helpers, and registry
+   conventions over new abstractions.
+6. Keep the installable component focused, and move app-specific composition,
+   dialogs, upload controls, previews, and action buttons into examples.
+7. **(Zaidan fork only)** Update the docs and examples so users can understand and compose the public
+   API.
+8. **(Zaidan fork only)** Update `src/registry/kobalte/registry.json` with every file the registry item
+   depends on.
+9. Run local validation and check the finished page in the browser.

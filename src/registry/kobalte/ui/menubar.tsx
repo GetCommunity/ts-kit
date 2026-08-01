@@ -1,10 +1,10 @@
 import * as MenubarPrimitive from "@kobalte/core/menubar"
-import { splitProps } from "solid-js"
+import { mergeProps, splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const MenubarGroup = MenubarPrimitive.Group
 const MenubarPortal = MenubarPrimitive.Portal
@@ -140,14 +140,26 @@ type MenubarItemProps<T extends ValidComponent = "div"> =
   MenubarPrimitive.MenubarItemProps<T> & {
     class?: string | undefined
     inset?: boolean
+    variant?: "default" | "destructive"
   }
 
 const MenubarItem = <T extends ValidComponent = "div">(
   props: PolymorphicProps<T, MenubarItemProps<T>>
 ) => {
-  const [local, others] = splitProps(props as MenubarItemProps, ["class", "inset"])
+  const mergedProps = mergeProps(
+    { variant: "default", inset: false } as MenubarItemProps<T>,
+    props
+  )
+  const [local, others] = splitProps(mergedProps as MenubarItemProps, [
+    "class",
+    "inset",
+    "variant"
+  ])
   return (
     <MenubarPrimitive.Item
+      data-slot="menubar-item"
+      data-inset={local.inset || undefined}
+      data-variant={local.variant}
       class={cn(
         "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground ui-disabled:pointer-events-none ui-disabled:opacity-50",
         local.inset && "pl-8",

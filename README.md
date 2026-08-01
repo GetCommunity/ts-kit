@@ -55,9 +55,8 @@ configuration lives in `eslint.config.js` and `prettier.config.js`:
 
 ```bash
 pnpm lint
-pnpm typecheck
-pnpm format:check
 pnpm format
+pnpm compile
 ```
 
 ### Validate Registry

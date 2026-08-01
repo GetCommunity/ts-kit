@@ -4,7 +4,7 @@ import { splitProps } from "solid-js"
 import type { VariantProps } from "class-variance-authority"
 import type { ComponentProps } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 type EmptyProps = ComponentProps<"div">
 

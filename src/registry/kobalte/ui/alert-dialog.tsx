@@ -5,7 +5,7 @@ import type { ButtonProps } from "@/registry/kobalte/ui/button"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Button } from "@/registry/kobalte/ui/button"
 
 const AlertDialog: Component<AlertDialogPrimitive.AlertDialogRootProps> = (props) => {

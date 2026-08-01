@@ -4,11 +4,11 @@ import { Portal } from "solid-js/web"
 import type { DateValue } from "@ark-ui/solid"
 import type { Setter } from "solid-js"
 
-import { formatDateValueLong } from "@/lib/utils/date"
-import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/kobalte/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/kobalte/form-inputs/form-input-errors"
 import CloseIcon from "@/registry/kobalte/icons/svg/close"
+import { formatDateValueLong } from "@/registry/kobalte/lib/utils/date"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Button, buttonVariants } from "@/registry/kobalte/ui/button"
 import {
   DatePicker,

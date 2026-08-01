@@ -7,7 +7,7 @@ import type { ToggleButtonRootProps } from "@kobalte/core/toggle-button"
 import type { VariantProps } from "class-variance-authority"
 import type { ComponentProps, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const toggleVariants = cva(
   "group/toggle z-toggle inline-flex items-center justify-center whitespace-nowrap outline-none hover:bg-muted focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0",

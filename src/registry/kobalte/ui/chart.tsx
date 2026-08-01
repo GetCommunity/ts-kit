@@ -22,7 +22,7 @@ import {
 import type { ECharts, EChartsCoreOption, SetOptionOpts } from "echarts/core"
 import type { Component, ComponentProps, JSX } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 // Register ECharts components - using SVG renderer for CSS variable support
 // Note: SVG is required because Canvas cannot parse CSS variables like var(--chart-1)

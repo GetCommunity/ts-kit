@@ -1,10 +1,11 @@
 import { cva } from "class-variance-authority"
 import { splitProps } from "solid-js"
 
+import type { PolymorphicProps } from "@kobalte/core"
 import type { VariantProps } from "class-variance-authority"
-import type { Component, ComponentProps } from "solid-js"
+import type { ComponentProps, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const badgeVariants = cva(
   "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
@@ -25,12 +26,15 @@ const badgeVariants = cva(
   }
 )
 
-type BadgeProps = ComponentProps<"div"> &
+type BadgeProps<T extends ValidComponent = "span"> = PolymorphicProps<
+  T,
+  ComponentProps<"div">
+> &
   VariantProps<typeof badgeVariants> & {
     round?: boolean
   }
 
-const Badge: Component<BadgeProps> = (props) => {
+const Badge = <T extends ValidComponent = "span">(props: BadgeProps<T>) => {
   const [local, others] = splitProps(props, ["class", "variant", "round"])
   return (
     <div

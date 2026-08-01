@@ -9,7 +9,7 @@ import type {
 import type { VariantProps } from "class-variance-authority"
 import type { ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { toggleVariants } from "@/registry/kobalte/ui/toggle"
 
 type ToggleGroupContextValue = VariantProps<typeof toggleVariants> & {

@@ -10,7 +10,7 @@ import type {
 } from "@corvu/drawer"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const Drawer = DrawerPrimitive
 

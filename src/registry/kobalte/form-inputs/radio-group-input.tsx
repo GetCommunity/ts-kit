@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/kobalte/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/kobalte/form-inputs/form-input-errors"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Label } from "@/registry/kobalte/ui/label"
 import {
   RadioGroupItem,

@@ -1,17 +1,36 @@
 import * as TabsPrimitive from "@kobalte/core/tabs"
+import { cva } from "class-variance-authority"
 import { splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import type { ValidComponent } from "solid-js"
+import type { VariantProps } from "class-variance-authority"
+import type { ComponentProps, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const Tabs = TabsPrimitive.Root
 
-type TabsListProps<T extends ValidComponent = "div"> =
-  TabsPrimitive.TabsListProps<T> & {
-    class?: string | undefined
+const tabsListVariants = cva(
+  "group/tabs-list z-tabs-list inline-flex w-fit items-center justify-center text-muted-foreground group-data-[orientation=vertical]/tabs:h-fit group-data-[orientation=vertical]/tabs:flex-col",
+  {
+    variants: {
+      variant: {
+        default: "z-tabs-list-variant-default bg-muted",
+        line: "z-tabs-list-variant-line gap-1 bg-transparent"
+      }
+    },
+    defaultVariants: {
+      variant: "default"
+    }
   }
+)
+
+type TabsListProps<T extends ValidComponent = "div"> = PolymorphicProps<
+  T,
+  TabsPrimitive.TabsListProps<T>
+> &
+  VariantProps<typeof tabsListVariants> &
+  Pick<ComponentProps<T>, "class" | "children">
 
 const TabsList = <T extends ValidComponent = "div">(
   props: PolymorphicProps<T, TabsListProps<T>>
@@ -88,4 +107,4 @@ const TabsIndicator = <T extends ValidComponent = "div">(
   )
 }
 
-export { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger }
+export { Tabs, TabsContent, TabsIndicator, TabsList, tabsListVariants, TabsTrigger }

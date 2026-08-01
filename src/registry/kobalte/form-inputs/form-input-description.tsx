@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Show } from "solid-js"
 
 type FormInputDescriptionProps = {

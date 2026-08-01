@@ -2,7 +2,7 @@ import { splitProps } from "solid-js"
 
 import type { ComponentProps, JSX } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 type AspectRatioProps = ComponentProps<"div"> & {
   ratio: number

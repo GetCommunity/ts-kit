@@ -5,7 +5,7 @@ import { Index, mergeProps, Show, splitProps } from "solid-js"
 
 import type { ComponentProps, JSX } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Button, buttonVariants } from "@/registry/kobalte/ui/button"
 import {
   Select,

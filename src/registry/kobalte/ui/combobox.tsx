@@ -2,14 +2,29 @@ import * as ComboboxPrimitive from "@kobalte/core/combobox"
 import { Show, splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import type { JSX, ValidComponent } from "solid-js"
+import type { ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { labelVariants } from "@/registry/kobalte/ui/label"
 
 const Combobox = ComboboxPrimitive.Root
 const ComboboxItemLabel = ComboboxPrimitive.ItemLabel
 const ComboboxHiddenSelect = ComboboxPrimitive.HiddenSelect
+
+type ComboboxEmptyProps = ComponentProps<"div"> & {
+  class?: string
+}
+
+const ComboboxEmpty = (props: ComboboxEmptyProps) => {
+  const [local, others] = splitProps(props, ["class"])
+  return (
+    <div
+      class={cn("z-combobox-empty py-6 text-center text-sm", local.class)}
+      data-slot="combobox-empty"
+      {...others}
+    />
+  )
+}
 
 type ComboboxLabelProps<T extends ValidComponent = "label"> =
   ComboboxPrimitive.ComboboxLabelProps<T> & { class?: string | undefined }
@@ -95,6 +110,21 @@ const ComboboxSection = <T extends ValidComponent = "li">(
   )
 }
 
+type ComboboxSectionLabelProps = ComponentProps<"span"> & {
+  class?: string
+}
+
+const ComboboxSectionLabel = (props: ComboboxSectionLabelProps) => {
+  const [local, others] = splitProps(props, ["class"])
+  return (
+    <span
+      class={cn("z-combobox-section-label z-select-label", local.class)}
+      data-slot="combobox-section-label"
+      {...others}
+    />
+  )
+}
+
 type ComboboxControlProps<
   U,
   T extends ValidComponent = "div"
@@ -115,7 +145,10 @@ const ComboboxControl = <T, U extends ValidComponent = "div">(
 }
 
 type ComboboxInputProps<T extends ValidComponent = "input"> =
-  ComboboxPrimitive.ComboboxInputProps<T> & { class?: string | undefined }
+  ComboboxPrimitive.ComboboxInputProps<T> & {
+    class?: string | undefined
+    showClear?: boolean
+  }
 
 const ComboboxInput = <T extends ValidComponent = "input">(
   props: PolymorphicProps<T, ComboboxInputProps<T>>
@@ -195,10 +228,31 @@ const ComboboxContent = <T extends ValidComponent = "div">(
   )
 }
 
+type ComboboxSeparatorProps<T extends ValidComponent = "hr"> = ComponentProps<T> & {
+  class?: string
+}
+
+const ComboboxSeparator = <T extends ValidComponent = "hr">(
+  props: PolymorphicProps<T, ComboboxSeparatorProps<T>>
+) => {
+  const [local, others] = splitProps(props as ComboboxSeparatorProps, ["class"])
+  return (
+    <hr
+      class={cn(
+        "pointer-events-none z-combobox-separator z-select-separator",
+        local.class
+      )}
+      data-slot="combobox-separator"
+      {...others}
+    />
+  )
+}
+
 export {
   Combobox,
   ComboboxContent,
   ComboboxControl,
+  ComboboxEmpty,
   ComboboxHiddenSelect,
   ComboboxInput,
   ComboboxItem,
@@ -206,5 +260,7 @@ export {
   ComboboxItemLabel,
   ComboboxLabel,
   ComboboxSection,
+  ComboboxSectionLabel,
+  ComboboxSeparator,
   ComboboxTrigger
 }

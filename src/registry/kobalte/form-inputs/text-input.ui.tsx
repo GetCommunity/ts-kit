@@ -3,7 +3,7 @@ import { Match, Show, Switch } from "solid-js"
 import FormInputErrors from "@/registry/kobalte/form-inputs/form-input-errors"
 import type { Setter } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import {
   TextField,
   TextFieldDescription,

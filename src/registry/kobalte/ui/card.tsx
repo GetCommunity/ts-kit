@@ -2,9 +2,11 @@ import { splitProps } from "solid-js"
 
 import type { Component, ComponentProps } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
-const Card: Component<ComponentProps<"div">> = (props) => {
+type CardProps = ComponentProps<"div"> & { size?: "default" | "sm" }
+
+const Card: Component<CardProps> = (props) => {
   const [local, others] = splitProps(props, ["class"])
   return (
     <div
@@ -37,6 +39,20 @@ const CardDescription: Component<ComponentProps<"p">> = (props) => {
   return <p class={cn("text-sm text-muted-foreground", local.class)} {...others} />
 }
 
+const CardAction: Component<ComponentProps<"div">> = (props) => {
+  const [local, others] = splitProps(props, ["class"])
+  return (
+    <div
+      data-slot="card-action"
+      class={cn(
+        "z-card-action col-start-2 row-span-2 row-start-1 self-start justify-self-end",
+        local.class
+      )}
+      {...others}
+    />
+  )
+}
+
 const CardContent: Component<ComponentProps<"div">> = (props) => {
   const [local, others] = splitProps(props, ["class"])
   return <div class={cn("p-6 pt-0", local.class)} {...others} />
@@ -47,4 +63,12 @@ const CardFooter: Component<ComponentProps<"div">> = (props) => {
   return <div class={cn("flex items-center p-6 pt-0", local.class)} {...others} />
 }
 
-export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
+export {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle
+}
