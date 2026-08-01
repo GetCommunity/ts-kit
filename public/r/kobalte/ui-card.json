@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-card",
+  "title": "Card",
+  "description": "A card component",
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "ui/card.tsx",
+      "content": "import { splitProps } from \"solid-js\"\n\nimport type { Component, ComponentProps } from \"solid-js\"\n\nimport { cn } from \"@/registry/kobalte/lib/utils/tailwind\"\n\ntype CardProps = ComponentProps<\"div\"> & { size?: \"default\" | \"sm\" }\n\nconst Card: Component<CardProps> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <div\n      class={cn(\n        \"rounded-lg border bg-card text-card-foreground shadow-sm\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\nconst CardHeader: Component<ComponentProps<\"div\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return <div class={cn(\"flex flex-col space-y-1.5 p-6\", local.class)} {...others} />\n}\n\nconst CardTitle: Component<ComponentProps<\"h3\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <h3\n      class={cn(\"text-lg font-semibold leading-none tracking-tight\", local.class)}\n      {...others}\n    />\n  )\n}\n\nconst CardDescription: Component<ComponentProps<\"p\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return <p class={cn(\"text-sm text-muted-foreground\", local.class)} {...others} />\n}\n\nconst CardAction: Component<ComponentProps<\"div\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <div\n      data-slot=\"card-action\"\n      class={cn(\n        \"z-card-action col-start-2 row-span-2 row-start-1 self-start justify-self-end\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\nconst CardContent: Component<ComponentProps<\"div\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return <div class={cn(\"p-6 pt-0\", local.class)} {...others} />\n}\n\nconst CardFooter: Component<ComponentProps<\"div\">> = (props) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return <div class={cn(\"flex items-center p-6 pt-0\", local.class)} {...others} />\n}\n\nexport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

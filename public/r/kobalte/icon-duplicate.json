@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-duplicate",
+  "title": "Duplicate Icon",
+  "description": "A duplicate icon component",
+  "files": [
+    {
+      "path": "icons/svg/duplicate.tsx",
+      "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const duplicate = (props: ComponentProps<\"svg\">) => (\n  <svg\n    {...props}\n    viewBox=\"0 0 24 24\"\n    fill=\"currentColor\"\n    color=\"currentColor\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    style={{ overflow: \"visible\" }}\n  >\n    <path d=\"M11 10H9v3H6v2h3v3h2v-3h3v-2h-3z\" />\n    <path d=\"M4 22h12c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2zM4 8h12l.002 12H4V8z\" />\n    <path d=\"M20 2H8v2h12v12h2V4c0-1.103-.897-2-2-2z\" />\n  </svg>\n)\n\nexport default duplicate\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/duplicate.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

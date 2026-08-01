@@ -1,0 +1,52 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tanstack-solid-config",
+  "title": "TanStack SolidJS Tailwind Application Config",
+  "description": "A base config files for a tanstack, solidjs, tailwindcss application",
+  "dependencies": [
+    "@eslint/eslintrc",
+    "@eslint/js",
+    "@tanstack/eslint-config",
+    "typescript-eslint",
+    "@getcommunity/client-styleguides",
+    "@kobalte/tailwindcss",
+    "@tailwindcss/typography",
+    "tailwindcss"
+  ],
+  "registryDependencies": [
+    "dev-scripts"
+  ],
+  "files": [
+    {
+      "path": "config/.pre-commit-config.yaml",
+      "content": "repos:\n  - repo: https://github.com/zricethezav/gitleaks\n    rev: v8.18.4\n    hooks:\n      - id: gitleaks\n  - repo: local\n    hooks:\n      - id: pnpm-checks\n        name: Format, Lint, Type Check, and Tests\n        entry: sh -c 'pnpm format && pnpm lint && pnpm compile && pnpm test:coverage'\n        language: system\n        pass_filenames: false\n",
+      "type": "registry:file",
+      "target": "~/.pre-commit-config.yaml"
+    },
+    {
+      "path": "config/components.json",
+      "content": "{\n  \"$schema\": \"https://ui.shadcn.com/schema.json\",\n  \"style\": \"kobalte\",\n  \"rsc\": false,\n  \"tsx\": true,\n  \"tailwind\": {\n    \"config\": \"tailwind.config.mjs\",\n    \"css\": \"src/styles/app.css\",\n    \"baseColor\": \"neutral\",\n    \"cssVariables\": true,\n    \"prefix\": \"\"\n  },\n  \"aliases\": {\n    \"components\": \"@/components\",\n    \"utils\": \"@/lib/utils\",\n    \"ui\": \"@/components/ui\",\n    \"lib\": \"@/lib\",\n    \"hooks\": \"@/hooks\"\n  },\n  \"iconLibrary\": \"lucide\",\n  \"registries\": {\n    \"@solid-ui\": \"https://solid-ui.com/r/{name}.json\"\n  }\n}\n",
+      "type": "registry:file",
+      "target": "~/components.json"
+    },
+    {
+      "path": "config/eslint.config-tanstack.mjs",
+      "content": "import { FlatCompat } from \"@eslint/eslintrc\"\nimport js from \"@eslint/js\"\nimport { tanstackConfig } from \"@tanstack/eslint-config\"\nimport tseslint from \"typescript-eslint\"\n\nconst compat = new FlatCompat({\n  baseDirectory: __dirname,\n  recommendedConfig: js.configs.recommended\n})\n\nexport default [\n  {\n    ignores: [\"**/*.config.*\", \"**/*.json\", \"**/lib/ui/*.tsx\"]\n  },\n  js.configs.recommended,\n  ...tseslint.configs.recommended,\n  ...tanstackConfig,\n  ...compat.extends(\"plugin:solid/recommended\"),\n  {\n    files: [\"**/*.ts\", \"**/*.tsx\"],\n    languageOptions: {\n      parser: tseslint.parser\n    }\n  },\n  {\n    rules: {\n      \"@typescript-eslint/consistent-type-imports\": [\n        \"error\",\n        {\n          prefer: \"type-imports\",\n          fixStyle: \"separate-type-imports\"\n        }\n      ]\n    }\n  }\n]\n",
+      "type": "registry:file",
+      "target": "~/eslint.config.js"
+    },
+    {
+      "path": "config/prettier.config-tailwind.mjs",
+      "content": "import gcPrettierTailwindApp from \"@getcommunity/config-prettier/app-tailwind.js\"\n\nexport default gcPrettierTailwindApp\n",
+      "type": "registry:file",
+      "target": "~/prettier.config.js"
+    },
+    {
+      "path": "config/tailwind.config.mjs",
+      "content": "import ClientStyleguideBiasc from \"@getcommunity/client-styleguides/biasc\"\nimport ClientStyleguideBrandywine from \"@getcommunity/client-styleguides/brandywine\"\nimport ClientStyleguideGetcommunity from \"@getcommunity/client-styleguides/getcommunity\"\nimport ClientStyleguideOlsonhomes from \"@getcommunity/client-styleguides/olsonhomes\"\nimport ClientStyleguidePacificcommunities from \"@getcommunity/client-styleguides/pacificcommunities\"\nimport ClientStyleguideSheahomes from \"@getcommunity/client-styleguides/sheahomes\"\nimport ClientStyleguideSocialBrands from \"@getcommunity/client-styleguides/social-brands\"\nimport ClientStyleguideTollbrothers from \"@getcommunity/client-styleguides/tollbrothers\"\nimport ClientStyleguideTrumark from \"@getcommunity/client-styleguides/trumark\"\nimport ClientStyleguideVandaele from \"@getcommunity/client-styleguides/vandaele\"\nimport ClientStyleguideWpg from \"@getcommunity/client-styleguides/wpg\"\nimport kobalteTailwind from \"@kobalte/tailwindcss\"\nimport tailwindcssTypography from \"@tailwindcss/typography\"\nimport defaultTheme from \"tailwindcss/defaultTheme\"\n\n/** @type {import('tailwindcss').Config} */\nexport default {\n  prefix: \"\",\n  theme: {\n    container: {\n      center: true,\n      padding: \"0rem\",\n      screens: {\n        \"2xl\": \"1440px\",\n        \"3xl\": \"1920px\",\n        \"4xl\": \"2160px\"\n      }\n    },\n    screens: {\n      ...defaultTheme.screens,\n      micro: \"1px\",\n      \"2xs\": \"320px\",\n      xs: \"480px\",\n      \"2xl\": \"1440px\",\n      \"3xl\": \"1920px\",\n      \"4xl\": \"2160px\"\n    },\n    extend: {\n      fontFamily: {\n        sans: [\"Montserrat\", ...defaultTheme.fontFamily.sans],\n        serif: [\"Playfair Display\", ...defaultTheme.fontFamily.serif]\n      },\n      colors: {\n        border: \"hsl(var(--border))\",\n        input: \"hsl(var(--input))\",\n        ring: \"hsl(var(--ring))\",\n        background: \"hsl(var(--background))\",\n        foreground: \"hsl(var(--foreground))\",\n        primary: {\n          DEFAULT: \"hsl(var(--primary))\",\n          foreground: \"hsl(var(--primary-foreground))\"\n        },\n        secondary: {\n          DEFAULT: \"hsl(var(--secondary))\",\n          foreground: \"hsl(var(--secondary-foreground))\"\n        },\n        destructive: {\n          DEFAULT: \"hsl(var(--destructive))\",\n          foreground: \"hsl(var(--destructive-foreground))\"\n        },\n        info: {\n          DEFAULT: \"hsl(var(--info))\",\n          foreground: \"hsl(var(--info-foreground))\"\n        },\n        success: {\n          DEFAULT: \"hsl(var(--success))\",\n          foreground: \"hsl(var(--success-foreground))\"\n        },\n        warning: {\n          DEFAULT: \"hsl(var(--warning))\",\n          foreground: \"hsl(var(--warning-foreground))\"\n        },\n        error: {\n          DEFAULT: \"hsl(var(--error))\",\n          foreground: \"hsl(var(--error-foreground))\"\n        },\n        muted: {\n          DEFAULT: \"hsl(var(--muted))\",\n          foreground: \"hsl(var(--muted-foreground))\"\n        },\n        accent: {\n          DEFAULT: \"hsl(var(--accent))\",\n          foreground: \"hsl(var(--accent-foreground))\"\n        },\n        popover: {\n          DEFAULT: \"hsl(var(--popover))\",\n          foreground: \"hsl(var(--popover-foreground))\"\n        },\n        card: { DEFAULT: \"hsl(var(--card))\", foreground: \"hsl(var(--card-foreground))\" }\n      },\n      borderRadius: {\n        xl: \"calc(var(--radius) + 4px)\",\n        lg: \"var(--radius)\",\n        md: \"calc(var(--radius) - 2px)\",\n        sm: \"calc(var(--radius) - 4px)\"\n      },\n      keyframes: {\n        \"accordion-down\": {\n          from: { height: 0 },\n          to: { height: \"var(--kb-accordion-content-height)\" }\n        },\n        \"accordion-up\": {\n          from: { height: \"var(--kb-accordion-content-height)\" },\n          to: { height: 0 }\n        },\n        \"content-show\": {\n          from: { opacity: 0, transform: \"scale(0.96)\" },\n          to: { opacity: 1, transform: \"scale(1)\" }\n        },\n        \"content-hide\": {\n          from: { opacity: 1, transform: \"scale(1)\" },\n          to: { opacity: 0, transform: \"scale(0.96)\" }\n        },\n        \"caret-blink\": { \"0%,70%,100%\": { opacity: \"1\" }, \"20%,50%\": { opacity: \"0\" } }\n      },\n      animation: {\n        \"accordion-down\": \"accordion-down 0.2s ease-out\",\n        \"accordion-up\": \"accordion-up 0.2s ease-out\",\n        \"content-show\": \"content-show 0.2s ease-out\",\n        \"content-hide\": \"content-hide 0.2s ease-out\",\n        \"caret-blink\": \"caret-blink 1.25s ease-out infinite\"\n      },\n      aspectRatio: {\n        \"video-vertical\": \"9 / 16\",\n        \"datastudio-report\": \"16 / 10\",\n        \"lookerstudio-report\": \"16 / 10\"\n      }\n    }\n  },\n  plugins: [\n    kobalteTailwind,\n    tailwindcssTypography(),\n    ClientStyleguideBiasc,\n    ClientStyleguideBrandywine,\n    ClientStyleguideGetcommunity,\n    ClientStyleguideOlsonhomes,\n    ClientStyleguidePacificcommunities,\n    ClientStyleguideSheahomes,\n    ClientStyleguideSocialBrands,\n    ClientStyleguideTollbrothers,\n    ClientStyleguideTrumark,\n    ClientStyleguideVandaele,\n    ClientStyleguideWpg\n  ]\n}\n",
+      "type": "registry:file",
+      "target": "~/tailwind.config.mjs"
+    }
+  ],
+  "type": "registry:item"
+}

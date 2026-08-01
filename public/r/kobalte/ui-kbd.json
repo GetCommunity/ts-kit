@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-kbd",
+  "title": "Kbd",
+  "description": "A kbd component",
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "ui/kbd.tsx",
+      "content": "import { splitProps } from \"solid-js\"\n\nimport type { ComponentProps } from \"solid-js\"\n\nimport { cn } from \"@/registry/kobalte/lib/utils/tailwind\"\n\ntype KbdProps = ComponentProps<\"kbd\">\n\nconst Kbd = (props: KbdProps) => {\n  const [local, others] = splitProps(props, [\"class\"])\n\n  return (\n    <kbd\n      class={cn(\n        \"pointer-events-none z-kbd inline-flex select-none items-center justify-center\",\n        local.class\n      )}\n      data-slot=\"kbd\"\n      {...others}\n    />\n  )\n}\n\ntype KbdGroupProps = ComponentProps<\"div\">\n\nconst KbdGroup = (props: KbdGroupProps) => {\n  const [local, others] = splitProps(props, [\"class\"])\n\n  return (\n    <div\n      class={cn(\"z-kbd-group inline-flex items-center\", local.class)}\n      data-slot=\"kbd-group\"\n      {...others}\n    />\n  )\n}\n\nexport { Kbd, KbdGroup }\n",
+      "type": "registry:ui",
+      "target": "components/ui/kbd.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

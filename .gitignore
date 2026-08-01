@@ -6,8 +6,9 @@ node_modules/
 # Build output
 .output/
 .vinxi/
-.velite
+.velite/
 dist/
+public/static/
 
 # Environment files
 .env

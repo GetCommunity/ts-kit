@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-tabs",
+  "title": "Tabs",
+  "description": "A tabs component",
+  "dependencies": [
+    "@kobalte/core",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "ui/tabs.tsx",
+      "content": "import * as TabsPrimitive from \"@kobalte/core/tabs\"\nimport { cva } from \"class-variance-authority\"\nimport { splitProps } from \"solid-js\"\n\nimport type { PolymorphicProps } from \"@kobalte/core/polymorphic\"\nimport type { VariantProps } from \"class-variance-authority\"\nimport type { ComponentProps, ValidComponent } from \"solid-js\"\n\nimport { cn } from \"@/registry/kobalte/lib/utils/tailwind\"\n\nconst Tabs = TabsPrimitive.Root\n\nconst tabsListVariants = cva(\n  \"group/tabs-list z-tabs-list inline-flex w-fit items-center justify-center text-muted-foreground group-data-[orientation=vertical]/tabs:h-fit group-data-[orientation=vertical]/tabs:flex-col\",\n  {\n    variants: {\n      variant: {\n        default: \"z-tabs-list-variant-default bg-muted\",\n        line: \"z-tabs-list-variant-line gap-1 bg-transparent\"\n      }\n    },\n    defaultVariants: {\n      variant: \"default\"\n    }\n  }\n)\n\ntype TabsListProps<T extends ValidComponent = \"div\"> = PolymorphicProps<\n  T,\n  TabsPrimitive.TabsListProps<T>\n> &\n  VariantProps<typeof tabsListVariants> &\n  Pick<ComponentProps<T>, \"class\" | \"children\">\n\nconst TabsList = <T extends ValidComponent = \"div\">(\n  props: PolymorphicProps<T, TabsListProps<T>>\n) => {\n  const [local, others] = splitProps(props as TabsListProps, [\"class\"])\n  return (\n    <TabsPrimitive.List\n      class={cn(\n        \"inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\ntype TabsTriggerProps<T extends ValidComponent = \"button\"> =\n  TabsPrimitive.TabsTriggerProps<T> & {\n    class?: string | undefined\n  }\n\nconst TabsTrigger = <T extends ValidComponent = \"button\">(\n  props: PolymorphicProps<T, TabsTriggerProps<T>>\n) => {\n  const [local, others] = splitProps(props as TabsTriggerProps, [\"class\"])\n  return (\n    <TabsPrimitive.Trigger\n      class={cn(\n        \"inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ui-selected:bg-background ui-selected:text-foreground ui-selected:shadow-sm\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\ntype TabsContentProps<T extends ValidComponent = \"div\"> =\n  TabsPrimitive.TabsContentProps<T> & {\n    class?: string | undefined\n  }\n\nconst TabsContent = <T extends ValidComponent = \"div\">(\n  props: PolymorphicProps<T, TabsContentProps<T>>\n) => {\n  const [local, others] = splitProps(props as TabsContentProps, [\"class\"])\n  return (\n    <TabsPrimitive.Content\n      class={cn(\n        \"mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\ntype TabsIndicatorProps<T extends ValidComponent = \"div\"> =\n  TabsPrimitive.TabsIndicatorProps<T> & {\n    class?: string | undefined\n  }\n\nconst TabsIndicator = <T extends ValidComponent = \"div\">(\n  props: PolymorphicProps<T, TabsIndicatorProps<T>>\n) => {\n  const [local, others] = splitProps(props as TabsIndicatorProps, [\"class\"])\n  return (\n    <TabsPrimitive.Indicator\n      class={cn(\n        \"duration-250ms absolute transition-all data-[orientation=horizontal]:-bottom-px data-[orientation=vertical]:-right-px data-[orientation=horizontal]:h-0.5 data-[orientation=vertical]:w-0.5\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\nexport { Tabs, TabsContent, TabsIndicator, TabsList, tabsListVariants, TabsTrigger }\n",
+      "type": "registry:ui",
+      "target": "components/ui/tabs.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

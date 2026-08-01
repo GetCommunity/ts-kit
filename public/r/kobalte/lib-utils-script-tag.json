@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lib-utils-script-tag",
+  "title": "Script Tag Utilities",
+  "description": "Utilities for handling <script> tag injection",
+  "files": [
+    {
+      "path": "lib/utils/script-tag.ts",
+      "content": "export function ensureInlineScript(id: string, code: string) {\n  if (typeof window === \"undefined\") return\n  if (document.getElementById(id)) return\n  const script = document.createElement(\"script\")\n  script.id = id\n  script.text = code\n  document.head.appendChild(script)\n}\n\nexport function ensureExternalScript(id: string, src: string) {\n  if (typeof window === \"undefined\") return\n  if (document.getElementById(id)) return\n  const script = document.createElement(\"script\")\n  script.id = id\n  script.async = true\n  script.src = src\n  document.head.appendChild(script)\n}\n\nexport function removeScriptById(id: string) {\n  if (typeof window === \"undefined\") return\n  const script = document.getElementById(id)\n  if (script) {\n    script.remove()\n  }\n}\n",
+      "type": "registry:file",
+      "target": "lib/utils/script-tag.ts"
+    }
+  ],
+  "type": "registry:item"
+}

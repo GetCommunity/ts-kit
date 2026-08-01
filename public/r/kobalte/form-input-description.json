@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-input-description",
+  "title": "Form Input Description",
+  "description": "A shared form input description component",
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "form-inputs/form-input-description.tsx",
+      "content": "import { cn } from \"@/registry/kobalte/lib/utils/tailwind\"\nimport { Show } from \"solid-js\"\n\ntype FormInputDescriptionProps = {\n  class?: string\n  description?: string\n}\n\nexport default function FormInputDescription(props: FormInputDescriptionProps) {\n  return (\n    <Show when={props.description}>\n      <div\n        class={cn(\n          \"text-sm text-muted-foreground w-full my-0 leading-none\",\n          props.class\n        )}\n      >\n        {props.description}\n      </div>\n    </Show>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/form-inputs/form-input-description.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dev-scripts",
+  "title": "Development Scripts",
+  "description": "Essential scripts used for development",
+  "files": [
+    {
+      "path": "scripts/.pre-commit-config.yaml",
+      "content": "repos:\n  - repo: https://github.com/zricethezav/gitleaks\n    rev: v8.18.4\n    hooks:\n      - id: gitleaks\n  - repo: local\n    hooks:\n      - id: format-code\n        name: format-code\n        entry: ./scripts/format.sh\n        language: script\n        pass_filenames: false\n  - repo: local\n    hooks:\n      - id: lint-code\n        name: lint-code\n        entry: ./scripts/lint.sh\n        language: script\n        pass_filenames: false\n",
+      "type": "registry:file",
+      "target": "~/.pre-commit-config.yaml"
+    },
+    {
+      "path": "scripts/format.sh",
+      "content": "#!/usr/bin/env bash\n\nset -e\nset -x\n\npnpm run format",
+      "type": "registry:file",
+      "target": "~/scripts/format.sh"
+    },
+    {
+      "path": "scripts/lint.sh",
+      "content": "#!/usr/bin/env bash\n\nset -e\nset -x\n\npnpm run lint\npnpm run compile",
+      "type": "registry:file",
+      "target": "~/scripts/lint.sh"
+    },
+    {
+      "path": "scripts/test.sh",
+      "content": "#!/usr/bin/env bash\n\nset -e\nset -x\n\npnpm run test:coverage",
+      "type": "registry:file",
+      "target": "~/scripts/test.sh"
+    }
+  ],
+  "type": "registry:item"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hook-use-color-mode",
+  "title": "Use Color Mode",
+  "description": "A color mode toggle hook",
+  "dependencies": [
+    "@tanstack/solid-start",
+    "@kobalte/core",
+    "valibot"
+  ],
+  "files": [
+    {
+      "path": "hooks/use-color-mode.ts",
+      "content": "import { createCookieStorageManager } from \"@kobalte/core\"\nimport { createIsomorphicFn } from \"@tanstack/solid-start\"\nimport { getCookie } from \"@tanstack/solid-start/server\"\nimport * as v from \"valibot\"\n\nimport type { ConfigColorMode } from \"@kobalte/core\"\n\nexport const colorModeKey = \"gc-color-mode\"\nconst colorModeSchema = v.picklist([\"light\", \"dark\"])\ntype ColorModeCookie = `${typeof colorModeKey}=${ConfigColorMode}`\n\nconst getStoredThemeMode = createIsomorphicFn()\n  .server((): ColorModeCookie => {\n    try {\n      const cookie = getCookie(colorModeKey) as ColorModeCookie | undefined\n      if (!cookie) return `${colorModeKey}=light`\n      const mode = v.parse(colorModeSchema, cookie.split(\"=\")[1])\n      return `${colorModeKey}=${mode}`\n    } catch {\n      return `${colorModeKey}=light`\n    }\n  })\n  .client((): ColorModeCookie => {\n    try {\n      const cookie = document.cookie\n        .split(\"; \")\n        .find((row) => row.startsWith(`${colorModeKey}=`)) as\n        ColorModeCookie | undefined\n      if (!cookie) return `${colorModeKey}=light`\n      const mode = v.parse(colorModeSchema, cookie.split(\"=\")[1])\n      return `${colorModeKey}=${mode}`\n    } catch {\n      return `${colorModeKey}=light`\n    }\n  })\n\nexport const colorModeStorageManager = createCookieStorageManager(\n  colorModeKey,\n  getStoredThemeMode()\n)\n",
+      "type": "registry:hook",
+      "target": "hooks/use-color-mode.ts"
+    }
+  ],
+  "type": "registry:hook"
+}

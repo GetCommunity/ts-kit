@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-chevron-left",
+  "title": "Chevron Left Icon",
+  "description": "A chevron left icon component",
+  "files": [
+    {
+      "path": "icons/svg/chevron-left.tsx",
+      "content": "import type { ComponentProps } from \"solid-js\"\n\nexport const chevronLeft = (props: ComponentProps<\"svg\">) => (\n  <>\n    <svg\n      {...props}\n      fill=\"none\"\n      stroke-width=\"0\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      stroke=\"currentColor\"\n      viewBox=\"0 0 24 24\"\n      style={{ overflow: \"visible\", color: \"currentcolor\" }}\n    >\n      <path\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n        stroke-width=\"1.5\"\n        d=\"M15.75 19.5 8.25 12l7.5-7.5\"\n      />\n    </svg>\n  </>\n)\n\nexport default chevronLeft\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/chevron-left.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-input",
+  "title": "Input",
+  "description": "A input component",
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "ui/input.tsx",
+      "content": "import { splitProps } from \"solid-js\"\n\nimport type { ComponentProps } from \"solid-js\"\n\nimport { cn } from \"@/registry/kobalte/lib/utils/tailwind\"\n\ntype InputProps = ComponentProps<\"input\">\n\nconst Input = (props: InputProps) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <input\n      data-slot=\"input\"\n      class={cn(\n        \"z-input w-full min-w-0 outline-none file:inline-flex file:border-0 file:bg-transparent file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\",\n        local.class\n      )}\n      {...others}\n    />\n  )\n}\n\nexport { Input, type InputProps }\n",
+      "type": "registry:ui",
+      "target": "components/ui/input.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-popover",
+  "title": "Popover",
+  "description": "A popover component",
+  "dependencies": [
+    "@kobalte/core"
+  ],
+  "registryDependencies": [
+    "lib-utils-tailwind"
+  ],
+  "files": [
+    {
+      "path": "ui/popover.tsx",
+      "content": "import * as PopoverPrimitive from \"@kobalte/core/popover\"\nimport { splitProps } from \"solid-js\"\n\nimport type { PolymorphicProps } from \"@kobalte/core/polymorphic\"\nimport type { Component, ComponentProps, ValidComponent } from \"solid-js\"\n\nimport { cn } from \"@/registry/kobalte/lib/utils/tailwind\"\n\nconst PopoverTrigger = PopoverPrimitive.Trigger\n\nconst Popover: Component<PopoverPrimitive.PopoverRootProps> = (props) => {\n  return <PopoverPrimitive.Root gutter={4} {...props} />\n}\n\ntype PopoverContentProps<T extends ValidComponent = \"div\"> =\n  PopoverPrimitive.PopoverContentProps<T> & { class?: string | undefined }\n\nconst PopoverContent = <T extends ValidComponent = \"div\">(\n  props: PolymorphicProps<T, PopoverContentProps<T>>\n) => {\n  const [local, others] = splitProps(props as PopoverContentProps, [\"class\"])\n  return (\n    <PopoverPrimitive.Portal>\n      <PopoverPrimitive.Content\n        class={cn(\n          \"z-50 w-72 origin-(--kb-popover-content-transform-origin) rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none ui-expanded:animate-in ui-closed:animate-out ui-closed:fade-out-0 ui-expanded:fade-in-0 ui-closed:zoom-out-95 ui-expanded:zoom-in-95\",\n          local.class\n        )}\n        {...others}\n      />\n    </PopoverPrimitive.Portal>\n  )\n}\n\ntype PopoverHeaderProps = ComponentProps<\"div\"> & {\n  class?: string | undefined\n}\n\nconst PopoverHeader = (props: PopoverHeaderProps) => {\n  const [local, others] = splitProps(props, [\"class\"])\n  return (\n    <div\n      data-slot=\"popover-header\"\n      class={cn(\"z-popover-header\", local.class)}\n      {...others}\n    />\n  )\n}\n\ntype PopoverTitleProps<T extends ValidComponent = \"h2\"> = PolymorphicProps<\n  T,\n  PopoverPrimitive.PopoverTitleProps<T>\n> &\n  Pick<ComponentProps<T>, \"class\">\n\nconst PopoverTitle = <T extends ValidComponent = \"h2\">(props: PopoverTitleProps<T>) => {\n  const [local, others] = splitProps(props as PopoverTitleProps, [\"class\"])\n  return (\n    <PopoverPrimitive.Title\n      data-slot=\"popover-title\"\n      class={cn(\"z-font-heading z-popover-title\", local.class)}\n      {...others}\n    />\n  )\n}\n\ntype PopoverDescriptionProps<T extends ValidComponent = \"p\"> = PolymorphicProps<\n  T,\n  PopoverPrimitive.PopoverDescriptionProps<T>\n> &\n  Pick<ComponentProps<T>, \"class\">\n\nconst PopoverDescription = <T extends ValidComponent = \"p\">(\n  props: PopoverDescriptionProps<T>\n) => {\n  const [local, others] = splitProps(props as PopoverDescriptionProps, [\"class\"])\n  return (\n    <PopoverPrimitive.Description\n      data-slot=\"popover-description\"\n      class={cn(\"z-popover-description\", local.class)}\n      {...others}\n    />\n  )\n}\n\ntype PopoverArrowProps<T extends ValidComponent = \"div\"> = PolymorphicProps<\n  T,\n  PopoverPrimitive.PopoverArrowProps<T>\n> &\n  Pick<ComponentProps<T>, \"class\">\n\nconst PopoverArrow = <T extends ValidComponent = \"div\">(\n  props: PopoverArrowProps<T>\n) => {\n  const [local, others] = splitProps(props as PopoverArrowProps, [\"class\"])\n  return (\n    <PopoverPrimitive.Arrow\n      data-slot=\"popover-arrow\"\n      class={cn(\"z-popover-arrow\", local.class)}\n      {...others}\n    />\n  )\n}\n\nexport {\n  Popover,\n  PopoverArrow,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/popover.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

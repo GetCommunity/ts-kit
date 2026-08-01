@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-sidebar-open",
+  "title": "Sidebar Open Icon",
+  "description": "A sidebar open icon component",
+  "files": [
+    {
+      "path": "icons/svg/sidebar-open.tsx",
+      "content": "import * as SolidJs from \"solid-js\"\n\nimport type { ComponentProps } from \"solid-js\"\n\nexport const sidebarOpen = (props: ComponentProps<\"svg\">) => {\n  const [, rest] = SolidJs.splitProps(props, [\"class\"])\n  return (\n    <svg\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      stroke-width=\"2\"\n      stroke-linecap=\"round\"\n      stroke-linejoin=\"round\"\n      class={props.class}\n      {...rest}\n    >\n      <path d=\"M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z\" />\n      <path d=\"M9 4v16\" />\n      <path d=\"M14 10l2 2l-2 2\" />\n    </svg>\n  )\n}\n\nexport default sidebarOpen\n",
+      "type": "registry:file",
+      "target": "components/icons/svg/sidebar-open.tsx"
+    }
+  ],
+  "type": "registry:component"
+}
