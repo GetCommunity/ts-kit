@@ -5,7 +5,7 @@ import { splitProps } from "solid-js"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 type ContextMenuProps<T extends ValidComponent = "div"> = PolymorphicProps<
   T,

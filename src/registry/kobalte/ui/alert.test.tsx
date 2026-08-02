@@ -2,6 +2,7 @@ import { render, screen } from "@solidjs/testing-library"
 
 import {
   Alert,
+  AlertAction,
   AlertDescription,
   AlertTitle,
   alertVariants
@@ -13,6 +14,7 @@ describe("Alert", () => {
       <Alert variant="destructive" class="custom-alert">
         <AlertTitle>Problem found</AlertTitle>
         <AlertDescription>Something needs attention.</AlertDescription>
+        <AlertAction class="custom-action">Retry</AlertAction>
       </Alert>
     ))
 
@@ -21,6 +23,8 @@ describe("Alert", () => {
     expect(alert).toHaveClass("custom-alert", "text-destructive")
     expect(screen.getByText("Problem found")).toHaveClass("font-medium")
     expect(screen.getByText("Something needs attention.")).toHaveClass("text-sm")
+    expect(screen.getByText("Retry")).toHaveAttribute("data-slot", "alert-action")
+    expect(screen.getByText("Retry")).toHaveClass("custom-action")
   })
 
   it("exports reusable variant classes", () => {

@@ -9,7 +9,7 @@ import {
 } from "@tanstack/solid-router"
 import type { JSX } from "solid-js"
 import { HydrationScript } from "solid-js/web"
-import appCss from "../app.css?url"
+import appCss from "../styles/app.css?url"
 
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient

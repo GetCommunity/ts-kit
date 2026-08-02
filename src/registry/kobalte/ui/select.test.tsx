@@ -5,8 +5,10 @@ import {
   SelectContent,
   SelectDescription,
   SelectErrorMessage,
+  SelectGroup,
   SelectItem,
   SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue
 } from "@/registry/kobalte/ui/select"
@@ -41,7 +43,10 @@ describe("Select", () => {
             {(state) => state.selectedOption()?.label ?? "Choose option"}
           </SelectValue>
         </SelectTrigger>
-        <SelectContent />
+        <SelectContent>
+          <SelectGroup class="custom-group">Featured</SelectGroup>
+          <SelectSeparator class="custom-separator" />
+        </SelectContent>
         <SelectDescription>Pick one option.</SelectDescription>
         <SelectErrorMessage>Option is required.</SelectErrorMessage>
       </Select>
@@ -54,6 +59,11 @@ describe("Select", () => {
     expect(screen.getByText("Option is required.")).toHaveClass("text-destructive")
     expect(screen.getByRole("option", { name: "Alpha" }).lastElementChild).toHaveClass(
       "custom-item-label"
+    )
+    expect(screen.getByText("Featured")).toHaveAttribute("data-slot", "select-group")
+    expect(screen.getByText("Featured")).toHaveClass("custom-group")
+    expect(document.querySelector('[data-slot="select-separator"]')).toHaveClass(
+      "custom-separator"
     )
   })
 })

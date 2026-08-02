@@ -4,7 +4,7 @@ import { createMemo, For, Show, splitProps } from "solid-js"
 import type { VariantProps } from "class-variance-authority"
 import type { ComponentProps, JSX } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Label } from "@/registry/kobalte/ui/label"
 import { Separator } from "@/registry/kobalte/ui/separator"
 

@@ -33,6 +33,7 @@ type ImportRequirements = {
 const TEST_DIRECTORY = dirname(fileURLToPath(import.meta.url))
 export const PROJECT_ROOT = resolve(TEST_DIRECTORY, "../..")
 
+const ROOT_REGISTRY_PROJECT_PATH = "src/registry/kobalte/registry.json"
 const SOURCE_EXTENSIONS = new Set([".js", ".jsx", ".mjs", ".ts", ".tsx"])
 const HOST_DEPENDENCIES = new Set(["solid-js"])
 
@@ -114,10 +115,11 @@ function walkDirectory(directoryPath: string): Array<string> {
 }
 
 function createRegistryIndex() {
-  const rootRegistry = loadRegistry("registry.json")
-  const entries = (rootRegistry.include ?? []).flatMap((registryProjectPath) => {
-    const registryPath = fromProjectRoot(registryProjectPath)
-    const registry = loadRegistry(registryProjectPath)
+  const rootRegistry = loadRegistry(ROOT_REGISTRY_PROJECT_PATH)
+  const rootRegistryDirectory = dirname(fromProjectRoot(ROOT_REGISTRY_PROJECT_PATH))
+  const entries = (rootRegistry.include ?? []).flatMap((includedRegistryPath) => {
+    const registryPath = resolve(rootRegistryDirectory, includedRegistryPath)
+    const registry = JSON.parse(readFileSync(registryPath, "utf8")) as Registry
     return (registry.items ?? []).map((item): RegistryEntry => ({ item, registryPath }))
   })
   const itemByFile = new Map<string, RegistryItem>()

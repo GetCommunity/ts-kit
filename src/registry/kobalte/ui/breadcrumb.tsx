@@ -4,7 +4,7 @@ import { Show, splitProps } from "solid-js"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const Breadcrumb = BreadcrumbPrimitive.Root
 
@@ -39,6 +39,22 @@ const BreadcrumbLink = <T extends ValidComponent = "a">(
         "transition-colors hover:text-foreground ui-current:font-normal ui-current:text-foreground",
         local.class
       )}
+      {...others}
+    />
+  )
+}
+
+type BreadcrumbPageProps = ComponentProps<"span">
+
+const BreadcrumbPage = (props: BreadcrumbPageProps) => {
+  const [local, others] = splitProps(props, ["class"])
+  return (
+    <span
+      aria-current="page"
+      aria-disabled="true"
+      class={cn("z-breadcrumb-page", local.class)}
+      data-slot="breadcrumb-page"
+      role="link"
       {...others}
     />
   )
@@ -116,5 +132,6 @@ export {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
+  BreadcrumbPage,
   BreadcrumbSeparator
 }

@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+  - repo: local
+    hooks:
+      - id: pnpm-checks
+        name: Format, Lint, Type Check, and Tests
+        entry: sh -c 'pnpm format && pnpm lint && pnpm compile && pnpm test:coverage'
+        language: system
+        pass_filenames: false

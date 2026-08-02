@@ -7,7 +7,7 @@ import type { Setter } from "solid-js"
 import FormInputDescription from "@/registry/kobalte/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/kobalte/form-inputs/form-input-errors"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Checkbox as CheckboxUI } from "@/registry/kobalte/ui/checkbox"
 import { Label, labelVariants } from "@/registry/kobalte/ui/label"
 

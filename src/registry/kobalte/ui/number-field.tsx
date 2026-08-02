@@ -4,7 +4,7 @@ import { Show, splitProps } from "solid-js"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { labelVariants } from "@/registry/kobalte/ui/label"
 
 const NumberField = NumberFieldPrimitive.Root

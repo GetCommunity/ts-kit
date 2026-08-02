@@ -6,6 +6,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
+  BreadcrumbPage,
   BreadcrumbSeparator
 } from "@/registry/kobalte/ui/breadcrumb"
 
@@ -22,9 +23,7 @@ describe("Breadcrumb", () => {
             <BreadcrumbEllipsis />
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/docs" aria-current="page">
-              Docs
-            </BreadcrumbLink>
+            <BreadcrumbPage class="custom-page">Docs</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
@@ -35,6 +34,11 @@ describe("Breadcrumb", () => {
     expect(screen.getByText("/")).toBeInTheDocument()
     expect(screen.getByText("More")).toHaveClass("sr-only")
     expect(screen.getByText("Home").closest("ol")).toHaveClass("custom-list")
+    expect(screen.getByRole("link", { name: "Docs" })).toHaveAttribute(
+      "aria-current",
+      "page"
+    )
+    expect(screen.getByRole("link", { name: "Docs" })).toHaveClass("custom-page")
   })
 
   it("provides a default separator icon", () => {

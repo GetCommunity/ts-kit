@@ -51,7 +51,7 @@
       "type": "registry:ui",
       "title": "Badge",
       "description": "A badge component",
-      "dependencies": ["class-variance-authority"],
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
       "registryDependencies": ["lib-utils-tailwind"],
       "files": [
         {
@@ -302,7 +302,7 @@
       "type": "registry:ui",
       "title": "Pagination",
       "description": "A pagination component",
-      "dependencies": ["@kobalte/core"],
+      "dependencies": ["@kobalte/core", "lucide-solid"],
       "registryDependencies": ["ui-button", "lib-utils-tailwind"],
       "files": [
         {
@@ -450,7 +450,7 @@
       "type": "registry:ui",
       "title": "Tabs",
       "description": "A tabs component",
-      "dependencies": ["@kobalte/core"],
+      "dependencies": ["@kobalte/core", "class-variance-authority"],
       "registryDependencies": ["lib-utils-tailwind"],
       "files": [
         {

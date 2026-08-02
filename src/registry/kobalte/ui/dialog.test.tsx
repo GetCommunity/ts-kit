@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event"
 
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -26,6 +27,7 @@ describe("Dialog", () => {
             <DialogDescription>Dialog description</DialogDescription>
           </DialogHeader>
           <DialogFooter>Dialog footer</DialogFooter>
+          <DialogClose class="custom-close">Close dialog</DialogClose>
         </DialogContent>
       </Dialog>
     ))
@@ -33,8 +35,16 @@ describe("Dialog", () => {
     expect(screen.getByRole("dialog")).toHaveClass("custom-dialog")
     expect(screen.getByText("Dialog title")).toHaveClass("text-lg")
     expect(screen.getByText("Dialog description")).toHaveClass("text-muted-foreground")
+    const explicitClose = screen
+      .getAllByRole("button", { name: "Dismiss" })
+      .find((button) => button.dataset.slot === "dialog-close")
+    expect(explicitClose).toHaveAttribute("data-slot", "dialog-close")
+    expect(explicitClose).toHaveClass("custom-close")
 
-    await user.click(screen.getByRole("button", { name: "Dismiss" }))
+    const defaultClose = screen
+      .getAllByRole("button", { name: "Dismiss" })
+      .find((button) => button.dataset.slot !== "dialog-close")
+    await user.click(defaultClose!)
 
     expect(handleClose).toHaveBeenCalledTimes(1)
   })

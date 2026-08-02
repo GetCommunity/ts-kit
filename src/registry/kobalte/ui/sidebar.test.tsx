@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event"
 
 const mobileMocks = vi.hoisted(() => ({ isMobile: false }))
 
-vi.mock("@/hooks/use-mobile", () => ({
+vi.mock("@/registry/kobalte/hooks/use-mobile", () => ({
   useIsMobile: () => () => mobileMocks.isMobile
 }))
 

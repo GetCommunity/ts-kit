@@ -5,7 +5,7 @@ import type { HandleProps, PanelProps, RootProps } from "@corvu/resizable"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { ComponentProps, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 type ResizablePanelGroupProps<T extends ValidComponent = "div"> = PolymorphicProps<
   T,

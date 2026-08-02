@@ -1,10 +1,10 @@
 import * as DropdownMenuPrimitive from "@kobalte/core/dropdown-menu"
-import { splitProps } from "solid-js"
+import { mergeProps, splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuPortal = DropdownMenuPrimitive.Portal
@@ -43,19 +43,29 @@ const DropdownMenuContent = <T extends ValidComponent = "div">(
 type DropdownMenuItemProps<T extends ValidComponent = "div"> =
   DropdownMenuPrimitive.DropdownMenuItemProps<T> & {
     class?: string | undefined
+    inset?: boolean
+    variant?: "default" | "destructive"
   }
 
 const DropdownMenuItem = <T extends ValidComponent = "div">(
-  props: PolymorphicProps<T, DropdownMenuItemProps<T>>
+  rawProps: PolymorphicProps<T, DropdownMenuItemProps<T>>
 ) => {
-  const [, rest] = splitProps(props as DropdownMenuItemProps, ["class"])
+  // const [, rest] = splitProps(props as DropdownMenuItemProps, ["class"])
+  const props = mergeProps({ variant: "default" } as DropdownMenuItemProps<T>, rawProps)
+  const [local, others] = splitProps(props as DropdownMenuItemProps, [
+    "class",
+    "inset",
+    "variant"
+  ])
   return (
     <DropdownMenuPrimitive.Item
       class={cn(
         "relative flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground ui-disabled:pointer-events-none ui-disabled:opacity-50",
         props.class
       )}
-      {...rest}
+      data-inset={local.inset}
+      data-variant={local.variant}
+      {...others}
     />
   )
 }

@@ -25,7 +25,7 @@ export default defineConfig({
     })
   ],
   test: {
-    include: ["**/*.test.{ts,tsx}"],
+    include: ["test/**/*.test.{ts,tsx}", "src/registry/**/*.test.{ts,tsx}"],
     environment: "jsdom",
     globals: true,
     passWithNoTests: true,
@@ -47,11 +47,12 @@ export default defineConfig({
         lines: 95,
         statements: 95
       },
-      include: ["src/**/*.{ts,tsx}"],
+      include: ["test/**/*.{ts,tsx}", "src/registry/**/*.{ts,tsx}"],
       exclude: [
         "src/router.tsx",
         "src/routeTree.gen.ts",
         "src/routes/**",
+        "examples/**",
         "test/**",
         "**/*.test.{ts,tsx}",
         "**/*.spec.{ts,tsx}",

@@ -2,7 +2,7 @@ import { mergeProps, splitProps } from "solid-js"
 
 import type { Component, ComponentProps } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 type Size = "xs" | "sm" | "md" | "lg" | "xl"
 

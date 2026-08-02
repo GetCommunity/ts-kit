@@ -1,0 +1,46 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "lib-utils-tailwind",
+      "type": "registry:item",
+      "title": "Tailwind Utilities",
+      "description": "Tailwind utility scripts (cn)",
+      "dependencies": ["tailwind-merge", "clsx"],
+      "files": [
+        {
+          "path": "tailwind.ts",
+          "type": "registry:file",
+          "target": "lib/utils/tailwind.ts"
+        }
+      ]
+    },
+    {
+      "name": "lib-utils-date",
+      "type": "registry:item",
+      "title": "Date Utilities",
+      "description": "Date and time utility scripts",
+      "dependencies": ["@internationalized/date"],
+      "files": [
+        {
+          "path": "date.ts",
+          "type": "registry:file",
+          "target": "lib/utils/date.ts"
+        }
+      ]
+    },
+    {
+      "name": "lib-utils-script-tag",
+      "type": "registry:item",
+      "title": "Script Tag Utilities",
+      "description": "Utilities for handling <script> tag injection",
+      "files": [
+        {
+          "path": "script-tag.ts",
+          "type": "registry:file",
+          "target": "lib/utils/script-tag.ts"
+        }
+      ]
+    }
+  ]
+}

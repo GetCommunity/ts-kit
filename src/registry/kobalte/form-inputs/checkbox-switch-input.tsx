@@ -4,9 +4,9 @@ import type { orientationVariants } from "@/registry/kobalte/ui/orientation"
 import type { VariantProps } from "class-variance-authority"
 import type { Setter } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/kobalte/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/kobalte/form-inputs/form-input-errors"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Label } from "@/registry/kobalte/ui/label"
 import {
   SwitchControl,

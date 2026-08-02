@@ -4,7 +4,7 @@ import { mergeProps, splitProps } from "solid-js"
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { labelVariants } from "@/registry/kobalte/ui/label"
 
 type TextFieldRootProps<T extends ValidComponent = "div"> =

@@ -3,7 +3,7 @@ import { For, Show, mergeProps } from "solid-js"
 
 import type { FormSchema, FormStore } from "@formisch/solid"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Alert, AlertDescription, AlertTitle } from "@/registry/kobalte/ui/alert"
 
 interface FormErrorsProps<TSchema extends FormSchema> {

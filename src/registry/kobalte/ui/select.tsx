@@ -1,32 +1,57 @@
 import * as SelectPrimitive from "@kobalte/core/select"
-import { splitProps } from "solid-js"
+import { mergeProps, splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import type { JSX, ValidComponent } from "solid-js"
+import type { ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { labelVariants } from "@/registry/kobalte/ui/label"
 
 const Select = SelectPrimitive.Root
 const SelectValue = SelectPrimitive.Value
 const SelectHiddenSelect = SelectPrimitive.HiddenSelect
 
+type SelectGroupProps<T extends ValidComponent = "div"> = PolymorphicProps<
+  T,
+  SelectPrimitive.SelectSectionProps<T>
+> &
+  Pick<ComponentProps<T>, "class">
+
+const SelectGroup = <T extends ValidComponent = "div">(props: SelectGroupProps<T>) => {
+  const [local, others] = splitProps(props as SelectGroupProps, ["class"])
+  return (
+    <SelectPrimitive.Section
+      class={cn("z-select-group", local.class)}
+      data-slot="select-group"
+      {...others}
+    />
+  )
+}
+
 type SelectTriggerProps<T extends ValidComponent = "button"> =
   SelectPrimitive.SelectTriggerProps<T> & {
     class?: string | undefined
     children?: JSX.Element
+    size?: "sm" | "default"
   }
 
 const SelectTrigger = <T extends ValidComponent = "button">(
-  props: PolymorphicProps<T, SelectTriggerProps<T>>
+  rawProps: PolymorphicProps<T, SelectTriggerProps<T>>
 ) => {
-  const [local, others] = splitProps(props as SelectTriggerProps, ["class", "children"])
+  const props = mergeProps({ size: "default" }, rawProps)
+  const [local, others] = splitProps(props as SelectTriggerProps, [
+    "class",
+    "children",
+    "size"
+  ])
   return (
     <SelectPrimitive.Trigger
       class={cn(
         "flex h-10 w-full items-center justify-between rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
         local.class
       )}
+      data-size={local.size}
+      data-slot="select-trigger"
       {...others}
     >
       {local.children}
@@ -165,14 +190,33 @@ const SelectErrorMessage = <T extends ValidComponent = "div">(
   )
 }
 
+type SelectSeparatorProps<T extends ValidComponent = "hr"> = ComponentProps<T> & {
+  class?: string | undefined
+}
+
+const SelectSeparator = <T extends ValidComponent = "hr">(
+  props: PolymorphicProps<T, SelectSeparatorProps<T>>
+) => {
+  const [local, others] = splitProps(props as SelectSeparatorProps, ["class"])
+  return (
+    <hr
+      class={cn("pointer-events-none z-select-separator", local.class)}
+      data-slot="select-separator"
+      {...others}
+    />
+  )
+}
+
 export {
   Select,
   SelectContent,
   SelectDescription,
   SelectErrorMessage,
+  SelectGroup,
   SelectHiddenSelect,
   SelectItem,
   SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue
 }

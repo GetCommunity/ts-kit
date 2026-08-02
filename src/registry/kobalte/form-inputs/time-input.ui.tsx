@@ -3,11 +3,14 @@ import { Show } from "solid-js"
 import type { Time } from "@internationalized/date"
 import type { Setter } from "solid-js"
 
-import { formatTimeInputValue, parseTimeInputValue } from "@/lib/utils/date"
-import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/kobalte/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/kobalte/form-inputs/form-input-errors"
 import CloseIcon from "@/registry/kobalte/icons/svg/close"
+import {
+  formatTimeInputValue,
+  parseTimeInputValue
+} from "@/registry/kobalte/lib/utils/date"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Button, buttonVariants } from "@/registry/kobalte/ui/button"
 import { labelVariants } from "@/registry/kobalte/ui/label"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/kobalte/ui/tooltip"

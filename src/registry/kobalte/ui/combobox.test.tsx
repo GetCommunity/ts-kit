@@ -4,6 +4,7 @@ import {
   Combobox,
   ComboboxContent,
   ComboboxControl,
+  ComboboxEmpty,
   ComboboxHiddenSelect,
   ComboboxInput,
   ComboboxItem,
@@ -11,6 +12,8 @@ import {
   ComboboxItemLabel,
   ComboboxLabel,
   ComboboxSection,
+  ComboboxSectionLabel,
+  ComboboxSeparator,
   ComboboxTrigger
 } from "@/registry/kobalte/ui/combobox"
 
@@ -88,5 +91,31 @@ describe("Combobox", () => {
 
     expect(container.querySelectorAll("svg").length).toBeGreaterThan(0)
     expect(screen.getByTestId("selected-icon")).toHaveTextContent("Selected")
+  })
+
+  it("renders empty, section-label, and separator slots", () => {
+    render(() => (
+      <div>
+        <ComboboxEmpty class="custom-empty">No options</ComboboxEmpty>
+        <ComboboxSectionLabel class="custom-section-label">
+          Suggested
+        </ComboboxSectionLabel>
+        <ComboboxSeparator class="custom-separator" />
+      </div>
+    ))
+
+    expect(screen.getByText("No options")).toHaveAttribute(
+      "data-slot",
+      "combobox-empty"
+    )
+    expect(screen.getByText("No options")).toHaveClass("custom-empty")
+    expect(screen.getByText("Suggested")).toHaveAttribute(
+      "data-slot",
+      "combobox-section-label"
+    )
+    expect(screen.getByText("Suggested")).toHaveClass("custom-section-label")
+    expect(document.querySelector('[data-slot="combobox-separator"]')).toHaveClass(
+      "custom-separator"
+    )
   })
 })

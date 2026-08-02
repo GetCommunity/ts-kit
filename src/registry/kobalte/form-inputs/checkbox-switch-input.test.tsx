@@ -35,6 +35,8 @@ describe("CheckboxSwitchInput", () => {
     expect(container.firstElementChild).toHaveClass("grid-cols-2")
 
     const switchRow = container.querySelector(".switch-class") as HTMLElement
+    expect(screen.getByRole("group")).toHaveAttribute("id", "notifications")
+    expect(screen.getByRole("switch")).toHaveAttribute("id", "notifications-input")
     await user.click(switchRow)
     expect(screen.getByRole("switch")).toBeChecked()
     fireEvent.keyPress(switchRow, { key: "Enter" })

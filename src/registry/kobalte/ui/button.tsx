@@ -6,7 +6,7 @@ import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { VariantProps } from "class-variance-authority"
 import type { JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer whitespace-break-spaces",
@@ -26,7 +26,10 @@ const buttonVariants = cva(
         xs: "p-1 h-8",
         sm: "h-9 px-3 text-xs",
         lg: "h-11 px-8",
-        icon: "size-10"
+        icon: "size-10",
+        "icon-xs": "size-6",
+        "icon-sm": "size-8",
+        "icon-lg": "size-12"
       }
     },
     defaultVariants: {
@@ -36,12 +39,14 @@ const buttonVariants = cva(
   }
 )
 
-type ButtonProps<T extends ValidComponent = "button"> =
-  ButtonPrimitive.ButtonRootProps<T> &
-    VariantProps<typeof buttonVariants> & {
-      class?: string | undefined
-      children?: JSX.Element
-    }
+type ButtonProps<T extends ValidComponent = "button"> = PolymorphicProps<
+  T,
+  ButtonPrimitive.ButtonRootProps<T>
+> &
+  VariantProps<typeof buttonVariants> & {
+    class?: string | undefined
+    children?: JSX.Element
+  }
 
 const Button = <T extends ValidComponent = "button">(
   props: PolymorphicProps<T, ButtonProps<T>>

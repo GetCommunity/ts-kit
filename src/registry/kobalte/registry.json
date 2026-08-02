@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "tskit",
+  "homepage": "https://tskit.getcommunity.com",
+  "include": [
+    "components/registry.json",
+    "config/registry.json",
+    "form-inputs/registry.json",
+    "hooks/registry.json",
+    "icons/registry.json",
+    "lib/utils/registry.json",
+    "scripts/registry.json",
+    "ui/registry.json"
+  ]
+}

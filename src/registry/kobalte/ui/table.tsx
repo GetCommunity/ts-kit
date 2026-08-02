@@ -2,7 +2,7 @@ import { splitProps } from "solid-js"
 
 import type { Component, ComponentProps } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const Table: Component<
   ComponentProps<"table"> & {

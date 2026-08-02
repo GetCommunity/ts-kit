@@ -2,55 +2,62 @@ import { render, screen } from "@solidjs/testing-library"
 
 import {
   Pagination,
+  PaginationContent,
   PaginationEllipsis,
   PaginationItem,
-  PaginationItems,
+  PaginationLink,
   PaginationNext,
   PaginationPrevious
 } from "@/registry/kobalte/ui/pagination"
 
 describe("Pagination", () => {
-  it("renders pagination controls and items", () => {
+  it("renders navigation links and marks the current page", () => {
     render(() => (
-      <Pagination
-        count={30}
-        page={2}
-        itemComponent={(props) => (
-          <PaginationItem page={props.page}>{props.page}</PaginationItem>
-        )}
-        ellipsisComponent={() => <PaginationEllipsis />}
-      >
-        <PaginationPrevious />
-        <PaginationItems />
-        <PaginationNext />
+      <Pagination class="custom-pagination">
+        <PaginationContent class="custom-content">
+          <PaginationItem>
+            <PaginationPrevious href="/page/1" class="custom-previous" />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLink href="/page/1">1</PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLink href="/page/2" isActive size="sm">
+              2
+            </PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationEllipsis class="custom-ellipsis" />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationNext href="/page/3" class="custom-next" />
+          </PaginationItem>
+        </PaginationContent>
       </Pagination>
     ))
 
-    expect(screen.getByRole("navigation")).toBeInTheDocument()
-    expect(screen.getByRole("button", { name: /previous/i })).toHaveClass("gap-1")
-    expect(screen.getByRole("button", { name: /next/i })).toHaveClass("gap-1")
-    expect(screen.getByRole("button", { name: "2" })).toHaveClass("size-10")
-  })
+    expect(screen.getByRole("navigation", { name: "pagination" })).toHaveClass(
+      "custom-pagination"
+    )
+    expect(screen.getByRole("list")).toHaveClass("custom-content")
+    expect(screen.getAllByRole("listitem")).toHaveLength(5)
 
-  it("renders custom previous and next labels plus ellipsis", () => {
-    render(() => (
-      <Pagination
-        count={100}
-        page={5}
-        siblingCount={0}
-        itemComponent={(props) => (
-          <PaginationItem page={props.page}>{props.page}</PaginationItem>
-        )}
-        ellipsisComponent={() => <PaginationEllipsis />}
-      >
-        <PaginationPrevious>Back</PaginationPrevious>
-        <PaginationItems />
-        <PaginationNext>Forward</PaginationNext>
-      </Pagination>
-    ))
+    expect(screen.getByRole("link", { name: "1" })).not.toHaveAttribute("aria-current")
+    expect(screen.getByRole("link", { name: "2" })).toHaveAttribute(
+      "aria-current",
+      "page"
+    )
+    expect(screen.getByRole("link", { name: "2" })).toHaveAttribute(
+      "data-active",
+      "true"
+    )
 
-    expect(screen.getByRole("button", { name: "Back" })).toBeInTheDocument()
-    expect(screen.getByRole("button", { name: "Forward" })).toBeInTheDocument()
-    expect(screen.getAllByText("More pages").length).toBeGreaterThan(0)
+    expect(screen.getByRole("link", { name: "Go to previous page" })).toHaveClass(
+      "custom-previous"
+    )
+    expect(screen.getByRole("link", { name: "Go to next page" })).toHaveClass(
+      "custom-next"
+    )
+    expect(screen.getByText("More pages").parentElement).toHaveClass("custom-ellipsis")
   })
 })

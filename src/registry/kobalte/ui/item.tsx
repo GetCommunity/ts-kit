@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Separator } from "@/registry/kobalte/ui/separator"
 import { cva } from "class-variance-authority"
 import { mergeProps, splitProps } from "solid-js"

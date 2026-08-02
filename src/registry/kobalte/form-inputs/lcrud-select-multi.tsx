@@ -1,18 +1,18 @@
 import * as SelectPrimitive from "@kobalte/core/select"
 import { For, Show, children, onMount } from "solid-js"
 
-import type { CollectionDocument } from "@/hooks/use-infinite-query"
+import type { CollectionDocument } from "@/registry/kobalte/hooks/use-infinite-query"
 import type { orientationVariants } from "@/registry/kobalte/ui/orientation"
 import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { infiniteQueryOptions } from "@tanstack/solid-query"
 import type { VariantProps } from "class-variance-authority"
 import type { JSX } from "solid-js"
 
-import { useInfiniteCollection } from "@/hooks/use-infinite-query"
-import { cn } from "@/lib/utils/tailwind"
 import FormInputDescription from "@/registry/kobalte/form-inputs/form-input-description"
 import FormInputErrors from "@/registry/kobalte/form-inputs/form-input-errors"
+import { useInfiniteCollection } from "@/registry/kobalte/hooks/use-infinite-query"
 import CloseIcon from "@/registry/kobalte/icons/svg/close"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 import { Button } from "@/registry/kobalte/ui/button"
 import { Checkbox } from "@/registry/kobalte/ui/checkbox"
 import {

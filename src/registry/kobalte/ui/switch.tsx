@@ -1,12 +1,12 @@
 import * as SwitchPrimitive from "@kobalte/core/switch"
-import { splitProps } from "solid-js"
+import { mergeProps, splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
-import type { JSX, ValidComponent } from "solid-js"
+import type { ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
-const Switch = SwitchPrimitive.Root
+// const Switch = SwitchPrimitive.Root
 const SwitchDescription = SwitchPrimitive.Description
 const SwitchErrorMessage = SwitchPrimitive.ErrorMessage
 
@@ -77,6 +77,35 @@ const SwitchLabel = <T extends ValidComponent = "label">(
     <SwitchPrimitive.Label
       class={cn(
         "text-sm font-medium leading-none ui-disabled:cursor-not-allowed ui-disabled:opacity-70",
+        local.class
+      )}
+      {...others}
+    />
+  )
+}
+
+type SwitchProps<T extends ValidComponent = "div"> = PolymorphicProps<
+  T,
+  SwitchPrimitive.SwitchRootProps<T>
+> &
+  Pick<ComponentProps<T>, "class" | "children"> & {
+    size?: "sm" | "default"
+  }
+
+const Switch = <T extends ValidComponent = "div">(props: SwitchProps<T>) => {
+  const mergedProps = mergeProps({ size: "default" as const }, props)
+  const [local, others] = splitProps(mergedProps as SwitchProps, [
+    "class",
+    "size",
+    "id"
+  ])
+  return (
+    <SwitchPrimitive.Root
+      id={local.id}
+      data-slot="switch"
+      data-size={local.size}
+      class={cn(
+        "peer group/switch relative z-switch inline-flex items-center outline-none transition-all data-disabled:cursor-not-allowed data-disabled:opacity-50",
         local.class
       )}
       {...others}

@@ -1,10 +1,10 @@
 import * as DialogPrimitive from "@kobalte/core/dialog"
-import { splitProps } from "solid-js"
+import { mergeProps, Show, splitProps } from "solid-js"
 
 import type { PolymorphicProps } from "@kobalte/core/polymorphic"
 import type { Component, ComponentProps, JSX, ValidComponent } from "solid-js"
 
-import { cn } from "@/lib/utils/tailwind"
+import { cn } from "@/registry/kobalte/lib/utils/tailwind"
 
 const Dialog = DialogPrimitive.Root
 const DialogTrigger = DialogPrimitive.Trigger
@@ -18,6 +18,17 @@ const DialogPortal: Component<DialogPrimitive.DialogPortalProps> = (props) => {
       </div>
     </DialogPrimitive.Portal>
   )
+}
+
+type DialogCloseProps<T extends ValidComponent = "button"> = PolymorphicProps<
+  T,
+  DialogPrimitive.DialogCloseButtonProps<T>
+>
+
+const DialogClose = <T extends ValidComponent = "button">(
+  props: DialogCloseProps<T>
+) => {
+  return <DialogPrimitive.CloseButton data-slot="dialog-close" {...props} />
 }
 
 type DialogOverlayProps<T extends ValidComponent = "div"> =
@@ -45,15 +56,17 @@ type DialogContentProps<T extends ValidComponent = "div"> =
   }
 
 const DialogContent = <T extends ValidComponent = "div">(
-  props: PolymorphicProps<T, DialogContentProps<T>> & {
+  rawProps: PolymorphicProps<T, DialogContentProps<T>> & {
     onCloseClick?: () => void
     iconClass?: string
     iconSvgClass?: string
+    showCloseButton?: boolean
   }
 ) => {
+  const props = mergeProps({ showCloseButton: true } as DialogContentProps<T>, rawProps)
   const [local, rest] = splitProps(props as DialogContentProps, ["class", "children"])
   const handleClose = () => {
-    props.onCloseClick?.()
+    rawProps.onCloseClick?.()
   }
   return (
     <DialogPortal>
@@ -66,28 +79,30 @@ const DialogContent = <T extends ValidComponent = "div">(
         {...rest}
       >
         {local.children}
-        <DialogPrimitive.CloseButton
-          onClick={handleClose}
-          class={cn(
-            "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none ui-expanded:bg-accent ui-expanded:text-muted-foreground",
-            props.iconClass
-          )}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class={cn("size-4", props.iconSvgClass)}
+        <Show when={props.showCloseButton}>
+          <DialogPrimitive.CloseButton
+            onClick={handleClose}
+            class={cn(
+              "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none ui-expanded:bg-accent ui-expanded:text-muted-foreground",
+              props.iconClass
+            )}
           >
-            <path d="M18 6l-12 12" />
-            <path d="M6 6l12 12" />
-          </svg>
-          <span class="sr-only">Close</span>
-        </DialogPrimitive.CloseButton>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class={cn("size-4", props.iconSvgClass)}
+            >
+              <path d="M18 6l-12 12" />
+              <path d="M6 6l12 12" />
+            </svg>
+            <span class="sr-only">Close</span>
+          </DialogPrimitive.CloseButton>
+        </Show>
       </DialogPrimitive.Content>
     </DialogPortal>
   )
@@ -152,6 +167,7 @@ const DialogDescription = <T extends ValidComponent = "p">(
 
 export {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
