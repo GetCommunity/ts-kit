@@ -1,37 +1,41 @@
-<MDXHeader title="Table" description="A responsive table component." />
+---
+title: Table
+slug: table
+description: A responsive table component.
+---
 
-<ComponentPreview name="table-demo" />
+# Table
+
+A responsive table component.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add table
+```package-dlx
+shadcn@latest add @zaidan/table
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
+Copy and paste the following code into your project.
 
-<Step>Copy and paste the following code into your project: </Step>
+```tsx file=../../../registry/kobalte/ui/table.tsx showLineNumbers
 
-<ComponentSource name="table" />
+```
 
-</TabsContent>
+## Data Table
 
-</Tabs>
+You can use the `<Table />` component to build more complex data tables. Combine it with [@tanstack/solid-table](https://tanstack.com/table/v8) to create tables with sorting, filtering and pagination.
 
-## Usage
+## Examples
+
+Here are the source code of all the examples from the preview page:
+
+### Basic
 
 ```tsx
+import { For } from "solid-js"
 import {
   Table,
   TableBody,
@@ -43,24 +47,131 @@ import {
 } from "~/components/ui/table"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/table-example.tsx#L90-L118
+
+```
+
+### With Footer
+
 ```tsx
-<Table>
-  <TableCaption>A list of your recent invoices.</TableCaption>
-  <TableHeader>
-    <TableRow>
-      <TableHead class="w-[100px]">Invoice</TableHead>
-      <TableHead>Status</TableHead>
-      <TableHead>Method</TableHead>
-      <TableHead class="text-right">Amount</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell class="font-medium">INV001</TableCell>
-      <TableCell>Paid</TableCell>
-      <TableCell>Credit Card</TableCell>
-      <TableCell class="text-right">$250.00</TableCell>
-    </TableRow>
-  </TableBody>
-</Table>
+import { For } from "solid-js"
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow
+} from "~/components/ui/table"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/table-example.tsx#L120-L154
+
+```
+
+### Simple
+
+```tsx
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from "~/components/ui/table"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/table-example.tsx#L156-L187
+
+```
+
+### With Badges
+
+```tsx
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from "~/components/ui/table"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/table-example.tsx#L189-L244
+
+```
+
+### With Actions
+
+```tsx
+import { MoreHorizontal } from "lucide-solid"
+import { For } from "solid-js"
+import { Button } from "~/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from "~/components/ui/dropdown-menu"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from "~/components/ui/table"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/table-example.tsx#L246-L290
+
+```
+
+### With Select
+
+```tsx
+import { For } from "solid-js"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "~/components/ui/select"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from "~/components/ui/table"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/table-example.tsx#L317-L359
+
+```
+
+### With Input
+
+```tsx
+import { For } from "solid-js"
+import { Input } from "~/components/ui/input"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from "~/components/ui/table"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/table-example.tsx#L361-L394
+
 ```

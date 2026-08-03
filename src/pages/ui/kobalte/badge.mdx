@@ -1,40 +1,103 @@
-<MDXHeader title="Badge" description="Displays a badge or a component that looks like a badge." />
+---
+title: Badge
+slug: badge
+description: Displays a badge or a component that looks like a badge.
+---
 
-<ComponentPreview name="badge-demo" />
+# Badge
+
+Displays a badge or a component that looks like a badge.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add badge
+```package-dlx
+shadcn@latest add @zaidan/badge
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
+Copy and paste the following code into your project.
 
-<Step>Copy and paste the following code into your project: </Step>
+```tsx file=../../../registry/kobalte/ui/badge.tsx showLineNumbers
 
-<ComponentSource name="badge" />
+```
 
-</TabsContent>
+## Examples
 
-</Tabs>
+Here are the source code of all the examples from the preview page:
 
-## Usage
+### Variants
 
 ```tsx
 import { Badge } from "~/components/ui/badge"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/badge-example.tsx#L21-L34
+
+```
+
+### Icon Left
+
 ```tsx
-<Badge variant="outline">Badge</Badge>
+import { BadgeCheck } from "lucide-solid"
+import { Badge } from "~/components/ui/badge"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/badge-example.tsx#L36-L67
+
+```
+
+### Icon Right
+
+```tsx
+import { ArrowRight } from "lucide-solid"
+import { Badge } from "~/components/ui/badge"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/badge-example.tsx#L69-L100
+
+```
+
+### With Spinner
+
+```tsx
+import { Badge } from "~/components/ui/badge"
+import { Spinner } from "~/components/ui/spinner"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/badge-example.tsx#L102-L133
+
+```
+
+### As Link
+
+```tsx
+import { ArrowUpRight } from "lucide-solid"
+import { Badge } from "~/components/ui/badge"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/badge-example.tsx#L135-L154
+
+```
+
+### Long Text
+
+```tsx
+import { Badge } from "~/components/ui/badge"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/badge-example.tsx#L156-L164
+
+```
+
+### Custom Colors
+
+```tsx
+import { Badge } from "~/components/ui/badge"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/badge-example.tsx#L166-L188
+
 ```

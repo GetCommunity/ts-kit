@@ -1,60 +1,118 @@
-<MDXHeader
-  title="Radio Group"
-  description="A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time."
-  docs="https://kobalte.dev/docs/core/components/radio-group"
-/>
+---
+title: Radio Group
+slug: radio-group
+description: A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.
+---
 
-<ComponentPreview name="radio-group-demo" />
+# Radio Group
+
+A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add radio-group
+```package-dlx
+shadcn@latest add @zaidan/radio-group
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Install the following dependencies:
 
-<Step>Install the following dependencies: </Step>
-
-```bash
-npm install @kobalte/core
+```package-install
+@kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+Copy and paste the following code into your project.
 
-<ComponentSource name="radio-group" />
+```tsx file=../../../registry/kobalte/ui/radio-group.tsx showLineNumbers
 
-</Steps>
-</TabsContent>
+```
 
-</Tabs>
+## Examples
 
-## Usage
+Here are the source code of all the examples from the preview page:
+
+### Basic
 
 ```tsx
-import { RadioGroup, RadioGroupItem, RadioGroupItemLabel } from "~/components/ui/radio-group"
+import { Field, FieldLabel } from "~/components/ui/field"
+import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/radio-group-example.tsx#L25-L50
+
+```
+
+### With Descriptions
+
 ```tsx
-<RadioGroup>
-  <For each={["Apple", "Orange", "Watermelon"]}>
-    {(fruit) => (
-      <RadioGroupItem value={fruit}>
-        <RadioGroupItemLabel>{fruit}</RadioGroupItemLabel>
-      </RadioGroupItem>
-    )}
-  </For>
-</RadioGroup>
+import {
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldLabel
+} from "~/components/ui/field"
+import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/radio-group-example.tsx#L52-L86
+
+```
+
+### With FieldSet
+
+```tsx
+import {
+  Field,
+  FieldDescription,
+  FieldLabel,
+  FieldLegend,
+  FieldSet
+} from "~/components/ui/field"
+import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/radio-group-example.tsx#L88-L117
+
+```
+
+### Grid Layout
+
+```tsx
+import { Field, FieldLabel } from "~/components/ui/field"
+import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/radio-group-example.tsx#L119-L150
+
+```
+
+### Disabled
+
+```tsx
+import { Field, FieldLabel } from "~/components/ui/field"
+import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/radio-group-example.tsx#L152-L177
+
+```
+
+### Invalid
+
+```tsx
+import {
+  Field,
+  FieldDescription,
+  FieldLabel,
+  FieldLegend,
+  FieldSet
+} from "~/components/ui/field"
+import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/radio-group-example.tsx#L179-L208
+
 ```

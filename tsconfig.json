@@ -13,7 +13,8 @@
     "noEmit": true,
     "paths": {
       "~/*": ["./*"],
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@velite": ["./.velite"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

@@ -1,49 +1,48 @@
-<MDXHeader
-  title="Drawer"
-  description="A drawer component for Solid."
-  docs="https://corvu.dev/docs/primitives/drawer/"
-/>
+---
+title: Drawer
+slug: drawer
+description: A drawer component for SolidJS.
+---
 
-<ComponentPreview name="drawer-demo" />
+# Drawer
+
+A drawer component for SolidJS.
+
+## About
+
+Drawer is built on top of [Corvu Drawer](https://corvu.dev/docs/primitives/drawer) by [Jasmin](https://github.com/GiyoMoon).
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add drawer
+```package-dlx
+shadcn@latest add @zaidan/drawer
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
-
-<Step>Install the following dependencies: </Step>
+Install the following dependencies:
 
 ```bash
-npm install @corvu/drawer
+bun add corvu
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+Copy and paste the following code into your project.
 
-<ComponentSource name="drawer" />
+```tsx file=../../../registry/kobalte/ui/drawer.tsx showLineNumbers
 
-</Steps>
-</TabsContent>
+```
 
-</Tabs>
+## Examples
 
-## Usage
+Here are the source code of all the examples from the preview page:
+
+### Scrollable Content
 
 ```tsx
+import { Index } from "solid-js"
+import { Button } from "~/components/ui/button"
 import {
   Drawer,
   DrawerClose,
@@ -56,28 +55,43 @@ import {
 } from "~/components/ui/drawer"
 ```
 
-```tsx
-<Drawer>
-  <DrawerTrigger>Open</DrawerTrigger>
-  <DrawerContent>
-    <DrawerHeader>
-      <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-      <DrawerDescription>This action cannot be undone.</DrawerDescription>
-    </DrawerHeader>
-    <DrawerFooter>
-      <Button>Submit</Button>
-      <DrawerClose>
-        <Button variant="outline">Cancel</Button>
-      </DrawerClose>
-    </DrawerFooter>
-  </DrawerContent>
-</Drawer>
+```tsx file=../../../registry/kobalte/examples/ui/drawer-example.tsx#L70-L106
+
 ```
 
-## Examples
+### Sides
 
-### Responsive Dialog
+```tsx
+import { For, Index } from "solid-js"
+import { Button } from "~/components/ui/button"
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger
+} from "~/components/ui/drawer"
+```
 
-You can combine the `Dialog` and `Drawer` components to create a responsive dialog. This renders a `Dialog` component on desktop and a `Drawer` on mobile.
+```tsx file=../../../registry/kobalte/examples/ui/drawer-example.tsx#L26-L68
 
-<ComponentPreview name="drawer-dialog" />
+```
+
+## Props
+
+The Drawer component uses Corvu's Drawer primitive under the hood. Here are the main props:
+
+| Prop                      | Type                                     | Default    | Description                            |
+| ------------------------- | ---------------------------------------- | ---------- | -------------------------------------- |
+| `side`                    | `"top" \| "right" \| "bottom" \| "left"` | `"bottom"` | The side the drawer opens from         |
+| `open`                    | `boolean`                                | -          | The controlled open state              |
+| `defaultOpen`             | `boolean`                                | `false`    | The default open state                 |
+| `onOpenChange`            | `(open: boolean) => void`                | -          | Handler called when open state changes |
+| `snapPoints`              | `Size[]`                                 | `[0, 1]`   | Positions to snap to                   |
+| `activeSnapPoint`         | `Size`                                   | -          | The controlled active snap point       |
+| `allowSkippingSnapPoints` | `boolean`                                | `true`     | Whether to allow skipping snap points  |
+| `closeOnOutsidePointer`   | `boolean`                                | `true`     | Whether to close on outside pointer    |
+| `closeOnEscapeKeyDown`    | `boolean`                                | `true`     | Whether to close on escape key         |

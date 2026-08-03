@@ -1,0 +1,118 @@
+import { NotFoundPage } from "@/components/not-found-page"
+import { PageToggleNav } from "@/components/page-toggle-nav"
+import { createPageHead } from "@/lib/seo"
+import type { IframeMessage } from "@/lib/types"
+import { cn } from "@/lib/utils/tailwind"
+import { useColorMode } from "@kobalte/core"
+import { createFileRoute, notFound, useRouter } from "@tanstack/solid-router"
+import { ui } from "@velite"
+import { createEffect, createMemo, onCleanup, onMount, untrack } from "solid-js"
+
+export const Route = createFileRoute("/_website/ui/{-$slug}")({
+  loader: (r) => {
+    const doc =
+      ui.find((u) => (r.params.slug ? u.slug === r.params.slug : false)) ?? ui[0]
+    if (!doc) {
+      throw notFound({
+        data: {
+          slug: r.params.slug
+        }
+      })
+    }
+    return doc
+  },
+  head: (r) => {
+    if (!r.loaderData) return {}
+    return createPageHead({
+      title: r.loaderData.title,
+      description: r.loaderData.description,
+      path: `/ui/${r.loaderData.slug}`
+    })
+  },
+  component: RouteComponent,
+  notFoundComponent: () => <NotFoundPage />
+})
+
+function RouteComponent() {
+  const router = useRouter()
+  const doc = Route.useLoaderData()
+  const search = Route.useSearch()
+  const { colorMode } = useColorMode()
+
+  let iframeRef: HTMLIFrameElement | undefined
+
+  // Handle forwarded keyboard shortcuts from iframe
+  onMount(() => {
+    const handleMessage = (event: MessageEvent<IframeMessage>) => {
+      if (event.data.type === "dark-mode-forward") {
+        const syntheticEvent = new KeyboardEvent("keydown", {
+          key: event.data.key,
+          bubbles: true,
+          cancelable: true
+        })
+        document.dispatchEvent(syntheticEvent)
+      } else if (event.data.type === "randomize-forward") {
+        const syntheticEvent = new KeyboardEvent("keydown", {
+          key: event.data.key,
+          bubbles: true,
+          cancelable: true
+        })
+        document.dispatchEvent(syntheticEvent)
+      } else if (event.data.type === "cmd-k-forward") {
+        const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.userAgent)
+        const syntheticEvent = new KeyboardEvent("keydown", {
+          key: event.data.key,
+          metaKey: isMac,
+          ctrlKey: !isMac,
+          bubbles: true,
+          cancelable: true
+        })
+        document.dispatchEvent(syntheticEvent)
+      }
+    }
+
+    window.addEventListener("message", handleMessage)
+    onCleanup(() => window.removeEventListener("message", handleMessage))
+  })
+
+  // Send color mode to iframe when it changes
+  createEffect(() => {
+    iframeRef?.contentWindow?.postMessage({
+      type: "color-mode-sync",
+      data: colorMode()
+    } satisfies IframeMessage)
+  })
+
+  const href = createMemo(() => {
+    const slug = doc().slug
+    return untrack(
+      () =>
+        router.buildLocation({
+          to: "/preview/$kind/$primitive/$slug",
+          params: { kind: "ui", primitive: "kobalte", slug },
+          search: search()
+        }).href
+    )
+  })
+
+  return (
+    <div
+      class={cn(
+        "relative flex h-full w-[calc(100svw-var(--spacing)*8)] flex-row rounded-2xl ring-1 ring-foreground/15 md:w-[calc(100svw-var(--spacing)*56)] lg:w-full",
+        "overflow-hidden"
+      )}
+    >
+      <iframe
+        ref={(r) => (iframeRef = r)}
+        src={href()}
+        class="z-10 size-full rounded-lg"
+        title="Preview"
+      />
+      <PageToggleNav
+        kind="ui"
+        slug={doc().slug}
+        class="absolute right-2 bottom-2 isolate z-10"
+      />
+    </div>
+  )
+}

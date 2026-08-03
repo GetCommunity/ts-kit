@@ -1,56 +1,85 @@
-<MDXHeader
-  title="Switch"
-  description="A control that allows the user to toggle between checked and not checked."
-  docs="https://kobalte.dev/docs/core/components/switch"
-/>
+---
+title: Switch
+slug: switch
+description: A control that allows the user to toggle between checked and not checked.
+---
 
-<ComponentPreview name="switch-demo" />
+# Switch
+
+A control that allows the user to toggle between checked and not checked.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add switch
+```package-dlx
+shadcn@latest add @zaidan/switch
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Install the following dependencies:
 
-<Step>Install the following dependencies: </Step>
-
-```bash
-npm install @kobalte/core
+```package-install
+@kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+Copy and paste the following code into your project.
 
-<ComponentSource name="switch" />
+```tsx file=../../../registry/kobalte/ui/switch.tsx showLineNumbers
 
-</Steps>
-</TabsContent>
+```
 
-</Tabs>
+## Examples
 
-## Usage
+Here are the source code of all the examples from the preview page:
+
+### Basic
 
 ```tsx
-import { Switch, SwitchControl, SwitchThumb } from "~/components/ui/switch"
+import { Field, FieldLabel } from "~/components/ui/field"
+import { Switch } from "~/components/ui/switch"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/switch-example.tsx#L23-L32
+
+```
+
+### With Description
+
 ```tsx
-<Switch>
-  <SwitchControl>
-    <SwitchThumb />
-  </SwitchControl>
-</Switch>
+import {
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldLabel,
+  FieldTitle
+} from "~/components/ui/field"
+import { Switch } from "~/components/ui/switch"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/switch-example.tsx#L34-L50
+
+```
+
+### Disabled
+
+```tsx
+import { Label } from "~/components/ui/label"
+import { Switch } from "~/components/ui/switch"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/switch-example.tsx#L52-L67
+
+```
+
+### Sizes
+
+```tsx
+import { Label } from "~/components/ui/label"
+import { Switch } from "~/components/ui/switch"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/switch-example.tsx#L69-L84
+
 ```

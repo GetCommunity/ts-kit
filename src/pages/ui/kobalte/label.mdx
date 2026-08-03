@@ -1,40 +1,77 @@
-<MDXHeader title="Label" description="Renders an accessible label associated with controls." />
+---
+title: Label
+slug: label
+description: Renders an accessible label associated with controls.
+---
 
-<ComponentPreview name="checkbox-demo" />
+# Label
+
+Renders an accessible label associated with controls.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add label
+```package-dlx
+shadcn@latest add @zaidan/label
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
+Copy and paste the following code into your project.
 
-<Step>Copy and paste the following code into your project: </Step>
+```tsx file=../../../registry/kobalte/ui/label.tsx showLineNumbers
 
-<ComponentSource name="label" />
+```
 
-</TabsContent>
+## Examples
 
-</Tabs>
+Here are the source code of all the examples from the preview page:
 
-## Usage
+### With Checkbox
 
 ```tsx
+import { Checkbox } from "~/components/ui/checkbox"
+import { Field } from "~/components/ui/field"
 import { Label } from "~/components/ui/label"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/label-example.tsx#L19-L28
+
+```
+
+### With Input
+
 ```tsx
-<Label for="email">Your email address</Label>
+import { Field } from "~/components/ui/field"
+import { Input } from "~/components/ui/input"
+import { Label } from "~/components/ui/label"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/label-example.tsx#L30-L39
+
+```
+
+### Disabled
+
+```tsx
+import { Field } from "~/components/ui/field"
+import { Input } from "~/components/ui/input"
+import { Label } from "~/components/ui/label"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/label-example.tsx#L41-L50
+
+```
+
+### With Textarea
+
+```tsx
+import { Field } from "~/components/ui/field"
+import { Label } from "~/components/ui/label"
+import { Textarea } from "~/components/ui/textarea"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/label-example.tsx#L52-L61
+
 ```

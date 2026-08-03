@@ -1,58 +1,123 @@
-<MDXHeader
-  title="Toggle"
-  description="A two-state button that can be either on or off."
-  docs="https://kobalte.dev/docs/core/components/toggle-button"
-/>
+---
+title: Toggle
+slug: toggle
+description: A two-state button that can be either on or off.
+---
 
-<ComponentPreview name="toggle-demo" />
+# Toggle
+
+A two-state button that can be either on or off.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add toggle
+```package-dlx
+shadcn@latest add @zaidan/toggle
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Install the following dependencies:
 
-<Step>Install the following dependencies: </Step>
-
-```bash
-npm install @kobalte/core
+```package-install
+@kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+Copy and paste the following code into your project.
 
-<ComponentSource name="toggle" />
+```tsx file=../../../registry/kobalte/ui/toggle.tsx showLineNumbers
 
-</Steps>
-</TabsContent>
+```
 
-</Tabs>
+## Examples
 
-## Usage
+Here are the source code of all the examples from the preview page:
+
+### Basic
+
+```tsx
+import { Bold, Italic, Underline } from "lucide-solid"
+import { Toggle } from "~/components/ui/toggle"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/toggle-example.tsx#L21-L37
+
+```
+
+### Outline
+
+```tsx
+import { Bold, Italic } from "lucide-solid"
+import { Toggle } from "~/components/ui/toggle"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/toggle-example.tsx#L39-L54
+
+```
+
+### Sizes
 
 ```tsx
 import { Toggle } from "~/components/ui/toggle"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/toggle-example.tsx#L56-L72
+
+```
+
+### With Button Text
+
 ```tsx
-<Toggle>
-  {(state) => (
-    <Show when={state.pressed()} fallback={<Icon2 />}>
-      <Icon1 />
-    </Show>
-  )}
-</Toggle>
+import { Button } from "~/components/ui/button"
+import { Toggle } from "~/components/ui/toggle"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/toggle-example.tsx#L74-L105
+
+```
+
+### With Button Icon
+
+```tsx
+import { Bold, Italic, Underline } from "lucide-solid"
+import { Button } from "~/components/ui/button"
+import { Toggle } from "~/components/ui/toggle"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/toggle-example.tsx#L107-L138
+
+```
+
+### With Button Icon + Text
+
+```tsx
+import { Bold, Italic, Underline } from "lucide-solid"
+import { Button } from "~/components/ui/button"
+import { Toggle } from "~/components/ui/toggle"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/toggle-example.tsx#L140-L177
+
+```
+
+### Disabled
+
+```tsx
+import { Toggle } from "~/components/ui/toggle"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/toggle-example.tsx#L179-L192
+
+```
+
+### With Icon
+
+```tsx
+import { Bookmark } from "lucide-solid"
+import { Toggle } from "~/components/ui/toggle"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/toggle-example.tsx#L194-L208
+
 ```

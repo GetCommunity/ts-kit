@@ -1,57 +1,68 @@
-<MDXHeader
-  title="Hover Card"
-  description="For sighted users to preview content available behind a link."
-  docs="https://kobalte.dev/docs/core/components/hover-card"
-/>
+---
+title: Hover Card
+slug: hover-card
+description: For sighted users to preview content available behind a link.
+---
 
-<ComponentPreview name="hover-card-demo" />
+# Hover Card
+
+For sighted users to preview content available behind a link.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add hover-card
+```package-dlx
+shadcn@latest add @zaidan/hover-card
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
+Copy and paste the following code into your project.
 
-<Steps>
+```tsx file=../../../registry/kobalte/ui/hover-card.tsx showLineNumbers
 
-<Step>Install the following dependencies: </Step>
-
-```bash
-npm install @kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+## Examples
 
-<ComponentSource name="hover-card" />
+Here are the source code of all the examples from the preview page:
 
-</Steps>
-
-</TabsContent>
-
-</Tabs>
-
-## Usage
+### Sides
 
 ```tsx
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "~/components/ui/hover-card"
+import { For } from "solid-js"
+import { Button } from "~/components/ui/button"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger
+} from "~/components/ui/hover-card"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/hover-card-example.tsx#L25-L47
+
+```
+
+### In Dialog
+
 ```tsx
-<HoverCard>
-  <HoverCardTrigger>Hover</HoverCardTrigger>
-  <HoverCardContent>The React Framework – created and maintained by @vercel.</HoverCardContent>
-</HoverCard>
+import { Button } from "~/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from "~/components/ui/dialog"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger
+} from "~/components/ui/hover-card"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/hover-card-example.tsx#L49-L78
+
 ```

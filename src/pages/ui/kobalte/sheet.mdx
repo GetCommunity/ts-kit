@@ -1,46 +1,65 @@
-<MDXHeader
-  title="Sheet"
-  description="Extends the Dialog component to display content that complements the main content of the screen."
-/>
+---
+title: Sheet
+slug: sheet
+description: Extends the Dialog component to display content that complements the main content of the screen.
+---
 
-<ComponentPreview name="sheet-demo" />
+# Sheet
+
+Extends the Dialog component to display content that complements the main content of the screen.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add sheet
+```package-dlx
+shadcn@latest add @zaidan/sheet
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Install the following dependencies:
 
-<Step>Install the following dependencies: </Step>
-
-```bash
-npm install @kobalte/core
+```package-install
+@kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+Copy and paste the following code into your project.
 
-<ComponentSource name="sheet" />
+```tsx file=../../../registry/kobalte/ui/sheet.tsx showLineNumbers
 
-</Steps>
-</TabsContent>
+```
 
-</Tabs>
+## Examples
+
+Here are the source code of all the examples from the preview page:
+
+### With Form
 
 ```tsx
+import { Button } from "~/components/ui/button"
+import { Input } from "~/components/ui/input"
+import { Label } from "~/components/ui/label"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger
+} from "~/components/ui/sheet"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/sheet-example.tsx#L27-L63
+
+```
+
+### No Close Button
+
+```tsx
+import { Button } from "~/components/ui/button"
 import {
   Sheet,
   SheetContent,
@@ -51,53 +70,46 @@ import {
 } from "~/components/ui/sheet"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/sheet-example.tsx#L65-L84
+
+```
+
+### Sides
+
+Use the `side` property to `<SheetContent />` to indicate the edge of the screen where the component will appear. The values can be `top`, `right`, `bottom` or `left`.
+
 ```tsx
-<Sheet>
-  <SheetTrigger>Open</SheetTrigger>
-  <SheetContent>
-    <SheetHeader>
-      <SheetTitle>Are you sure absolutely sure?</SheetTitle>
-      <SheetDescription>
-        This action cannot be undone. This will permanently delete your account and remove your data
-        from our servers.
-      </SheetDescription>
-    </SheetHeader>
-  </SheetContent>
-</Sheet>
+import { For, Index } from "solid-js"
+import { Button } from "~/components/ui/button"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger
+} from "~/components/ui/sheet"
 ```
 
-### Position
+```tsx file=../../../registry/kobalte/examples/ui/sheet-example.tsx#L86-L135
 
-Use the `position` property to `<SheetContent />` to indicate the edge of the screen where the component will appear. The values can be `top`, `right`, `bottom` or `left`.
-
-```tsx {3}
-<Sheet>
-  <SheetTrigger>Open</SheetTrigger>
-  <SheetContent position="bottom">
-    <SheetHeader>
-      <SheetTitle>Are you sure absolutely sure?</SheetTitle>
-      <SheetDescription>
-        This action cannot be undone. This will permanently delete your account and remove your data
-        from our servers.
-      </SheetDescription>
-    </SheetHeader>
-  </SheetContent>
-</Sheet>
 ```
 
-### Size
+## Size
 
 You can adjust the size of the sheet using CSS classes:
 
-```tsx {3}
+```tsx showLineNumbers {3}
 <Sheet>
   <SheetTrigger>Open</SheetTrigger>
-  <SheetContent className="w-[400px] sm:w-[540px]">
+  <SheetContent class="w-[400px] sm:w-[540px]">
     <SheetHeader>
       <SheetTitle>Are you absolutely sure?</SheetTitle>
       <SheetDescription>
-        This action cannot be undone. This will permanently delete your account and remove your data
-        from our servers.
+        This action cannot be undone. This will permanently delete your account and
+        remove your data from our servers.
       </SheetDescription>
     </SheetHeader>
   </SheetContent>

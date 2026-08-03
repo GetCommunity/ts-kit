@@ -1,42 +1,69 @@
-<MDXHeader title="Aspect Ratio" description="Displays content within a desired ratio." />
+---
+title: Aspect Ratio
+slug: aspect-ratio
+description: Displays content within a desired ratio.
+---
 
-<ComponentPreview name="aspect-ratio-demo" />
+# Aspect Ratio
+
+Displays content within a desired ratio.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add aspect-ratio
+```package-dlx
+shadcn@latest add @zaidan/aspect-ratio
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
+Copy and paste the following code into your project.
 
-<Step>Copy and paste the following code into your project: </Step>
+```tsx file=../../../registry/kobalte/ui/aspect-ratio.tsx showLineNumbers
 
-<ComponentSource name="aspect-ratio" />
+```
 
-</TabsContent>
+## Examples
 
-</Tabs>
+Here are the source code of all the examples from the preview page:
 
-## Usage
+### 16 / 9
 
 ```tsx
 import { AspectRatio } from "~/components/ui/aspect-ratio"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/aspect-ratio-example.tsx#L16-L28
+
+```
+
+### 1 / 1
+
 ```tsx
-<AspectRatio ratio={16 / 9}>
-  <img src="..." alt="..." class="size-full rounded-md object-cover" />
-</AspectRatio>
+import { AspectRatio } from "~/components/ui/aspect-ratio"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/aspect-ratio-example.tsx#L30-L42
+
+```
+
+### 9 / 16
+
+```tsx
+import { AspectRatio } from "~/components/ui/aspect-ratio"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/aspect-ratio-example.tsx#L44-L56
+
+```
+
+### 21 / 9
+
+```tsx
+import { AspectRatio } from "~/components/ui/aspect-ratio"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/aspect-ratio-example.tsx#L58-L70
+
 ```

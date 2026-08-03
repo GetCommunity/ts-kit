@@ -1,52 +1,69 @@
-<MDXHeader
-  title="Separator"
-  description="Visually or semantically separates content."
-  docs="https://kobalte.dev/docs/core/components/separator"
-/>
+---
+title: Separator
+slug: separator
+description: Visually or semantically separates content.
+---
 
-<ComponentPreview name="separator-demo" />
+# Separator
+
+Visually or semantically separates content.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add separator
+```package-dlx
+shadcn@latest add @zaidan/separator
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Copy and paste the following code into your project.
 
-<Step>Install the following dependencies: </Step>
+```tsx file=../../../registry/kobalte/ui/separator.tsx showLineNumbers
 
-```bash
-npm install @kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+## Examples
 
-<ComponentSource name="separator" />
+Here are the source code of all the examples from the preview page:
 
-</Steps>
-</TabsContent>
-
-</Tabs>
-
-## Usage
+### Horizontal
 
 ```tsx
 import { Separator } from "~/components/ui/separator"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/separator-example.tsx#L15-L30
+
+```
+
+### Vertical
+
 ```tsx
-<Separator />
+import { Separator } from "~/components/ui/separator"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/separator-example.tsx#L32-L44
+
+```
+
+### Vertical Menu
+
+```tsx
+import { Separator } from "~/components/ui/separator"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/separator-example.tsx#L46-L67
+
+```
+
+### In List
+
+```tsx
+import { Separator } from "~/components/ui/separator"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/separator-example.tsx#L69-L90
+
 ```

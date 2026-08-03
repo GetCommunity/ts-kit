@@ -1,56 +1,114 @@
-<MDXHeader
-  title="Resizable"
-  description="SolidJS components for building resizable panels and splitters."
-  docs="https://corvu.dev/docs/primitives/resizable/"
-/>
+---
+title: Resizable
+slug: resizable
+description: Accessible resizable panel groups and layouts with keyboard support.
+---
 
-<ComponentPreview name="resizable-demo" />
+# Resizable
+
+Accessible resizable panel groups and layouts with keyboard support.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add resizable
+```package-dlx
+shadcn@latest add @zaidan/resizable
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Install the following dependencies:
 
-<Step>Install the following dependencies: </Step>
-
-```bash
-npm install @corvu/resizable
+```package-install
+@corvu/resizable
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+Copy and paste the following code into your project.
 
-<ComponentSource name="resizable" />
+```tsx file=../../../registry/kobalte/ui/resizable.tsx showLineNumbers
 
-</Steps>
-</TabsContent>
+```
 
-</Tabs>
+## Examples
 
-## Usage
+Here are the source code of all the examples from the preview page:
+
+### Horizontal
 
 ```tsx
-import { Resizable, ResizableHandle, ResizablePanel } from "~/components/ui/resizable"
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup
+} from "~/components/ui/resizable"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/resizable-example.tsx#L21-L39
+
+```
+
+### Vertical
+
+Use the `orientation` prop to set the orientation of the resizable panels.
+
 ```tsx
-<Resizable orientation="horizontal">
-  <ResizablePanel>One</ResizablePanel>
-  <ResizableHandle />
-  <ResizablePanel>Two</ResizablePanel>
-</Resizable>
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup
+} from "~/components/ui/resizable"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/resizable-example.tsx#L41-L59
+
+```
+
+### With Handle
+
+You can set or hide the handle by using the `withHandle` prop on the `ResizableHandle` component.
+
+```tsx
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup
+} from "~/components/ui/resizable"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/resizable-example.tsx#L61-L79
+
+```
+
+### Nested
+
+You can nest `ResizablePanelGroup` components to create more complex layouts.
+
+```tsx
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup
+} from "~/components/ui/resizable"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/resizable-example.tsx#L81-L109
+
+```
+
+### Controlled
+
+Use the `sizes` and `onSizesChange` props to control the panel sizes.
+
+```tsx
+import { createSignal } from "solid-js"
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup
+} from "~/components/ui/resizable"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/resizable-example.tsx#L111-L138
+
 ```

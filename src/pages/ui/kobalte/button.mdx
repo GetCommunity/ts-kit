@@ -1,79 +1,93 @@
-<MDXHeader
-  title="Button"
-  description="Displays a button or a component that looks like a button."
-  docs="https://kobalte.dev/docs/core/components/button"
-/>
+---
+title: Button
+slug: button
+description: Displays a button or a component that looks like a button.
+---
 
-<ComponentPreview name="button-demo" />
+# Button
+
+Displays a button or a component that looks like a button.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add button
+```package-dlx
+shadcn@latest add @zaidan/button
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Copy and paste the following code into your project.
 
-<Step>Install the following dependencies: </Step>
+```tsx file=../../../registry/kobalte/ui/button.tsx showLineNumbers
 
-```bash
-npm install @kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+## Examples
 
-<ComponentSource name="button" />
+Here are the source code of all the examples from the preview page:
 
-</Steps>
-</TabsContent>
-
-</Tabs>
-
-## Usage
+### Variants & Sizes
 
 ```tsx
 import { Button } from "~/components/ui/button"
 ```
 
-```tsx
-<Button variant="outline">Button</Button>
+```tsx file=../../../registry/kobalte/examples/ui/button-example.tsx#L18-L85
+
 ```
 
-### Link
-
-You can use the `buttonVariants` helper to create a link that looks like a button.
+### Icon Right
 
 ```tsx
-import { buttonVariants } from "~/components/ui/button"
+import { ArrowRight } from "lucide-solid"
+import { Button } from "~/components/ui/button"
 ```
 
-```tsx
-<a class={buttonVariants({ variant: "outline" })}>Click here</a>
+```tsx file=../../../registry/kobalte/examples/ui/button-example.tsx#L87-L174
+
 ```
 
-Alternatively, you can set the `as` parameter with the component you want to use as your link.
+### Icon Left
+
 ```tsx
-import { A } from "@solidjs/router";
+import { ArrowLeftCircle } from "lucide-solid"
+import { Button } from "~/components/ui/button"
 ```
 
-```tsx
-<Button as={A} href="/login">Login</Button>
+```tsx file=../../../registry/kobalte/examples/ui/button-example.tsx#L176-L261
+
 ```
 
-Or set it as `"a"`, in case you want to use the standard HTML anchor tag.
+### Icon Only
 
 ```tsx
-<Button as="a" href="/login">Login</Button>
+import { ArrowRight } from "lucide-solid"
+import { Button } from "~/components/ui/button"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/button-example.tsx#L263-L348
+
+```
+
+### Invalid States
+
+```tsx
+import { Button } from "~/components/ui/button"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/button-example.tsx#L350-L433
+
+```
+
+### Examples
+
+```tsx
+import { ArrowRight } from "lucide-solid"
+import { Button } from "~/components/ui/button"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/button-example.tsx#L435-L454
+
 ```

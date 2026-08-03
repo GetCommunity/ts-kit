@@ -1,39 +1,34 @@
-<MDXHeader
-  title="Breadcrumb"
-  description="Displays the path to the current resource using a hierarchy of links."
-  docs="https://kobalte.dev/docs/core/components/breadcrumbs"
-/>
+---
+title: Breadcrumb
+slug: breadcrumb
+description: Displays the path to the current resource using a hierarchy of links.
+---
 
-<ComponentPreview name="breadcrumb-demo" />
+# Breadcrumb
+
+Displays the path to the current resource using a hierarchy of links.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add breadcrumb
+```package-dlx
+shadcn@latest add @zaidan/breadcrumb
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
+Copy and paste the following code into your project.
 
-<Step>Copy and paste the following code into your project: </Step>
+```tsx file=../../../registry/kobalte/ui/breadcrumb.tsx showLineNumbers
 
-<ComponentSource name="breadcrumb" />
+```
 
-</TabsContent>
+## Examples
 
-</Tabs>
+Here are the source code of all the examples from the preview page:
 
-## Usage
+### Basic
 
 ```tsx
 import {
@@ -41,50 +36,55 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
+  BreadcrumbPage,
   BreadcrumbSeparator
 } from "~/components/ui/breadcrumb"
 ```
 
-```tsx
-<Breadcrumb>
-  <BreadcrumbList>
-    <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
-    </BreadcrumbItem>
-    <BreadcrumbSeparator />
-    <BreadcrumbItem>
-      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
-    </BreadcrumbItem>
-    <BreadcrumbSeparator />
-    <BreadcrumbItem>
-      <BreadcrumbLink current>Breadcrumb</BreadcrumbLink>
-    </BreadcrumbItem>
-  </BreadcrumbList>
-</Breadcrumb>
+```tsx file=../../../registry/kobalte/examples/ui/breadcrumb-example.tsx#L31-L51
+
 ```
 
-## Examples
+### With Dropdown
 
-### Custom separator
+```tsx
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator
+} from "~/components/ui/breadcrumb"
+import { Button } from "~/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "~/components/ui/dropdown-menu"
+```
 
-Use a custom component as `children` for `<BreadcrumbSeparator />` to create a custom separator.
+```tsx file=../../../registry/kobalte/examples/ui/breadcrumb-example.tsx#L53-L87
 
-```tsx {1,10-12}
-import { Slash } from "~/components/icons"
+```
 
-...
+### With Link
 
-<Breadcrumb>
-  <BreadcrumbList>
-    <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
-    </BreadcrumbItem>
-    <BreadcrumbSeparator>
-      <Slash />
-    </BreadcrumbSeparator>
-    <BreadcrumbItem>
-      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
-    </BreadcrumbItem>
-  </BreadcrumbList>
-</Breadcrumb>
+```tsx
+import { Link } from "@tanstack/solid-router"
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator
+} from "~/components/ui/breadcrumb"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/breadcrumb-example.tsx#L89-L117
+
 ```

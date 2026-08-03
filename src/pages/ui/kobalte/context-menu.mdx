@@ -1,69 +1,221 @@
-<MDXHeader
-  title="Context Menu"
-  description="Displays a menu located at the pointer, triggered by a right-click or a long-press."
-  docs="https://kobalte.dev/docs/core/components/context-menu"
-/>
+---
+title: Context Menu
+slug: context-menu
+description: Displays a menu to the user — such as a set of actions or functions — triggered by a right-click.
+---
 
-<ComponentPreview name="context-menu-demo" />
+# Context Menu
+
+Displays a menu to the user — such as a set of actions or functions — triggered by a right-click.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add context-menu
+```package-dlx
+shadcn@latest add @zaidan/context-menu
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Copy and paste the following code into your project.
 
-<Step>Install the following dependencies: </Step>
+```tsx file=../../../registry/kobalte/ui/context-menu.tsx showLineNumbers
 
-```bash
-npm install @kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+## Examples
 
-<ComponentSource name="context-menu" />
+Here are the source code of all the examples from the preview page:
 
-</Steps>
-</TabsContent>
-
-</Tabs>
-
-## Usage
+### Basic
 
 ```tsx
 import {
   ContextMenu,
   ContextMenuContent,
+  ContextMenuGroup,
   ContextMenuItem,
-  ContextMenuLabel,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L47-L64
+
+```
+
+### With Sides
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L332-L387
+
+```
+
+### With Icons
+
+```tsx
+import { Archive, ClipboardPaste, Copy, Scissors, Trash } from "lucide-solid"
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
   ContextMenuSeparator,
   ContextMenuTrigger
 } from "~/components/ui/context-menu"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L66-L99
+
+```
+
+### With Shortcuts
+
 ```tsx
-<ContextMenu>
-  <ContextMenuTrigger>Open</ContextMenuTrigger>
-  <ContextMenuContent>
-    <ContextMenuLabel>My Account</ContextMenuLabel>
-    <ContextMenuSeparator />
-    <ContextMenuItem>Profile</ContextMenuItem>
-    <ContextMenuItem>Billing</ContextMenuItem>
-    <ContextMenuItem>Team</ContextMenuItem>
-    <ContextMenuItem>Subscription</ContextMenuItem>
-  </ContextMenuContent>
-</ContextMenu>
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L101-L138
+
+```
+
+### With Submenu
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L140-L180
+
+```
+
+### With Groups, Labels & Separators
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L182-L243
+
+```
+
+### With Checkboxes
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L245-L262
+
+```
+
+### With Radio Group
+
+```tsx
+import { createSignal } from "solid-js"
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuLabel,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L264-L295
+
+```
+
+### With Destructive Items
+
+```tsx
+import { Archive, Pencil, Share, Trash } from "lucide-solid"
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuSeparator,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L297-L330
+
+```
+
+### In Dialog
+
+```tsx
+import { ClipboardPaste, Copy, Scissors, Trash } from "lucide-solid"
+import { Button } from "~/components/ui/button"
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuSeparator,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger
+} from "~/components/ui/context-menu"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from "~/components/ui/dialog"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/context-menu-example.tsx#L389-L450
+
 ```

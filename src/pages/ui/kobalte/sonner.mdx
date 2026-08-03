@@ -1,70 +1,57 @@
-<MDXHeader title="Sonner" description="An opinionated toast component for Solid." />
+---
+title: Sonner
+slug: sonner
+description: An opinionated toast component for SolidJS.
+---
 
-<ComponentPreview name="sonner-demo" />
+# Sonner
 
-## About
-
-`solid-sonner` is built and maintained by [wobsoriano](https://github.com/wobsoriano).
+An opinionated toast component for SolidJS.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add sonner
+```package-dlx
+shadcn@latest add @zaidan/sonner
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Install the following dependencies:
 
-<Step>Install the following dependencies: </Step>
-
-```bash
-npm install solid-sonner
+```package-install
+solid-sonner
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+Copy and paste the following code into your project.
 
-<ComponentSource name="sonner" />
+```tsx file=../../../registry/kobalte/ui/sonner.tsx showLineNumbers
 
-<Step>Add the Toaster component:</Step>
-
-```tsx{1,9}
-import { Toaster } from "~/components/ui/sonner"
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <head />
-      <body>
-        <main>{children}</main>
-        <Toaster />
-      </body>
-    </html>
-  )
-}
 ```
 
-</Steps>
-</TabsContent>
+## Examples
 
-</Tabs>
+Here are the source code of all the examples from the preview page:
 
-## Usage
+### Basic
 
 ```tsx
 import { toast } from "solid-sonner"
+import { Button } from "~/components/ui/button"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/sonner-example.tsx#L18-L26
+
+```
+
+### With Description
+
 ```tsx
-toast("Event has been created.")
+import { toast } from "solid-sonner"
+import { Button } from "~/components/ui/button"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/sonner-example.tsx#L28-L43
+
 ```

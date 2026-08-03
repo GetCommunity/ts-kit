@@ -1,55 +1,126 @@
-<MDXHeader
-  title="Tooltip"
-  description="A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
-  docs="https://kobalte.dev/docs/core/components/tooltip"
-/>
+---
+title: Tooltip
+slug: tooltip
+description: A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+---
 
-<ComponentPreview name="tooltip-demo" />
+# Tooltip
+
+A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add tooltip
+```package-dlx
+shadcn@latest add @zaidan/tooltip
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Install the following dependencies:
 
-<Step>Install the following dependencies: </Step>
-
-```bash
-npm install @kobalte/core
+```package-install
+@kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+Copy and paste the following code into your project.
 
-<ComponentSource name="tooltip" />
+```tsx file=../../../registry/kobalte/ui/tooltip.tsx showLineNumbers
 
-</Steps>
-</TabsContent>
+```
 
-</Tabs>
+## Examples
 
-## Usage
+Here are the source code of all the examples from the preview page:
+
+### Basic
+
+```tsx
+import { Button } from "~/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "~/components/ui/tooltip"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tooltip-example.tsx#L25-L38
+
+```
+
+### Sides
+
+```tsx
+import { For } from "solid-js"
+import { Button } from "~/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "~/components/ui/tooltip"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tooltip-example.tsx#L40-L59
+
+```
+
+### With Icon
+
+```tsx
+import { Info } from "lucide-solid"
+import { Button } from "~/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "~/components/ui/tooltip"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tooltip-example.tsx#L61-L75
+
+```
+
+### Long Content
+
+```tsx
+import { Button } from "~/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "~/components/ui/tooltip"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tooltip-example.tsx#L77-L91
+
+```
+
+### Disabled
+
+```tsx
+import { Button } from "~/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "~/components/ui/tooltip"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tooltip-example.tsx#L93-L108
+
+```
+
+### With Keyboard Shortcut
+
+```tsx
+import { Save } from "lucide-solid"
+import { Button } from "~/components/ui/button"
+import { Kbd } from "~/components/ui/kbd"
+import { Tooltip, TooltipContent, TooltipTrigger } from "~/components/ui/tooltip"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tooltip-example.tsx#L110-L125
+
+```
+
+### On Link
 
 ```tsx
 import { Tooltip, TooltipContent, TooltipTrigger } from "~/components/ui/tooltip"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/tooltip-example.tsx#L127-L145
+
+```
+
+### Formatted Content
+
 ```tsx
-<Tooltip>
-  <TooltipTrigger>Hover Me</TooltipTrigger>
-  <TooltipContent>Place content for the Tooltip here.</TooltipContent>
-</Tooltip>
+import { Button } from "~/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "~/components/ui/tooltip"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tooltip-example.tsx#L147-L163
+
 ```

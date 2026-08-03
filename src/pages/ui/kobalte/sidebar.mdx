@@ -1,325 +1,122 @@
-<MDXHeader
-  title="Sidebar"
-  description="A composable, themeable and customizable sidebar component."
-/>
+---
+title: Sidebar
+slug: sidebar
+description: A composable, themeable and customizable sidebar component.
+---
 
-<ComponentPreview name="sidebar-01" type="block" />
+# Sidebar
 
-Sidebars are one of the most complex components to build. They are central
-to any application and often contain a lot of moving parts.
-
-We now have a solid foundation to build on top of. Composable. Themeable.
-Customizable.
+A composable, themeable and customizable sidebar component.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-<Steps>
-
-<Step> Run the following command to install `sidebar.tsx`</Step>
-
-```bash
-npx solidui-cli@latest add sidebar
+```package-dlx
+shadcn@latest add @zaidan/sidebar
 ```
 
-<Step>Add the following colors to your CSS file</Step>
+### Manual
 
-```css title="app.css"
-@layer base {
-  :root {
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+Install the following dependencies:
 
-  .dark,
-  [data-kb-theme="dark"] {
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
+```package-install
+@kobalte/core
 ```
 
-<Step>Extend your tailwind config</Step>
+Copy and paste the following code into your project.
 
-```js title="tailwind.config.cjs"
-// ...
-sidebar: {
-  DEFAULT: 'hsl(var(--sidebar-background))',
-  foreground: 'hsl(var(--sidebar-foreground))',
-  primary: 'hsl(var(--sidebar-primary))',
-  'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-  accent: 'hsl(var(--sidebar-accent))',
-  'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-  border: 'hsl(var(--sidebar-border))',
-  ring: 'hsl(var(--sidebar-ring))',
-},
-// ...
+```tsx file=../../../registry/kobalte/ui/sidebar.tsx showLineNumbers
+
 ```
 
-</Steps>
-</TabsContent>
+## Sidebar Variants
 
-<TabsContent value="manual">
-<Steps>
+The sidebar component supports multiple variants and collapsible modes:
 
-<Step>Copy and paste the following code into your project: </Step>
+### Variants
 
-<ComponentSource name="sidebar" />
+- `sidebar` - Default sidebar attached to the edge
+- `floating` - Sidebar with rounded corners and spacing from edges
+- `inset` - Sidebar inset within the main content area
 
-<Step>Add the following colors to your CSS file</Step>
+### Collapsible Modes
 
-```css title="app.css"
-@layer base {
-  :root {
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+- `offcanvas` - Slides in/out from the edge (default)
+- `icon` - Collapses to show only icons
+- `none` - Non-collapsible fixed sidebar
 
-  .dark,
-  [data-kb-theme="dark"] {
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-```
+## Props
 
-<Step>Extend your tailwind config</Step>
+### Sidebar
 
-```js title="tailwind.config.cjs"
-// ...
-sidebar: {
-  DEFAULT: 'hsl(var(--sidebar-background))',
-  foreground: 'hsl(var(--sidebar-foreground))',
-  primary: 'hsl(var(--sidebar-primary))',
-  'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-  accent: 'hsl(var(--sidebar-accent))',
-  'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-  border: 'hsl(var(--sidebar-border))',
-  ring: 'hsl(var(--sidebar-ring))',
-},
-// ...
-```
+| Prop          | Type                                 | Default       | Description                       |
+| ------------- | ------------------------------------ | ------------- | --------------------------------- |
+| `side`        | `"left" \| "right"`                  | `"left"`      | Which side the sidebar appears on |
+| `variant`     | `"sidebar" \| "floating" \| "inset"` | `"sidebar"`   | Visual style variant              |
+| `collapsible` | `"offcanvas" \| "icon" \| "none"`    | `"offcanvas"` | How the sidebar collapses         |
 
-</Steps>
-</TabsContent>
+### SidebarProvider
 
-</Tabs>
+| Prop           | Type                      | Default | Description                      |
+| -------------- | ------------------------- | ------- | -------------------------------- |
+| `defaultOpen`  | `boolean`                 | `true`  | Whether sidebar starts open      |
+| `open`         | `boolean`                 | -       | Controlled open state            |
+| `onOpenChange` | `(open: boolean) => void` | -       | Callback when open state changes |
 
-## Structure
+## Keyboard Shortcuts
 
-A `Sidebar` component is composed of the following parts:
+- `Cmd+B` (Mac) / `Ctrl+B` (Windows) - Toggle sidebar
 
-- `SidebarProvider` - Handles collapsible state.
-- `Sidebar` - The sidebar container.
-- `SidebarHeader` and `SidebarFooter` - Sticky at the top and bottom of the sidebar.
-- `SidebarContent` - Scrollable content.
-- `SidebarGroup` - Section within the `SidebarContent`.
-- `SidebarTrigger` - Trigger for the `Sidebar`.
+## Examples
 
-<img
-  src="/images/sidebar-structure.png"
-  width="716"
-  height="420"
-  alt="Sidebar Structure"
-  class="border dark:hidden rounded-lg overflow-hidden mt-6 w-full"
-/>
-<img
-  src="/images/sidebar-structure-dark.png"
-  width="716"
-  height="420"
-  alt="Sidebar Structure"
-  class="border hidden dark:block rounded-lg overflow-hidden mt-6 w-full"
-/>
+Here is the source code of the example from the preview page:
 
-## Usage
+### Basic
 
-```tsx showLineNumbers title="app.tsx"
-import { AppSidebar } from "~/components/app-sidebar"
-import { SidebarProvider, SidebarTrigger } from "~/components/ui/sidebar"
-
-export default function Layout(props: ParentProps) {
-  return (
-    <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
-  )
-}
-```
-
-```tsx showLineNumbers title="components/app-sidebar.tsx"
+```tsx
+import { Check, ChevronsUpDown, Search } from "lucide-solid"
+import { createSignal, For, Show } from "solid-js"
 import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarHeader
-} from "~/components/ui/sidebar"
-
-export function AppSidebar() {
-  return (
-    <Sidebar>
-      <SidebarHeader />
-      <SidebarContent>
-        <SidebarGroup />
-        <SidebarGroup />
-      </SidebarContent>
-      <SidebarFooter />
-    </Sidebar>
-  )
-}
-```
-
-## Your First Sidebar
-
-Let's start with the most basic sidebar. A collapsible sidebar with a menu.
-
-<Steps>
-
-<Step>Add a `SidebarProvider` and `SidebarTrigger` at the root of your application.</Step>
-
-```tsx showLineNumbers title="app.tsx"
-import { AppSidebar } from "~/components/app-sidebar"
-import { SidebarProvider, SidebarTrigger } from "~/components/ui/sidebar"
-
-export default function Layout(props: ParentProps) {
-  return (
-    <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
-  )
-}
-```
-
-<Step>Create a new sidebar component at `components/app-sidebar.tsx`.</Step>
-
-```tsx showLineNumbers title="components/app-sidebar.tsx"
-import { Sidebar, SidebarContent } from "~/components/ui/sidebar"
-
-export function AppSidebar() {
-  return (
-    <Sidebar>
-      <SidebarContent />
-    </Sidebar>
-  )
-}
-```
-
-<Step>Now, let's add a `SidebarMenu` to the sidebar.</Step>
-
-We'll use the `SidebarMenu` component in a `SidebarGroup`.
-
-```tsx showLineNumbers title="components/app-sidebar.tsx"
-import { For } from "solid-js"
-import { A } from "@solidjs/router"
-
-import { IconCalendar, IconHome, IconMail, IconSearch, IconSettings } from "~/components/icons"
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator
+} from "~/components/ui/breadcrumb"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "~/components/ui/dropdown-menu"
+import { Label } from "~/components/ui/label"
+import { Separator } from "~/components/ui/separator"
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
+  SidebarInput,
+  SidebarInset,
   SidebarMenu,
   SidebarMenuButton,
-  SidebarMenuItem
+  SidebarMenuItem,
+  SidebarProvider,
+  SidebarRail,
+  SidebarTrigger
 } from "~/components/ui/sidebar"
-
-const items = [
-  {
-    title: "Home",
-    url: "#",
-    icon: IconHome
-  },
-  {
-    title: "Inbox",
-    url: "#",
-    icon: IconMail
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: IconCalendar
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: IconSearch
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: IconSettings
-  }
-]
-
-export function AppSidebar() {
-  return (
-    <Sidebar>
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <For each={items}>
-                {(item) => (
-                  <SidebarMenuItem>
-                    <SidebarMenuButton as={A} href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                )}
-              </For>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-    </Sidebar>
-  )
-}
 ```
 
-<Step>You've created your first sidebar.</Step>
+```tsx file=../../../registry/kobalte/examples/ui/sidebar-example.tsx#L167-L266
 
-<ComponentPreview name="demo-sidebar" type="block" />
+```
 
-</Steps>
+## See Also
+
+- [Sidebar (Icon)](/ui/sidebar-icon) - Icon collapsible variant
+- [Sidebar (Inset)](/ui/sidebar-inset) - Inset variant
+- [Sidebar (Floating)](/ui/sidebar-floating) - Floating variant

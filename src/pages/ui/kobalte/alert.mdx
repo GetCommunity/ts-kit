@@ -1,58 +1,74 @@
-<MDXHeader
-  title="Alert"
-  description="Displays a callout for user attention."
-  docs="https://kobalte.dev/docs/core/components/alert"
-/>
+---
+title: Alert
+slug: alert
+description: Displays a callout for user attention.
+---
 
-<ComponentPreview name="alert-demo" />
+# Alert
+
+Displays a callout for user attention.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add alert
+```package-dlx
+shadcn@latest add @zaidan/alert
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Copy and paste the following code into your project.
 
-<Step>Install the following dependencies: </Step>
+```tsx file=../../../registry/kobalte/ui/alert.tsx showLineNumbers
 
-```bash
-npm install @kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+## Examples
 
-<ComponentSource name="alert" />
+Here are the source code of all the examples from the preview page:
 
-</Steps>
-</TabsContent>
-
-</Tabs>
-
-## Usage
+### Basic
 
 ```tsx
 import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/alert-example.tsx#L19-L36
+
+```
+
+### With Icons
+
 ```tsx
-<Alert>
-  <IconTerminal />
-  <AlertTitle>Heads up!</AlertTitle>
-  <AlertDescription>
-    You can add components and dependencies to your app using the cli.
-  </AlertDescription>
-</Alert>
+import { CircleAlert } from "lucide-solid"
+import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/alert-example.tsx#L38-L93
+
+```
+
+### Destructive
+
+```tsx
+import { CircleAlert } from "lucide-solid"
+import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/alert-example.tsx#L95-L121
+
+```
+
+### With Actions
+
+```tsx
+import { CircleAlert } from "lucide-solid"
+import { Alert, AlertAction, AlertDescription, AlertTitle } from "~/components/ui/alert"
+import { Badge } from "~/components/ui/badge"
+import { Button } from "~/components/ui/button"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/alert-example.tsx#L123-L148
+
 ```

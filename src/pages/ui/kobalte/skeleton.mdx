@@ -1,44 +1,86 @@
-<MDXHeader
-  title="Skeleton"
-  description="Use to show a placeholder while content is loading."
-  docs="https://kobalte.dev/docs/core/components/skeleton"
-/>
+---
+title: Skeleton
+slug: skeleton
+description: Use to show a placeholder while content is loading.
+---
 
-<ComponentPreview name="skeleton-demo" />
+# Skeleton
+
+Use to show a placeholder while content is loading.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add skeleton
+```package-dlx
+shadcn@latest add @zaidan/skeleton
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
+Install the following dependencies:
 
-<Step>Copy and paste the following code into your project: </Step>
+```package-install
+@kobalte/core
+```
 
-<ComponentSource name="skeleton" />
+Copy and paste the following code into your project.
 
-</TabsContent>
+```tsx file=../../../registry/kobalte/ui/skeleton.tsx showLineNumbers
 
-</Tabs>
+```
 
-## Usage
+## Examples
+
+Here are the source code of all the examples from the preview page:
+
+### Avatar
 
 ```tsx
 import { Skeleton } from "~/components/ui/skeleton"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/skeleton-example.tsx#L17-L29
+
+```
+
+### Card
+
 ```tsx
-<Skeleton height={16} width={200} radius={10} />
+import { Card, CardContent, CardHeader } from "~/components/ui/card"
+import { Skeleton } from "~/components/ui/skeleton"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/skeleton-example.tsx#L31-L45
+
+```
+
+### Text
+
+```tsx
+import { Skeleton } from "~/components/ui/skeleton"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/skeleton-example.tsx#L47-L57
+
+```
+
+### Form
+
+```tsx
+import { Skeleton } from "~/components/ui/skeleton"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/skeleton-example.tsx#L59-L75
+
+```
+
+### Table
+
+```tsx
+import { Skeleton } from "~/components/ui/skeleton"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/skeleton-example.tsx#L77-L99
+
 ```

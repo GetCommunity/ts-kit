@@ -1,66 +1,101 @@
-<MDXHeader
-  title="Pagination"
-  description="Pagination with page navigation, next and previous links."
-  docs="https://kobalte.dev/docs/core/components/pagination"
-/>
+---
+title: Pagination
+slug: pagination
+description: Pagination with page navigation, next and previous links.
+---
 
-<ComponentPreview name="pagination-demo" />
+# Pagination
+
+Pagination with page navigation, next and previous links.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add pagination
+```package-dlx
+shadcn@latest add @zaidan/pagination
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Copy and paste the following code into your project.
 
-<Step>Install the following dependencies: </Step>
+```tsx file=../../../registry/kobalte/ui/pagination.tsx showLineNumbers
 
-```bash
-npm install @kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+## SolidJS Router
 
-<ComponentSource name="pagination" />
+By default, the `<PaginationLink />` component will render an `<a>` element. You can use the `as` prop to render a different component, such as a SolidJS Router `<A>` component.
 
-</Steps>
-</TabsContent>
+```tsx
+import { A } from "@solidjs/router"
+import { PaginationLink } from "~/components/ui/pagination"
+```
 
-</Tabs>
+```tsx showLineNumbers
+<PaginationLink as={A} href="/page/2">
+  2
+</PaginationLink>
+```
 
-## Usage
+## Examples
+
+Here are the source code of all the examples from the preview page:
+
+### Basic
 
 ```tsx
 import {
   Pagination,
+  PaginationContent,
   PaginationEllipsis,
   PaginationItem,
-  PaginationItems,
+  PaginationLink,
   PaginationNext,
   PaginationPrevious
 } from "~/components/ui/pagination"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/pagination-example.tsx#L24-L53
+
+```
+
+### Simple
+
 ```tsx
-<Pagination
-  itemComponent={(props) => <PaginationItem page={props.page}>{props.page}</PaginationItem>}
-  ellipsisComponent={() => <PaginationEllipsis />}
->
-  <PaginationPrevious />
-  <PaginationItems />
-  <PaginationNext />
-</Pagination>
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink
+} from "~/components/ui/pagination"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/pagination-example.tsx#L55-L81
+
+```
+
+### With Select
+
+```tsx
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationNext,
+  PaginationPrevious
+} from "~/components/ui/pagination"
+import { Field, FieldLabel } from "~/components/ui/field"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "~/components/ui/select"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/pagination-example.tsx#L83-L126
+
 ```

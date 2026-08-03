@@ -1,55 +1,104 @@
-<MDXHeader
-  title="Popover"
-  description="Displays rich content in a portal, triggered by a button."
-  docs="https://kobalte.dev/docs/core/components/popover"
-/>
+---
+title: Popover
+slug: popover
+description: Displays rich content in a portal, triggered by a button.
+---
 
-<ComponentPreview name="popover-demo" />
+# Popover
+
+Displays rich content in a portal, triggered by a button.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add popover
+```package-dlx
+shadcn@latest add @zaidan/popover
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Copy and paste the following code into your project.
 
-<Step>Install the following dependencies: </Step>
+```tsx file=../../../registry/kobalte/ui/popover.tsx showLineNumbers
 
-```bash
-npm install @kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+## Examples
 
-<ComponentSource name="popover" />
+Here are the source code of all the examples from the preview page:
 
-</Steps>
-</TabsContent>
-
-</Tabs>
-
-## Usage
+### Basic
 
 ```tsx
+import { Button } from "~/components/ui/button"
+import {
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger
+} from "~/components/ui/popover"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/popover-example.tsx#L33-L49
+
+```
+
+### With Form
+
+```tsx
+import { Button } from "~/components/ui/button"
+import { Field, FieldGroup, FieldLabel } from "~/components/ui/field"
+import { Input } from "~/components/ui/input"
+import {
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger
+} from "~/components/ui/popover"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/popover-example.tsx#L51-L81
+
+```
+
+### Alignments
+
+```tsx
+import { Button } from "~/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "~/components/ui/popover"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/popover-example.tsx#L83-L108
+
+```
+
+### In Dialog
+
 ```tsx
-<Popover>
-  <PopoverTrigger>Open</PopoverTrigger>
-  <PopoverContent>Place content for the popover here.</PopoverContent>
-</Popover>
+import { Button } from "~/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from "~/components/ui/dialog"
+import {
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger
+} from "~/components/ui/popover"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/popover-example.tsx#L110-L139
+
 ```

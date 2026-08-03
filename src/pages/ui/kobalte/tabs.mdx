@@ -1,59 +1,172 @@
-<MDXHeader
-  title="Tabs"
-  description="A set of layered sections of content—known as tab panels—that are displayed one at a time."
-  docs="https://kobalte.dev/docs/core/components/tabs"
-/>
+---
+title: Tabs
+slug: tabs
+description: A set of layered sections of content—known as tab panels—that are displayed one at a time.
+---
 
-<ComponentPreview name="tabs-demo" />
+# Tabs
+
+A set of layered sections of content—known as tab panels—that are displayed one at a time.
 
 ## Installation
 
-<Tabs defaultValue="cli">
+### CLI
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-
-<TabsContent value="cli">
-
-```bash
-npx solidui-cli@latest add tabs
+```package-dlx
+shadcn@latest add @zaidan/tabs
 ```
 
-</TabsContent>
+### Manual
 
-<TabsContent value="manual">
-<Steps>
+Copy and paste the following code into your project.
 
-<Step>Install the following dependencies: </Step>
+```tsx file=../../../registry/kobalte/ui/tabs.tsx showLineNumbers
 
-```bash
-npm install @kobalte/core
 ```
 
-<Step>Copy and paste the following code into your project: </Step>
+## Examples
 
-<ComponentSource name="tabs" />
+Here are the source code of all the examples from the preview page:
 
-</Steps>
-</TabsContent>
+### Basic
 
-</Tabs>
+```tsx
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
 
-## Usage
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L34-L45
+
+```
+
+### Line
+
+```tsx
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L47-L59
+
+```
+
+### Variants Alignment
+
+```tsx
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L61-L80
+
+```
+
+### Disabled
+
+```tsx
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L82-L95
+
+```
+
+### With Icons
+
+```tsx
+import { AppWindow, Code } from "lucide-solid"
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L97-L114
+
+```
+
+### Icon Only
+
+```tsx
+import { Home, Search, Settings } from "lucide-solid"
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L116-L134
+
+```
+
+### Multiple
+
+```tsx
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L136-L149
+
+```
+
+### With Content
 
 ```tsx
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs"
 ```
 
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L151-L174
+
+```
+
+### Line With Content
+
 ```tsx
-<Tabs defaultValue="account" class="w-[400px]">
-  <TabsList class="grid w-full grid-cols-2">
-    <TabsTrigger value="account">Account</TabsTrigger>
-    <TabsTrigger value="password">Password</TabsTrigger>
-  </TabsList>
-  <TabsContent value="account">Account Tab</TabsContent>
-  <TabsContent value="password">Password Tab</TabsContent>
-</Tabs>
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L176-L199
+
+```
+
+### Line Disabled
+
+```tsx
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L201-L215
+
+```
+
+### With Dropdown
+
+```tsx
+import { MoreHorizontal } from "lucide-solid"
+import { Button } from "~/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from "~/components/ui/dropdown-menu"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L217-L253
+
+```
+
+### Vertical
+
+```tsx
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L255-L280
+
+```
+
+### With Input and Button
+
+```tsx
+import { Button } from "~/components/ui/button"
+import { Input } from "~/components/ui/input"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs"
+```
+
+```tsx file=../../../registry/kobalte/examples/ui/tabs-example.tsx#L282-L308
+
 ```
