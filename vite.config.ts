@@ -7,8 +7,8 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
     alias: {
-      "~": new URL("./", import.meta.url).pathname,
-      "@": new URL("./src", import.meta.url).pathname
+      "@": new URL("./", import.meta.url).pathname,
+      "~": new URL("./src", import.meta.url).pathname
     }
   },
   server: {

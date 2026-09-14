@@ -1,0 +1,51 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "config-solid-ui-css",
+      "type": "registry:item",
+      "title": "Solid UI Tailwind Base CSS",
+      "description": "A base CSS file for tailwindcss and shadcn/solid-ui",
+      "devDependencies": ["tw-animate-css"],
+      "files": [
+        {
+          "path": "base.css",
+          "type": "registry:file",
+          "target": "~/base.css"
+        }
+      ]
+    },
+    {
+      "name": "config-solid-ui-components",
+      "type": "registry:item",
+      "title": "Solid UI Components JSON Config",
+      "description": "A JSON config file for shadcn/solid-ui components",
+      "files": [
+        {
+          "path": "components.json",
+          "type": "registry:file",
+          "target": "@/components.json"
+        }
+      ]
+    },
+    {
+      "name": "config-tailwind",
+      "type": "registry:item",
+      "title": "Tailwind Config",
+      "description": "A tailwindcss config file",
+      "dependencies": [
+        "@getcommunity/client-styleguides",
+        "@kobalte/tailwindcss",
+        "@tailwindcss/typography",
+        "tailwindcss"
+      ],
+      "files": [
+        {
+          "path": "tailwind.config.mjs",
+          "type": "registry:file",
+          "target": "@/tailwind.config.mjs"
+        }
+      ]
+    }
+  ]
+}

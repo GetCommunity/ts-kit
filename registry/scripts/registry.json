@@ -5,10 +5,10 @@
       "name": "dev-scripts",
       "type": "registry:item",
       "title": "Development Scripts",
-      "description": "Essential scripts used for development",
+      "description": "Helpful developoment scripts",
       "files": [
         {
-          "path": ".pre-commit-config.yaml",
+          "path": "pre-commit-config.yaml",
           "type": "registry:file",
           "target": "@/.pre-commit-config.yaml"
         },

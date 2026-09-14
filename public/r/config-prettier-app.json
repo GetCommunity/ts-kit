@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-prettier-app",
+  "title": "Prettier Config for Apps",
+  "description": "A prettier config for typescript applications.",
+  "devDependencies": [
+    "prettier",
+    "prettier-plugin-organize-imports"
+  ],
+  "files": [
+    {
+      "path": "registry/config/prettier/app.js",
+      "content": "const config = {\n  $schema: \"http://json.schemastore.org/prettier\",\n  endOfLine: \"lf\",\n  semi: false,\n  singleQuote: false,\n  jsxSingleQuote: false,\n  tabWidth: 2,\n  useTabs: false,\n  printWidth: 88,\n  trailingComma: \"none\",\n  plugins: [\"prettier-plugin-organize-imports\"]\n}\n\nexport default config\n",
+      "type": "registry:file",
+      "target": "@/prettier.config.js"
+    }
+  ],
+  "type": "registry:item"
+}

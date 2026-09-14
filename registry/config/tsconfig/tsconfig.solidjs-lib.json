@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "SolidJs Library TSConfig",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "newLine": "LF",
+    "allowJs": false,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "types": [
+      "@testing-library/jest-dom/vitest",
+      "vite/client",
+      "node",
+      "vitest/globals"
+    ]
+  },
+  "exclude": [
+    "node_modules/",
+    "build/",
+    "dist/",
+    "scripts/",
+    "public/",
+    ".wrangler/",
+    ".vinxi/",
+    ".vercel/",
+    ".tmp/"
+  ]
+}

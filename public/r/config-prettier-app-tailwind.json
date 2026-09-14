@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-prettier-app-tailwind",
+  "title": "Prettier Config for Tailwind Apps",
+  "description": "A prettier config for typescript apps using tailwindcss.",
+  "devDependencies": [
+    "prettier",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-organize-imports"
+  ],
+  "files": [
+    {
+      "path": "registry/config/prettier/app-tailwind.js",
+      "content": "const config = {\n  $schema: \"http://json.schemastore.org/prettier\",\n  endOfLine: \"lf\",\n  semi: false,\n  singleQuote: false,\n  jsxSingleQuote: false,\n  tabWidth: 2,\n  useTabs: false,\n  printWidth: 88,\n  trailingComma: \"none\",\n  plugins: [\n    \"prettier-plugin-tailwindcss\",\n    \"prettier-plugin-organize-imports\"\n  ]\n}\n\nexport default config\n",
+      "type": "registry:file",
+      "target": "@/prettier.config.js"
+    }
+  ],
+  "type": "registry:item"
+}

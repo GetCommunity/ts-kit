@@ -8,9 +8,10 @@ export type RegistryFile = {
 }
 
 export type RegistryItem = {
-  dependencies?: Array<string>
-  files: Array<RegistryFile>
   name: string
+  files: Array<RegistryFile>
+  dependencies?: Array<string>
+  devDependencies?: Array<string>
   registryDependencies?: Array<string>
 }
 
@@ -26,6 +27,7 @@ type RegistryEntry = {
 
 type ImportRequirements = {
   dependencies: Array<string>
+  devDependencies: Array<string>
   registryDependencies: Array<string>
   unresolvedInternalImports: Array<string>
 }
@@ -96,6 +98,13 @@ export function defineSourceRegistryTests(registryProjectPath: string) {
         )
       })
 
+      it("declares every imported package devDependency", () => {
+        expect(requirements.unresolvedInternalImports).toEqual([])
+        expect(item.devDependencies ?? []).toEqual(
+          expect.arrayContaining(requirements.devDependencies)
+        )
+      })
+
       it("declares every imported registry dependency", () => {
         expect(requirements.unresolvedInternalImports).toEqual([])
         expect(item.registryDependencies ?? []).toEqual(
@@ -137,6 +146,7 @@ function getImportRequirements(
   registryIndex: Map<string, RegistryItem>
 ): ImportRequirements {
   const dependencies = new Set<string>()
+  const devDependencies = new Set<string>()
   const registryDependencies = new Set<string>()
   const unresolvedInternalImports = new Set<string>()
 
@@ -175,6 +185,7 @@ function getImportRequirements(
 
   return {
     dependencies: [...dependencies].sort(),
+    devDependencies: [...devDependencies].sort(),
     registryDependencies: [...registryDependencies].sort(),
     unresolvedInternalImports: [...unresolvedInternalImports].sort()
   }

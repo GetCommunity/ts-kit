@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "SolidJs App TSConfig",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "noEmit": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "types": ["@types/node", "vite/client"]
+  },
+  "exclude": [
+    "node_modules/",
+    "build/",
+    "dist/",
+    "scripts/",
+    "public/",
+    ".wrangler/",
+    ".vinxi/",
+    ".vercel/",
+    ".tmp/"
+  ]
+}

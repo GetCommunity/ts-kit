@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Typescript Library TSConfig",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ESNext"],
+    "newLine": "LF",
+    "allowJs": false,
+    "sourceMap": true,
+    "types": ["@types/node"]
+  }
+}

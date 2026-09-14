@@ -1,0 +1,96 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "config-ts-strapi",
+      "type": "registry:item",
+      "title": "Typescript Config Strapi",
+      "description": "A typescript config for Strapi applications.",
+      "devDependencies": ["typescript", "@strapi/typescript-utils"],
+      "files": [
+        {
+          "path": "tsconfig.strapi.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ]
+    },
+    {
+      "name": "config-ts-base",
+      "type": "registry:item",
+      "title": "Typescript Config Base",
+      "description": "A typescript config base.",
+      "devDependencies": ["typescript"],
+      "files": [
+        {
+          "path": "tsconfig.base.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.base.json"
+        }
+      ]
+    },
+    {
+      "name": "config-ts-lib",
+      "type": "registry:item",
+      "title": "Typescript Config Packages/Libraries",
+      "description": "A typescript config for packages/libraries.",
+      "devDependencies": ["typescript"],
+      "registrydevDependencies": ["config-ts-base"],
+      "files": [
+        {
+          "path": "tsconfig.ts-package.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ]
+    },
+    {
+      "name": "config-ts-lib-solid",
+      "type": "registry:item",
+      "title": "Typescript Config SolidJs Library",
+      "description": "A typescript config for SolidJs packages/libraries.",
+      "dependencies": ["solid-js"],
+      "devDependencies": ["typescript", "@testing-library/jest-dom", "vite", "vitest"],
+      "registrydevDependencies": ["config-ts-base"],
+      "files": [
+        {
+          "path": "tsconfig.solidjs-lib.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ]
+    },
+    {
+      "name": "config-ts-app-solid",
+      "type": "registry:item",
+      "title": "Typescript Config SolidJs Application",
+      "description": "A typescript config for SolidJs applications.",
+      "dependencies": ["solid-js"],
+      "devDependencies": ["typescript", "vite"],
+      "registrydevDependencies": ["config-ts-base"],
+      "files": [
+        {
+          "path": "tsconfig.solidjs-app.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ]
+    },
+    {
+      "name": "config-ts-app-tanstack",
+      "type": "registry:item",
+      "title": "Typescript Config TanStack SolidJs Application",
+      "description": "A typescript config for TanStack SolidJs applications.",
+      "dependencies": ["solid-js"],
+      "devDependencies": ["typescript", "vite"],
+      "registrydevDependencies": ["config-ts-base"],
+      "files": [
+        {
+          "path": "tsconfig.tanstack-app.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ]
+    }
+  ]
+}

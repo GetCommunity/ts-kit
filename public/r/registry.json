@@ -4,40 +4,227 @@
   "homepage": "https://tskit.getcommunity.com",
   "items": [
     {
-      "name": "tanstack-solid-config",
-      "title": "TanStack SolidJS Tailwind Application Config",
-      "description": "A base config files for a tanstack, solidjs, tailwindcss application",
+      "name": "config-prettier",
+      "title": "Prettier Config",
+      "description": "A prettier config for typescript.",
+      "devDependencies": [
+        "prettier",
+        "prettier-plugin-organize-imports"
+      ],
+      "files": [
+        {
+          "path": "registry/config/prettier/prettier-config.json",
+          "type": "registry:file",
+          "target": "@/prettier.config.js"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-prettier-lib",
+      "title": "Prettier Config for Packages/Libraries",
+      "description": "A prettier config for typescript packages/libraries.",
+      "devDependencies": [
+        "prettier",
+        "prettier-plugin-organize-imports"
+      ],
+      "files": [
+        {
+          "path": "registry/config/prettier/package.js",
+          "type": "registry:file",
+          "target": "@/prettier.config.js"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-prettier-app",
+      "title": "Prettier Config for Apps",
+      "description": "A prettier config for typescript applications.",
+      "devDependencies": [
+        "prettier",
+        "prettier-plugin-organize-imports"
+      ],
+      "files": [
+        {
+          "path": "registry/config/prettier/app.js",
+          "type": "registry:file",
+          "target": "@/prettier.config.js"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-prettier-app-tailwind",
+      "title": "Prettier Config for Tailwind Apps",
+      "description": "A prettier config for typescript apps using tailwindcss.",
+      "devDependencies": [
+        "prettier",
+        "prettier-plugin-tailwindcss",
+        "prettier-plugin-organize-imports"
+      ],
+      "files": [
+        {
+          "path": "registry/config/prettier/app-tailwind.js",
+          "type": "registry:file",
+          "target": "@/prettier.config.js"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-ts-strapi",
+      "title": "Typescript Config Strapi",
+      "description": "A typescript config for Strapi applications.",
+      "devDependencies": [
+        "typescript",
+        "@strapi/typescript-utils"
+      ],
+      "files": [
+        {
+          "path": "registry/config/tsconfig/tsconfig.strapi.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-ts-base",
+      "title": "Typescript Config Base",
+      "description": "A typescript config base.",
+      "devDependencies": [
+        "typescript"
+      ],
+      "files": [
+        {
+          "path": "registry/config/tsconfig/tsconfig.base.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.base.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-ts-lib",
+      "title": "Typescript Config Packages/Libraries",
+      "description": "A typescript config for packages/libraries.",
+      "devDependencies": [
+        "typescript"
+      ],
+      "files": [
+        {
+          "path": "registry/config/tsconfig/tsconfig.ts-package.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-ts-lib-solid",
+      "title": "Typescript Config SolidJs Library",
+      "description": "A typescript config for SolidJs packages/libraries.",
       "dependencies": [
-        "@eslint/eslintrc",
-        "@eslint/js",
-        "@tanstack/eslint-config",
-        "typescript-eslint",
+        "solid-js"
+      ],
+      "devDependencies": [
+        "typescript",
+        "@testing-library/jest-dom",
+        "vite",
+        "vitest"
+      ],
+      "files": [
+        {
+          "path": "registry/config/tsconfig/tsconfig.solidjs-lib.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-ts-app-solid",
+      "title": "Typescript Config SolidJs Application",
+      "description": "A typescript config for SolidJs applications.",
+      "dependencies": [
+        "solid-js"
+      ],
+      "devDependencies": [
+        "typescript",
+        "vite"
+      ],
+      "files": [
+        {
+          "path": "registry/config/tsconfig/tsconfig.solidjs-app.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-ts-app-tanstack",
+      "title": "Typescript Config TanStack SolidJs Application",
+      "description": "A typescript config for TanStack SolidJs applications.",
+      "dependencies": [
+        "solid-js"
+      ],
+      "devDependencies": [
+        "typescript",
+        "vite"
+      ],
+      "files": [
+        {
+          "path": "registry/config/tsconfig/tsconfig.tanstack-app.json",
+          "type": "registry:file",
+          "target": "@/tsconfig.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-solid-ui-css",
+      "title": "Solid UI Tailwind Base CSS",
+      "description": "A base CSS file for tailwindcss and shadcn/solid-ui",
+      "devDependencies": [
+        "tw-animate-css"
+      ],
+      "files": [
+        {
+          "path": "registry/config/tailwind/base.css",
+          "type": "registry:file",
+          "target": "~/base.css"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-solid-ui-components",
+      "title": "Solid UI Components JSON Config",
+      "description": "A JSON config file for shadcn/solid-ui components",
+      "files": [
+        {
+          "path": "registry/config/tailwind/components.json",
+          "type": "registry:file",
+          "target": "@/components.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-tailwind",
+      "title": "Tailwind Config",
+      "description": "A tailwindcss config file",
+      "dependencies": [
         "@getcommunity/client-styleguides",
         "@kobalte/tailwindcss",
         "@tailwindcss/typography",
         "tailwindcss"
       ],
-      "registryDependencies": [
-        "dev-scripts"
-      ],
       "files": [
         {
-          "path": "registry/config/components.json",
-          "type": "registry:file",
-          "target": "@/components.json"
-        },
-        {
-          "path": "registry/config/eslint.config-tanstack.mjs",
-          "type": "registry:file",
-          "target": "@/eslint.config.js"
-        },
-        {
-          "path": "registry/config/prettier.config-tailwind.mjs",
-          "type": "registry:file",
-          "target": "@/prettier.config.js"
-        },
-        {
-          "path": "registry/config/tailwind.config.mjs",
+          "path": "registry/config/tailwind/tailwind.config.mjs",
           "type": "registry:file",
           "target": "@/tailwind.config.mjs"
         }
@@ -123,10 +310,10 @@
     {
       "name": "dev-scripts",
       "title": "Development Scripts",
-      "description": "Essential scripts used for development",
+      "description": "Helpful developoment scripts",
       "files": [
         {
-          "path": "registry/scripts/.pre-commit-config.yaml",
+          "path": "registry/scripts/pre-commit-config.yaml",
           "type": "registry:file",
           "target": "@/.pre-commit-config.yaml"
         },

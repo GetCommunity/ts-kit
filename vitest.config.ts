@@ -5,8 +5,8 @@ import { defineConfig } from "vitest/config"
 export default defineConfig({
   resolve: {
     alias: {
-      "~": resolve(import.meta.dirname),
-      "@": resolve(import.meta.dirname, "src")
+      "@": resolve(import.meta.dirname),
+      "~": resolve(import.meta.dirname, "src")
     }
   },
   plugins: [
