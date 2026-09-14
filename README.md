@@ -1,15 +1,13 @@
-# Shadcn Solid Registry Template
+# Get Community, Inc. TypeScript Development Registry
 
 ## Getting Started
 
-This is a template for creating a custom registry using Next.js.
-
-- The template uses a `registry.json` file to define components and their files.
-- The `shadcn build` command is used to build the registry.
+- Uses a `registry.json` file in the root of this repo to define registry items and their files/deps/etc.
+- The `pnpm r:build` command builds the public registry using `shadcn build` under the hood.
 - The registry items are served as static files under `public/r/[name].json`.
-- The template also includes a route handler for serving registry items.
-- Every registry item are compatible with the `shadcn` CLI.
-- We have also added v0 integration using the `Open in v0` api.
+- All registry item must be compatible with the `shadcn` CLI.
+
+## Usage
 
 ### Validate Registry
 
@@ -17,17 +15,33 @@ This is a template for creating a custom registry using Next.js.
 pnpm dlx shadcn@latest registry validate getcommunity/ts-kit
 ```
 
-### List and Search Registry
+### `list` Search Registry
 
 ```bash
 pnpm dlx shadcn@latest list getcommunity/ts-kit
+```
+
+```bash
 pnpm dlx shadcn@latest search getcommunity/ts-kit --query config-prettier
+```
+
+```bash
 pnpm dlx shadcn@latest search getcommunity/ts-kit --query config-ts
+```
+
+### `view` Registry Item by Name
+
+```bash
 pnpm dlx shadcn@latest view getcommunity/ts-kit/config-prettier-app
+```
+
+### `add` Registry Item by Name
+
+```bash
 pnpm dlx shadcn@latest add getcommunity/ts-kit/config-prettier-app
 ```
 
-## Documentation
+## Development
 
 Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view the full documentation.
 
@@ -37,7 +51,7 @@ Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view th
 # Install dependencies
 pnpm install
 
-# Start development server
+# Start development server (WIP)
 pnpm dev
 ```
 
@@ -51,7 +65,7 @@ router integration.
 Build the static registry JSON files with the native shadcn build command:
 
 ```bash
-pnpm build:registry
+pnpm r:build
 ```
 
 This resolves the included source registries into `public/r`. TanStack Start
@@ -68,4 +82,13 @@ pnpm lint
 pnpm typecheck
 pnpm format:check
 pnpm format
+```
+
+### Testing
+
+The project uses vitest to test the registry.json files and to test individual registry items.
+
+```bash
+pnpm test
+pnpm test:coverage
 ```
