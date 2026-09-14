@@ -152,7 +152,7 @@ function getImportRequirements(
     for (const importedModule of importedModules) {
       const specifier = importedModule.fileName
 
-      if (specifier.startsWith("@/") || specifier.startsWith(".")) {
+      if (specifier.startsWith("~/") || specifier.startsWith(".")) {
         const resolvedImport = resolveInternalImport(sourcePath, specifier)
         const dependencyItem = resolvedImport
           ? registryIndex.get(resolvedImport)
