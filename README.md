@@ -23,7 +23,8 @@ pnpm dlx shadcn@latest registry validate getcommunity/ts-kit
 pnpm dlx shadcn@latest list getcommunity/ts-kit
 pnpm dlx shadcn@latest search getcommunity/ts-kit --query config-prettier
 pnpm dlx shadcn@latest search getcommunity/ts-kit --query config-ts
-pnpm dlx shadcn@latest view getcommunity/ts-kit/button
+pnpm dlx shadcn@latest view getcommunity/ts-kit/config-prettier-app
+pnpm dlx shadcn@latest add getcommunity/ts-kit/config-prettier-app
 ```
 
 ## Documentation

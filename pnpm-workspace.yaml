@@ -4,8 +4,7 @@ allowBuilds:
   "@parcel/watcher": true
   esbuild: true
 minimumReleaseAgeExclude:
-  - "@getcommunity/config-prettier"
   - "@getcommunity/client-styleguides"
   - "@getcommunity/gc-validators"
   - "@getcommunity/strapi-blocks-solid-renderer"
-  - vite@8.2.0
+  - vite
