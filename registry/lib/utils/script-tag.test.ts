@@ -1,14 +1,14 @@
 import {
   ensureExternalScript,
   ensureInlineScript,
-  removeScriptById
+  removeScriptById,
 } from "@/registry/lib/utils/script-tag"
 
 describe("script tag utilities", () => {
   afterEach(() => {
-    document
-      .querySelectorAll('script[id^="script-tag-test-"]')
-      .forEach((script) => script.remove())
+    document.querySelectorAll('script[id^="script-tag-test-"]').forEach((script) => {
+      script.remove()
+    })
     vi.unstubAllGlobals()
   })
 
@@ -26,15 +26,15 @@ describe("script tag utilities", () => {
   it("adds an asynchronous external script once", () => {
     ensureExternalScript(
       "script-tag-test-external",
-      "https://cdn.example.com/analytics.js"
+      "https://cdn.example.com/analytics.js",
     )
     ensureExternalScript(
       "script-tag-test-external",
-      "https://cdn.example.com/replacement.js"
+      "https://cdn.example.com/replacement.js",
     )
 
     const scripts = document.querySelectorAll(
-      "#script-tag-test-external"
+      "#script-tag-test-external",
     ) as NodeListOf<HTMLScriptElement>
     expect(scripts).toHaveLength(1)
     expect(scripts[0]).toHaveAttribute("src", "https://cdn.example.com/analytics.js")
@@ -55,13 +55,13 @@ describe("script tag utilities", () => {
     vi.stubGlobal("window", undefined)
 
     expect(() =>
-      ensureInlineScript("script-tag-test-server-inline", "void 0")
+      ensureInlineScript("script-tag-test-server-inline", "void 0"),
     ).not.toThrow()
     expect(() =>
       ensureExternalScript(
         "script-tag-test-server-external",
-        "https://cdn.example.com/server.js"
-      )
+        "https://cdn.example.com/server.js",
+      ),
     ).not.toThrow()
     expect(() => removeScriptById("script-tag-test-server-inline")).not.toThrow()
   })

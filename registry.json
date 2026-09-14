@@ -3,6 +3,8 @@
   "name": "tskit",
   "homepage": "https://tskit.getcommunity.com",
   "include": [
+    "registry/config/biome/registry.json",
+    "registry/config/eslint/registry.json",
     "registry/config/prettier/registry.json",
     "registry/config/tsconfig/registry.json",
     "registry/config/tailwind/registry.json",

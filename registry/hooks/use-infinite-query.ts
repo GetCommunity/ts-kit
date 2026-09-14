@@ -1,8 +1,7 @@
-import { useInfiniteQuery } from "@tanstack/solid-query"
-import { createMemo } from "solid-js"
-
 import type { BaseDocument, StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { infiniteQueryOptions } from "@tanstack/solid-query"
+import { useInfiniteQuery } from "@tanstack/solid-query"
+import { createMemo } from "solid-js"
 
 export interface CollectionDocument extends BaseDocument, Record<string, unknown> {}
 
@@ -10,7 +9,7 @@ export type PageItem<TPage extends StrapiListResponse<CollectionDocument>> =
   TPage["data"][number]
 
 export function useInfiniteCollection<
-  TPage extends StrapiListResponse<CollectionDocument>
+  TPage extends StrapiListResponse<CollectionDocument>,
 >(queryOptions: ReturnType<typeof infiniteQueryOptions<TPage>>) {
   const query = useInfiniteQuery<TPage>(() => queryOptions)
   const pages = createMemo(() => query.data?.pages ?? [])
@@ -31,7 +30,7 @@ export function useInfiniteCollection<
 
   const hasMore = createMemo(() => query.hasNextPage)
   const isLoading = createMemo(
-    () => query.isPending || query.isFetching || query.isLoading
+    () => query.isPending || query.isFetching || query.isLoading,
   )
 
   const fetchNext = () => query.fetchNextPage()
@@ -49,6 +48,6 @@ export function useInfiniteCollection<
     hasMore,
     isLoading,
     fetchNext,
-    loadingMoreMessage
+    loadingMoreMessage,
   } as const
 }

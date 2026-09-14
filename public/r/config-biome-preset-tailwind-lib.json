@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-biome-preset-tailwind-lib",
+  "title": "Biome Preset: Tailwind Library",
+  "description": "Root biome.jsonc for a library that ships Tailwind CSS but has no Solid.js runtime (e.g. client-styleguides).",
+  "registryDependencies": [
+    "getcommunity/ts-kit/config-biome-base",
+    "getcommunity/ts-kit/config-biome-tailwind",
+    "getcommunity/ts-kit/config-biome-lib"
+  ],
+  "files": [
+    {
+      "path": "registry/config/biome/biome.preset.tailwind-lib.jsonc",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"extends\": [\"./biome.base.jsonc\", \"./biome.tailwind.jsonc\", \"./biome.lib.jsonc\"]\n}\n",
+      "type": "registry:file",
+      "target": "biome.jsonc"
+    }
+  ],
+  "type": "registry:item"
+}

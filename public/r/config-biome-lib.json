@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-biome-lib",
+  "title": "Biome Config Library",
+  "description": "Stricter rules for published packages/libraries (e.g. no console statements shipped to consumers), layered on top of config-biome-base.",
+  "files": [
+    {
+      "path": "registry/config/biome/biome.lib.jsonc",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"linter\": {\n    \"rules\": {\n      \"suspicious\": {\n        // A published library should never ship a stray console statement to consumers.\n        \"noConsole\": \"error\"\n      }\n    }\n  }\n}\n",
+      "type": "registry:file",
+      "target": "biome.lib.jsonc"
+    }
+  ],
+  "type": "registry:item"
+}

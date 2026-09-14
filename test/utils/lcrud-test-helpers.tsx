@@ -1,13 +1,12 @@
+import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import { render } from "@solidjs/testing-library"
 import {
+  infiniteQueryOptions,
   QueryClient,
   QueryClientProvider,
-  infiniteQueryOptions
 } from "@tanstack/solid-query"
-
-import type { CollectionDocument } from "@/registry/hooks/use-infinite-query"
-import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { JSX } from "solid-js"
+import type { CollectionDocument } from "@/registry/hooks/use-infinite-query"
 
 export type TestDocument = CollectionDocument & {
   description?: string
@@ -26,14 +25,14 @@ export const valueMappers = {
   optionTextValue: "label" as const,
   getOptionLabel: (option: TestDocument) => option.label,
   getOptionDesc: (option: TestDocument) => option.description,
-  getOptionDisabled: (option: TestDocument) => option.documentId === "gamma"
+  getOptionDisabled: (option: TestDocument) => option.documentId === "gamma",
 }
 
 export function createDocument(
   id: number,
   documentId: string,
   label: string,
-  description?: string
+  description?: string,
 ): TestDocument {
   return {
     id,
@@ -41,14 +40,14 @@ export function createDocument(
     label,
     description,
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-01-01T00:00:00.000Z"
+    updatedAt: "2026-01-01T00:00:00.000Z",
   }
 }
 
 export function createPage(
   data: Array<TestDocument>,
   page = 1,
-  pageCount = 1
+  pageCount = 1,
 ): TestPage {
   return {
     data,
@@ -57,9 +56,9 @@ export function createPage(
         page,
         pageSize: data.length,
         pageCount,
-        total: data.length
-      }
-    }
+        total: data.length,
+      },
+    },
   }
 }
 
@@ -79,7 +78,7 @@ export function createDeferred<T>() {
 export function createCollectionOptions(
   testName: string,
   queryFn: ReturnType<typeof createCollectionQueryMock>,
-  initialPages?: Array<TestPage>
+  initialPages?: Array<TestPage>,
 ) {
   // @ts-expect-error - query options type mismatch
   return infiniteQueryOptions({
@@ -94,11 +93,11 @@ export function createCollectionOptions(
       ? {
           initialData: {
             pages: initialPages,
-            pageParams: initialPages.map(({ meta }) => meta.pagination.page)
+            pageParams: initialPages.map(({ meta }) => meta.pagination.page),
           },
-          staleTime: Infinity
+          staleTime: Infinity,
         }
-      : {})
+      : {}),
   })
 }
 
@@ -107,15 +106,15 @@ export function renderWithQuery(ui: () => JSX.Element) {
     defaultOptions: {
       queries: {
         gcTime: Infinity,
-        retry: false
-      }
-    }
+        retry: false,
+      },
+    },
   })
 
   return {
     ...render(() => (
       <QueryClientProvider client={queryClient}>{ui()}</QueryClientProvider>
     )),
-    queryClient
+    queryClient,
   }
 }

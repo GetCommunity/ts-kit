@@ -1,0 +1,22 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.13/schema.json",
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    },
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "linter": {
+    "rules": {
+      "nursery": {
+        // Biome's sorter is an unsafe fix and does not yet understand Tailwind 4 custom utilities/@theme tokens.
+        "useSortedClasses": "off"
+      }
+    }
+  }
+}

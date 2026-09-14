@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-eslint-tanstack",
+  "title": "ESLint Config TanStack",
+  "description": "Residual ESLint layer for TanStack-specific rules Biome cannot express. Pair with a config-biome-* preset, which owns formatting and general-purpose/Solid linting.",
+  "devDependencies": [
+    "eslint",
+    "@tanstack/eslint-config",
+    "typescript-eslint"
+  ],
+  "files": [
+    {
+      "path": "registry/config/eslint/tanstack.ts",
+      "content": "import { tanstackConfig } from \"@tanstack/eslint-config\"\nimport tseslint from \"typescript-eslint\"\n\n// Residual ESLint layer for TanStack-specific rules Biome cannot express.\n// Biome is the sole formatter and general-purpose linter (see the config-biome-*\n// presets) — this file intentionally does not repeat eslint/typescript-eslint's\n// own recommended rule sets, only the plumbing TanStack's rules need to run.\nexport default [\n  {\n    ignores: [\n      \".output/\",\n      \".vinxi/\",\n      \".wrangler/\",\n      \"coverage/\",\n      \"dist/\",\n      \"node_modules/\",\n    ],\n  },\n  {\n    files: [\"**/*.{ts,tsx}\"],\n    languageOptions: {\n      parser: tseslint.parser,\n    },\n  },\n  ...tanstackConfig,\n]\n",
+      "type": "registry:file",
+      "target": "eslint.config.ts"
+    }
+  ],
+  "type": "registry:item"
+}

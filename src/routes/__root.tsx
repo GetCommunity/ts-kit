@@ -5,7 +5,7 @@ import {
   createRootRouteWithContext,
   HeadContent,
   Outlet,
-  Scripts
+  Scripts,
 } from "@tanstack/solid-router"
 import type { JSX } from "solid-js"
 import { HydrationScript } from "solid-js/web"
@@ -19,16 +19,16 @@ export const Route = createRootRouteWithContext<{
       { charset: "utf-8" },
       {
         name: "viewport",
-        content: "width=device-width, initial-scale=1"
+        content: "width=device-width, initial-scale=1",
       },
-      { title: "Get Community TS Kit Registry" }
+      { title: "Get Community TS Kit Registry" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico" }
-    ]
+      { rel: "icon", href: "/favicon.ico" },
+    ],
   }),
-  component: RootComponent
+  component: RootComponent,
 })
 
 function RootComponent() {

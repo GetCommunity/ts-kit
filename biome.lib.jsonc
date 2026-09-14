@@ -1,0 +1,11 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.13/schema.json",
+  "linter": {
+    "rules": {
+      "suspicious": {
+        // A published library should never ship a stray console statement to consumers.
+        "noConsole": "error"
+      }
+    }
+  }
+}

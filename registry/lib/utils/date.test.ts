@@ -2,7 +2,7 @@ import {
   CalendarDate,
   CalendarDateTime,
   Time,
-  ZonedDateTime
+  ZonedDateTime,
 } from "@internationalized/date"
 
 import {
@@ -14,7 +14,7 @@ import {
   getDateTimeZone,
   getTimeValue,
   isLeapYear,
-  parseTimeInputValue
+  parseTimeInputValue,
 } from "@/registry/lib/utils/date"
 
 describe("date utilities", () => {
@@ -22,7 +22,7 @@ describe("date utilities", () => {
     expect(getTimeValue()).toEqual(new Time(0, 0, 0, 0))
     expect(getTimeValue(new CalendarDate(2026, 7, 27))).toEqual(new Time(0, 0, 0, 0))
     expect(getTimeValue(new CalendarDateTime(2026, 7, 27, 9, 8, 7, 6))).toEqual(
-      new Time(9, 8, 7, 6)
+      new Time(9, 8, 7, 6),
     )
   })
 
@@ -31,7 +31,7 @@ describe("date utilities", () => {
 
     expect(getDateTimeZone(zoned)).toBe("America/Los_Angeles")
     expect(getDateTimeZone(new CalendarDate(2026, 7, 27), "Europe/London")).toBe(
-      "Europe/London"
+      "Europe/London",
     )
     expect(getDateTimeZone(new CalendarDate(2026, 7, 27))).toBe("UTC")
   })
@@ -42,7 +42,7 @@ describe("date utilities", () => {
     ["23:59", new Time(23, 59)],
     ["12:", new Time(12, 0)],
     [":30", new Time(0, 30)],
-    ["12:30:00", new Time(12, 30)]
+    ["12:30:00", new Time(12, 30)],
   ])("parses valid time input %s", (value, expected) => {
     expect(parseTimeInputValue(value)).toEqual(expected)
   })
@@ -51,7 +51,7 @@ describe("date utilities", () => {
     "rejects invalid time input %s",
     (value) => {
       expect(parseTimeInputValue(value)).toBeNull()
-    }
+    },
   )
 
   it("formats date and time values for display and native inputs", () => {
@@ -62,7 +62,7 @@ describe("date utilities", () => {
     expect(formatTimeInputValue(new CalendarDate(2026, 7, 27))).toBe("00:00")
     expect(formatTimeInputValue(new CalendarDateTime(2026, 7, 27, 9, 5))).toBe("09:05")
     expect(formatDateTimeValue(new CalendarDateTime(2026, 7, 27, 9, 5))).toBe(
-      "July 27, 2026 at 9:05 AM"
+      "July 27, 2026 at 9:05 AM",
     )
   })
 

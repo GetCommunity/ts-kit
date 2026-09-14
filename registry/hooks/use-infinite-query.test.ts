@@ -1,16 +1,14 @@
+import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import { renderHook, waitFor } from "@solidjs/testing-library"
 import {
+  infiniteQueryOptions,
   QueryClient,
   QueryClientProvider,
-  infiniteQueryOptions
 } from "@tanstack/solid-query"
-import { createComponent } from "solid-js"
-
-import { useInfiniteCollection } from "@/registry/hooks/use-infinite-query"
-
-import type { CollectionDocument } from "@/registry/hooks/use-infinite-query"
-import type { StrapiListResponse } from "@getcommunity/gc-validators/base"
 import type { Component, JSX } from "solid-js"
+import { createComponent } from "solid-js"
+import type { CollectionDocument } from "@/registry/hooks/use-infinite-query"
+import { useInfiniteCollection } from "@/registry/hooks/use-infinite-query"
 
 type TestDocument = CollectionDocument & {
   label: string
@@ -24,14 +22,14 @@ function createDocument(id: number, documentId: string, label: string): TestDocu
     documentId,
     label,
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-01-01T00:00:00.000Z"
+    updatedAt: "2026-01-01T00:00:00.000Z",
   }
 }
 
 function createPage(
   page: number,
   pageCount: number,
-  data: Array<TestDocument>
+  data: Array<TestDocument>,
 ): TestPage {
   return {
     data,
@@ -40,9 +38,9 @@ function createPage(
         page,
         pageSize: 2,
         pageCount,
-        total: 4
-      }
-    }
+        total: 4,
+      },
+    },
   }
 }
 
@@ -60,21 +58,21 @@ function createQueryClient() {
     defaultOptions: {
       queries: {
         gcTime: Infinity,
-        retry: false
-      }
-    }
+        retry: false,
+      },
+    },
   })
 }
 
 function createQueryWrapper(
-  queryClient: QueryClient
+  queryClient: QueryClient,
 ): Component<{ children: JSX.Element }> {
   return (props) =>
     createComponent(QueryClientProvider, {
       client: queryClient,
       get children() {
         return props.children
-      }
+      },
     })
 }
 
@@ -86,7 +84,7 @@ function createCollectionOptions(queryFn: (page: number) => Promise<TestPage>) {
     getNextPageParam: (lastPage) => {
       const pagination = lastPage.meta.pagination
       return pagination.page < pagination.pageCount ? pagination.page + 1 : undefined
-    }
+    },
   })
 }
 
@@ -97,7 +95,7 @@ describe("useInfiniteCollection", () => {
     const queryOptions = createCollectionOptions(() => firstPage.promise)
     // @ts-expect-error - query options type mismatch
     const { result } = renderHook(() => useInfiniteCollection(queryOptions), {
-      wrapper: createQueryWrapper(queryClient)
+      wrapper: createQueryWrapper(queryClient),
     })
 
     expect(result.options()).toEqual([])
@@ -122,15 +120,15 @@ describe("useInfiniteCollection", () => {
         return Promise.resolve(
           createPage(1, 2, [
             createDocument(1, "alpha", "Alpha"),
-            createDocument(2, "shared", "Original")
-          ])
+            createDocument(2, "shared", "Original"),
+          ]),
         )
       }
       return nextPage.promise
     })
     // @ts-expect-error - query options type mismatch
     const { result } = renderHook(() => useInfiniteCollection(queryOptions), {
-      wrapper: createQueryWrapper(queryClient)
+      wrapper: createQueryWrapper(queryClient),
     })
 
     await waitFor(() => expect(result.query.isSuccess).toBe(true))
@@ -143,8 +141,8 @@ describe("useInfiniteCollection", () => {
     nextPage.resolve(
       createPage(2, 2, [
         createDocument(3, "shared", "Duplicate"),
-        createDocument(4, "beta", "Beta")
-      ])
+        createDocument(4, "beta", "Beta"),
+      ]),
     )
     await fetchNextPage
 
@@ -152,8 +150,8 @@ describe("useInfiniteCollection", () => {
       expect(result.options().map(({ label }) => label)).toEqual([
         "Alpha",
         "Original",
-        "Beta"
-      ])
+        "Beta",
+      ]),
     )
     expect(result.hasMore()).toBe(false)
     expect(result.isLoading()).toBe(false)

@@ -7,7 +7,7 @@ import { vi } from "vitest"
 // viewport-sized scrollbar and generating invalid computed CSS values.
 Object.defineProperty(document.body, "offsetWidth", {
   configurable: true,
-  get: () => window.innerWidth
+  get: () => window.innerWidth,
 })
 
 // Match Media
@@ -22,8 +22,8 @@ if (typeof window.matchMedia !== "function") {
       removeListener: vi.fn(),
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
-      dispatchEvent: vi.fn()
-    }))
+      dispatchEvent: vi.fn(),
+    })),
   })
 }
 

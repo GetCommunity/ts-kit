@@ -5,7 +5,8 @@ import { useIsMobile } from "@/registry/hooks/use-mobile"
 describe("useIsMobile", () => {
   it("uses the media query value and reacts to changes", () => {
     let changeHandler:
-      ((event: Pick<MediaQueryListEvent, "matches">) => void) | undefined
+      | ((event: Pick<MediaQueryListEvent, "matches">) => void)
+      | undefined
     const removeEventListener = vi.fn()
 
     vi.spyOn(window, "matchMedia").mockImplementation((query) => {
@@ -17,13 +18,13 @@ describe("useIsMobile", () => {
         onchange: null,
         addEventListener: vi.fn((_type, handler) => {
           changeHandler = handler as (
-            event: Pick<MediaQueryListEvent, "matches">
+            event: Pick<MediaQueryListEvent, "matches">,
           ) => void
         }),
         removeEventListener,
         addListener: vi.fn(),
         removeListener: vi.fn(),
-        dispatchEvent: vi.fn()
+        dispatchEvent: vi.fn(),
       }
     })
 

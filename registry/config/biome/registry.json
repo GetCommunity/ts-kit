@@ -1,0 +1,162 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "config-biome-base",
+      "type": "registry:item",
+      "title": "Biome Config Base",
+      "description": "Shared Biome formatter + linter foundation: double quotes, trailing commas, 2-space/lf, recommended lint preset, organize-imports assist. Every other Biome fragment/preset builds on this.",
+      "devDependencies": ["@biomejs/biome"],
+      "files": [
+        {
+          "path": "biome.base.jsonc",
+          "type": "registry:file",
+          "target": "biome.base.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-solid",
+      "type": "registry:item",
+      "title": "Biome Config Solid",
+      "description": "Solid.js domain rules (reactivity, destructured props, component detection) layered on top of config-biome-base.",
+      "files": [
+        {
+          "path": "biome.solid.jsonc",
+          "type": "registry:file",
+          "target": "biome.solid.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-tailwind",
+      "type": "registry:item",
+      "title": "Biome Config Tailwind",
+      "description": "Tailwind v4 CSS parsing/formatting/linting layered on top of config-biome-base.",
+      "files": [
+        {
+          "path": "biome.tailwind.jsonc",
+          "type": "registry:file",
+          "target": "biome.tailwind.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-app",
+      "type": "registry:item",
+      "title": "Biome Config App",
+      "description": "Ignore rules specific to deployed applications (e.g. Cloudflare Workers' .wrangler dev cache), layered on top of config-biome-base.",
+      "files": [
+        {
+          "path": "biome.app.jsonc",
+          "type": "registry:file",
+          "target": "biome.app.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-lib",
+      "type": "registry:item",
+      "title": "Biome Config Library",
+      "description": "Stricter rules for published packages/libraries (e.g. no console statements shipped to consumers), layered on top of config-biome-base.",
+      "files": [
+        {
+          "path": "biome.lib.jsonc",
+          "type": "registry:file",
+          "target": "biome.lib.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-preset-solid-tailwind-app",
+      "type": "registry:item",
+      "title": "Biome Preset: Solid + Tailwind App",
+      "description": "Root biome.jsonc for a Solid.js application styled with Tailwind (e.g. a TanStack Start app deployed to Cloudflare Workers).",
+      "registryDependencies": [
+        "getcommunity/ts-kit/config-biome-base",
+        "getcommunity/ts-kit/config-biome-solid",
+        "getcommunity/ts-kit/config-biome-tailwind",
+        "getcommunity/ts-kit/config-biome-app"
+      ],
+      "files": [
+        {
+          "path": "biome.preset.solid-tailwind-app.jsonc",
+          "type": "registry:file",
+          "target": "biome.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-preset-solid-tailwind-lib",
+      "type": "registry:item",
+      "title": "Biome Preset: Solid + Tailwind Library",
+      "description": "Root biome.jsonc for a Solid.js component/config library styled with Tailwind (e.g. ts-kit itself).",
+      "registryDependencies": [
+        "getcommunity/ts-kit/config-biome-base",
+        "getcommunity/ts-kit/config-biome-solid",
+        "getcommunity/ts-kit/config-biome-tailwind",
+        "getcommunity/ts-kit/config-biome-lib"
+      ],
+      "files": [
+        {
+          "path": "biome.preset.solid-tailwind-lib.jsonc",
+          "type": "registry:file",
+          "target": "biome.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-preset-tailwind-lib",
+      "type": "registry:item",
+      "title": "Biome Preset: Tailwind Library",
+      "description": "Root biome.jsonc for a library that ships Tailwind CSS but has no Solid.js runtime (e.g. client-styleguides).",
+      "registryDependencies": [
+        "getcommunity/ts-kit/config-biome-base",
+        "getcommunity/ts-kit/config-biome-tailwind",
+        "getcommunity/ts-kit/config-biome-lib"
+      ],
+      "files": [
+        {
+          "path": "biome.preset.tailwind-lib.jsonc",
+          "type": "registry:file",
+          "target": "biome.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-preset-solid-lib",
+      "type": "registry:item",
+      "title": "Biome Preset: Solid Library",
+      "description": "Root biome.jsonc for a Solid.js component library with no Tailwind CSS (e.g. strapi-blocks-solid-renderer).",
+      "registryDependencies": [
+        "getcommunity/ts-kit/config-biome-base",
+        "getcommunity/ts-kit/config-biome-solid",
+        "getcommunity/ts-kit/config-biome-lib"
+      ],
+      "files": [
+        {
+          "path": "biome.preset.solid-lib.jsonc",
+          "type": "registry:file",
+          "target": "biome.jsonc"
+        }
+      ]
+    },
+    {
+      "name": "config-biome-preset-lib",
+      "type": "registry:item",
+      "title": "Biome Preset: Plain Library",
+      "description": "Root biome.jsonc for a plain TypeScript/Node library with no Solid.js and no Tailwind CSS (e.g. gcemail).",
+      "registryDependencies": [
+        "getcommunity/ts-kit/config-biome-base",
+        "getcommunity/ts-kit/config-biome-lib"
+      ],
+      "files": [
+        {
+          "path": "biome.preset.lib.jsonc",
+          "type": "registry:file",
+          "target": "biome.jsonc"
+        }
+      ]
+    }
+  ]
+}

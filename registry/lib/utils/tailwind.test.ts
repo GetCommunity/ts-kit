@@ -10,8 +10,8 @@ describe("tailwind cn utility", () => {
     expect(
       cn("base", isHidden && "hidden", null, undefined, {
         active: true,
-        disabled: false
-      })
+        disabled: false,
+      }),
     ).toBe("base active")
   })
 

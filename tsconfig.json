@@ -27,5 +27,17 @@
     ]
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
-  "exclude": [".idea", ".output", ".tanstack", "dist", "node_modules", "public/r"]
+  "exclude": [
+    ".idea",
+    ".output",
+    ".tanstack",
+    "dist",
+    "node_modules",
+    "public/r",
+    // Registry templates for consuming projects' own eslint.config.ts — they
+    // import packages (@tanstack/eslint-config, typescript-eslint,
+    // @ospm/eslint-plugin-valibot) that are intentionally not dependencies of
+    // ts-kit itself, so they can't type-check in this project's context.
+    "registry/config/eslint"
+  ]
 }

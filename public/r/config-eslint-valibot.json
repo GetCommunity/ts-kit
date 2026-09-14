@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-eslint-valibot",
+  "title": "ESLint Config Valibot",
+  "description": "Residual ESLint layer for the @ospm/eslint-plugin-valibot rules Biome cannot express. Pair with a config-biome-* preset, which owns formatting and general-purpose linting.",
+  "devDependencies": [
+    "eslint",
+    "@ospm/eslint-plugin-valibot",
+    "typescript-eslint"
+  ],
+  "files": [
+    {
+      "path": "registry/config/eslint/valibot.ts",
+      "content": "import valibotPlugin from \"@ospm/eslint-plugin-valibot\"\nimport tseslint from \"typescript-eslint\"\n\n// Residual ESLint layer for the @ospm/eslint-plugin-valibot rules Biome cannot\n// express. Biome is the sole formatter and general-purpose linter (see the\n// config-biome-* presets) — this file intentionally does not repeat\n// eslint/typescript-eslint's own recommended rule sets, only the plumbing the\n// valibot plugin needs to run.\nexport default [\n  {\n    ignores: [\"coverage/\", \"dist/\", \"node_modules/\"],\n  },\n  {\n    files: [\"**/*.{ts,tsx}\"],\n    languageOptions: {\n      parser: tseslint.parser,\n    },\n  },\n  {\n    plugins: {\n      valibot: valibotPlugin,\n    },\n  },\n]\n",
+      "type": "registry:file",
+      "target": "eslint.config.ts"
+    }
+  ],
+  "type": "registry:item"
+}

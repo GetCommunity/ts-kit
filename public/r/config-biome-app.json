@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-biome-app",
+  "title": "Biome Config App",
+  "description": "Ignore rules specific to deployed applications (e.g. Cloudflare Workers' .wrangler dev cache), layered on top of config-biome-base.",
+  "files": [
+    {
+      "path": "registry/config/biome/biome.app.jsonc",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"files\": {\n    \"includes\": [\n      \"**\",\n      // Cloudflare Workers' local dev cache — only deployed apps have one.\n      \"!!**/.wrangler\"\n    ]\n  }\n}\n",
+      "type": "registry:file",
+      "target": "biome.app.jsonc"
+    }
+  ],
+  "type": "registry:item"
+}

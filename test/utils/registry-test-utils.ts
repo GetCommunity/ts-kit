@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync } from "node:fs"
+import { existsSync, readdirSync, readFileSync } from "node:fs"
 import { dirname, extname, relative, resolve, sep } from "node:path"
 import { fileURLToPath } from "node:url"
 import { preProcessFile } from "typescript"
@@ -55,7 +55,7 @@ export function listDirectoryFiles(registryProjectPath: string) {
       (filePath) =>
         filePath !== "registry.json" &&
         !filePath.includes(".test.") &&
-        !filePath.split("/").some((segment) => segment.startsWith("."))
+        !filePath.split("/").some((segment) => segment.startsWith(".")),
     )
     .sort()
 }
@@ -75,7 +75,7 @@ export function defineSourceRegistryTests(registryProjectPath: string) {
   describe(registryProjectPath, () => {
     it("registers every source file in its directory", () => {
       expect(getRegisteredFilePaths(registry)).toEqual(
-        listDirectoryFiles(registryProjectPath)
+        listDirectoryFiles(registryProjectPath),
       )
     })
 
@@ -86,29 +86,32 @@ export function defineSourceRegistryTests(registryProjectPath: string) {
         for (const file of item.files) {
           expect(
             existsSync(resolve(dirname(registryPath), file.path)),
-            `${item.name}: ${file.path}`
+            `${item.name}: ${file.path}`,
           ).toBe(true)
         }
       })
 
-      it("declares every imported package dependency", () => {
+      it("declares every imported package as a dependency or devDependency", () => {
+        // A bare import doesn't say whether the package is meant to be a runtime
+        // dependency or a devDependency for the consuming project — that's an
+        // authoring decision (e.g. an ESLint/Biome config's own tooling imports
+        // are devDependencies, while a hook's `@tanstack/solid-query` import is
+        // a real dependency) — so check the import is declared *somewhere*,
+        // not specifically under `dependencies`.
         expect(requirements.unresolvedInternalImports).toEqual([])
-        expect(item.dependencies ?? []).toEqual(
-          expect.arrayContaining(requirements.dependencies)
-        )
-      })
-
-      it("declares every imported package devDependency", () => {
-        expect(requirements.unresolvedInternalImports).toEqual([])
-        expect(item.devDependencies ?? []).toEqual(
-          expect.arrayContaining(requirements.devDependencies)
+        const declaredPackages = [
+          ...(item.dependencies ?? []),
+          ...(item.devDependencies ?? []),
+        ]
+        expect(declaredPackages).toEqual(
+          expect.arrayContaining(requirements.dependencies),
         )
       })
 
       it("declares every imported registry dependency", () => {
         expect(requirements.unresolvedInternalImports).toEqual([])
         expect(item.registryDependencies ?? []).toEqual(
-          expect.arrayContaining(requirements.registryDependencies)
+          expect.arrayContaining(requirements.registryDependencies),
         )
       })
     })
@@ -143,7 +146,7 @@ function createRegistryIndex() {
 function getImportRequirements(
   item: RegistryItem,
   registryPath: string,
-  registryIndex: Map<string, RegistryItem>
+  registryIndex: Map<string, RegistryItem>,
 ): ImportRequirements {
   const dependencies = new Set<string>()
   const devDependencies = new Set<string>()
@@ -187,7 +190,7 @@ function getImportRequirements(
     dependencies: [...dependencies].sort(),
     devDependencies: [...devDependencies].sort(),
     registryDependencies: [...registryDependencies].sort(),
-    unresolvedInternalImports: [...unresolvedInternalImports].sort()
+    unresolvedInternalImports: [...unresolvedInternalImports].sort(),
   }
 }
 
@@ -202,7 +205,7 @@ function resolveInternalImport(sourcePath: string, specifier: string) {
     `${unresolvedPath}.js`,
     `${unresolvedPath}.jsx`,
     resolve(unresolvedPath, "index.ts"),
-    resolve(unresolvedPath, "index.tsx")
+    resolve(unresolvedPath, "index.tsx"),
   ]
 
   return candidates.find((candidate) => existsSync(candidate))
@@ -212,7 +215,8 @@ function getPackageName(specifier: string) {
   if (specifier.startsWith("@")) {
     return specifier.split("/").slice(0, 2).join("/")
   }
-  return specifier.split("/")[0]!
+  const [packageName] = specifier.split("/")
+  return packageName ?? specifier
 }
 
 function toPosixPath(filePath: string) {

@@ -1,6 +1,5 @@
-import { Time, toCalendarDateTime } from "@internationalized/date"
-
 import type { DateValue } from "@internationalized/date"
+import { Time, toCalendarDateTime } from "@internationalized/date"
 
 export function formatTimePart(value: number) {
   return value.toString().padStart(2, "0")
@@ -40,10 +39,10 @@ export function formatDateValueLong(value: DateValue) {
   const normalizedDate = new Date(
     parsedDate.getUTCFullYear(),
     parsedDate.getUTCMonth(),
-    parsedDate.getUTCDate()
+    parsedDate.getUTCDate(),
   )
   return new Intl.DateTimeFormat("en-US", {
-    dateStyle: "long"
+    dateStyle: "long",
   }).format(normalizedDate)
 }
 
@@ -62,7 +61,7 @@ export function formatDateTimeValue(value: DateValue, fallbackTimeZone?: string)
   return new Intl.DateTimeFormat("en-US", {
     dateStyle: "long",
     timeStyle: "short",
-    timeZone
+    timeZone,
   }).format(dateTime.toDate(timeZone))
 }
 
@@ -88,7 +87,7 @@ export const calcDaysInMonth = (year: number, month: number): number => {
     9: 30,
     10: 31,
     11: 30,
-    12: 31
+    12: 31,
   }
   return daysMap[month as Month]
 }

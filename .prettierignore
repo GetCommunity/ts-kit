@@ -1,7 +1,0 @@
-.output/
-.vinxi/
-dist/
-node_modules/
-public/r/
-pnpm-lock.yaml
-routeTree.gen.ts

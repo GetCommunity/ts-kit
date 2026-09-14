@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-biome-preset-solid-lib",
+  "title": "Biome Preset: Solid Library",
+  "description": "Root biome.jsonc for a Solid.js component library with no Tailwind CSS (e.g. strapi-blocks-solid-renderer).",
+  "registryDependencies": [
+    "getcommunity/ts-kit/config-biome-base",
+    "getcommunity/ts-kit/config-biome-solid",
+    "getcommunity/ts-kit/config-biome-lib"
+  ],
+  "files": [
+    {
+      "path": "registry/config/biome/biome.preset.solid-lib.jsonc",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"extends\": [\"./biome.base.jsonc\", \"./biome.solid.jsonc\", \"./biome.lib.jsonc\"]\n}\n",
+      "type": "registry:file",
+      "target": "biome.jsonc"
+    }
+  ],
+  "type": "registry:item"
+}

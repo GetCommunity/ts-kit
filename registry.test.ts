@@ -7,6 +7,6 @@ describe("registry.json", () => {
     "includes an existing registry: %s",
     (includedRegistry) => {
       expect(existsSync(fromProjectRoot(includedRegistry))).toBe(true)
-    }
+    },
   )
 })

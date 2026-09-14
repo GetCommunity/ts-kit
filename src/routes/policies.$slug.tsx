@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/solid-router"
 
 export const Route = createFileRoute("/policies/$slug")({
-  component: Policy
+  component: Policy,
 })
 
 function Policy() {

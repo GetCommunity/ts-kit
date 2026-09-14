@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "config-eslint-tanstack",
+      "type": "registry:item",
+      "title": "ESLint Config TanStack",
+      "description": "Residual ESLint layer for TanStack-specific rules Biome cannot express. Pair with a config-biome-* preset, which owns formatting and general-purpose/Solid linting.",
+      "devDependencies": ["eslint", "@tanstack/eslint-config", "typescript-eslint"],
+      "files": [
+        {
+          "path": "tanstack.ts",
+          "type": "registry:file",
+          "target": "eslint.config.ts"
+        }
+      ]
+    },
+    {
+      "name": "config-eslint-valibot",
+      "type": "registry:item",
+      "title": "ESLint Config Valibot",
+      "description": "Residual ESLint layer for the @ospm/eslint-plugin-valibot rules Biome cannot express. Pair with a config-biome-* preset, which owns formatting and general-purpose linting.",
+      "devDependencies": ["eslint", "@ospm/eslint-plugin-valibot", "typescript-eslint"],
+      "files": [
+        {
+          "path": "valibot.ts",
+          "type": "registry:file",
+          "target": "eslint.config.ts"
+        }
+      ]
+    }
+  ]
+}
