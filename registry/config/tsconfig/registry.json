@@ -35,7 +35,7 @@
       "title": "Typescript Config Packages/Libraries",
       "description": "A typescript config for packages/libraries.",
       "devDependencies": ["typescript"],
-      "registryDependencies": ["config-ts-base"],
+      "registryDependencies": ["getcommunity/ts-kit/config-ts-base"],
       "files": [
         {
           "path": "tsconfig.ts-package.json",
@@ -51,7 +51,7 @@
       "description": "A typescript config for SolidJs packages/libraries.",
       "dependencies": ["solid-js"],
       "devDependencies": ["typescript", "@testing-library/jest-dom", "vite", "vitest"],
-      "registryDependencies": ["config-ts-base"],
+      "registryDependencies": ["getcommunity/ts-kit/config-ts-base"],
       "files": [
         {
           "path": "tsconfig.solidjs-lib.json",
@@ -67,7 +67,7 @@
       "description": "A typescript config for SolidJs applications.",
       "dependencies": ["solid-js"],
       "devDependencies": ["typescript", "vite"],
-      "registryDependencies": ["config-ts-base"],
+      "registryDependencies": ["getcommunity/ts-kit/config-ts-base"],
       "files": [
         {
           "path": "tsconfig.solidjs-app.json",
@@ -83,7 +83,7 @@
       "description": "A typescript config for TanStack SolidJs applications.",
       "dependencies": ["solid-js"],
       "devDependencies": ["typescript", "vite"],
-      "registryDependencies": ["config-ts-base"],
+      "registryDependencies": ["getcommunity/ts-kit/config-ts-base"],
       "files": [
         {
           "path": "tsconfig.tanstack-app.json",

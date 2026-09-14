@@ -113,7 +113,7 @@
         "typescript"
       ],
       "registryDependencies": [
-        "config-ts-base"
+        "getcommunity/ts-kit/config-ts-base"
       ],
       "files": [
         {
@@ -138,7 +138,7 @@
         "vitest"
       ],
       "registryDependencies": [
-        "config-ts-base"
+        "getcommunity/ts-kit/config-ts-base"
       ],
       "files": [
         {
@@ -161,7 +161,7 @@
         "vite"
       ],
       "registryDependencies": [
-        "config-ts-base"
+        "getcommunity/ts-kit/config-ts-base"
       ],
       "files": [
         {
@@ -184,7 +184,7 @@
         "vite"
       ],
       "registryDependencies": [
-        "config-ts-base"
+        "getcommunity/ts-kit/config-ts-base"
       ],
       "files": [
         {

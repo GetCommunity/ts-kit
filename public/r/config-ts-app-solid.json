@@ -11,7 +11,7 @@
     "vite"
   ],
   "registryDependencies": [
-    "config-ts-base"
+    "getcommunity/ts-kit/config-ts-base"
   ],
   "files": [
     {
