@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/config/tsconfig/tsconfig.base.json",
-      "content": "{\n  \"$schema\": \"https://json.schemastore.org/tsconfig\",\n  \"display\": \"Root TSConfig\",\n  \"compilerOptions\": {\n    \"strict\": true,\n    \"esModuleInterop\": true,\n    \"allowSyntheticDefaultImports\": true,\n    \"forceConsistentCasingInFileNames\": true,\n    \"noFallthroughCasesInSwitch\": false,\n    \"resolveJsonModule\": true,\n    \"paths\": {\n      \"@/*\": [\n        \"./*\"\n      ],\n      \"~/*\": [\n        \"./src/*\"\n      ],\n    }\n  },\n  \"exclude\": [\n    \"node_modules\"\n  ]\n}",
+      "content": "{\n  \"$schema\": \"https://json.schemastore.org/tsconfig\",\n  \"display\": \"Root TSConfig\",\n  \"compilerOptions\": {\n    \"strict\": true,\n    \"esModuleInterop\": true,\n    \"allowSyntheticDefaultImports\": true,\n    \"forceConsistentCasingInFileNames\": true,\n    \"noFallthroughCasesInSwitch\": false,\n    \"resolveJsonModule\": true,\n    \"paths\": {\n      \"@/*\": [\"./*\"],\n      \"~/*\": [\"./src/*\"]\n    }\n  },\n  \"exclude\": [\"node_modules\"]\n}\n",
       "type": "registry:file",
       "target": "@/tsconfig.base.json"
     }
