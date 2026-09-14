@@ -1,11 +1,5 @@
 # Shadcn Solid Registry Template
 
-A template for creating custom component registries compatible with the shadcn CLI, ported to **SolidJS** and **TanStack Start**.
-
-This is a SolidJS port of the official [shadcn-ui/registry-template](https://github.com/shadcn-ui/registry-template).
-
-You can use the shadcn CLI to run your own component registry. Running your own component registry allows you to distribute your custom components, hooks, pages, and other files to any React project.
-
 ## Getting Started
 
 This is a template for creating a custom registry using Next.js.
@@ -16,6 +10,20 @@ This is a template for creating a custom registry using Next.js.
 - The template also includes a route handler for serving registry items.
 - Every registry item are compatible with the `shadcn` CLI.
 - We have also added v0 integration using the `Open in v0` api.
+
+### Validate Registry
+
+```bash
+pnpm dlx shadcn@latest registry validate getcommunity/ts-kit
+```
+
+### List and Search Registry
+
+```bash
+pnpm dlx shadcn@latest list getcommunity/ts-kit
+pnpm dlx shadcn@latest search getcommunity/ts-kit --query lib-utils-tailwind
+pnpm dlx shadcn@latest view getcommunity/ts-kit/button
+```
 
 ## Documentation
 
@@ -58,18 +66,4 @@ pnpm lint
 pnpm typecheck
 pnpm format:check
 pnpm format
-```
-
-### Validate Registry
-
-```bash
-pnpm dlx shadcn@latest registry validate getcommunity/ts-kit
-```
-
-### List and Search Registry
-
-```bash
-pnpm dlx shadcn@latest list getcommunity/ts-kit
-pnpm dlx shadcn@latest search getcommunity/ts-kit --query lib-utils-tailwind
-pnpm dlx shadcn@latest view getcommunity/ts-kit/button
 ```
