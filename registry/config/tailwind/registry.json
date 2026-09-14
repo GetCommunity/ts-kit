@@ -11,7 +11,7 @@
         {
           "path": "base.css",
           "type": "registry:file",
-          "target": "~/base.css"
+          "target": "src/base.css"
         }
       ]
     },
@@ -24,7 +24,7 @@
         {
           "path": "components.json",
           "type": "registry:file",
-          "target": "@/components.json"
+          "target": "components.json"
         }
       ]
     },
@@ -43,7 +43,7 @@
         {
           "path": "tailwind.config.mjs",
           "type": "registry:file",
-          "target": "@/tailwind.config.mjs"
+          "target": "tailwind.config.mjs"
         }
       ]
     }

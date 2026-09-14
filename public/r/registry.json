@@ -15,7 +15,7 @@
         {
           "path": "registry/config/prettier/prettier-config.json",
           "type": "registry:file",
-          "target": "@/prettier.config.js"
+          "target": "prettier.config.js"
         }
       ],
       "type": "registry:item"
@@ -32,7 +32,7 @@
         {
           "path": "registry/config/prettier/package.js",
           "type": "registry:file",
-          "target": "@/prettier.config.js"
+          "target": "prettier.config.js"
         }
       ],
       "type": "registry:item"
@@ -49,7 +49,7 @@
         {
           "path": "registry/config/prettier/app.js",
           "type": "registry:file",
-          "target": "@/prettier.config.js"
+          "target": "prettier.config.js"
         }
       ],
       "type": "registry:item"
@@ -67,7 +67,7 @@
         {
           "path": "registry/config/prettier/app-tailwind.js",
           "type": "registry:file",
-          "target": "@/prettier.config.js"
+          "target": "prettier.config.js"
         }
       ],
       "type": "registry:item"
@@ -84,7 +84,7 @@
         {
           "path": "registry/config/tsconfig/tsconfig.strapi.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.json"
         }
       ],
       "type": "registry:item"
@@ -100,7 +100,7 @@
         {
           "path": "registry/config/tsconfig/tsconfig.base.json",
           "type": "registry:file",
-          "target": "@/tsconfig.base.json"
+          "target": "tsconfig.base.json"
         }
       ],
       "type": "registry:item"
@@ -112,11 +112,14 @@
       "devDependencies": [
         "typescript"
       ],
+      "registryDependencies": [
+        "config-ts-base"
+      ],
       "files": [
         {
           "path": "registry/config/tsconfig/tsconfig.ts-package.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.lib.json"
         }
       ],
       "type": "registry:item"
@@ -134,11 +137,14 @@
         "vite",
         "vitest"
       ],
+      "registryDependencies": [
+        "config-ts-base"
+      ],
       "files": [
         {
           "path": "registry/config/tsconfig/tsconfig.solidjs-lib.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.lib.json"
         }
       ],
       "type": "registry:item"
@@ -154,11 +160,14 @@
         "typescript",
         "vite"
       ],
+      "registryDependencies": [
+        "config-ts-base"
+      ],
       "files": [
         {
           "path": "registry/config/tsconfig/tsconfig.solidjs-app.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.app.json"
         }
       ],
       "type": "registry:item"
@@ -174,11 +183,14 @@
         "typescript",
         "vite"
       ],
+      "registryDependencies": [
+        "config-ts-base"
+      ],
       "files": [
         {
           "path": "registry/config/tsconfig/tsconfig.tanstack-app.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.app.json"
         }
       ],
       "type": "registry:item"
@@ -194,7 +206,7 @@
         {
           "path": "registry/config/tailwind/base.css",
           "type": "registry:file",
-          "target": "~/base.css"
+          "target": "src/base.css"
         }
       ],
       "type": "registry:item"
@@ -207,7 +219,7 @@
         {
           "path": "registry/config/tailwind/components.json",
           "type": "registry:file",
-          "target": "@/components.json"
+          "target": "components.json"
         }
       ],
       "type": "registry:item"
@@ -226,7 +238,7 @@
         {
           "path": "registry/config/tailwind/tailwind.config.mjs",
           "type": "registry:file",
-          "target": "@/tailwind.config.mjs"
+          "target": "tailwind.config.mjs"
         }
       ],
       "type": "registry:item"
@@ -315,22 +327,22 @@
         {
           "path": "registry/scripts/pre-commit-config.yaml",
           "type": "registry:file",
-          "target": "@/.pre-commit-config.yaml"
+          "target": ".pre-commit-config.yaml"
         },
         {
           "path": "registry/scripts/format.sh",
           "type": "registry:file",
-          "target": "@/scripts/format.sh"
+          "target": "scripts/format.sh"
         },
         {
           "path": "registry/scripts/lint.sh",
           "type": "registry:file",
-          "target": "@/scripts/lint.sh"
+          "target": "scripts/lint.sh"
         },
         {
           "path": "registry/scripts/test.sh",
           "type": "registry:file",
-          "target": "@/scripts/test.sh"
+          "target": "scripts/test.sh"
         }
       ],
       "type": "registry:item"

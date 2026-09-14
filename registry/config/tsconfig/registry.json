@@ -11,7 +11,7 @@
         {
           "path": "tsconfig.strapi.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.json"
         }
       ]
     },
@@ -25,7 +25,7 @@
         {
           "path": "tsconfig.base.json",
           "type": "registry:file",
-          "target": "@/tsconfig.base.json"
+          "target": "tsconfig.base.json"
         }
       ]
     },
@@ -35,12 +35,12 @@
       "title": "Typescript Config Packages/Libraries",
       "description": "A typescript config for packages/libraries.",
       "devDependencies": ["typescript"],
-      "registrydevDependencies": ["config-ts-base"],
+      "registryDependencies": ["config-ts-base"],
       "files": [
         {
           "path": "tsconfig.ts-package.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.lib.json"
         }
       ]
     },
@@ -51,12 +51,12 @@
       "description": "A typescript config for SolidJs packages/libraries.",
       "dependencies": ["solid-js"],
       "devDependencies": ["typescript", "@testing-library/jest-dom", "vite", "vitest"],
-      "registrydevDependencies": ["config-ts-base"],
+      "registryDependencies": ["config-ts-base"],
       "files": [
         {
           "path": "tsconfig.solidjs-lib.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.lib.json"
         }
       ]
     },
@@ -67,12 +67,12 @@
       "description": "A typescript config for SolidJs applications.",
       "dependencies": ["solid-js"],
       "devDependencies": ["typescript", "vite"],
-      "registrydevDependencies": ["config-ts-base"],
+      "registryDependencies": ["config-ts-base"],
       "files": [
         {
           "path": "tsconfig.solidjs-app.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.app.json"
         }
       ]
     },
@@ -83,12 +83,12 @@
       "description": "A typescript config for TanStack SolidJs applications.",
       "dependencies": ["solid-js"],
       "devDependencies": ["typescript", "vite"],
-      "registrydevDependencies": ["config-ts-base"],
+      "registryDependencies": ["config-ts-base"],
       "files": [
         {
           "path": "tsconfig.tanstack-app.json",
           "type": "registry:file",
-          "target": "@/tsconfig.json"
+          "target": "tsconfig.app.json"
         }
       ]
     }

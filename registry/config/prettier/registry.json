@@ -11,7 +11,7 @@
         {
           "path": "prettier-config.json",
           "type": "registry:file",
-          "target": "@/prettier.config.js"
+          "target": "prettier.config.js"
         }
       ]
     },
@@ -25,7 +25,7 @@
         {
           "path": "package.js",
           "type": "registry:file",
-          "target": "@/prettier.config.js"
+          "target": "prettier.config.js"
         }
       ]
     },
@@ -39,7 +39,7 @@
         {
           "path": "app.js",
           "type": "registry:file",
-          "target": "@/prettier.config.js"
+          "target": "prettier.config.js"
         }
       ]
     },
@@ -57,7 +57,7 @@
         {
           "path": "app-tailwind.js",
           "type": "registry:file",
-          "target": "@/prettier.config.js"
+          "target": "prettier.config.js"
         }
       ]
     }

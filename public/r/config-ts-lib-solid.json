@@ -12,12 +12,15 @@
     "vite",
     "vitest"
   ],
+  "registryDependencies": [
+    "config-ts-base"
+  ],
   "files": [
     {
       "path": "registry/config/tsconfig/tsconfig.solidjs-lib.json",
       "content": "{\n  \"$schema\": \"https://json.schemastore.org/tsconfig\",\n  \"display\": \"SolidJs Library TSConfig\",\n  \"extends\": \"./tsconfig.base.json\",\n  \"compilerOptions\": {\n    \"target\": \"ESNext\",\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"Bundler\",\n    \"jsx\": \"preserve\",\n    \"jsxImportSource\": \"solid-js\",\n    \"lib\": [\"DOM\", \"DOM.Iterable\", \"ESNext\"],\n    \"newLine\": \"LF\",\n    \"allowJs\": false,\n    \"sourceMap\": true,\n    \"isolatedModules\": true,\n    \"types\": [\n      \"@testing-library/jest-dom/vitest\",\n      \"vite/client\",\n      \"node\",\n      \"vitest/globals\"\n    ]\n  },\n  \"exclude\": [\n    \"node_modules/\",\n    \"build/\",\n    \"dist/\",\n    \"scripts/\",\n    \"public/\",\n    \".wrangler/\",\n    \".vinxi/\",\n    \".vercel/\",\n    \".tmp/\"\n  ]\n}\n",
       "type": "registry:file",
-      "target": "@/tsconfig.json"
+      "target": "tsconfig.lib.json"
     }
   ],
   "type": "registry:item"

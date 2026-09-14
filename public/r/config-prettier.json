@@ -12,7 +12,7 @@
       "path": "registry/config/prettier/prettier-config.json",
       "content": "{\n  \"$schema\": \"https://json.schemastore.org/prettierrc\",\n  \"endOfLine\": \"lf\",\n  \"semi\": false,\n  \"singleQuote\": false,\n  \"jsxSingleQuote\": false,\n  \"tabWidth\": 2,\n  \"useTabs\": false,\n  \"printWidth\": 88,\n  \"trailingComma\": \"none\",\n  \"plugins\": [\"prettier-plugin-organize-imports\"]\n}\n",
       "type": "registry:file",
-      "target": "@/prettier.config.js"
+      "target": "prettier.config.js"
     }
   ],
   "type": "registry:item"

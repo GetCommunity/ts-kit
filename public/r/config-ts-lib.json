@@ -6,12 +6,15 @@
   "devDependencies": [
     "typescript"
   ],
+  "registryDependencies": [
+    "config-ts-base"
+  ],
   "files": [
     {
       "path": "registry/config/tsconfig/tsconfig.ts-package.json",
       "content": "{\n  \"$schema\": \"https://json.schemastore.org/tsconfig\",\n  \"display\": \"Typescript Library TSConfig\",\n  \"extends\": \"./tsconfig.base.json\",\n  \"compilerOptions\": {\n    \"target\": \"ESNext\",\n    \"module\": \"NodeNext\",\n    \"moduleResolution\": \"NodeNext\",\n    \"lib\": [\"ESNext\"],\n    \"newLine\": \"LF\",\n    \"allowJs\": false,\n    \"sourceMap\": true,\n    \"types\": [\"@types/node\"]\n  }\n}\n",
       "type": "registry:file",
-      "target": "@/tsconfig.json"
+      "target": "tsconfig.lib.json"
     }
   ],
   "type": "registry:item"

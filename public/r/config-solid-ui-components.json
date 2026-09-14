@@ -8,7 +8,7 @@
       "path": "registry/config/tailwind/components.json",
       "content": "{\n  \"$schema\": \"https://ui.shadcn.com/schema.json\",\n  \"style\": \"kobalte\",\n  \"rsc\": false,\n  \"tsx\": true,\n  \"tailwind\": {\n    \"config\": \"tailwind.config.mjs\",\n    \"css\": \"src/styles/app.css\",\n    \"baseColor\": \"neutral\",\n    \"cssVariables\": true,\n    \"prefix\": \"\"\n  },\n  \"aliases\": {\n    \"components\": \"~/components\",\n    \"utils\": \"~/lib/utils\",\n    \"ui\": \"~/components/ui\",\n    \"lib\": \"~/lib\",\n    \"hooks\": \"~/hooks\"\n  },\n  \"iconLibrary\": \"lucide\",\n  \"registries\": {\n    \"@solid-ui\": \"https://solid-ui.com/r/{name}.json\"\n  }\n}\n",
       "type": "registry:file",
-      "target": "@/components.json"
+      "target": "components.json"
     }
   ],
   "type": "registry:item"
