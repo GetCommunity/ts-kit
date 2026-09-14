@@ -22,6 +22,10 @@ pnpm dlx shadcn@latest list getcommunity/ts-kit
 ```
 
 ```bash
+pnpm dlx shadcn@latest search getcommunity/ts-kit --query config-biome
+```
+
+```bash
 pnpm dlx shadcn@latest search getcommunity/ts-kit --query config-prettier
 ```
 
