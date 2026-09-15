@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "config-biome-preset-lib",
   "title": "Biome Preset: Plain Library",
-  "description": "Root biome.jsonc for a plain TypeScript/Node library with no Solid.js and no Tailwind CSS (e.g. gcemail).",
+  "description": "Root biome.jsonc for a plain TypeScript/Node library published for other packages to import — no Solid.js, no Tailwind CSS.",
   "registryDependencies": [
     "getcommunity/ts-kit/config-biome-base",
     "getcommunity/ts-kit/config-biome-lib"

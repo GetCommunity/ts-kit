@@ -13,6 +13,9 @@
       "!*.d.ts",
       // TanStack Router's generated route tree is codegen, not source.
       "!**/routeTree.gen.ts",
+      // Static SVG assets (logos, icons) aren't authored JSX — Biome's a11y
+      // rules for inline <svg> markup don't apply to a standalone asset file.
+      "!**/*.svg",
       // Build and test output should never be scanned, across any project shape.
       "!!**/.output",
       "!!**/.vinxi",

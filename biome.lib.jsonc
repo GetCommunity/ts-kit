@@ -3,8 +3,15 @@
   "linter": {
     "rules": {
       "suspicious": {
-        // A published library should never ship a stray console statement to consumers.
-        "noConsole": "error"
+        // A published library should never leak a stray console.log/debug to
+        // consumers, but console.warn/error are legitimate ways to surface a
+        // real runtime problem (e.g. an unhandled content type).
+        "noConsole": {
+          "level": "error",
+          "options": {
+            "allow": ["warn", "error"]
+          }
+        }
       }
     }
   }

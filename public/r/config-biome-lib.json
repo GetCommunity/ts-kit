@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/config/biome/biome.lib.jsonc",
-      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"linter\": {\n    \"rules\": {\n      \"suspicious\": {\n        // A published library should never ship a stray console statement to consumers.\n        \"noConsole\": \"error\"\n      }\n    }\n  }\n}\n",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"linter\": {\n    \"rules\": {\n      \"suspicious\": {\n        // A published library should never leak a stray console.log/debug to\n        // consumers, but console.warn/error are legitimate ways to surface a\n        // real runtime problem (e.g. an unhandled content type).\n        \"noConsole\": {\n          \"level\": \"error\",\n          \"options\": {\n            \"allow\": [\"warn\", \"error\"]\n          }\n        }\n      }\n    }\n  }\n}\n",
       "type": "registry:file",
       "target": "biome.lib.jsonc"
     }

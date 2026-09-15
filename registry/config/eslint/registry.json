@@ -6,7 +6,12 @@
       "type": "registry:item",
       "title": "ESLint Config TanStack",
       "description": "Residual ESLint layer for TanStack-specific rules Biome cannot express. Pair with a config-biome-* preset, which owns formatting and general-purpose/Solid linting.",
-      "devDependencies": ["eslint", "@tanstack/eslint-config", "typescript-eslint"],
+      "devDependencies": [
+        "eslint",
+        "@tanstack/eslint-config",
+        "eslint-plugin-solid",
+        "typescript-eslint"
+      ],
       "files": [
         {
           "path": "tanstack.ts",

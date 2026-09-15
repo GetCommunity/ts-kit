@@ -6,12 +6,13 @@
   "devDependencies": [
     "eslint",
     "@tanstack/eslint-config",
+    "eslint-plugin-solid",
     "typescript-eslint"
   ],
   "files": [
     {
       "path": "registry/config/eslint/tanstack.ts",
-      "content": "import { tanstackConfig } from \"@tanstack/eslint-config\"\nimport tseslint from \"typescript-eslint\"\n\n// Residual ESLint layer for TanStack-specific rules Biome cannot express.\n// Biome is the sole formatter and general-purpose linter (see the config-biome-*\n// presets) — this file intentionally does not repeat eslint/typescript-eslint's\n// own recommended rule sets, only the plumbing TanStack's rules need to run.\nexport default [\n  {\n    ignores: [\n      \".output/\",\n      \".vinxi/\",\n      \".wrangler/\",\n      \"coverage/\",\n      \"dist/\",\n      \"node_modules/\",\n    ],\n  },\n  {\n    files: [\"**/*.{ts,tsx}\"],\n    languageOptions: {\n      parser: tseslint.parser,\n    },\n  },\n  ...tanstackConfig,\n]\n",
+      "content": "import { tanstackConfig } from \"@tanstack/eslint-config\"\nimport solid from \"eslint-plugin-solid\"\nimport tseslint from \"typescript-eslint\"\n\n// Residual ESLint layer for TanStack-specific rules Biome cannot express.\n// Biome is the sole formatter and general-purpose linter (see the config-biome-*\n// presets) — this file intentionally does not repeat eslint/typescript-eslint's\n// own recommended rule sets, only the plumbing TanStack's rules need to run.\nexport default [\n  {\n    ignores: [\n      \".idea/\",\n      \".output/\",\n      \".vinxi/\",\n      \".wrangler/\",\n      \"coverage/\",\n      \"dist/\",\n      \"node_modules/\",\n      \"**/*.d.ts\",\n    ],\n  },\n  {\n    files: [\"**/*.{ts,tsx}\"],\n    languageOptions: {\n      parser: tseslint.parser,\n    },\n    // tanstackConfig references solid-specific rule IDs (e.g. solid/no-innerhtml)\n    // without registering the plugin itself — Biome's solid domain covers\n    // general Solid linting, but this plugin still needs to be present for\n    // tanstackConfig's own targeted rule references to resolve.\n    plugins: {\n      solid,\n    },\n  },\n  ...tanstackConfig,\n  {\n    // Biome's organizeImports assist is the single source of truth for import\n    // order/sorting — tanstackConfig's own import/sort-imports rules disagree\n    // with Biome's sort order and would fight it on every save.\n    rules: {\n      \"import/order\": \"off\",\n      \"sort-imports\": \"off\",\n    },\n  },\n]\n",
       "type": "registry:file",
       "target": "eslint.config.ts"
     }

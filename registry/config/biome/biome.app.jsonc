@@ -1,8 +1,10 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.5.13/schema.json",
   "files": {
+    // No "**" catch-all here: a second one after biome.base.jsonc's own "**"
+    // would re-include everything below it (gitignore-style, last match wins),
+    // silently undoing every exclusion the extended configs declared.
     "includes": [
-      "**",
       // Cloudflare Workers' local dev cache — only deployed apps have one.
       "!!**/.wrangler"
     ]

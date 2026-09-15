@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-biome-preset-base",
+  "title": "Biome Preset: Base Only",
+  "description": "Root biome.jsonc with no app/lib shape assumptions — for internal CLI tools/scripts that are neither a deployed app nor a published library (e.g. gcemail), so config-biome-lib's published-package rules (like restricting console usage) don't misfire on a tool whose whole job is console output.",
+  "registryDependencies": [
+    "getcommunity/ts-kit/config-biome-base"
+  ],
+  "files": [
+    {
+      "path": "registry/config/biome/biome.preset.base.jsonc",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"extends\": [\"./biome.base.jsonc\"]\n}\n",
+      "type": "registry:file",
+      "target": "biome.jsonc"
+    }
+  ],
+  "type": "registry:item"
+}

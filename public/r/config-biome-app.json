@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/config/biome/biome.app.jsonc",
-      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"files\": {\n    \"includes\": [\n      \"**\",\n      // Cloudflare Workers' local dev cache — only deployed apps have one.\n      \"!!**/.wrangler\"\n    ]\n  }\n}\n",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"files\": {\n    // No \"**\" catch-all here: a second one after biome.base.jsonc's own \"**\"\n    // would re-include everything below it (gitignore-style, last match wins),\n    // silently undoing every exclusion the extended configs declared.\n    \"includes\": [\n      // Cloudflare Workers' local dev cache — only deployed apps have one.\n      \"!!**/.wrangler\"\n    ]\n  }\n}\n",
       "type": "registry:file",
       "target": "biome.app.jsonc"
     }
