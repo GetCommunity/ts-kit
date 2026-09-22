@@ -8,6 +8,7 @@
     "registry/config/prettier/registry.json",
     "registry/config/tsconfig/registry.json",
     "registry/config/tailwind/registry.json",
+    "registry/config/vscode/registry.json",
     "registry/hooks/registry.json",
     "registry/lib/utils/registry.json",
     "registry/scripts/registry.json"

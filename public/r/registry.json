@@ -456,6 +456,48 @@
       "type": "registry:item"
     },
     {
+      "name": "config-vscode",
+      "title": "VSCode Config Settings",
+      "description": "A vscode config for TypeScript application development.",
+      "devDependencies": [
+        "@biomejs/biome"
+      ],
+      "files": [
+        {
+          "path": "registry/config/vscode/settings.json",
+          "type": "registry:file",
+          "target": ".vscode/settings.json"
+        },
+        {
+          "path": "registry/config/vscode/extensions.json",
+          "type": "registry:file",
+          "target": ".vscode/extensions.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
+      "name": "config-vscode-tanstack",
+      "title": "VSCode Config Settings for TanStack",
+      "description": "A vscode config for TanStack application development.",
+      "devDependencies": [
+        "@biomejs/biome"
+      ],
+      "files": [
+        {
+          "path": "registry/config/vscode/settings-tanstack.json",
+          "type": "registry:file",
+          "target": ".vscode/settings.json"
+        },
+        {
+          "path": "registry/config/vscode/extensions.json",
+          "type": "registry:file",
+          "target": ".vscode/extensions.json"
+        }
+      ],
+      "type": "registry:item"
+    },
+    {
       "name": "hook-use-infinite-query",
       "title": "Use Infinite Query",
       "description": "A TanStack Query hook for fetching paginated Strapi data infinitely",

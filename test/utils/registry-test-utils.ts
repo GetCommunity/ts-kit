@@ -61,9 +61,10 @@ export function listDirectoryFiles(registryProjectPath: string) {
 }
 
 export function getRegisteredFilePaths(registry: Registry) {
-  return (registry.items ?? [])
-    .flatMap((item) => item.files.map((file) => toPosixPath(file.path)))
-    .sort()
+  const filePaths = (registry.items ?? []).flatMap((item) =>
+    item.files.map((file) => toPosixPath(file.path)),
+  )
+  return [...new Set(filePaths)].sort()
 }
 
 export function defineSourceRegistryTests(registryProjectPath: string) {

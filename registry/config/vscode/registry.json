@@ -1,0 +1,43 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "config-vscode",
+      "type": "registry:item",
+      "title": "VSCode Config Settings",
+      "description": "A vscode config for TypeScript application development.",
+      "devDependencies": ["@biomejs/biome"],
+      "files": [
+        {
+          "path": "settings.json",
+          "type": "registry:file",
+          "target": ".vscode/settings.json"
+        },
+        {
+          "path": "extensions.json",
+          "type": "registry:file",
+          "target": ".vscode/extensions.json"
+        }
+      ]
+    },
+    {
+      "name": "config-vscode-tanstack",
+      "type": "registry:item",
+      "title": "VSCode Config Settings for TanStack",
+      "description": "A vscode config for TanStack application development.",
+      "devDependencies": ["@biomejs/biome"],
+      "files": [
+        {
+          "path": "settings-tanstack.json",
+          "type": "registry:file",
+          "target": ".vscode/settings.json"
+        },
+        {
+          "path": "extensions.json",
+          "type": "registry:file",
+          "target": ".vscode/extensions.json"
+        }
+      ]
+    }
+  ]
+}

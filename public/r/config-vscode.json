@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "config-vscode",
+  "title": "VSCode Config Settings",
+  "description": "A vscode config for TypeScript application development.",
+  "devDependencies": [
+    "@biomejs/biome"
+  ],
+  "files": [
+    {
+      "path": "registry/config/vscode/settings.json",
+      "content": "{\n  \"prettier.configPath\": \"./prettier.config.js\",\n  \"biome.enabled\": true,\n  \"biome.requireConfiguration\": true,\n  \"biome.configurationPath\": \"./biome.jsonc\",\n  \"[css]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\",\n    \"editor.formatOnSave\": true\n  },\n  \"[tailwindcss]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\",\n    \"editor.formatOnSave\": true\n  },\n  \"[javascript]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\",\n    \"editor.formatOnSave\": true\n  },\n  \"[javascriptreact]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\",\n    \"editor.formatOnSave\": true\n  },\n  \"[json]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\",\n    \"editor.formatOnSave\": true\n  },\n  \"[jsonc]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\",\n    \"editor.formatOnSave\": true\n  },\n  \"[typescript]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\",\n    \"editor.formatOnSave\": true\n  },\n  \"[typescriptreact]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\",\n    \"editor.formatOnSave\": true\n  },\n  \"editor.codeActionsOnSave\": {\n    \"source.fixAll.biome\": \"explicit\",\n    \"source.organizeImports.biome\": \"explicit\"\n  }\n}\n",
+      "type": "registry:file",
+      "target": ".vscode/settings.json"
+    },
+    {
+      "path": "registry/config/vscode/extensions.json",
+      "content": "{\n  \"recommendations\": [\"biomejs.biome\"]\n}\n",
+      "type": "registry:file",
+      "target": ".vscode/extensions.json"
+    }
+  ],
+  "type": "registry:item"
+}
