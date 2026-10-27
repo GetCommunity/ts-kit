@@ -3,7 +3,7 @@
 This project uses **Biome** for both formatting and linting (Prettier and ESLint have
 been retired here — see `biome.jsonc`, which composes the shared
 `registry/config/biome/biome.preset.solid-tailwind-lib.jsonc` fragments: `biome.base.jsonc`
-+ `biome.solid.jsonc` + `biome.tailwind.jsonc` + `biome.lib.jsonc`).
+- `biome.solid.jsonc` + `biome.tailwind.jsonc` + `biome.lib.jsonc`).
 
 ## Quick Reference
 

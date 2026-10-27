@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/config/biome/biome.solid.jsonc",
-      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"linter\": {\n    \"domains\": {\n      \"solid\": \"recommended\"\n    },\n    \"rules\": {\n      \"correctness\": {\n        \"noSolidDestructuredProps\": \"error\"\n      },\n      \"performance\": {\n        \"useSolidForComponent\": \"error\"\n      },\n      \"suspicious\": {\n        // Solid's <For> keys by reference, not by index, so React's index-key\n        // foot-gun this rule guards against does not apply here.\n        \"noArrayIndexKey\": \"off\"\n      }\n    }\n  }\n}\n",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.6.3/schema.json\",\n  \"linter\": {\n    \"domains\": {\n      \"solid\": \"recommended\"\n    },\n    \"rules\": {\n      \"correctness\": {\n        \"noSolidDestructuredProps\": \"error\"\n      },\n      \"performance\": {\n        \"useSolidForComponent\": \"error\"\n      },\n      \"suspicious\": {\n        // Solid's <For> keys by reference, not by index, so React's index-key\n        // foot-gun this rule guards against does not apply here.\n        \"noArrayIndexKey\": \"off\"\n      }\n    }\n  }\n}\n",
       "type": "registry:file",
       "target": "biome.solid.jsonc"
     }

@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/config/biome/biome.tailwind.jsonc",
-      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"css\": {\n    \"parser\": {\n      \"tailwindDirectives\": true\n    },\n    \"formatter\": {\n      \"enabled\": true\n    },\n    \"linter\": {\n      \"enabled\": true\n    }\n  },\n  \"linter\": {\n    \"rules\": {\n      \"nursery\": {\n        // Biome's sorter is an unsafe fix and does not yet understand Tailwind 4 custom utilities/@theme tokens.\n        \"useSortedClasses\": \"off\"\n      }\n    }\n  }\n}\n",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.6.3/schema.json\",\n  \"css\": {\n    \"parser\": {\n      \"tailwindDirectives\": true\n    },\n    \"formatter\": {\n      \"enabled\": true\n    },\n    \"linter\": {\n      \"enabled\": true\n    }\n  },\n  \"tailwind\": {\n    \"stylesheet\": \"src/app.css\"\n  }\n}\n",
       "type": "registry:file",
       "target": "biome.tailwind.jsonc"
     }

@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "registry/config/biome/biome.preset.solid-tailwind-app.jsonc",
-      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"extends\": [\n    \"./biome.base.jsonc\",\n    \"./biome.solid.jsonc\",\n    \"./biome.tailwind.jsonc\",\n    \"./biome.app.jsonc\"\n  ]\n}\n",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.6.3/schema.json\",\n  \"extends\": [\n    \"./biome.base.jsonc\",\n    \"./biome.solid.jsonc\",\n    \"./biome.tailwind.jsonc\",\n    \"./biome.app.jsonc\"\n  ]\n}\n",
       "type": "registry:file",
       "target": "biome.jsonc"
     }

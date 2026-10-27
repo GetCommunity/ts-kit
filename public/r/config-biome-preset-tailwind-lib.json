@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/config/biome/biome.preset.tailwind-lib.jsonc",
-      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.5.13/schema.json\",\n  \"extends\": [\"./biome.base.jsonc\", \"./biome.tailwind.jsonc\", \"./biome.lib.jsonc\"]\n}\n",
+      "content": "{\n  \"$schema\": \"https://biomejs.dev/schemas/2.6.3/schema.json\",\n  \"extends\": [\"./biome.base.jsonc\", \"./biome.tailwind.jsonc\", \"./biome.lib.jsonc\"]\n}\n",
       "type": "registry:file",
       "target": "biome.jsonc"
     }
